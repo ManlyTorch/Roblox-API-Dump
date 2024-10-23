@@ -137,6 +137,1329 @@
     {
       "Members": [
         {
+          "Category": "Data",
+          "MemberType": "Property",
+          "Name": "Size",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": false,
+            "CanSave": true
+          },
+          "Tags": [
+            "ReadOnly",
+            "NotReplicated"
+          ],
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "DataType",
+            "Name": "Vector2"
+          }
+        },
+        {
+          "MemberType": "Function",
+          "Name": "DrawCircle",
+          "Parameters": [
+            {
+              "Name": "center",
+              "Type": {
+                "Category": "DataType",
+                "Name": "Vector2"
+              }
+            },
+            {
+              "Name": "radius",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int"
+              }
+            },
+            {
+              "Name": "color",
+              "Type": {
+                "Category": "DataType",
+                "Name": "Color3"
+              }
+            },
+            {
+              "Name": "transparency",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "float"
+              }
+            },
+            {
+              "Name": "combineType",
+              "Type": {
+                "Category": "Enum",
+                "Name": "ImageCombineType"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "DrawImage",
+          "Parameters": [
+            {
+              "Name": "position",
+              "Type": {
+                "Category": "DataType",
+                "Name": "Vector2"
+              }
+            },
+            {
+              "Name": "image",
+              "Type": {
+                "Category": "DataType",
+                "Name": "Object"
+              }
+            },
+            {
+              "Name": "combineType",
+              "Type": {
+                "Category": "Enum",
+                "Name": "ImageCombineType"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "DrawLine",
+          "Parameters": [
+            {
+              "Name": "p1",
+              "Type": {
+                "Category": "DataType",
+                "Name": "Vector2"
+              }
+            },
+            {
+              "Name": "p2",
+              "Type": {
+                "Category": "DataType",
+                "Name": "Vector2"
+              }
+            },
+            {
+              "Name": "color",
+              "Type": {
+                "Category": "DataType",
+                "Name": "Color3"
+              }
+            },
+            {
+              "Name": "transparency",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "float"
+              }
+            },
+            {
+              "Name": "combineType",
+              "Type": {
+                "Category": "Enum",
+                "Name": "ImageCombineType"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "DrawProjectionImage",
+          "Parameters": [
+            {
+              "Name": "mesh",
+              "Type": {
+                "Category": "DataType",
+                "Name": "Object"
+              }
+            },
+            {
+              "Name": "projection",
+              "Type": {
+                "Category": "Group",
+                "Name": "Dictionary"
+              }
+            },
+            {
+              "Name": "brushConfig",
+              "Type": {
+                "Category": "Group",
+                "Name": "Dictionary"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "DrawRectangle",
+          "Parameters": [
+            {
+              "Name": "position",
+              "Type": {
+                "Category": "DataType",
+                "Name": "Vector2"
+              }
+            },
+            {
+              "Name": "size",
+              "Type": {
+                "Category": "DataType",
+                "Name": "Vector2"
+              }
+            },
+            {
+              "Name": "color",
+              "Type": {
+                "Category": "DataType",
+                "Name": "Color3"
+              }
+            },
+            {
+              "Name": "transparency",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "float"
+              }
+            },
+            {
+              "Name": "combineType",
+              "Type": {
+                "Category": "Enum",
+                "Name": "ImageCombineType"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "DrawTriangle",
+          "Parameters": [
+            {
+              "Name": "p1",
+              "Type": {
+                "Category": "DataType",
+                "Name": "Vector2"
+              }
+            },
+            {
+              "Name": "p2",
+              "Type": {
+                "Category": "DataType",
+                "Name": "Vector2"
+              }
+            },
+            {
+              "Name": "p3",
+              "Type": {
+                "Category": "DataType",
+                "Name": "Vector2"
+              }
+            },
+            {
+              "Name": "color",
+              "Type": {
+                "Category": "DataType",
+                "Name": "Color3"
+              }
+            },
+            {
+              "Name": "transparency",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "float"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetContent",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "DataType",
+            "Name": "Content"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "ReadPixelsBuffer",
+          "Parameters": [
+            {
+              "Name": "position",
+              "Type": {
+                "Category": "DataType",
+                "Name": "Vector2"
+              }
+            },
+            {
+              "Name": "size",
+              "Type": {
+                "Category": "DataType",
+                "Name": "Vector2"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "DataType",
+            "Name": "buffer"
+          },
+          "Security": "None",
+          "Tags": [
+            "CustomLuaState"
+          ],
+          "ThreadSafety": "Safe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "WritePixelsBuffer",
+          "Parameters": [
+            {
+              "Name": "position",
+              "Type": {
+                "Category": "DataType",
+                "Name": "Vector2"
+              }
+            },
+            {
+              "Name": "size",
+              "Type": {
+                "Category": "DataType",
+                "Name": "Vector2"
+              }
+            },
+            {
+              "Name": "buffer",
+              "Type": {
+                "Category": "DataType",
+                "Name": "buffer"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "None",
+          "Tags": [
+            "CustomLuaState"
+          ],
+          "ThreadSafety": "Unsafe"
+        }
+      ],
+      "MemoryCategory": "Instances",
+      "Name": "EditableImage",
+      "Superclass": "Object"
+    },
+    {
+      "Members": [
+        {
+          "Category": "Data",
+          "MemberType": "Property",
+          "Name": "FixedSize",
+          "Security": {
+            "Read": "None",
+            "Write": "RobloxSecurity"
+          },
+          "Serialization": {
+            "CanLoad": false,
+            "CanSave": true
+          },
+          "Tags": [
+            "ReadOnly",
+            "NotReplicated"
+          ],
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "bool"
+          }
+        },
+        {
+          "Category": "Data",
+          "MemberType": "Property",
+          "Name": "SkinningEnabled",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "bool"
+          }
+        },
+        {
+          "MemberType": "Function",
+          "Name": "AddColor",
+          "Parameters": [
+            {
+              "Name": "color",
+              "Type": {
+                "Category": "DataType",
+                "Name": "Color3"
+              }
+            },
+            {
+              "Name": "alpha",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "float"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "int64"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "AddNormal",
+          "Parameters": [
+            {
+              "Name": "normal",
+              "Type": {
+                "Category": "DataType",
+                "Name": "Vector3?"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "int64"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "AddTriangle",
+          "Parameters": [
+            {
+              "Name": "vertexId0",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            },
+            {
+              "Name": "vertexId1",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            },
+            {
+              "Name": "vertexId2",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "int64"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "AddUV",
+          "Parameters": [
+            {
+              "Name": "uv",
+              "Type": {
+                "Category": "DataType",
+                "Name": "Vector2"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "int64"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "AddVertex",
+          "Parameters": [
+            {
+              "Name": "p",
+              "Type": {
+                "Category": "DataType",
+                "Name": "Vector3"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "int64"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "FindClosestPointOnSurface",
+          "Parameters": [
+            {
+              "Name": "point",
+              "Type": {
+                "Category": "DataType",
+                "Name": "Vector3"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Tuple"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "FindClosestVertex",
+          "Parameters": [
+            {
+              "Name": "toThisPoint",
+              "Type": {
+                "Category": "DataType",
+                "Name": "Vector3"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "int64"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "FindVerticesWithinSphere",
+          "Parameters": [
+            {
+              "Name": "center",
+              "Type": {
+                "Category": "DataType",
+                "Name": "Vector3"
+              }
+            },
+            {
+              "Name": "radius",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "float"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Array"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetAdjacentFaces",
+          "Parameters": [
+            {
+              "Name": "faceId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Array"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetAdjacentVertices",
+          "Parameters": [
+            {
+              "Name": "vertexId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Array"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetColor",
+          "Parameters": [
+            {
+              "Name": "colorId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "DataType",
+            "Name": "Color3?"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetColorAlpha",
+          "Parameters": [
+            {
+              "Name": "colorId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "float?"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetColors",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Array"
+          },
+          "Security": "None",
+          "Tags": [
+            "CustomLuaState"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetContent",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "DataType",
+            "Name": "Content"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetFaceColors",
+          "Parameters": [
+            {
+              "Name": "faceId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Array"
+          },
+          "Security": "None",
+          "Tags": [
+            "CustomLuaState"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetFaceNormals",
+          "Parameters": [
+            {
+              "Name": "faceId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Array"
+          },
+          "Security": "None",
+          "Tags": [
+            "CustomLuaState"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetFaceUVs",
+          "Parameters": [
+            {
+              "Name": "faceId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Array"
+          },
+          "Security": "None",
+          "Tags": [
+            "CustomLuaState"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetFaceVertices",
+          "Parameters": [
+            {
+              "Name": "faceId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Array"
+          },
+          "Security": "None",
+          "Tags": [
+            "CustomLuaState"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetFaces",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Array"
+          },
+          "Security": "None",
+          "Tags": [
+            "CustomLuaState"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetFacesWithAttribute",
+          "Parameters": [
+            {
+              "Name": "id",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Array"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetNormal",
+          "Parameters": [
+            {
+              "Name": "normalId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "DataType",
+            "Name": "Vector3?"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetNormals",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Array"
+          },
+          "Security": "None",
+          "Tags": [
+            "CustomLuaState"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetPosition",
+          "Parameters": [
+            {
+              "Name": "vertexId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "DataType",
+            "Name": "Vector3"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetUV",
+          "Parameters": [
+            {
+              "Name": "uvId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "DataType",
+            "Name": "Vector2?"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetUVs",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Array"
+          },
+          "Security": "None",
+          "Tags": [
+            "CustomLuaState"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetVertices",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Array"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetVerticesWithAttribute",
+          "Parameters": [
+            {
+              "Name": "id",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Array"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "IdDebugString",
+          "Parameters": [
+            {
+              "Name": "id",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "string"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "MergeVertices",
+          "Parameters": [
+            {
+              "Name": "mergeTolerance",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "float"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Map"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "RaycastLocal",
+          "Parameters": [
+            {
+              "Name": "origin",
+              "Type": {
+                "Category": "DataType",
+                "Name": "Vector3"
+              }
+            },
+            {
+              "Name": "direction",
+              "Type": {
+                "Category": "DataType",
+                "Name": "Vector3"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Tuple"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "RemoveFace",
+          "Parameters": [
+            {
+              "Name": "faceId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "RemoveUnused",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Array"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "ResetNormal",
+          "Parameters": [
+            {
+              "Name": "normalId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "SetColor",
+          "Parameters": [
+            {
+              "Name": "colorId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            },
+            {
+              "Name": "color",
+              "Type": {
+                "Category": "DataType",
+                "Name": "Color3"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "SetColorAlpha",
+          "Parameters": [
+            {
+              "Name": "colorId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            },
+            {
+              "Name": "alpha",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "float"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "SetFaceColors",
+          "Parameters": [
+            {
+              "Name": "faceId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            },
+            {
+              "Name": "ids",
+              "Type": {
+                "Category": "Group",
+                "Name": "Array"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "None",
+          "Tags": [
+            "CustomLuaState"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "SetFaceNormals",
+          "Parameters": [
+            {
+              "Name": "faceId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            },
+            {
+              "Name": "ids",
+              "Type": {
+                "Category": "Group",
+                "Name": "Array"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "None",
+          "Tags": [
+            "CustomLuaState"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "SetFaceUVs",
+          "Parameters": [
+            {
+              "Name": "faceId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            },
+            {
+              "Name": "ids",
+              "Type": {
+                "Category": "Group",
+                "Name": "Array"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "None",
+          "Tags": [
+            "CustomLuaState"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "SetFaceVertices",
+          "Parameters": [
+            {
+              "Name": "faceId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            },
+            {
+              "Name": "ids",
+              "Type": {
+                "Category": "Group",
+                "Name": "Array"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "None",
+          "Tags": [
+            "CustomLuaState"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "SetNormal",
+          "Parameters": [
+            {
+              "Name": "normalId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            },
+            {
+              "Name": "normal",
+              "Type": {
+                "Category": "DataType",
+                "Name": "Vector3"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "SetPosition",
+          "Parameters": [
+            {
+              "Name": "vertexId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            },
+            {
+              "Name": "p",
+              "Type": {
+                "Category": "DataType",
+                "Name": "Vector3"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "SetUV",
+          "Parameters": [
+            {
+              "Name": "uvId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            },
+            {
+              "Name": "uv",
+              "Type": {
+                "Category": "DataType",
+                "Name": "Vector2"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "Triangulate",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "CreateMeshPartAsync",
+          "Parameters": [
+            {
+              "Name": "initialSize",
+              "Type": {
+                "Category": "DataType",
+                "Name": "Vector3"
+              }
+            },
+            {
+              "Default": "nil",
+              "Name": "options",
+              "Type": {
+                "Category": "Group",
+                "Name": "Dictionary"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Class",
+            "Name": "MeshPart"
+          },
+          "Security": "None",
+          "Tags": [
+            "Yields"
+          ],
+          "ThreadSafety": "Unsafe"
+        }
+      ],
+      "MemoryCategory": "Instances",
+      "Name": "EditableMesh",
+      "Superclass": "Object"
+    },
+    {
+      "Members": [
+        {
           "Category": "Behavior",
           "MemberType": "Property",
           "Name": "Archivable",
@@ -616,7 +1939,7 @@
           "Parameters": [],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
           },
           "Security": "None",
           "ThreadSafety": "Safe"
@@ -889,7 +2212,7 @@
           "Parameters": [],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
           },
           "Security": "None",
           "Tags": [
@@ -964,7 +2287,7 @@
           "Parameters": [],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
           },
           "Security": "None",
           "Tags": [
@@ -2909,7 +4232,7 @@
           "Parameters": [],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
           },
           "Security": "None",
           "ThreadSafety": "Unsafe"
@@ -4943,7 +6266,7 @@
           "Parameters": [],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
           },
           "Security": "RobloxScriptSecurity",
           "ThreadSafety": "Unsafe"
@@ -6367,10 +7690,18 @@
         {
           "MemberType": "Function",
           "Name": "CreateEditableImage",
-          "Parameters": [],
+          "Parameters": [
+            {
+              "Name": "editableImageOptions",
+              "Type": {
+                "Category": "Group",
+                "Name": "Dictionary?"
+              }
+            }
+          ],
           "ReturnType": {
-            "Category": "Class",
-            "Name": "EditableImage"
+            "Category": "DataType",
+            "Name": "Object"
           },
           "Security": "None",
           "ThreadSafety": "Unsafe"
@@ -6378,10 +7709,18 @@
         {
           "MemberType": "Function",
           "Name": "CreateEditableMesh",
-          "Parameters": [],
+          "Parameters": [
+            {
+              "Name": "editableMeshOptions",
+              "Type": {
+                "Category": "Group",
+                "Name": "Dictionary?"
+              }
+            }
+          ],
           "ReturnType": {
-            "Category": "Class",
-            "Name": "EditableMesh"
+            "Category": "DataType",
+            "Name": "Object"
           },
           "Security": "None",
           "ThreadSafety": "Unsafe"
@@ -6445,7 +7784,7 @@
         },
         {
           "MemberType": "Function",
-          "Name": "CreateEditableImageAsync",
+          "Name": "CheckTextureAlphaAsync",
           "Parameters": [
             {
               "Name": "textureId",
@@ -6456,8 +7795,37 @@
             }
           ],
           "ReturnType": {
-            "Category": "Class",
-            "Name": "EditableImage"
+            "Category": "Primitive",
+            "Name": "bool"
+          },
+          "Security": "RobloxScriptSecurity",
+          "Tags": [
+            "Yields"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "CreateEditableImageAsync",
+          "Parameters": [
+            {
+              "Name": "content",
+              "Type": {
+                "Category": "DataType",
+                "Name": "Content"
+              }
+            },
+            {
+              "Name": "editableImageOptions",
+              "Type": {
+                "Category": "Group",
+                "Name": "Dictionary?"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "DataType",
+            "Name": "Object"
           },
           "Security": "None",
           "Tags": [
@@ -6470,16 +7838,23 @@
           "Name": "CreateEditableMeshAsync",
           "Parameters": [
             {
-              "Name": "meshId",
+              "Name": "content",
               "Type": {
                 "Category": "DataType",
-                "Name": "ContentId"
+                "Name": "Content"
+              }
+            },
+            {
+              "Name": "editableMeshOptions",
+              "Type": {
+                "Category": "Group",
+                "Name": "Dictionary?"
               }
             }
           ],
           "ReturnType": {
-            "Category": "Class",
-            "Name": "EditableMesh"
+            "Category": "DataType",
+            "Name": "Object"
           },
           "Security": "None",
           "Tags": [
@@ -6500,8 +7875,8 @@
             }
           ],
           "ReturnType": {
-            "Category": "Class",
-            "Name": "EditableMesh"
+            "Category": "DataType",
+            "Name": "Object"
           },
           "Security": "None",
           "Tags": [
@@ -6522,8 +7897,8 @@
             }
           ],
           "ReturnType": {
-            "Category": "Class",
-            "Name": "EditableMesh"
+            "Category": "DataType",
+            "Name": "Object"
           },
           "Security": "RobloxScriptSecurity",
           "Tags": [
@@ -7458,7 +8833,7 @@
           "Parameters": [],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
           },
           "Security": "None",
           "ThreadSafety": "Unsafe"
@@ -7722,7 +9097,7 @@
           ],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
           },
           "Security": "None",
           "ThreadSafety": "Unsafe"
@@ -7860,7 +9235,7 @@
           ],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
           },
           "Security": "None",
           "ThreadSafety": "Unsafe"
@@ -8027,7 +9402,7 @@
           ],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
           },
           "Security": "None",
           "ThreadSafety": "Unsafe"
@@ -8186,7 +9561,7 @@
           ],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
           },
           "Security": "None",
           "ThreadSafety": "Unsafe"
@@ -8268,7 +9643,7 @@
           ],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
           },
           "Security": "None",
           "ThreadSafety": "Unsafe"
@@ -8343,7 +9718,7 @@
           ],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
           },
           "Security": "None",
           "ThreadSafety": "Unsafe"
@@ -8487,7 +9862,7 @@
           ],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
           },
           "Security": "None",
           "ThreadSafety": "Unsafe"
@@ -8499,6 +9874,29 @@
     },
     {
       "Members": [
+        {
+          "Capabilities": {
+            "Read": [
+              "Audio"
+            ]
+          },
+          "Category": "Emission",
+          "MemberType": "Property",
+          "Name": "AngleAttenuation",
+          "Security": {
+            "Read": "RobloxSecurity",
+            "Write": "RobloxSecurity"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "DataType",
+            "Name": "BinaryString"
+          }
+        },
         {
           "Capabilities": {
             "Read": [
@@ -8550,6 +9948,23 @@
             "Audio"
           ],
           "MemberType": "Function",
+          "Name": "GetAngleAttenuation",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Dictionary"
+          },
+          "Security": "None",
+          "Tags": [
+            "CustomLuaState"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Audio"
+          ],
+          "MemberType": "Function",
           "Name": "GetAudibilityFor",
           "Parameters": [
             {
@@ -8584,7 +9999,7 @@
           ],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
           },
           "Security": "None",
           "ThreadSafety": "Unsafe"
@@ -8615,9 +10030,34 @@
           "Parameters": [],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
           },
           "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Audio"
+          ],
+          "MemberType": "Function",
+          "Name": "SetAngleAttenuation",
+          "Parameters": [
+            {
+              "Name": "curve",
+              "Type": {
+                "Category": "Group",
+                "Name": "Dictionary"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "None",
+          "Tags": [
+            "CustomLuaState"
+          ],
           "ThreadSafety": "Unsafe"
         },
         {
@@ -8810,7 +10250,7 @@
           ],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
           },
           "Security": "None",
           "ThreadSafety": "Unsafe"
@@ -8885,7 +10325,7 @@
           ],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
           },
           "Security": "None",
           "ThreadSafety": "Unsafe"
@@ -9055,7 +10495,7 @@
           ],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
           },
           "Security": "None",
           "ThreadSafety": "Unsafe"
@@ -9198,7 +10638,7 @@
           ],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
           },
           "Security": "None",
           "ThreadSafety": "Unsafe"
@@ -9454,7 +10894,7 @@
           ],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
           },
           "Security": "None",
           "ThreadSafety": "Unsafe"
@@ -9466,6 +10906,29 @@
     },
     {
       "Members": [
+        {
+          "Capabilities": {
+            "Read": [
+              "Audio"
+            ]
+          },
+          "Category": "Listening",
+          "MemberType": "Property",
+          "Name": "AngleAttenuation",
+          "Security": {
+            "Read": "RobloxSecurity",
+            "Write": "RobloxSecurity"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "DataType",
+            "Name": "BinaryString"
+          }
+        },
         {
           "Capabilities": {
             "Read": [
@@ -9517,6 +10980,23 @@
             "Audio"
           ],
           "MemberType": "Function",
+          "Name": "GetAngleAttenuation",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Dictionary"
+          },
+          "Security": "None",
+          "Tags": [
+            "CustomLuaState"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Audio"
+          ],
+          "MemberType": "Function",
           "Name": "GetAudibilityOf",
           "Parameters": [
             {
@@ -9551,7 +11031,7 @@
           ],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
           },
           "Security": "None",
           "ThreadSafety": "Unsafe"
@@ -9582,9 +11062,34 @@
           "Parameters": [],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
           },
           "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Audio"
+          ],
+          "MemberType": "Function",
+          "Name": "SetAngleAttenuation",
+          "Parameters": [
+            {
+              "Name": "curve",
+              "Type": {
+                "Category": "Group",
+                "Name": "Dictionary"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "None",
+          "Tags": [
+            "CustomLuaState"
+          ],
           "ThreadSafety": "Unsafe"
         },
         {
@@ -9682,7 +11187,7 @@
           ],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
           },
           "Security": "None",
           "ThreadSafety": "Unsafe"
@@ -9972,7 +11477,7 @@
           ],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
           },
           "Security": "None",
           "ThreadSafety": "Unsafe"
@@ -10003,6 +11508,38 @@
             "Name": "null"
           },
           "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Audio"
+          ],
+          "MemberType": "Function",
+          "Name": "GetWaveformAsync",
+          "Parameters": [
+            {
+              "Name": "timeRange",
+              "Type": {
+                "Category": "DataType",
+                "Name": "NumberRange"
+              }
+            },
+            {
+              "Name": "samples",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Array"
+          },
+          "Security": "None",
+          "Tags": [
+            "Yields"
+          ],
           "ThreadSafety": "Unsafe"
         },
         {
@@ -10348,7 +11885,7 @@
           ],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
           },
           "Security": "None",
           "ThreadSafety": "Unsafe"
@@ -10744,6 +12281,25 @@
       "Members": [
         {
           "MemberType": "Function",
+          "Name": "DeserializeAvatarModel",
+          "Parameters": [
+            {
+              "Name": "serializedModel",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Class",
+            "Name": "Instance"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
           "Name": "GetValidationRules",
           "Parameters": [],
           "ReturnType": {
@@ -11033,8 +12589,8 @@
             }
           ],
           "ReturnType": {
-            "Category": "Class",
-            "Name": "EditableImage"
+            "Category": "DataType",
+            "Name": "Object"
           },
           "Security": "None",
           "Tags": [
@@ -14238,7 +15794,7 @@
           ],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
           },
           "Security": "None",
           "ThreadSafety": "Unsafe"
@@ -14267,7 +15823,7 @@
           ],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
           },
           "Security": "RobloxScriptSecurity",
           "ThreadSafety": "Unsafe"
@@ -15215,6 +16771,32 @@
           },
           "Category": "Appearance",
           "MemberType": "Property",
+          "Name": "CageMeshContent",
+          "Security": {
+            "Read": "None",
+            "Write": "PluginSecurity"
+          },
+          "Serialization": {
+            "CanLoad": false,
+            "CanSave": false
+          },
+          "Tags": [
+            "Hidden"
+          ],
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "DataType",
+            "Name": "Content"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "Avatar"
+            ]
+          },
+          "Category": "Appearance",
+          "MemberType": "Property",
           "Name": "CageMeshId",
           "Security": {
             "Read": "None",
@@ -15512,11 +17094,33 @@
             "Avatar"
           ],
           "MemberType": "Function",
+          "Name": "SetCageMeshContent",
+          "Parameters": [
+            {
+              "Name": "content",
+              "Type": {
+                "Category": "DataType",
+                "Name": "Content"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Avatar"
+          ],
+          "MemberType": "Function",
           "Name": "CreateEditableMeshAsync",
           "Parameters": [],
           "ReturnType": {
-            "Category": "Class",
-            "Name": "EditableMesh"
+            "Category": "DataType",
+            "Name": "Object"
           },
           "Security": "None",
           "Tags": [
@@ -15726,6 +17330,32 @@
           "ValueType": {
             "Category": "Primitive",
             "Name": "float"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "Avatar"
+            ]
+          },
+          "Category": "Appearance",
+          "MemberType": "Property",
+          "Name": "ReferenceMeshContent",
+          "Security": {
+            "Read": "None",
+            "Write": "PluginSecurity"
+          },
+          "Serialization": {
+            "CanLoad": false,
+            "CanSave": false
+          },
+          "Tags": [
+            "Hidden"
+          ],
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "DataType",
+            "Name": "Content"
           }
         },
         {
@@ -18639,7 +20269,7 @@
               "Name": "ignoreList",
               "Type": {
                 "Category": "DataType",
-                "Name": "Objects"
+                "Name": "Instances"
               }
             }
           ],
@@ -18682,13 +20312,13 @@
               "Name": "ignoreList",
               "Type": {
                 "Category": "DataType",
-                "Name": "Objects"
+                "Name": "Instances"
               }
             }
           ],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
           },
           "Security": "None",
           "ThreadSafety": "Unsafe"
@@ -22169,7 +23799,7 @@
           "Parameters": [],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
           },
           "Security": "RobloxScriptSecurity",
           "ThreadSafety": "Unsafe"
@@ -22390,7 +24020,7 @@
           ],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
           },
           "Security": "None",
           "Tags": [
@@ -22459,7 +24089,7 @@
           ],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
           },
           "Security": "None",
           "ThreadSafety": "Safe"
@@ -29923,7 +31553,7 @@
           "Parameters": [],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
           },
           "Security": "None",
           "ThreadSafety": "Unsafe"
@@ -30159,1191 +31789,6 @@
       "Tags": [
         "Deprecated"
       ]
-    },
-    {
-      "Members": [
-        {
-          "Category": "Data",
-          "MemberType": "Property",
-          "Name": "SkinningEnabled",
-          "Security": {
-            "Read": "None",
-            "Write": "None"
-          },
-          "Serialization": {
-            "CanLoad": true,
-            "CanSave": true
-          },
-          "ThreadSafety": "ReadSafe",
-          "ValueType": {
-            "Category": "Primitive",
-            "Name": "bool"
-          }
-        },
-        {
-          "MemberType": "Function",
-          "Name": "AddColor",
-          "Parameters": [
-            {
-              "Name": "color",
-              "Type": {
-                "Category": "DataType",
-                "Name": "Color3"
-              }
-            },
-            {
-              "Name": "alpha",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "float"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Primitive",
-            "Name": "int64"
-          },
-          "Security": "None",
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "AddNormal",
-          "Parameters": [
-            {
-              "Name": "normal",
-              "Type": {
-                "Category": "DataType",
-                "Name": "Vector3?"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Primitive",
-            "Name": "int64"
-          },
-          "Security": "None",
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "AddTriangle",
-          "Parameters": [
-            {
-              "Name": "vertexId0",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "int64"
-              }
-            },
-            {
-              "Name": "vertexId1",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "int64"
-              }
-            },
-            {
-              "Name": "vertexId2",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "int64"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Primitive",
-            "Name": "int64"
-          },
-          "Security": "None",
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "AddUV",
-          "Parameters": [
-            {
-              "Name": "uv",
-              "Type": {
-                "Category": "DataType",
-                "Name": "Vector2"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Primitive",
-            "Name": "int64"
-          },
-          "Security": "None",
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "AddVertex",
-          "Parameters": [
-            {
-              "Name": "p",
-              "Type": {
-                "Category": "DataType",
-                "Name": "Vector3"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Primitive",
-            "Name": "int64"
-          },
-          "Security": "None",
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "FindClosestPointOnSurface",
-          "Parameters": [
-            {
-              "Name": "point",
-              "Type": {
-                "Category": "DataType",
-                "Name": "Vector3"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Group",
-            "Name": "Tuple"
-          },
-          "Security": "None",
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "FindClosestVertex",
-          "Parameters": [
-            {
-              "Name": "toThisPoint",
-              "Type": {
-                "Category": "DataType",
-                "Name": "Vector3"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Primitive",
-            "Name": "int64"
-          },
-          "Security": "None",
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "FindVerticesWithinSphere",
-          "Parameters": [
-            {
-              "Name": "center",
-              "Type": {
-                "Category": "DataType",
-                "Name": "Vector3"
-              }
-            },
-            {
-              "Name": "radius",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "float"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Group",
-            "Name": "Array"
-          },
-          "Security": "None",
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "GetAdjacentFaces",
-          "Parameters": [
-            {
-              "Name": "faceId",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "int64"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Group",
-            "Name": "Array"
-          },
-          "Security": "None",
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "GetAdjacentTriangles",
-          "Parameters": [
-            {
-              "Name": "triangleId",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "int64"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Group",
-            "Name": "Array"
-          },
-          "Security": "None",
-          "Tags": [
-            "Deprecated"
-          ],
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "GetAdjacentVertices",
-          "Parameters": [
-            {
-              "Name": "vertexId",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "int64"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Group",
-            "Name": "Array"
-          },
-          "Security": "None",
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "GetColor",
-          "Parameters": [
-            {
-              "Name": "colorId",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "int64"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "DataType",
-            "Name": "Color3?"
-          },
-          "Security": "None",
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "GetColorAlpha",
-          "Parameters": [
-            {
-              "Name": "colorId",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "int64"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Primitive",
-            "Name": "float?"
-          },
-          "Security": "None",
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "GetColors",
-          "Parameters": [],
-          "ReturnType": {
-            "Category": "Group",
-            "Name": "Array"
-          },
-          "Security": "None",
-          "Tags": [
-            "CustomLuaState"
-          ],
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "GetFaceColors",
-          "Parameters": [
-            {
-              "Name": "faceId",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "int64"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Group",
-            "Name": "Array"
-          },
-          "Security": "None",
-          "Tags": [
-            "CustomLuaState"
-          ],
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "GetFaceNormals",
-          "Parameters": [
-            {
-              "Name": "faceId",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "int64"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Group",
-            "Name": "Array"
-          },
-          "Security": "None",
-          "Tags": [
-            "CustomLuaState"
-          ],
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "GetFaceUVs",
-          "Parameters": [
-            {
-              "Name": "faceId",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "int64"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Group",
-            "Name": "Array"
-          },
-          "Security": "None",
-          "Tags": [
-            "CustomLuaState"
-          ],
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "GetFaceVertices",
-          "Parameters": [
-            {
-              "Name": "faceId",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "int64"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Group",
-            "Name": "Array"
-          },
-          "Security": "None",
-          "Tags": [
-            "CustomLuaState"
-          ],
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "GetFaces",
-          "Parameters": [],
-          "ReturnType": {
-            "Category": "Group",
-            "Name": "Array"
-          },
-          "Security": "None",
-          "Tags": [
-            "CustomLuaState"
-          ],
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "GetFacesWithAttribute",
-          "Parameters": [
-            {
-              "Name": "id",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "int64"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Group",
-            "Name": "Array"
-          },
-          "Security": "None",
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "GetNormal",
-          "Parameters": [
-            {
-              "Name": "normalId",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "int64"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "DataType",
-            "Name": "Vector3?"
-          },
-          "Security": "None",
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "GetNormals",
-          "Parameters": [],
-          "ReturnType": {
-            "Category": "Group",
-            "Name": "Array"
-          },
-          "Security": "None",
-          "Tags": [
-            "CustomLuaState"
-          ],
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "GetPosition",
-          "Parameters": [
-            {
-              "Name": "vertexId",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "int64"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "DataType",
-            "Name": "Vector3"
-          },
-          "Security": "None",
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "GetTriangleVertices",
-          "Parameters": [
-            {
-              "Name": "triangleId",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "int64"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Group",
-            "Name": "Tuple"
-          },
-          "Security": "None",
-          "Tags": [
-            "Deprecated"
-          ],
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "GetTriangles",
-          "Parameters": [],
-          "ReturnType": {
-            "Category": "Group",
-            "Name": "Array"
-          },
-          "Security": "None",
-          "Tags": [
-            "Deprecated"
-          ],
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "GetUV",
-          "Parameters": [
-            {
-              "Name": "uvId",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "int64"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "DataType",
-            "Name": "Vector2?"
-          },
-          "Security": "None",
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "GetUVs",
-          "Parameters": [],
-          "ReturnType": {
-            "Category": "Group",
-            "Name": "Array"
-          },
-          "Security": "None",
-          "Tags": [
-            "CustomLuaState"
-          ],
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "GetVertexColor",
-          "Parameters": [
-            {
-              "Name": "vertexId",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "int64"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "DataType",
-            "Name": "Color3"
-          },
-          "Security": "None",
-          "Tags": [
-            "Deprecated"
-          ],
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "GetVertexColorAlpha",
-          "Parameters": [
-            {
-              "Name": "vertexId",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "int64"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Primitive",
-            "Name": "float"
-          },
-          "Security": "None",
-          "Tags": [
-            "Deprecated"
-          ],
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "GetVertexNormal",
-          "Parameters": [
-            {
-              "Name": "vertexId",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "int64"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "DataType",
-            "Name": "Vector3"
-          },
-          "Security": "None",
-          "Tags": [
-            "Deprecated"
-          ],
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "GetVertices",
-          "Parameters": [],
-          "ReturnType": {
-            "Category": "Group",
-            "Name": "Array"
-          },
-          "Security": "None",
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "GetVerticesWithAttribute",
-          "Parameters": [
-            {
-              "Name": "id",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "int64"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Group",
-            "Name": "Array"
-          },
-          "Security": "None",
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "IdDebugString",
-          "Parameters": [
-            {
-              "Name": "id",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "int64"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Primitive",
-            "Name": "string"
-          },
-          "Security": "None",
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "MergeVertices",
-          "Parameters": [
-            {
-              "Name": "mergeTolerance",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "float"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Group",
-            "Name": "Map"
-          },
-          "Security": "None",
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "RaycastLocal",
-          "Parameters": [
-            {
-              "Name": "origin",
-              "Type": {
-                "Category": "DataType",
-                "Name": "Vector3"
-              }
-            },
-            {
-              "Name": "direction",
-              "Type": {
-                "Category": "DataType",
-                "Name": "Vector3"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Group",
-            "Name": "Tuple"
-          },
-          "Security": "None",
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "RemoveFace",
-          "Parameters": [
-            {
-              "Name": "faceId",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "int64"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Primitive",
-            "Name": "null"
-          },
-          "Security": "None",
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "RemoveTriangle",
-          "Parameters": [
-            {
-              "Name": "triangleId",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "int64"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Primitive",
-            "Name": "null"
-          },
-          "Security": "None",
-          "Tags": [
-            "Deprecated"
-          ],
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "RemoveUnused",
-          "Parameters": [],
-          "ReturnType": {
-            "Category": "Group",
-            "Name": "Array"
-          },
-          "Security": "None",
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "RemoveVertex",
-          "Parameters": [
-            {
-              "Name": "vertexId",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "int64"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Primitive",
-            "Name": "null"
-          },
-          "Security": "None",
-          "Tags": [
-            "Deprecated"
-          ],
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "ResetNormal",
-          "Parameters": [
-            {
-              "Name": "normalId",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "int64"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Primitive",
-            "Name": "null"
-          },
-          "Security": "None",
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "SetColor",
-          "Parameters": [
-            {
-              "Name": "colorId",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "int64"
-              }
-            },
-            {
-              "Name": "color",
-              "Type": {
-                "Category": "DataType",
-                "Name": "Color3"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Primitive",
-            "Name": "null"
-          },
-          "Security": "None",
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "SetColorAlpha",
-          "Parameters": [
-            {
-              "Name": "colorId",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "int64"
-              }
-            },
-            {
-              "Name": "alpha",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "float"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Primitive",
-            "Name": "null"
-          },
-          "Security": "None",
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "SetFaceColors",
-          "Parameters": [
-            {
-              "Name": "faceId",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "int64"
-              }
-            },
-            {
-              "Name": "ids",
-              "Type": {
-                "Category": "Group",
-                "Name": "Array"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Primitive",
-            "Name": "null"
-          },
-          "Security": "None",
-          "Tags": [
-            "CustomLuaState"
-          ],
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "SetFaceNormals",
-          "Parameters": [
-            {
-              "Name": "faceId",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "int64"
-              }
-            },
-            {
-              "Name": "ids",
-              "Type": {
-                "Category": "Group",
-                "Name": "Array"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Primitive",
-            "Name": "null"
-          },
-          "Security": "None",
-          "Tags": [
-            "CustomLuaState"
-          ],
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "SetFaceUVs",
-          "Parameters": [
-            {
-              "Name": "faceId",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "int64"
-              }
-            },
-            {
-              "Name": "ids",
-              "Type": {
-                "Category": "Group",
-                "Name": "Array"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Primitive",
-            "Name": "null"
-          },
-          "Security": "None",
-          "Tags": [
-            "CustomLuaState"
-          ],
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "SetFaceVertices",
-          "Parameters": [
-            {
-              "Name": "faceId",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "int64"
-              }
-            },
-            {
-              "Name": "ids",
-              "Type": {
-                "Category": "Group",
-                "Name": "Array"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Primitive",
-            "Name": "null"
-          },
-          "Security": "None",
-          "Tags": [
-            "CustomLuaState"
-          ],
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "SetNormal",
-          "Parameters": [
-            {
-              "Name": "normalId",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "int64"
-              }
-            },
-            {
-              "Name": "normal",
-              "Type": {
-                "Category": "DataType",
-                "Name": "Vector3"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Primitive",
-            "Name": "null"
-          },
-          "Security": "None",
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "SetPosition",
-          "Parameters": [
-            {
-              "Name": "vertexId",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "int64"
-              }
-            },
-            {
-              "Name": "p",
-              "Type": {
-                "Category": "DataType",
-                "Name": "Vector3"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Primitive",
-            "Name": "null"
-          },
-          "Security": "None",
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "SetUV",
-          "Parameters": [
-            {
-              "Name": "uvId",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "int64"
-              }
-            },
-            {
-              "Name": "uv",
-              "Type": {
-                "Category": "DataType",
-                "Name": "Vector2"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Primitive",
-            "Name": "null"
-          },
-          "Security": "None",
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "SetVertexColor",
-          "Parameters": [
-            {
-              "Name": "vertexId",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "int64"
-              }
-            },
-            {
-              "Name": "color",
-              "Type": {
-                "Category": "DataType",
-                "Name": "Color3"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Primitive",
-            "Name": "null"
-          },
-          "Security": "None",
-          "Tags": [
-            "Deprecated"
-          ],
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "SetVertexColorAlpha",
-          "Parameters": [
-            {
-              "Name": "vertexId",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "int64"
-              }
-            },
-            {
-              "Name": "alpha",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "float"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Primitive",
-            "Name": "null"
-          },
-          "Security": "None",
-          "Tags": [
-            "Deprecated"
-          ],
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "SetVertexNormal",
-          "Parameters": [
-            {
-              "Name": "vertexId",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "int64"
-              }
-            },
-            {
-              "Name": "vnormal",
-              "Type": {
-                "Category": "DataType",
-                "Name": "Vector3"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Primitive",
-            "Name": "null"
-          },
-          "Security": "None",
-          "Tags": [
-            "Deprecated"
-          ],
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "Triangulate",
-          "Parameters": [],
-          "ReturnType": {
-            "Category": "Primitive",
-            "Name": "null"
-          },
-          "Security": "None",
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "CreateMeshPartAsync",
-          "Parameters": [
-            {
-              "Default": "nil",
-              "Name": "options",
-              "Type": {
-                "Category": "Group",
-                "Name": "Dictionary"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Class",
-            "Name": "MeshPart"
-          },
-          "Security": "None",
-          "Tags": [
-            "Yields"
-          ],
-          "ThreadSafety": "Unsafe"
-        }
-      ],
-      "MemoryCategory": "Instances",
-      "Name": "EditableMesh",
-      "Superclass": "DataModelMesh"
-    },
-    {
-      "Members": [],
-      "MemoryCategory": "Instances",
-      "Name": "RobloxEditableMesh",
-      "Superclass": "EditableMesh"
     },
     {
       "Members": [
@@ -33796,7 +34241,7 @@
           "Parameters": [],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
           },
           "Security": "None",
           "ThreadSafety": "Unsafe"
@@ -34653,7 +35098,7 @@
           "Parameters": [],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
           },
           "Security": "None",
           "ThreadSafety": "Unsafe"
@@ -34855,7 +35300,7 @@
               "Name": "scripts",
               "Type": {
                 "Category": "DataType",
-                "Name": "Objects"
+                "Name": "Instances"
               }
             }
           ],
@@ -34899,7 +35344,7 @@
           ],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
           },
           "Security": "RobloxScriptSecurity",
           "ThreadSafety": "Unsafe"
@@ -34912,7 +35357,7 @@
               "Name": "scripts",
               "Type": {
                 "Category": "DataType",
-                "Name": "Objects"
+                "Name": "Instances"
               }
             }
           ],
@@ -34931,7 +35376,7 @@
               "Name": "scripts",
               "Type": {
                 "Category": "DataType",
-                "Name": "Objects"
+                "Name": "Instances"
               }
             }
           ],
@@ -34950,7 +35395,7 @@
               "Name": "scripts",
               "Type": {
                 "Category": "DataType",
-                "Name": "Objects"
+                "Name": "Instances"
               }
             }
           ],
@@ -34976,7 +35421,7 @@
               "Name": "scripts",
               "Type": {
                 "Category": "DataType",
-                "Name": "Objects"
+                "Name": "Instances"
               }
             }
           ],
@@ -34995,7 +35440,7 @@
               "Name": "scripts",
               "Type": {
                 "Category": "DataType",
-                "Name": "Objects"
+                "Name": "Instances"
               }
             }
           ],
@@ -35015,7 +35460,7 @@
           "Parameters": [],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
           },
           "Security": "RobloxScriptSecurity",
           "Tags": [
@@ -35031,7 +35476,7 @@
               "Name": "scripts",
               "Type": {
                 "Category": "DataType",
-                "Name": "Objects"
+                "Name": "Instances"
               }
             }
           ],
@@ -35203,7 +35648,7 @@
               "Name": "parts",
               "Type": {
                 "Category": "DataType",
-                "Name": "Objects"
+                "Name": "Instances"
               }
             }
           ],
@@ -35656,518 +36101,6 @@
         "Service",
         "NotReplicated"
       ]
-    },
-    {
-      "Members": [
-        {
-          "Category": "Data",
-          "MemberType": "Property",
-          "Name": "Size",
-          "Security": {
-            "Read": "None",
-            "Write": "None"
-          },
-          "Serialization": {
-            "CanLoad": true,
-            "CanSave": true
-          },
-          "ThreadSafety": "ReadSafe",
-          "ValueType": {
-            "Category": "DataType",
-            "Name": "Vector2"
-          }
-        },
-        {
-          "MemberType": "Function",
-          "Name": "Copy",
-          "Parameters": [
-            {
-              "Name": "min",
-              "Type": {
-                "Category": "DataType",
-                "Name": "Vector2"
-              }
-            },
-            {
-              "Name": "max",
-              "Type": {
-                "Category": "DataType",
-                "Name": "Vector2"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Class",
-            "Name": "EditableImage"
-          },
-          "Security": "None",
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "Crop",
-          "Parameters": [
-            {
-              "Name": "min",
-              "Type": {
-                "Category": "DataType",
-                "Name": "Vector2"
-              }
-            },
-            {
-              "Name": "max",
-              "Type": {
-                "Category": "DataType",
-                "Name": "Vector2"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Primitive",
-            "Name": "null"
-          },
-          "Security": "None",
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "DrawCircle",
-          "Parameters": [
-            {
-              "Name": "center",
-              "Type": {
-                "Category": "DataType",
-                "Name": "Vector2"
-              }
-            },
-            {
-              "Name": "radius",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "int"
-              }
-            },
-            {
-              "Name": "color",
-              "Type": {
-                "Category": "DataType",
-                "Name": "Color3"
-              }
-            },
-            {
-              "Name": "transparency",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "float"
-              }
-            },
-            {
-              "Name": "combineType",
-              "Type": {
-                "Category": "Enum",
-                "Name": "ImageCombineType"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Primitive",
-            "Name": "null"
-          },
-          "Security": "None",
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "DrawImage",
-          "Parameters": [
-            {
-              "Name": "position",
-              "Type": {
-                "Category": "DataType",
-                "Name": "Vector2"
-              }
-            },
-            {
-              "Name": "image",
-              "Type": {
-                "Category": "Class",
-                "Name": "EditableImage"
-              }
-            },
-            {
-              "Name": "combineType",
-              "Type": {
-                "Category": "Enum",
-                "Name": "ImageCombineType"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Primitive",
-            "Name": "null"
-          },
-          "Security": "None",
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "DrawLine",
-          "Parameters": [
-            {
-              "Name": "p1",
-              "Type": {
-                "Category": "DataType",
-                "Name": "Vector2"
-              }
-            },
-            {
-              "Name": "p2",
-              "Type": {
-                "Category": "DataType",
-                "Name": "Vector2"
-              }
-            },
-            {
-              "Name": "color",
-              "Type": {
-                "Category": "DataType",
-                "Name": "Color3"
-              }
-            },
-            {
-              "Name": "transparency",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "float"
-              }
-            },
-            {
-              "Name": "combineType",
-              "Type": {
-                "Category": "Enum",
-                "Name": "ImageCombineType"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Primitive",
-            "Name": "null"
-          },
-          "Security": "None",
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "DrawProjectionImage",
-          "Parameters": [
-            {
-              "Name": "mesh",
-              "Type": {
-                "Category": "Class",
-                "Name": "EditableMesh"
-              }
-            },
-            {
-              "Name": "projection",
-              "Type": {
-                "Category": "Group",
-                "Name": "Dictionary"
-              }
-            },
-            {
-              "Name": "brushConfig",
-              "Type": {
-                "Category": "Group",
-                "Name": "Dictionary"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Primitive",
-            "Name": "null"
-          },
-          "Security": "None",
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "DrawRectangle",
-          "Parameters": [
-            {
-              "Name": "position",
-              "Type": {
-                "Category": "DataType",
-                "Name": "Vector2"
-              }
-            },
-            {
-              "Name": "size",
-              "Type": {
-                "Category": "DataType",
-                "Name": "Vector2"
-              }
-            },
-            {
-              "Name": "color",
-              "Type": {
-                "Category": "DataType",
-                "Name": "Color3"
-              }
-            },
-            {
-              "Name": "transparency",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "float"
-              }
-            },
-            {
-              "Name": "combineType",
-              "Type": {
-                "Category": "Enum",
-                "Name": "ImageCombineType"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Primitive",
-            "Name": "null"
-          },
-          "Security": "None",
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "DrawTriangle",
-          "Parameters": [
-            {
-              "Name": "p1",
-              "Type": {
-                "Category": "DataType",
-                "Name": "Vector2"
-              }
-            },
-            {
-              "Name": "p2",
-              "Type": {
-                "Category": "DataType",
-                "Name": "Vector2"
-              }
-            },
-            {
-              "Name": "p3",
-              "Type": {
-                "Category": "DataType",
-                "Name": "Vector2"
-              }
-            },
-            {
-              "Name": "color",
-              "Type": {
-                "Category": "DataType",
-                "Name": "Color3"
-              }
-            },
-            {
-              "Name": "transparency",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "float"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Primitive",
-            "Name": "null"
-          },
-          "Security": "RobloxScriptSecurity",
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "ReadPixels",
-          "Parameters": [
-            {
-              "Name": "position",
-              "Type": {
-                "Category": "DataType",
-                "Name": "Vector2"
-              }
-            },
-            {
-              "Name": "size",
-              "Type": {
-                "Category": "DataType",
-                "Name": "Vector2"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Group",
-            "Name": "Array"
-          },
-          "Security": "None",
-          "Tags": [
-            "CustomLuaState"
-          ],
-          "ThreadSafety": "Safe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "ReadPixelsBuffer",
-          "Parameters": [
-            {
-              "Name": "position",
-              "Type": {
-                "Category": "DataType",
-                "Name": "Vector2"
-              }
-            },
-            {
-              "Name": "size",
-              "Type": {
-                "Category": "DataType",
-                "Name": "Vector2"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "DataType",
-            "Name": "buffer"
-          },
-          "Security": "None",
-          "Tags": [
-            "CustomLuaState"
-          ],
-          "ThreadSafety": "Safe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "Resize",
-          "Parameters": [
-            {
-              "Name": "size",
-              "Type": {
-                "Category": "DataType",
-                "Name": "Vector2"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Primitive",
-            "Name": "null"
-          },
-          "Security": "None",
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "Rotate",
-          "Parameters": [
-            {
-              "Name": "degrees",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "float"
-              }
-            },
-            {
-              "Name": "changeSize",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "bool"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Primitive",
-            "Name": "null"
-          },
-          "Security": "None",
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "WritePixels",
-          "Parameters": [
-            {
-              "Name": "position",
-              "Type": {
-                "Category": "DataType",
-                "Name": "Vector2"
-              }
-            },
-            {
-              "Name": "size",
-              "Type": {
-                "Category": "DataType",
-                "Name": "Vector2"
-              }
-            },
-            {
-              "Name": "pixels",
-              "Type": {
-                "Category": "Group",
-                "Name": "Array"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Primitive",
-            "Name": "null"
-          },
-          "Security": "None",
-          "Tags": [
-            "CustomLuaState"
-          ],
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "WritePixelsBuffer",
-          "Parameters": [
-            {
-              "Name": "position",
-              "Type": {
-                "Category": "DataType",
-                "Name": "Vector2"
-              }
-            },
-            {
-              "Name": "size",
-              "Type": {
-                "Category": "DataType",
-                "Name": "Vector2"
-              }
-            },
-            {
-              "Name": "buffer",
-              "Type": {
-                "Category": "DataType",
-                "Name": "buffer"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Primitive",
-            "Name": "null"
-          },
-          "Security": "None",
-          "Tags": [
-            "CustomLuaState"
-          ],
-          "ThreadSafety": "Unsafe"
-        }
-      ],
-      "MemoryCategory": "Instances",
-      "Name": "EditableImage",
-      "Superclass": "Instance"
-    },
-    {
-      "Members": [],
-      "MemoryCategory": "Instances",
-      "Name": "RobloxEditableImage",
-      "Superclass": "EditableImage"
     },
     {
       "Members": [],
@@ -43976,8 +43909,7 @@
             "CanSave": false
           },
           "Tags": [
-            "Hidden",
-            "NotReplicated"
+            "Hidden"
           ],
           "ThreadSafety": "ReadSafe",
           "ValueType": {
@@ -45068,8 +45000,7 @@
             "CanSave": false
           },
           "Tags": [
-            "Hidden",
-            "NotReplicated"
+            "Hidden"
           ],
           "ThreadSafety": "ReadSafe",
           "ValueType": {
@@ -48322,7 +48253,7 @@
           ],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
           },
           "Security": "RobloxScriptSecurity",
           "ThreadSafety": "Unsafe"
@@ -51019,7 +50950,7 @@
               "Name": "ignoreDescendentsTable",
               "Type": {
                 "Category": "DataType",
-                "Name": "Objects"
+                "Name": "Instances"
               }
             }
           ],
@@ -53952,6 +53883,25 @@
             "Name": "null"
           },
           "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "SetKeys",
+          "Parameters": [
+            {
+              "Name": "keys",
+              "Type": {
+                "Category": "Group",
+                "Name": "Array"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "RobloxScriptSecurity",
           "ThreadSafety": "Unsafe"
         },
         {
@@ -59641,7 +59591,7 @@
           ],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
           },
           "Security": "RobloxScriptSecurity",
           "ThreadSafety": "Unsafe"
@@ -59926,7 +59876,7 @@
           ],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
           },
           "Security": "RobloxScriptSecurity",
           "Tags": [
@@ -59948,7 +59898,7 @@
           ],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
           },
           "Security": "RobloxScriptSecurity",
           "Tags": [
@@ -60834,7 +60784,7 @@
           "Parameters": [],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
           },
           "Security": "None",
           "ThreadSafety": "Unsafe"
@@ -60848,7 +60798,7 @@
           "Parameters": [],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
           },
           "Security": "None",
           "ThreadSafety": "Unsafe"
@@ -62551,7 +62501,7 @@
           "Parameters": [],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
           },
           "Security": "None",
           "ThreadSafety": "Unsafe"
@@ -66369,7 +66319,7 @@
           ],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
           },
           "Security": "RobloxScriptSecurity",
           "Tags": [
@@ -66385,7 +66335,7 @@
               "Name": "materialVaraints",
               "Type": {
                 "Category": "DataType",
-                "Name": "Objects"
+                "Name": "Instances"
               }
             }
           ],
@@ -70198,7 +70148,7 @@
               "Name": "instances",
               "Type": {
                 "Category": "DataType",
-                "Name": "Objects"
+                "Name": "Instances"
               }
             }
           ],
@@ -73286,7 +73236,7 @@
           ],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
           },
           "Security": "None",
           "ThreadSafety": "Safe"
@@ -73297,7 +73247,7 @@
           "Parameters": [],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
           },
           "Security": "None",
           "ThreadSafety": "Safe"
@@ -73341,7 +73291,7 @@
           "Parameters": [],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
           },
           "Security": "None",
           "ThreadSafety": "Unsafe"
@@ -73377,7 +73327,7 @@
           "Parameters": [],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
           },
           "Security": "None",
           "ThreadSafety": "Unsafe"
@@ -73592,7 +73542,7 @@
               "Name": "parts",
               "Type": {
                 "Category": "DataType",
-                "Name": "Objects"
+                "Name": "Instances"
               }
             },
             {
@@ -73633,7 +73583,7 @@
               "Name": "parts",
               "Type": {
                 "Category": "DataType",
-                "Name": "Objects"
+                "Name": "Instances"
               }
             },
             {
@@ -73674,7 +73624,7 @@
               "Name": "parts",
               "Type": {
                 "Category": "DataType",
-                "Name": "Objects"
+                "Name": "Instances"
               }
             },
             {
@@ -76144,8 +76094,7 @@
             "CanSave": false
           },
           "Tags": [
-            "Hidden",
-            "NotReplicated"
+            "Hidden"
           ],
           "ThreadSafety": "ReadSafe",
           "ValueType": {
@@ -76220,8 +76169,7 @@
             "CanSave": false
           },
           "Tags": [
-            "Hidden",
-            "NotReplicated"
+            "Hidden"
           ],
           "ThreadSafety": "ReadSafe",
           "ValueType": {
@@ -76893,7 +76841,7 @@
           "Parameters": [],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
           },
           "Security": "None",
           "ThreadSafety": "Unsafe"
@@ -77653,7 +77601,7 @@
               "Name": "partList",
               "Type": {
                 "Category": "DataType",
-                "Name": "Objects"
+                "Name": "Instances"
               }
             },
             {
@@ -77721,7 +77669,7 @@
               "Name": "partList",
               "Type": {
                 "Category": "DataType",
-                "Name": "Objects"
+                "Name": "Instances"
               }
             },
             {
@@ -77860,7 +77808,7 @@
               "Name": "ignoreDescendantsTable",
               "Type": {
                 "Category": "DataType",
-                "Name": "Objects"
+                "Name": "Instances"
               }
             },
             {
@@ -77905,7 +77853,7 @@
               "Name": "whitelistDescendantsTable",
               "Type": {
                 "Category": "DataType",
-                "Name": "Objects"
+                "Name": "Instances"
               }
             },
             {
@@ -77957,7 +77905,7 @@
           ],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
           },
           "Security": "None",
           "Tags": [
@@ -77980,7 +77928,7 @@
               "Name": "ignoreDescendantsTable",
               "Type": {
                 "Category": "DataType",
-                "Name": "Objects"
+                "Name": "Instances"
               }
             },
             {
@@ -77994,7 +77942,7 @@
           ],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
           },
           "Security": "None",
           "Tags": [
@@ -78017,7 +77965,7 @@
               "Name": "whitelistDescendantsTable",
               "Type": {
                 "Category": "DataType",
-                "Name": "Objects"
+                "Name": "Instances"
               }
             },
             {
@@ -78031,7 +77979,7 @@
           ],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
           },
           "Security": "None",
           "Tags": [
@@ -78068,7 +78016,7 @@
           ],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
           },
           "Security": "None",
           "ThreadSafety": "Safe"
@@ -78102,7 +78050,7 @@
           ],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
           },
           "Security": "None",
           "ThreadSafety": "Safe"
@@ -78129,7 +78077,7 @@
           ],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
           },
           "Security": "None",
           "ThreadSafety": "Safe"
@@ -78229,7 +78177,7 @@
               "Name": "ignoreDescendentsTable",
               "Type": {
                 "Category": "DataType",
-                "Name": "Objects"
+                "Name": "Instances"
               }
             }
           ],
@@ -78435,7 +78383,7 @@
               "Name": "parts",
               "Type": {
                 "Category": "DataType",
-                "Name": "Objects"
+                "Name": "Instances"
               }
             }
           ],
@@ -78522,7 +78470,7 @@
           ],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
           },
           "Security": "None",
           "Tags": [
@@ -79097,6 +79045,27 @@
         {
           "Category": "Behavior",
           "MemberType": "Property",
+          "Name": "SandboxedInstanceMode",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "Tags": [
+            "NotScriptable"
+          ],
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Enum",
+            "Name": "SandboxedInstanceMode"
+          }
+        },
+        {
+          "Category": "Behavior",
+          "MemberType": "Property",
           "Name": "SignalBehavior",
           "Security": {
             "Read": "None",
@@ -79268,7 +79237,7 @@
               "Name": "objects",
               "Type": {
                 "Category": "DataType",
-                "Name": "Objects"
+                "Name": "Instances"
               }
             }
           ],
@@ -79430,7 +79399,7 @@
               "Name": "objects",
               "Type": {
                 "Category": "DataType",
-                "Name": "Objects"
+                "Name": "Instances"
               }
             },
             {
@@ -79456,7 +79425,7 @@
               "Name": "objects",
               "Type": {
                 "Category": "DataType",
-                "Name": "Objects"
+                "Name": "Instances"
               }
             }
           ],
@@ -79546,7 +79515,7 @@
               "Name": "objects",
               "Type": {
                 "Category": "DataType",
-                "Name": "Objects"
+                "Name": "Instances"
               }
             }
           ],
@@ -79828,14 +79797,14 @@
               "Name": "cloneInstances",
               "Type": {
                 "Category": "DataType",
-                "Name": "Objects"
+                "Name": "Instances"
               }
             },
             {
               "Name": "originalInstances",
               "Type": {
                 "Category": "DataType",
-                "Name": "Objects"
+                "Name": "Instances"
               }
             }
           ],
@@ -79956,7 +79925,7 @@
               "Name": "instances",
               "Type": {
                 "Category": "DataType",
-                "Name": "Objects"
+                "Name": "Instances"
               }
             },
             {
@@ -79970,7 +79939,7 @@
               "Name": "cloneInstances",
               "Type": {
                 "Category": "DataType",
-                "Name": "Objects"
+                "Name": "Instances"
               }
             }
           ],
@@ -86435,7 +86404,7 @@
           "Parameters": [],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
           },
           "Security": "None",
           "ThreadSafety": "Safe"
@@ -86661,7 +86630,7 @@
           "Parameters": [],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
           },
           "Security": "None",
           "Tags": [
@@ -86697,7 +86666,7 @@
           "Parameters": [],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
           },
           "Security": "None",
           "Tags": [
@@ -87643,7 +87612,7 @@
               "Name": "objects",
               "Type": {
                 "Category": "DataType",
-                "Name": "Objects"
+                "Name": "Instances"
               }
             }
           ],
@@ -87710,13 +87679,13 @@
               "Name": "objects",
               "Type": {
                 "Category": "DataType",
-                "Name": "Objects"
+                "Name": "Instances"
               }
             }
           ],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
           },
           "Security": "PluginSecurity",
           "ThreadSafety": "Unsafe"
@@ -87929,13 +87898,13 @@
               "Name": "objects",
               "Type": {
                 "Category": "DataType",
-                "Name": "Objects"
+                "Name": "Instances"
               }
             }
           ],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
           },
           "Security": "PluginSecurity",
           "ThreadSafety": "Unsafe"
@@ -88060,7 +88029,7 @@
               "Name": "objects",
               "Type": {
                 "Category": "DataType",
-                "Name": "Objects"
+                "Name": "Instances"
               }
             }
           ],
@@ -88270,13 +88239,13 @@
               "Name": "instances",
               "Type": {
                 "Category": "DataType",
-                "Name": "Objects"
+                "Name": "Instances"
               }
             }
           ],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
           },
           "Security": "RobloxScriptSecurity",
           "Tags": [
@@ -89644,7 +89613,7 @@
           "Parameters": [],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
           },
           "Security": "None",
           "ThreadSafety": "Unsafe"
@@ -90764,7 +90733,7 @@
               "Name": "instances",
               "Type": {
                 "Category": "DataType",
-                "Name": "Objects"
+                "Name": "Instances"
               }
             },
             {
@@ -93211,6 +93180,35 @@
       ]
     },
     {
+      "Members": [
+        {
+          "Category": "Data",
+          "MemberType": "Property",
+          "Name": "Data",
+          "Security": {
+            "Read": "RobloxSecurity",
+            "Write": "RobloxSecurity"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "DataType",
+            "Name": "BinaryString"
+          }
+        }
+      ],
+      "MemoryCategory": "Instances",
+      "Name": "RobloxSerializableInstance",
+      "Superclass": "Instance",
+      "Tags": [
+        "NotCreatable",
+        "NotReplicated"
+      ]
+    },
+    {
       "Members": [],
       "MemoryCategory": "Instances",
       "Name": "RobloxServerStorage",
@@ -93219,6 +93217,16 @@
         "NotCreatable",
         "Service",
         "NotReplicated"
+      ]
+    },
+    {
+      "Members": [],
+      "MemoryCategory": "Instances",
+      "Name": "RomarkRbxAnalyticsService",
+      "Superclass": "Instance",
+      "Tags": [
+        "NotCreatable",
+        "Service"
       ]
     },
     {
@@ -94590,6 +94598,17 @@
         },
         {
           "MemberType": "Function",
+          "Name": "CompressLuaApp",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
           "Name": "DeserializeScriptProfilerString",
           "Parameters": [
             {
@@ -94959,7 +94978,7 @@
           "Parameters": [],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
           },
           "Security": "None",
           "ThreadSafety": "Unsafe"
@@ -95060,7 +95079,7 @@
           "Parameters": [],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
           },
           "Security": "None",
           "ThreadSafety": "Unsafe"
@@ -95796,7 +95815,7 @@
           "Parameters": [],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
           },
           "Security": "PluginSecurity",
           "ThreadSafety": "Unsafe"
@@ -96477,7 +96496,7 @@
               "Name": "instancesToAdd",
               "Type": {
                 "Category": "DataType",
-                "Name": "Objects"
+                "Name": "Instances"
               }
             }
           ],
@@ -96531,7 +96550,7 @@
           "Parameters": [],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
           },
           "Security": "PluginSecurity",
           "ThreadSafety": "Unsafe"
@@ -96544,7 +96563,7 @@
               "Name": "instancesToRemove",
               "Type": {
                 "Category": "DataType",
-                "Name": "Objects"
+                "Name": "Instances"
               }
             }
           ],
@@ -96563,7 +96582,7 @@
               "Name": "selection",
               "Type": {
                 "Category": "DataType",
-                "Name": "Objects"
+                "Name": "Instances"
               }
             }
           ],
@@ -97743,7 +97762,7 @@
           ],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
           },
           "Security": "PluginSecurity",
           "ThreadSafety": "Unsafe"
@@ -97770,7 +97789,7 @@
           ],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
           },
           "Security": "RobloxScriptSecurity",
           "ThreadSafety": "Unsafe"
@@ -98151,7 +98170,7 @@
           ],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
           },
           "Security": "RobloxScriptSecurity",
           "Tags": [
@@ -98248,7 +98267,7 @@
           ],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
           },
           "Security": "RobloxScriptSecurity",
           "Tags": [
@@ -100048,7 +100067,7 @@
           },
           "Serialization": {
             "CanLoad": true,
-            "CanSave": true
+            "CanSave": false
           },
           "Tags": [
             "Deprecated"
@@ -100399,12 +100418,9 @@
             "Write": "None"
           },
           "Serialization": {
-            "CanLoad": false,
-            "CanSave": false
+            "CanLoad": true,
+            "CanSave": true
           },
-          "Tags": [
-            "NotReplicated"
-          ],
           "ThreadSafety": "ReadSafe",
           "ValueType": {
             "Category": "Primitive",
@@ -100420,12 +100436,9 @@
             "Write": "None"
           },
           "Serialization": {
-            "CanLoad": false,
-            "CanSave": false
+            "CanLoad": true,
+            "CanSave": true
           },
-          "Tags": [
-            "NotReplicated"
-          ],
           "ThreadSafety": "ReadSafe",
           "ValueType": {
             "Category": "Primitive",
@@ -101725,7 +101738,7 @@
               "Name": "selectedCurveObjects",
               "Type": {
                 "Category": "DataType",
-                "Name": "Objects"
+                "Name": "Instances"
               }
             }
           ],
@@ -101734,6 +101747,25 @@
             "Name": "null"
           },
           "Security": "PluginSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "OpenDirectionalCurveEditor",
+          "Parameters": [
+            {
+              "Name": "selectedCurveObjects",
+              "Type": {
+                "Category": "DataType",
+                "Name": "Instances"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "RobloxScriptSecurity",
           "ThreadSafety": "Unsafe"
         },
         {
@@ -101918,7 +101950,7 @@
               "Name": "selectedCurveObjects",
               "Type": {
                 "Category": "DataType",
-                "Name": "Objects"
+                "Name": "Instances"
               }
             }
           ],
@@ -101933,7 +101965,22 @@
               "Name": "selectedEqualizerObjects",
               "Type": {
                 "Category": "DataType",
-                "Name": "Objects"
+                "Name": "Instances"
+              }
+            }
+          ],
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Event",
+          "Name": "OpenDirectionalCurveEditorSignal",
+          "Parameters": [
+            {
+              "Name": "selectedCurveObjects",
+              "Type": {
+                "Category": "DataType",
+                "Name": "Instances"
               }
             }
           ],
@@ -107586,14 +107633,14 @@
               "Name": "cloneInstances",
               "Type": {
                 "Category": "DataType",
-                "Name": "Objects"
+                "Name": "Instances"
               }
             },
             {
               "Name": "originalInstances",
               "Type": {
                 "Category": "DataType",
-                "Name": "Objects"
+                "Name": "Instances"
               }
             }
           ],
@@ -107657,7 +107704,7 @@
               "Name": "instances",
               "Type": {
                 "Category": "DataType",
-                "Name": "Objects"
+                "Name": "Instances"
               }
             },
             {
@@ -107762,7 +107809,7 @@
               "Name": "instances",
               "Type": {
                 "Category": "DataType",
-                "Name": "Objects"
+                "Name": "Instances"
               }
             }
           ],
@@ -107820,7 +107867,7 @@
               "Name": "instances",
               "Type": {
                 "Category": "DataType",
-                "Name": "Objects"
+                "Name": "Instances"
               }
             },
             {
@@ -107902,7 +107949,7 @@
               "Name": "instances",
               "Type": {
                 "Category": "DataType",
-                "Name": "Objects"
+                "Name": "Instances"
               }
             },
             {
@@ -109717,7 +109764,7 @@
           ],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
           },
           "Security": "PluginSecurity",
           "Tags": [
@@ -109828,7 +109875,7 @@
               "Name": "instances",
               "Type": {
                 "Category": "DataType",
-                "Name": "Objects"
+                "Name": "Instances"
               }
             }
           ],
@@ -109843,7 +109890,7 @@
               "Name": "instances",
               "Type": {
                 "Category": "DataType",
-                "Name": "Objects"
+                "Name": "Instances"
               }
             }
           ],
@@ -110138,7 +110185,7 @@
           "Parameters": [],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
           },
           "Security": "None",
           "ThreadSafety": "Unsafe"
@@ -110177,7 +110224,7 @@
               "Name": "rules",
               "Type": {
                 "Category": "DataType",
-                "Name": "Objects"
+                "Name": "Instances"
               }
             }
           ],
@@ -110396,7 +110443,7 @@
           "Parameters": [],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
           },
           "Security": "None",
           "ThreadSafety": "Unsafe"
@@ -110409,7 +110456,7 @@
               "Name": "derives",
               "Type": {
                 "Category": "DataType",
-                "Name": "Objects"
+                "Name": "Instances"
               }
             }
           ],
@@ -110529,7 +110576,7 @@
           ],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
           },
           "Security": "RobloxScriptSecurity",
           "ThreadSafety": "Unsafe"
@@ -110946,7 +110993,7 @@
           "Parameters": [],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
           },
           "Security": "None",
           "ThreadSafety": "Safe"
@@ -111044,7 +111091,7 @@
           "Parameters": [],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
           },
           "Security": "None",
           "ThreadSafety": "Unsafe"
@@ -111470,7 +111517,7 @@
               "Name": "players",
               "Type": {
                 "Category": "DataType",
-                "Name": "Objects"
+                "Name": "Instances"
               }
             },
             {
@@ -111612,7 +111659,7 @@
               "Name": "players",
               "Type": {
                 "Category": "DataType",
-                "Name": "Objects"
+                "Name": "Instances"
               }
             },
             {
@@ -111649,7 +111696,7 @@
               "Name": "players",
               "Type": {
                 "Category": "DataType",
-                "Name": "Objects"
+                "Name": "Instances"
               }
             },
             {
@@ -116140,7 +116187,7 @@
           "Parameters": [],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
           },
           "Security": "RobloxScriptSecurity",
           "ThreadSafety": "Unsafe"
@@ -116194,7 +116241,7 @@
               "Name": "instances",
               "Type": {
                 "Category": "DataType",
-                "Name": "Objects"
+                "Name": "Instances"
               }
             }
           ],
@@ -117853,15 +117900,15 @@
             {
               "Name": "editableMeshRoot",
               "Type": {
-                "Category": "Class",
-                "Name": "EditableMesh"
+                "Category": "DataType",
+                "Name": "Object"
               }
             },
             {
               "Name": "editableMeshQuery",
               "Type": {
-                "Category": "Class",
-                "Name": "EditableMesh"
+                "Category": "DataType",
+                "Name": "Object"
               }
             },
             {
@@ -117893,8 +117940,8 @@
             {
               "Name": "editableMesh",
               "Type": {
-                "Category": "Class",
-                "Name": "EditableMesh"
+                "Category": "DataType",
+                "Name": "Object"
               }
             },
             {
@@ -117919,8 +117966,8 @@
             {
               "Name": "editableMesh",
               "Type": {
-                "Category": "Class",
-                "Name": "EditableMesh"
+                "Category": "DataType",
+                "Name": "Object"
               }
             }
           ],
@@ -117938,8 +117985,8 @@
             {
               "Name": "editableMesh",
               "Type": {
-                "Category": "Class",
-                "Name": "EditableMesh"
+                "Category": "DataType",
+                "Name": "Object"
               }
             },
             {
@@ -117978,8 +118025,8 @@
             {
               "Name": "editableMesh",
               "Type": {
-                "Category": "Class",
-                "Name": "EditableMesh"
+                "Category": "DataType",
+                "Name": "Object"
               }
             },
             {
@@ -117999,13 +118046,60 @@
         },
         {
           "MemberType": "Function",
+          "Name": "GetEditableCagingRelevancyMetrics",
+          "Parameters": [
+            {
+              "Name": "innerCage",
+              "Type": {
+                "Category": "DataType",
+                "Name": "Object"
+              }
+            },
+            {
+              "Name": "outerCage",
+              "Type": {
+                "Category": "DataType",
+                "Name": "Object"
+              }
+            },
+            {
+              "Name": "refMesh",
+              "Type": {
+                "Category": "DataType",
+                "Name": "Object"
+              }
+            },
+            {
+              "Name": "offsetInner",
+              "Type": {
+                "Category": "DataType",
+                "Name": "Vector3"
+              }
+            },
+            {
+              "Name": "offsetOuter",
+              "Type": {
+                "Category": "DataType",
+                "Name": "Vector3"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Tuple"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
           "Name": "GetEditableImageSize",
           "Parameters": [
             {
               "Name": "editableImage",
               "Type": {
-                "Category": "Class",
-                "Name": "EditableImage"
+                "Category": "DataType",
+                "Name": "Object"
               }
             }
           ],
@@ -118023,8 +118117,8 @@
             {
               "Name": "editableMesh",
               "Type": {
-                "Category": "Class",
-                "Name": "EditableMesh"
+                "Category": "DataType",
+                "Name": "Object"
               }
             },
             {
@@ -118049,8 +118143,8 @@
             {
               "Name": "editableMesh",
               "Type": {
-                "Category": "Class",
-                "Name": "EditableMesh"
+                "Category": "DataType",
+                "Name": "Object"
               }
             }
           ],
@@ -118068,8 +118162,8 @@
             {
               "Name": "editableMesh",
               "Type": {
-                "Category": "Class",
-                "Name": "EditableMesh"
+                "Category": "DataType",
+                "Name": "Object"
               }
             }
           ],
@@ -118087,8 +118181,8 @@
             {
               "Name": "editableMesh",
               "Type": {
-                "Category": "Class",
-                "Name": "EditableMesh"
+                "Category": "DataType",
+                "Name": "Object"
               }
             },
             {
@@ -118113,8 +118207,8 @@
             {
               "Name": "editableMesh",
               "Type": {
-                "Category": "Class",
-                "Name": "EditableMesh"
+                "Category": "DataType",
+                "Name": "Object"
               }
             }
           ],
@@ -118177,8 +118271,8 @@
             {
               "Name": "editableMesh",
               "Type": {
-                "Category": "Class",
-                "Name": "EditableMesh"
+                "Category": "DataType",
+                "Name": "Object"
               }
             },
             {
@@ -118296,8 +118390,8 @@
             {
               "Name": "editableMesh",
               "Type": {
-                "Category": "Class",
-                "Name": "EditableMesh"
+                "Category": "DataType",
+                "Name": "Object"
               }
             },
             {
@@ -118349,8 +118443,8 @@
             {
               "Name": "editableMesh",
               "Type": {
-                "Category": "Class",
-                "Name": "EditableMesh"
+                "Category": "DataType",
+                "Name": "Object"
               }
             }
           ],
@@ -118368,8 +118462,8 @@
             {
               "Name": "editableImage",
               "Type": {
-                "Category": "Class",
-                "Name": "EditableImage"
+                "Category": "DataType",
+                "Name": "Object"
               }
             },
             {
@@ -118394,8 +118488,8 @@
             {
               "Name": "editableImage",
               "Type": {
-                "Category": "Class",
-                "Name": "EditableImage"
+                "Category": "DataType",
+                "Name": "Object"
               }
             }
           ],
@@ -118413,8 +118507,8 @@
             {
               "Name": "editableMesh",
               "Type": {
-                "Category": "Class",
-                "Name": "EditableMesh"
+                "Category": "DataType",
+                "Name": "Object"
               }
             },
             {
@@ -118460,22 +118554,22 @@
             {
               "Name": "innerCage",
               "Type": {
-                "Category": "Class",
-                "Name": "EditableMesh"
+                "Category": "DataType",
+                "Name": "Object"
               }
             },
             {
               "Name": "outerCage",
               "Type": {
-                "Category": "Class",
-                "Name": "EditableMesh"
+                "Category": "DataType",
+                "Name": "Object"
               }
             },
             {
               "Name": "refMesh",
               "Type": {
-                "Category": "Class",
-                "Name": "EditableMesh"
+                "Category": "DataType",
+                "Name": "Object"
               }
             }
           ],
@@ -118493,8 +118587,8 @@
             {
               "Name": "editableMesh",
               "Type": {
-                "Category": "Class",
-                "Name": "EditableMesh"
+                "Category": "DataType",
+                "Name": "Object"
               }
             }
           ],
@@ -118512,8 +118606,8 @@
             {
               "Name": "editableMesh",
               "Type": {
-                "Category": "Class",
-                "Name": "EditableMesh"
+                "Category": "DataType",
+                "Name": "Object"
               }
             }
           ],
@@ -118531,8 +118625,8 @@
             {
               "Name": "editableMesh",
               "Type": {
-                "Category": "Class",
-                "Name": "EditableMesh"
+                "Category": "DataType",
+                "Name": "Object"
               }
             }
           ],
@@ -118550,8 +118644,8 @@
             {
               "Name": "editableMesh",
               "Type": {
-                "Category": "Class",
-                "Name": "EditableMesh"
+                "Category": "DataType",
+                "Name": "Object"
               }
             }
           ],
@@ -118569,15 +118663,15 @@
             {
               "Name": "innerCage",
               "Type": {
-                "Category": "Class",
-                "Name": "EditableMesh"
+                "Category": "DataType",
+                "Name": "Object"
               }
             },
             {
               "Name": "outerCage",
               "Type": {
-                "Category": "Class",
-                "Name": "EditableMesh"
+                "Category": "DataType",
+                "Name": "Object"
               }
             }
           ],
@@ -118595,8 +118689,8 @@
             {
               "Name": "editableMesh",
               "Type": {
-                "Category": "Class",
-                "Name": "EditableMesh"
+                "Category": "DataType",
+                "Name": "Object"
               }
             }
           ],
@@ -118614,8 +118708,8 @@
             {
               "Name": "editableMesh",
               "Type": {
-                "Category": "Class",
-                "Name": "EditableMesh"
+                "Category": "DataType",
+                "Name": "Object"
               }
             }
           ],
@@ -118633,8 +118727,8 @@
             {
               "Name": "editableMesh",
               "Type": {
-                "Category": "Class",
-                "Name": "EditableMesh"
+                "Category": "DataType",
+                "Name": "Object"
               }
             }
           ],
@@ -118652,8 +118746,8 @@
             {
               "Name": "editableMesh",
               "Type": {
-                "Category": "Class",
-                "Name": "EditableMesh"
+                "Category": "DataType",
+                "Name": "Object"
               }
             }
           ],
@@ -118678,8 +118772,8 @@
             {
               "Name": "editableMesh",
               "Type": {
-                "Category": "Class",
-                "Name": "EditableMesh"
+                "Category": "DataType",
+                "Name": "Object"
               }
             }
           ],
@@ -118697,8 +118791,8 @@
             {
               "Name": "editableMesh",
               "Type": {
-                "Category": "Class",
-                "Name": "EditableMesh"
+                "Category": "DataType",
+                "Name": "Object"
               }
             },
             {
@@ -118723,8 +118817,8 @@
             {
               "Name": "editableMesh",
               "Type": {
-                "Category": "Class",
-                "Name": "EditableMesh"
+                "Category": "DataType",
+                "Name": "Object"
               }
             },
             {
@@ -118750,8 +118844,8 @@
             {
               "Name": "editableMesh",
               "Type": {
-                "Category": "Class",
-                "Name": "EditableMesh"
+                "Category": "DataType",
+                "Name": "Object"
               }
             }
           ],
@@ -119000,7 +119094,57 @@
           ],
           "ReturnType": {
             "Category": "DataType",
-            "Name": "Objects"
+            "Name": "Instances"
+          },
+          "Security": "RobloxScriptSecurity",
+          "Tags": [
+            "Yields"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetCagingRelevancyMetrics",
+          "Parameters": [
+            {
+              "Name": "innerCageMeshId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            },
+            {
+              "Name": "outerCageMeshId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            },
+            {
+              "Name": "refMeshId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            },
+            {
+              "Name": "offsetInner",
+              "Type": {
+                "Category": "DataType",
+                "Name": "Vector3"
+              }
+            },
+            {
+              "Name": "offsetOuter",
+              "Type": {
+                "Category": "DataType",
+                "Name": "Vector3"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Tuple"
           },
           "Security": "RobloxScriptSecurity",
           "Tags": [
@@ -129404,6 +129548,159 @@
     {
       "Members": [
         {
+          "MemberType": "Function",
+          "Name": "CloseWindow",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "MutateWindow",
+          "Parameters": [
+            {
+              "Name": "url",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            },
+            {
+              "Name": "title",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string?"
+              }
+            },
+            {
+              "Name": "isVisible",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "bool?"
+              }
+            },
+            {
+              "Name": "searchType",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string?"
+              }
+            },
+            {
+              "Name": "transitionAnimation",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string?"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "OpenWindow",
+          "Parameters": [
+            {
+              "Name": "url",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            },
+            {
+              "Name": "title",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string?"
+              }
+            },
+            {
+              "Name": "isVisible",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "bool?"
+              }
+            },
+            {
+              "Name": "searchType",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string?"
+              }
+            },
+            {
+              "Name": "transitionAnimation",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string?"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "IsAvailable",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "bool"
+          },
+          "Security": "RobloxScriptSecurity",
+          "Tags": [
+            "Yields"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Event",
+          "Name": "OnJavaScriptCall",
+          "Parameters": [
+            {
+              "Name": "content",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            }
+          ],
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Event",
+          "Name": "OnWindowClosed",
+          "Parameters": [],
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        }
+      ],
+      "MemoryCategory": "Instances",
+      "Name": "WebViewService",
+      "Superclass": "Instance",
+      "Tags": [
+        "NotCreatable",
+        "Service",
+        "NotReplicated"
+      ]
+    },
+    {
+      "Members": [
+        {
           "Capabilities": {
             "Read": [
               "Physics"
@@ -129915,6 +130212,14 @@
         {
           "Name": "WhyThisAdClicked",
           "Value": 6
+        },
+        {
+          "Name": "PlayEventTriggered",
+          "Value": 7
+        },
+        {
+          "Name": "PauseEventTriggered",
+          "Value": 8
         }
       ],
       "Name": "AdUIEventType"
@@ -132275,6 +132580,14 @@
         {
           "Name": "PutCursorBeforeEnd",
           "Value": 11
+        },
+        {
+          "Name": "ElideLeftOverride",
+          "Value": 12
+        },
+        {
+          "Name": "UseTextEditForAutocompleteScore",
+          "Value": 13
         }
       ],
       "Name": "CompletionItemTag"
@@ -134640,23 +134953,23 @@
       "Items": [
         {
           "Name": "UIHover",
-          "Value": 0
-        },
-        {
-          "Name": "UIClick",
           "Value": 1
         },
         {
-          "Name": "UINotification",
+          "Name": "UIClick",
           "Value": 2
         },
         {
-          "Name": "GameplayExplosion",
+          "Name": "UINotification",
           "Value": 3
         },
         {
-          "Name": "GameplayCollision",
+          "Name": "GameplayExplosion",
           "Value": 4
+        },
+        {
+          "Name": "GameplayCollision",
+          "Value": 5
         }
       ],
       "Name": "HapticEffectType"
@@ -139194,6 +139507,19 @@
         }
       ],
       "Name": "SalesTypeFilter"
+    },
+    {
+      "Items": [
+        {
+          "Name": "Default",
+          "Value": 0
+        },
+        {
+          "Name": "Experimental",
+          "Value": 1
+        }
+      ],
+      "Name": "SandboxedInstanceMode"
     },
     {
       "Items": [
