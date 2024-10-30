@@ -160,6 +160,17 @@
         },
         {
           "MemberType": "Function",
+          "Name": "Destroy",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
           "Name": "DrawCircle",
           "Parameters": [
             {
@@ -414,17 +425,6 @@
         },
         {
           "MemberType": "Function",
-          "Name": "GetContent",
-          "Parameters": [],
-          "ReturnType": {
-            "Category": "DataType",
-            "Name": "Content"
-          },
-          "Security": "None",
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
           "Name": "ReadPixelsBuffer",
           "Parameters": [
             {
@@ -491,7 +491,10 @@
       ],
       "MemoryCategory": "Instances",
       "Name": "EditableImage",
-      "Superclass": "Object"
+      "Superclass": "Object",
+      "Tags": [
+        "NotCreatable"
+      ]
     },
     {
       "Members": [
@@ -653,6 +656,17 @@
         },
         {
           "MemberType": "Function",
+          "Name": "Destroy",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
           "Name": "FindClosestPointOnSurface",
           "Parameters": [
             {
@@ -803,17 +817,6 @@
           "Tags": [
             "CustomLuaState"
           ],
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "GetContent",
-          "Parameters": [],
-          "ReturnType": {
-            "Category": "DataType",
-            "Name": "Content"
-          },
-          "Security": "None",
           "ThreadSafety": "Unsafe"
         },
         {
@@ -1448,14 +1451,18 @@
           },
           "Security": "None",
           "Tags": [
-            "Yields"
+            "Yields",
+            "Deprecated"
           ],
           "ThreadSafety": "Unsafe"
         }
       ],
       "MemoryCategory": "Instances",
       "Name": "EditableMesh",
-      "Superclass": "Object"
+      "Superclass": "Object",
+      "Tags": [
+        "NotCreatable"
+      ]
     },
     {
       "Members": [
@@ -6131,7 +6138,7 @@
         {
           "Category": "Data",
           "MemberType": "Property",
-          "Name": "Position",
+          "Name": "AdorneeOffset",
           "Security": {
             "Read": "RobloxScriptSecurity",
             "Write": "RobloxScriptSecurity"
@@ -6146,8 +6153,38 @@
           "ThreadSafety": "ReadSafe",
           "ValueType": {
             "Category": "DataType",
-            "Name": "CFrame"
+            "Name": "Vector3"
           }
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetAbsolutePosition",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "DataType",
+            "Name": "Vector3"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "SetAdorneeOffsetFromAbsolutePosition",
+          "Parameters": [
+            {
+              "Name": "position",
+              "Type": {
+                "Category": "DataType",
+                "Name": "Vector3"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
         }
       ],
       "MemoryCategory": "Instances",
@@ -6156,6 +6193,28 @@
     },
     {
       "Members": [
+        {
+          "Category": "Data",
+          "MemberType": "Property",
+          "Name": "AnnotationsVisible",
+          "Security": {
+            "Read": "RobloxScriptSecurity",
+            "Write": "RobloxScriptSecurity"
+          },
+          "Serialization": {
+            "CanLoad": false,
+            "CanSave": false
+          },
+          "Tags": [
+            "Hidden",
+            "NotReplicated"
+          ],
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "bool"
+          }
+        },
         {
           "Category": "Data",
           "MemberType": "Property",
@@ -6281,9 +6340,20 @@
                 "Category": "Class",
                 "Name": "Annotation"
               }
-            },
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "LoadResolvedAnnotations",
+          "Parameters": [
             {
-              "Default": "25",
               "Name": "count",
               "Type": {
                 "Category": "Primitive",
@@ -6302,13 +6372,6 @@
           "MemberType": "Function",
           "Name": "ResolveAnnotation",
           "Parameters": [
-            {
-              "Name": "userId",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "int64"
-              }
-            },
             {
               "Name": "annotation",
               "Type": {
@@ -6373,13 +6436,6 @@
           "Name": "AnnotationResolved",
           "Parameters": [
             {
-              "Name": "userId",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "int64"
-              }
-            },
-            {
               "Name": "annotation",
               "Type": {
                 "Category": "Class",
@@ -6406,6 +6462,21 @@
               "Type": {
                 "Category": "Class",
                 "Name": "Annotation"
+              }
+            }
+          ],
+          "Security": "RobloxSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Event",
+          "Name": "ServerLoadResolvedAnnotations",
+          "Parameters": [
+            {
+              "Name": "count",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int"
               }
             }
           ],
@@ -7880,7 +7951,8 @@
           },
           "Security": "None",
           "Tags": [
-            "Yields"
+            "Yields",
+            "Deprecated"
           ],
           "ThreadSafety": "Unsafe"
         },
@@ -7911,10 +7983,10 @@
           "Name": "CreateMeshPartAsync",
           "Parameters": [
             {
-              "Name": "meshId",
+              "Name": "meshContent",
               "Type": {
                 "Category": "DataType",
-                "Name": "ContentId"
+                "Name": "Content"
               }
             },
             {
@@ -7930,7 +8002,7 @@
             "Category": "Class",
             "Name": "MeshPart"
           },
-          "Security": "PluginSecurity",
+          "Security": "None",
           "Tags": [
             "Yields"
           ],
@@ -16777,8 +16849,8 @@
             "Write": "PluginSecurity"
           },
           "Serialization": {
-            "CanLoad": false,
-            "CanSave": false
+            "CanLoad": true,
+            "CanSave": true
           },
           "Tags": [
             "Hidden"
@@ -17346,8 +17418,8 @@
             "Write": "PluginSecurity"
           },
           "Serialization": {
-            "CanLoad": false,
-            "CanSave": false
+            "CanLoad": true,
+            "CanSave": true
           },
           "Tags": [
             "Hidden"
@@ -24650,7 +24722,7 @@
               "Name": "commerceProductId",
               "Type": {
                 "Category": "Primitive",
-                "Name": "int64"
+                "Name": "string"
               }
             }
           ],
@@ -24689,13 +24761,47 @@
         },
         {
           "MemberType": "Function",
+          "Name": "SignalPromptCommerceProductPurchaseFinished",
+          "Parameters": [
+            {
+              "Name": "productId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            },
+            {
+              "Name": "didTryPurchase",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "bool"
+              }
+            },
+            {
+              "Default": "",
+              "Name": "checkoutSessionId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
           "Name": "GetCommerceProductInfoAsync",
           "Parameters": [
             {
               "Name": "commerceProductId",
               "Type": {
                 "Category": "Primitive",
-                "Name": "int64"
+                "Name": "string"
               }
             }
           ],
@@ -24704,6 +24810,28 @@
             "Name": "Dictionary"
           },
           "Security": "None",
+          "Tags": [
+            "Yields"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "PrepareCommerceProductPurchase",
+          "Parameters": [
+            {
+              "Name": "commerceProductId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Dictionary"
+          },
+          "Security": "RobloxScriptSecurity",
           "Tags": [
             "Yields"
           ],
@@ -24721,6 +24849,28 @@
           "Tags": [
             "Yields"
           ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Event",
+          "Name": "BenefitStatusReceived",
+          "Parameters": [
+            {
+              "Name": "isGranted",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "bool"
+              }
+            }
+          ],
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Event",
+          "Name": "FetchReceipt",
+          "Parameters": [],
+          "Security": "RobloxSecurity",
           "ThreadSafety": "Unsafe"
         },
         {
@@ -24753,11 +24903,33 @@
               "Name": "productId",
               "Type": {
                 "Category": "Primitive",
-                "Name": "int64"
+                "Name": "string"
               }
             }
           ],
           "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Event",
+          "Name": "PromptCommerceProductPurchaseRequested",
+          "Parameters": [
+            {
+              "Name": "commerceProductId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            }
+          ],
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Event",
+          "Name": "PurchaseBrowserClosed",
+          "Parameters": [],
+          "Security": "RobloxScriptSecurity",
           "ThreadSafety": "Unsafe"
         }
       ],
@@ -43905,8 +44077,8 @@
             "Write": "None"
           },
           "Serialization": {
-            "CanLoad": false,
-            "CanSave": false
+            "CanLoad": true,
+            "CanSave": true
           },
           "Tags": [
             "Hidden"
@@ -44996,8 +45168,8 @@
             "Write": "None"
           },
           "Serialization": {
-            "CanLoad": false,
-            "CanSave": false
+            "CanLoad": true,
+            "CanSave": true
           },
           "Tags": [
             "Hidden"
@@ -76090,8 +76262,8 @@
             "Write": "NotAccessibleSecurity"
           },
           "Serialization": {
-            "CanLoad": false,
-            "CanSave": false
+            "CanLoad": true,
+            "CanSave": true
           },
           "Tags": [
             "Hidden"
@@ -76165,8 +76337,8 @@
             "Write": "None"
           },
           "Serialization": {
-            "CanLoad": false,
-            "CanSave": false
+            "CanLoad": true,
+            "CanSave": true
           },
           "Tags": [
             "Hidden"
@@ -78609,27 +78781,6 @@
           }
         },
         {
-          "Category": "Behavior",
-          "MemberType": "Property",
-          "Name": "DecreaseMinimumPartDensityMode",
-          "Security": {
-            "Read": "None",
-            "Write": "None"
-          },
-          "Serialization": {
-            "CanLoad": true,
-            "CanSave": true
-          },
-          "Tags": [
-            "NotScriptable"
-          ],
-          "ThreadSafety": "ReadSafe",
-          "ValueType": {
-            "Category": "Enum",
-            "Name": "DecreaseMinimumPartDensityMode"
-          }
-        },
-        {
           "Category": "Data",
           "MemberType": "Property",
           "Name": "DistributedGameTime",
@@ -79574,16 +79725,13 @@
           "MemberType": "Property",
           "Name": "AutoUpdate",
           "Security": {
-            "Read": "None",
-            "Write": "None"
+            "Read": "RobloxScriptSecurity",
+            "Write": "RobloxScriptSecurity"
           },
           "Serialization": {
             "CanLoad": true,
             "CanSave": true
           },
-          "Tags": [
-            "NotScriptable"
-          ],
           "ThreadSafety": "ReadSafe",
           "ValueType": {
             "Category": "Primitive",
@@ -79629,6 +79777,50 @@
           "ValueType": {
             "Category": "Primitive",
             "Name": "string"
+          }
+        },
+        {
+          "Category": "Data",
+          "MemberType": "Property",
+          "Name": "HasNewVersion",
+          "Security": {
+            "Read": "RobloxScriptSecurity",
+            "Write": "RobloxScriptSecurity"
+          },
+          "Serialization": {
+            "CanLoad": false,
+            "CanSave": false
+          },
+          "Tags": [
+            "Hidden",
+            "ReadOnly",
+            "NotReplicated"
+          ],
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "bool"
+          }
+        },
+        {
+          "Category": "Link",
+          "MemberType": "Property",
+          "Name": "ModifiedState",
+          "Security": {
+            "Read": "RobloxScriptSecurity",
+            "Write": "RobloxScriptSecurity"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "Tags": [
+            "Hidden"
+          ],
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "int"
           }
         },
         {
@@ -95595,6 +95787,28 @@
         },
         {
           "MemberType": "Function",
+          "Name": "MultiEditTextAsync",
+          "Parameters": [
+            {
+              "Name": "edits",
+              "Type": {
+                "Category": "Group",
+                "Name": "Array"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Tuple"
+          },
+          "Security": "PluginSecurity",
+          "Tags": [
+            "Yields"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
           "Name": "RequestSetSelectionAsync",
           "Parameters": [
             {
@@ -97001,10 +97215,7 @@
       ],
       "MemoryCategory": "Instances",
       "Name": "FluidForceSensor",
-      "Superclass": "SensorBase",
-      "Tags": [
-        "NotBrowsable"
-      ]
+      "Superclass": "SensorBase"
     },
     {
       "Members": [
@@ -100035,6 +100246,11 @@
     {
       "Members": [
         {
+          "Capabilities": {
+            "Read": [
+              "LegacySound"
+            ]
+          },
           "Category": "Asset",
           "MemberType": "Property",
           "Name": "ChannelCount",
@@ -100058,6 +100274,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "LegacySound"
+            ]
+          },
           "Category": "Data",
           "MemberType": "Property",
           "Name": "EmitterSize",
@@ -100079,6 +100300,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "LegacySound"
+            ]
+          },
           "Category": "Asset",
           "MemberType": "Property",
           "Name": "IsLoaded",
@@ -100101,6 +100327,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "LegacySound"
+            ]
+          },
           "Category": "Playback",
           "MemberType": "Property",
           "Name": "IsPaused",
@@ -100124,6 +100355,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "LegacySound"
+            ]
+          },
           "Category": "Playback",
           "MemberType": "Property",
           "Name": "IsPlaying",
@@ -100147,6 +100383,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "LegacySound"
+            ]
+          },
           "Category": "Behavior",
           "MemberType": "Property",
           "Name": "IsSpatial",
@@ -100170,6 +100411,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "LegacySound"
+            ]
+          },
           "Category": "Regions",
           "MemberType": "Property",
           "Name": "LoopRegion",
@@ -100188,6 +100434,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "LegacySound"
+            ]
+          },
           "Category": "Playback",
           "MemberType": "Property",
           "Name": "Looped",
@@ -100206,6 +100457,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "LegacySound"
+            ]
+          },
           "Category": "Data",
           "MemberType": "Property",
           "Name": "MaxDistance",
@@ -100227,6 +100483,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "LegacySound"
+            ]
+          },
           "Category": "Data",
           "MemberType": "Property",
           "Name": "MinDistance",
@@ -100248,6 +100509,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "LegacySound"
+            ]
+          },
           "Category": "Data",
           "MemberType": "Property",
           "Name": "Pitch",
@@ -100269,6 +100535,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "LegacySound"
+            ]
+          },
           "Category": "Behavior",
           "MemberType": "Property",
           "Name": "PlayOnRemove",
@@ -100287,6 +100558,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "LegacySound"
+            ]
+          },
           "Category": "Playback",
           "MemberType": "Property",
           "Name": "PlaybackLoudness",
@@ -100309,6 +100585,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "LegacySound"
+            ]
+          },
           "Category": "Regions",
           "MemberType": "Property",
           "Name": "PlaybackRegion",
@@ -100327,6 +100608,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "LegacySound"
+            ]
+          },
           "Category": "Playback",
           "MemberType": "Property",
           "Name": "PlaybackRegionsEnabled",
@@ -100345,6 +100631,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "LegacySound"
+            ]
+          },
           "Category": "Playback",
           "MemberType": "Property",
           "Name": "PlaybackSpeed",
@@ -100366,6 +100657,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "LegacySound"
+            ]
+          },
           "Category": "Playback",
           "MemberType": "Property",
           "Name": "Playing",
@@ -100387,6 +100683,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "LegacySound"
+            ]
+          },
           "Category": "Playback",
           "MemberType": "Property",
           "Name": "RollOffGain",
@@ -100410,6 +100711,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "LegacySound"
+            ]
+          },
           "Category": "Emitter",
           "MemberType": "Property",
           "Name": "RollOffMaxDistance",
@@ -100428,6 +100734,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "LegacySound"
+            ]
+          },
           "Category": "Emitter",
           "MemberType": "Property",
           "Name": "RollOffMinDistance",
@@ -100446,6 +100757,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "LegacySound"
+            ]
+          },
           "Category": "Emitter",
           "MemberType": "Property",
           "Name": "RollOffMode",
@@ -100464,6 +100780,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "LegacySound"
+            ]
+          },
           "Category": "Routing",
           "MemberType": "Property",
           "Name": "SoundGroup",
@@ -100482,6 +100803,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "LegacySound"
+            ]
+          },
           "Category": "Asset",
           "MemberType": "Property",
           "Name": "SoundId",
@@ -100500,6 +100826,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "LegacySound"
+            ]
+          },
           "Category": "Asset",
           "MemberType": "Property",
           "Name": "TimeLength",
@@ -100522,6 +100853,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "LegacySound"
+            ]
+          },
           "Category": "Playback",
           "MemberType": "Property",
           "Name": "TimePosition",
@@ -100543,6 +100879,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "LegacySound"
+            ]
+          },
           "Category": "Behavior",
           "MemberType": "Property",
           "Name": "UsageContextPermission",
@@ -100565,6 +100906,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "LegacySound"
+            ]
+          },
           "Category": "Playback",
           "MemberType": "Property",
           "Name": "Volume",
@@ -100583,6 +100929,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "LegacySound"
+            ]
+          },
           "Category": "Data",
           "MemberType": "Property",
           "Name": "isPlaying",
@@ -100606,6 +100957,9 @@
           }
         },
         {
+          "Capabilities": [
+            "LegacySound"
+          ],
           "MemberType": "Function",
           "Name": "Pause",
           "Parameters": [],
@@ -100617,6 +100971,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "LegacySound"
+          ],
           "MemberType": "Function",
           "Name": "Play",
           "Parameters": [],
@@ -100628,6 +100985,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "LegacySound"
+          ],
           "MemberType": "Function",
           "Name": "Resume",
           "Parameters": [],
@@ -100639,6 +100999,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "LegacySound"
+          ],
           "MemberType": "Function",
           "Name": "Stop",
           "Parameters": [],
@@ -100650,6 +101013,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "LegacySound"
+          ],
           "MemberType": "Function",
           "Name": "pause",
           "Parameters": [],
@@ -100664,6 +101030,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "LegacySound"
+          ],
           "MemberType": "Function",
           "Name": "play",
           "Parameters": [],
@@ -100678,6 +101047,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "LegacySound"
+          ],
           "MemberType": "Function",
           "Name": "stop",
           "Parameters": [],
@@ -100692,6 +101064,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "LegacySound"
+          ],
           "MemberType": "Event",
           "Name": "DidLoop",
           "Parameters": [
@@ -100714,6 +101089,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "LegacySound"
+          ],
           "MemberType": "Event",
           "Name": "Ended",
           "Parameters": [
@@ -100729,6 +101107,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "LegacySound"
+          ],
           "MemberType": "Event",
           "Name": "Loaded",
           "Parameters": [
@@ -100744,6 +101125,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "LegacySound"
+          ],
           "MemberType": "Event",
           "Name": "Paused",
           "Parameters": [
@@ -100759,6 +101143,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "LegacySound"
+          ],
           "MemberType": "Event",
           "Name": "Played",
           "Parameters": [
@@ -100774,6 +101161,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "LegacySound"
+          ],
           "MemberType": "Event",
           "Name": "Resumed",
           "Parameters": [
@@ -100789,6 +101179,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "LegacySound"
+          ],
           "MemberType": "Event",
           "Name": "Stopped",
           "Parameters": [
@@ -100811,6 +101204,11 @@
     {
       "Members": [
         {
+          "Capabilities": {
+            "Read": [
+              "LegacySound"
+            ]
+          },
           "Category": "State",
           "MemberType": "Property",
           "Name": "Enabled",
@@ -100829,6 +101227,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "LegacySound"
+            ]
+          },
           "Category": "State",
           "MemberType": "Property",
           "Name": "Priority",
@@ -100857,6 +101260,11 @@
     {
       "Members": [
         {
+          "Capabilities": {
+            "Read": [
+              "LegacySound"
+            ]
+          },
           "Category": "State",
           "MemberType": "Property",
           "Name": "Depth",
@@ -100875,6 +101283,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "LegacySound"
+            ]
+          },
           "Category": "State",
           "MemberType": "Property",
           "Name": "Mix",
@@ -100893,6 +101306,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "LegacySound"
+            ]
+          },
           "Category": "State",
           "MemberType": "Property",
           "Name": "Rate",
@@ -100918,6 +101336,11 @@
     {
       "Members": [
         {
+          "Capabilities": {
+            "Read": [
+              "LegacySound"
+            ]
+          },
           "Category": "State",
           "MemberType": "Property",
           "Name": "Attack",
@@ -100936,6 +101359,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "LegacySound"
+            ]
+          },
           "Category": "State",
           "MemberType": "Property",
           "Name": "GainMakeup",
@@ -100954,6 +101382,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "LegacySound"
+            ]
+          },
           "Category": "State",
           "MemberType": "Property",
           "Name": "Ratio",
@@ -100972,6 +101405,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "LegacySound"
+            ]
+          },
           "Category": "State",
           "MemberType": "Property",
           "Name": "Release",
@@ -100990,6 +101428,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "LegacySound"
+            ]
+          },
           "Category": "State",
           "MemberType": "Property",
           "Name": "SideChain",
@@ -101008,6 +101451,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "LegacySound"
+            ]
+          },
           "Category": "State",
           "MemberType": "Property",
           "Name": "Threshold",
@@ -101051,6 +101499,11 @@
     {
       "Members": [
         {
+          "Capabilities": {
+            "Read": [
+              "LegacySound"
+            ]
+          },
           "Category": "State",
           "MemberType": "Property",
           "Name": "Channel",
@@ -101080,6 +101533,11 @@
     {
       "Members": [
         {
+          "Capabilities": {
+            "Read": [
+              "LegacySound"
+            ]
+          },
           "Category": "State",
           "MemberType": "Property",
           "Name": "Level",
@@ -101105,6 +101563,11 @@
     {
       "Members": [
         {
+          "Capabilities": {
+            "Read": [
+              "LegacySound"
+            ]
+          },
           "Category": "State",
           "MemberType": "Property",
           "Name": "Delay",
@@ -101123,6 +101586,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "LegacySound"
+            ]
+          },
           "Category": "State",
           "MemberType": "Property",
           "Name": "DryLevel",
@@ -101141,6 +101609,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "LegacySound"
+            ]
+          },
           "Category": "State",
           "MemberType": "Property",
           "Name": "Feedback",
@@ -101159,6 +101632,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "LegacySound"
+            ]
+          },
           "Category": "State",
           "MemberType": "Property",
           "Name": "WetLevel",
@@ -101184,6 +101662,11 @@
     {
       "Members": [
         {
+          "Capabilities": {
+            "Read": [
+              "LegacySound"
+            ]
+          },
           "Category": "State",
           "MemberType": "Property",
           "Name": "HighGain",
@@ -101202,6 +101685,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "LegacySound"
+            ]
+          },
           "Category": "State",
           "MemberType": "Property",
           "Name": "LowGain",
@@ -101220,6 +101708,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "LegacySound"
+            ]
+          },
           "Category": "State",
           "MemberType": "Property",
           "Name": "MidGain",
@@ -101245,6 +101738,11 @@
     {
       "Members": [
         {
+          "Capabilities": {
+            "Read": [
+              "LegacySound"
+            ]
+          },
           "Category": "State",
           "MemberType": "Property",
           "Name": "Depth",
@@ -101263,6 +101761,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "LegacySound"
+            ]
+          },
           "Category": "State",
           "MemberType": "Property",
           "Name": "Mix",
@@ -101281,6 +101784,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "LegacySound"
+            ]
+          },
           "Category": "State",
           "MemberType": "Property",
           "Name": "Rate",
@@ -101306,6 +101814,11 @@
     {
       "Members": [
         {
+          "Capabilities": {
+            "Read": [
+              "LegacySound"
+            ]
+          },
           "Category": "State",
           "MemberType": "Property",
           "Name": "Octave",
@@ -101331,6 +101844,11 @@
     {
       "Members": [
         {
+          "Capabilities": {
+            "Read": [
+              "LegacySound"
+            ]
+          },
           "Category": "State",
           "MemberType": "Property",
           "Name": "DecayTime",
@@ -101349,6 +101867,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "LegacySound"
+            ]
+          },
           "Category": "State",
           "MemberType": "Property",
           "Name": "Density",
@@ -101367,6 +101890,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "LegacySound"
+            ]
+          },
           "Category": "State",
           "MemberType": "Property",
           "Name": "Diffusion",
@@ -101385,6 +101913,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "LegacySound"
+            ]
+          },
           "Category": "State",
           "MemberType": "Property",
           "Name": "DryLevel",
@@ -101403,6 +101936,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "LegacySound"
+            ]
+          },
           "Category": "State",
           "MemberType": "Property",
           "Name": "WetLevel",
@@ -101428,6 +101966,11 @@
     {
       "Members": [
         {
+          "Capabilities": {
+            "Read": [
+              "LegacySound"
+            ]
+          },
           "Category": "State",
           "MemberType": "Property",
           "Name": "Depth",
@@ -101446,6 +101989,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "LegacySound"
+            ]
+          },
           "Category": "State",
           "MemberType": "Property",
           "Name": "Duty",
@@ -101464,6 +102012,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "LegacySound"
+            ]
+          },
           "Category": "State",
           "MemberType": "Property",
           "Name": "Frequency",
@@ -101489,6 +102042,11 @@
     {
       "Members": [
         {
+          "Capabilities": {
+            "Read": [
+              "LegacySound"
+            ]
+          },
           "Category": "State",
           "MemberType": "Property",
           "Name": "Volume",
@@ -101765,7 +102323,7 @@
             "Category": "Primitive",
             "Name": "null"
           },
-          "Security": "RobloxScriptSecurity",
+          "Security": "PluginSecurity",
           "ThreadSafety": "Unsafe"
         },
         {
@@ -103692,7 +104250,7 @@
         {
           "Category": "Data",
           "MemberType": "Property",
-          "Name": "HeartbeatTimeMs",
+          "Name": "FrameTime",
           "Security": {
             "Read": "None",
             "Write": "None"
@@ -103704,6 +104262,51 @@
           "Tags": [
             "ReadOnly",
             "NotReplicated"
+          ],
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "float"
+          }
+        },
+        {
+          "Category": "Data",
+          "MemberType": "Property",
+          "Name": "HeartbeatTime",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": false,
+            "CanSave": false
+          },
+          "Tags": [
+            "ReadOnly",
+            "NotReplicated"
+          ],
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "float"
+          }
+        },
+        {
+          "Category": "Data",
+          "MemberType": "Property",
+          "Name": "HeartbeatTimeMs",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": false,
+            "CanSave": false
+          },
+          "Tags": [
+            "ReadOnly",
+            "NotReplicated",
+            "Deprecated"
           ],
           "ThreadSafety": "ReadSafe",
           "ValueType": {
@@ -103802,7 +104405,7 @@
         {
           "Category": "Data",
           "MemberType": "Property",
-          "Name": "PhysicsStepTimeMs",
+          "Name": "PhysicsStepTime",
           "Security": {
             "Read": "None",
             "Write": "None"
@@ -103824,7 +104427,250 @@
         {
           "Category": "Data",
           "MemberType": "Property",
+          "Name": "PhysicsStepTimeMs",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": false,
+            "CanSave": false
+          },
+          "Tags": [
+            "ReadOnly",
+            "NotReplicated",
+            "Deprecated"
+          ],
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "float"
+          }
+        },
+        {
+          "Category": "Data",
+          "MemberType": "Property",
           "Name": "PrimitivesCount",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": false,
+            "CanSave": false
+          },
+          "Tags": [
+            "ReadOnly",
+            "NotReplicated"
+          ],
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "int"
+          }
+        },
+        {
+          "Category": "Data",
+          "MemberType": "Property",
+          "Name": "RenderCPUFrameTime",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": false,
+            "CanSave": false
+          },
+          "Tags": [
+            "ReadOnly",
+            "NotReplicated"
+          ],
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "float"
+          }
+        },
+        {
+          "Category": "Data",
+          "MemberType": "Property",
+          "Name": "RenderGPUFrameTime",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": false,
+            "CanSave": false
+          },
+          "Tags": [
+            "ReadOnly",
+            "NotReplicated"
+          ],
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "float"
+          }
+        },
+        {
+          "Category": "Data",
+          "MemberType": "Property",
+          "Name": "SceneDrawcallCount",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": false,
+            "CanSave": false
+          },
+          "Tags": [
+            "ReadOnly",
+            "NotReplicated"
+          ],
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "int"
+          }
+        },
+        {
+          "Category": "Data",
+          "MemberType": "Property",
+          "Name": "SceneTriangleCount",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": false,
+            "CanSave": false
+          },
+          "Tags": [
+            "ReadOnly",
+            "NotReplicated"
+          ],
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "int"
+          }
+        },
+        {
+          "Category": "Data",
+          "MemberType": "Property",
+          "Name": "ShadowsDrawcallCount",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": false,
+            "CanSave": false
+          },
+          "Tags": [
+            "ReadOnly",
+            "NotReplicated"
+          ],
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "int"
+          }
+        },
+        {
+          "Category": "Data",
+          "MemberType": "Property",
+          "Name": "ShadowsTriangleCount",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": false,
+            "CanSave": false
+          },
+          "Tags": [
+            "ReadOnly",
+            "NotReplicated"
+          ],
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "int"
+          }
+        },
+        {
+          "Category": "Data",
+          "MemberType": "Property",
+          "Name": "UI2DDrawcallCount",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": false,
+            "CanSave": false
+          },
+          "Tags": [
+            "ReadOnly",
+            "NotReplicated"
+          ],
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "int"
+          }
+        },
+        {
+          "Category": "Data",
+          "MemberType": "Property",
+          "Name": "UI2DTriangleCount",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": false,
+            "CanSave": false
+          },
+          "Tags": [
+            "ReadOnly",
+            "NotReplicated"
+          ],
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "int"
+          }
+        },
+        {
+          "Category": "Data",
+          "MemberType": "Property",
+          "Name": "UI3DDrawcallCount",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": false,
+            "CanSave": false
+          },
+          "Tags": [
+            "ReadOnly",
+            "NotReplicated"
+          ],
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "int"
+          }
+        },
+        {
+          "Category": "Data",
+          "MemberType": "Property",
+          "Name": "UI3DTriangleCount",
           "Security": {
             "Read": "None",
             "Write": "None"
@@ -104099,6 +104945,75 @@
     {
       "Members": [
         {
+          "Capabilities": [
+            "Assistant"
+          ],
+          "MemberType": "Function",
+          "Name": "DEPRECATED_RegisterCommand",
+          "Parameters": [
+            {
+              "Name": "commandName",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            },
+            {
+              "Default": "nil",
+              "Name": "function",
+              "Type": {
+                "Category": "DataType",
+                "Name": "Function"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "RobloxScriptSecurity",
+          "Tags": [
+            "Deprecated"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Assistant"
+          ],
+          "MemberType": "Function",
+          "Name": "DEPRECATED_RegisterSequentialCommand",
+          "Parameters": [
+            {
+              "Name": "commandName",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            },
+            {
+              "Default": "nil",
+              "Name": "function",
+              "Type": {
+                "Category": "DataType",
+                "Name": "Function"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "RobloxScriptSecurity",
+          "Tags": [
+            "Deprecated"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Assistant"
+          ],
           "MemberType": "Function",
           "Name": "GetEphemeralVariable",
           "Parameters": [
@@ -104118,6 +105033,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Assistant"
+          ],
           "MemberType": "Function",
           "Name": "GetInstance",
           "Parameters": [
@@ -104144,6 +105062,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Assistant"
+          ],
           "MemberType": "Function",
           "Name": "InvokeCommand",
           "Parameters": [
@@ -104177,8 +105098,11 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Assistant"
+          ],
           "MemberType": "Function",
-          "Name": "RegisterCommand",
+          "Name": "RegisterCommandInternal",
           "Parameters": [
             {
               "Name": "commandName",
@@ -104194,6 +105118,22 @@
                 "Category": "DataType",
                 "Name": "Function"
               }
+            },
+            {
+              "Default": "false",
+              "Name": "isSequential",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "bool"
+              }
+            },
+            {
+              "Default": "false",
+              "Name": "isPublic",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "bool"
+              }
             }
           ],
           "ReturnType": {
@@ -104204,6 +105144,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Assistant"
+          ],
           "MemberType": "Function",
           "Name": "RegisterContextCollector",
           "Parameters": [
@@ -104231,33 +105174,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
-          "MemberType": "Function",
-          "Name": "RegisterSequentialCommand",
-          "Parameters": [
-            {
-              "Name": "commandName",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "string"
-              }
-            },
-            {
-              "Default": "nil",
-              "Name": "function",
-              "Type": {
-                "Category": "DataType",
-                "Name": "Function"
-              }
-            }
+          "Capabilities": [
+            "Assistant"
           ],
-          "ReturnType": {
-            "Category": "Primitive",
-            "Name": "null"
-          },
-          "Security": "RobloxScriptSecurity",
-          "ThreadSafety": "Unsafe"
-        },
-        {
           "MemberType": "Function",
           "Name": "SetEphemeralVariable",
           "Parameters": [
@@ -104292,6 +105211,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Assistant"
+          ],
           "MemberType": "Function",
           "Name": "SetPluginInfoCallback",
           "Parameters": [
@@ -104312,6 +105234,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Assistant"
+          ],
           "MemberType": "Function",
           "Name": "UnregisterCommand",
           "Parameters": [
@@ -104331,6 +105256,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Assistant"
+          ],
           "MemberType": "Function",
           "Name": "UnregisterContextCollector",
           "Parameters": [
@@ -104350,6 +105278,41 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Assistant"
+          ],
+          "MemberType": "Function",
+          "Name": "AttemptSaveAndSendPlaceTelemetry",
+          "Parameters": [
+            {
+              "Name": "requestId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            },
+            {
+              "Name": "toolSource",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "RobloxScriptSecurity",
+          "Tags": [
+            "Yields"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Assistant"
+          ],
           "MemberType": "Function",
           "Name": "BindCodeToGuid",
           "Parameters": [
@@ -104379,6 +105342,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Assistant"
+          ],
           "MemberType": "Function",
           "Name": "ExecuteCommandAsync",
           "Parameters": [
@@ -104408,13 +105374,16 @@
             "Category": "Group",
             "Name": "Variant"
           },
-          "Security": "LocalUserSecurity",
+          "Security": "None",
           "Tags": [
             "Yields"
           ],
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Assistant"
+          ],
           "MemberType": "Function",
           "Name": "RunSandboxedCode",
           "Parameters": [
@@ -104444,6 +105413,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Assistant"
+          ],
           "MemberType": "Event",
           "Name": "ConversationCleared",
           "Parameters": [],
@@ -104451,6 +105423,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Assistant"
+          ],
           "MemberType": "Event",
           "Name": "RequestEnded",
           "Parameters": [
@@ -104466,6 +105441,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Assistant"
+          ],
           "MemberType": "Event",
           "Name": "RequestError",
           "Parameters": [
@@ -104495,6 +105473,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Assistant"
+          ],
           "MemberType": "Event",
           "Name": "RequestStarted",
           "Parameters": [
@@ -104517,6 +105498,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Assistant"
+          ],
           "MemberType": "Event",
           "Name": "SequentialCommandsFinished",
           "Parameters": [
@@ -104539,6 +105523,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Assistant"
+          ],
           "MemberType": "Event",
           "Name": "Stream",
           "Parameters": [
@@ -133322,23 +134309,6 @@
     {
       "Items": [
         {
-          "Name": "Default",
-          "Value": 0
-        },
-        {
-          "Name": "Disabled",
-          "Value": 1
-        },
-        {
-          "Name": "Enabled",
-          "Value": 2
-        }
-      ],
-      "Name": "DecreaseMinimumPartDensityMode"
-    },
-    {
-      "Items": [
-        {
           "Name": "Zoom",
           "Value": 0
         },
@@ -139842,6 +140812,10 @@
         {
           "Name": "RemoteEvent",
           "Value": 19
+        },
+        {
+          "Name": "LegacySound",
+          "Value": 20
         }
       ],
       "Name": "SecurityCapability"
