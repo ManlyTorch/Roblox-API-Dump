@@ -72,7 +72,7 @@ async function UpdateRepo(Dump, Version, Token) {
       'User-Agent': 'Cloudflare-Worker',
     },
     body: JSON.stringify({
-      owner: "ManlyTorch",
+      owner: Owner,
       repo: Repo,
       path: Path,
       message: Version,
@@ -84,6 +84,23 @@ async function UpdateRepo(Dump, Version, Token) {
 
 export default {
   async fetch(request, env) {
+    const Token = env.GithubAPIKey // API Key
+    try {
+      const LatestCommit = await GetLatestCommit(Token);
+      const Version = await GetDumpVersion();
+      if (LatestCommit !== Version) {
+        const Dump = await GetAPIDump(Version);
+        await UpdateRepo(Dump, Version, Token)
+        return new Response(`Succesfully updated to ${Version}`)
+      } else {
+        return new Response('Already Latest Version')
+      }
+    } catch (error) {
+      return new Response(error.message)
+    }
+  },
+  
+  async scheduled(request, env) {
     const Token = env.GithubAPIKey // API Key
     try {
       const LatestCommit = await GetLatestCommit(Token);
