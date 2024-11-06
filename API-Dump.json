@@ -106,6 +106,7 @@
           },
           "Security": "None",
           "Tags": [
+            "Deprecated",
             "CustomLuaState"
           ],
           "ThreadSafety": "Unsafe"
@@ -251,6 +252,86 @@
         },
         {
           "MemberType": "Function",
+          "Name": "DrawImageProjected",
+          "Parameters": [
+            {
+              "Name": "mesh",
+              "Type": {
+                "Category": "DataType",
+                "Name": "Object"
+              }
+            },
+            {
+              "Name": "projection",
+              "Type": {
+                "Category": "Group",
+                "Name": "Dictionary"
+              }
+            },
+            {
+              "Name": "brushConfig",
+              "Type": {
+                "Category": "Group",
+                "Name": "Dictionary"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "DrawImageTransformed",
+          "Parameters": [
+            {
+              "Name": "position",
+              "Type": {
+                "Category": "DataType",
+                "Name": "Vector2"
+              }
+            },
+            {
+              "Name": "scale",
+              "Type": {
+                "Category": "DataType",
+                "Name": "Vector2"
+              }
+            },
+            {
+              "Name": "rotation",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "float"
+              }
+            },
+            {
+              "Name": "image",
+              "Type": {
+                "Category": "DataType",
+                "Name": "Object"
+              }
+            },
+            {
+              "Name": "options",
+              "Type": {
+                "Category": "Group",
+                "Name": "Dictionary?"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
           "Name": "DrawLine",
           "Parameters": [
             {
@@ -286,39 +367,6 @@
               "Type": {
                 "Category": "Enum",
                 "Name": "ImageCombineType"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Primitive",
-            "Name": "null"
-          },
-          "Security": "None",
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "DrawProjectionImage",
-          "Parameters": [
-            {
-              "Name": "mesh",
-              "Type": {
-                "Category": "DataType",
-                "Name": "Object"
-              }
-            },
-            {
-              "Name": "projection",
-              "Type": {
-                "Category": "Group",
-                "Name": "Dictionary"
-              }
-            },
-            {
-              "Name": "brushConfig",
-              "Type": {
-                "Category": "Group",
-                "Name": "Dictionary"
               }
             }
           ],
@@ -769,6 +817,17 @@
         },
         {
           "MemberType": "Function",
+          "Name": "GetCenter",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "DataType",
+            "Name": "Vector3"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
           "Name": "GetColor",
           "Parameters": [
             {
@@ -985,6 +1044,17 @@
               }
             }
           ],
+          "ReturnType": {
+            "Category": "DataType",
+            "Name": "Vector3"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetSize",
+          "Parameters": [],
           "ReturnType": {
             "Category": "DataType",
             "Name": "Vector3"
@@ -9880,6 +9950,29 @@
           "Category": "State",
           "MemberType": "Property",
           "Name": "Feedback",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "float"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "Audio"
+            ]
+          },
+          "Category": "State",
+          "MemberType": "Property",
+          "Name": "RampTime",
           "Security": {
             "Read": "None",
             "Write": "None"
@@ -46291,6 +46384,34 @@
               "UI"
             ]
           },
+          "Category": "Data",
+          "MemberType": "Property",
+          "Name": "DraggingScrollBar",
+          "Security": {
+            "Read": "RobloxScriptSecurity",
+            "Write": "RobloxScriptSecurity"
+          },
+          "Serialization": {
+            "CanLoad": false,
+            "CanSave": false
+          },
+          "Tags": [
+            "Hidden",
+            "ReadOnly",
+            "NotReplicated"
+          ],
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Enum",
+            "Name": "DraggingScrollBar"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "UI"
+            ]
+          },
           "Category": "Scrolling",
           "MemberType": "Property",
           "Name": "ElasticBehavior",
@@ -49185,6 +49306,9 @@
             "CanLoad": true,
             "CanSave": false
           },
+          "Tags": [
+            "NotReplicated"
+          ],
           "ThreadSafety": "ReadSafe",
           "ValueType": {
             "Category": "Primitive",
@@ -53003,7 +53127,7 @@
         },
         {
           "MemberType": "Function",
-          "Name": "NotificationDismissed",
+          "Name": "OnNotificationDisplayed",
           "Parameters": [
             {
               "Name": "notificationId",
@@ -53022,13 +53146,20 @@
         },
         {
           "MemberType": "Function",
-          "Name": "NotificationDisplayed",
+          "Name": "OnNotificationInteraction",
           "Parameters": [
             {
               "Name": "notificationId",
               "Type": {
                 "Category": "Primitive",
                 "Name": "string"
+              }
+            },
+            {
+              "Name": "buttonIndex",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int"
               }
             }
           ],
@@ -53567,32 +53698,6 @@
               "Type": {
                 "Category": "Enum",
                 "Name": "GuiType"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Primitive",
-            "Name": "null"
-          },
-          "Security": "RobloxScriptSecurity",
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "UserInteractedWithNotification",
-          "Parameters": [
-            {
-              "Name": "notificationId",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "string"
-              }
-            },
-            {
-              "Name": "buttonIndex",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "int"
               }
             }
           ],
@@ -79362,6 +79467,27 @@
         {
           "Category": "Behavior",
           "MemberType": "Property",
+          "Name": "TouchEventsUseCollisionGroups",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "Tags": [
+            "NotScriptable"
+          ],
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Enum",
+            "Name": "RolloutState"
+          }
+        },
+        {
+          "Category": "Behavior",
+          "MemberType": "Property",
           "Name": "TouchesUseCollisionGroups",
           "Security": {
             "Read": "None",
@@ -103348,12 +103474,13 @@
           },
           "Tags": [
             "NotReplicated",
+            "NotScriptable",
             "NotBrowsable"
           ],
           "ThreadSafety": "ReadSafe",
           "ValueType": {
             "Category": "Enum",
-            "Name": "AvatarJointUpgrade"
+            "Name": "RolloutState"
           }
         },
         {
@@ -104945,9 +105072,6 @@
     {
       "Members": [
         {
-          "Capabilities": [
-            "Assistant"
-          ],
           "MemberType": "Function",
           "Name": "DEPRECATED_RegisterCommand",
           "Parameters": [
@@ -104978,9 +105102,6 @@
           "ThreadSafety": "Unsafe"
         },
         {
-          "Capabilities": [
-            "Assistant"
-          ],
           "MemberType": "Function",
           "Name": "DEPRECATED_RegisterSequentialCommand",
           "Parameters": [
@@ -105011,9 +105132,6 @@
           "ThreadSafety": "Unsafe"
         },
         {
-          "Capabilities": [
-            "Assistant"
-          ],
           "MemberType": "Function",
           "Name": "GetEphemeralVariable",
           "Parameters": [
@@ -105033,9 +105151,6 @@
           "ThreadSafety": "Unsafe"
         },
         {
-          "Capabilities": [
-            "Assistant"
-          ],
           "MemberType": "Function",
           "Name": "GetInstance",
           "Parameters": [
@@ -105062,9 +105177,6 @@
           "ThreadSafety": "Unsafe"
         },
         {
-          "Capabilities": [
-            "Assistant"
-          ],
           "MemberType": "Function",
           "Name": "InvokeCommand",
           "Parameters": [
@@ -105098,9 +105210,6 @@
           "ThreadSafety": "Unsafe"
         },
         {
-          "Capabilities": [
-            "Assistant"
-          ],
           "MemberType": "Function",
           "Name": "RegisterCommandInternal",
           "Parameters": [
@@ -105144,9 +105253,6 @@
           "ThreadSafety": "Unsafe"
         },
         {
-          "Capabilities": [
-            "Assistant"
-          ],
           "MemberType": "Function",
           "Name": "RegisterContextCollector",
           "Parameters": [
@@ -105174,9 +105280,6 @@
           "ThreadSafety": "Unsafe"
         },
         {
-          "Capabilities": [
-            "Assistant"
-          ],
           "MemberType": "Function",
           "Name": "SetEphemeralVariable",
           "Parameters": [
@@ -105211,9 +105314,6 @@
           "ThreadSafety": "Unsafe"
         },
         {
-          "Capabilities": [
-            "Assistant"
-          ],
           "MemberType": "Function",
           "Name": "SetPluginInfoCallback",
           "Parameters": [
@@ -105234,9 +105334,6 @@
           "ThreadSafety": "Unsafe"
         },
         {
-          "Capabilities": [
-            "Assistant"
-          ],
           "MemberType": "Function",
           "Name": "UnregisterCommand",
           "Parameters": [
@@ -105256,9 +105353,6 @@
           "ThreadSafety": "Unsafe"
         },
         {
-          "Capabilities": [
-            "Assistant"
-          ],
           "MemberType": "Function",
           "Name": "UnregisterContextCollector",
           "Parameters": [
@@ -105278,9 +105372,6 @@
           "ThreadSafety": "Unsafe"
         },
         {
-          "Capabilities": [
-            "Assistant"
-          ],
           "MemberType": "Function",
           "Name": "AttemptSaveAndSendPlaceTelemetry",
           "Parameters": [
@@ -105310,9 +105401,6 @@
           "ThreadSafety": "Unsafe"
         },
         {
-          "Capabilities": [
-            "Assistant"
-          ],
           "MemberType": "Function",
           "Name": "BindCodeToGuid",
           "Parameters": [
@@ -105381,9 +105469,6 @@
           "ThreadSafety": "Unsafe"
         },
         {
-          "Capabilities": [
-            "Assistant"
-          ],
           "MemberType": "Function",
           "Name": "RunSandboxedCode",
           "Parameters": [
@@ -105413,9 +105498,6 @@
           "ThreadSafety": "Unsafe"
         },
         {
-          "Capabilities": [
-            "Assistant"
-          ],
           "MemberType": "Event",
           "Name": "ConversationCleared",
           "Parameters": [],
@@ -105423,9 +105505,6 @@
           "ThreadSafety": "Unsafe"
         },
         {
-          "Capabilities": [
-            "Assistant"
-          ],
           "MemberType": "Event",
           "Name": "RequestEnded",
           "Parameters": [
@@ -105441,9 +105520,6 @@
           "ThreadSafety": "Unsafe"
         },
         {
-          "Capabilities": [
-            "Assistant"
-          ],
           "MemberType": "Event",
           "Name": "RequestError",
           "Parameters": [
@@ -105473,9 +105549,6 @@
           "ThreadSafety": "Unsafe"
         },
         {
-          "Capabilities": [
-            "Assistant"
-          ],
           "MemberType": "Event",
           "Name": "RequestStarted",
           "Parameters": [
@@ -105498,9 +105571,6 @@
           "ThreadSafety": "Unsafe"
         },
         {
-          "Capabilities": [
-            "Assistant"
-          ],
           "MemberType": "Event",
           "Name": "SequentialCommandsFinished",
           "Parameters": [
@@ -105523,9 +105593,6 @@
           "ThreadSafety": "Unsafe"
         },
         {
-          "Capabilities": [
-            "Assistant"
-          ],
           "MemberType": "Event",
           "Name": "Stream",
           "Parameters": [
@@ -112031,7 +112098,23 @@
       ]
     },
     {
-      "Members": [],
+      "Members": [
+        {
+          "MemberType": "Event",
+          "Name": "TeamCreateErrorStatus",
+          "Parameters": [
+            {
+              "Name": "result",
+              "Type": {
+                "Category": "Enum",
+                "Name": "TeamCreateErrorState"
+              }
+            }
+          ],
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        }
+      ],
       "MemoryCategory": "Instances",
       "Name": "TeamCreatePublishService",
       "Superclass": "Instance",
@@ -116485,6 +116568,38 @@
           "ReturnType": {
             "Category": "Primitive",
             "Name": "bool"
+          },
+          "Security": "None",
+          "Tags": [
+            "Yields"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Chat"
+          ],
+          "MemberType": "Function",
+          "Name": "CanUsersDirectChatAsync",
+          "Parameters": [
+            {
+              "Name": "requesterUserId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            },
+            {
+              "Name": "userIds",
+              "Type": {
+                "Category": "Group",
+                "Name": "Array"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Array"
           },
           "Security": "None",
           "Tags": [
@@ -121874,10 +121989,7 @@
       ],
       "MemoryCategory": "Instances",
       "Name": "UIDragDetector",
-      "Superclass": "UIComponent",
-      "Tags": [
-        "NotBrowsable"
-      ]
+      "Superclass": "UIComponent"
     },
     {
       "Members": [
@@ -126384,7 +126496,7 @@
               }
             }
           ],
-          "Security": "RobloxScriptSecurity",
+          "Security": "None",
           "ThreadSafety": "Unsafe"
         },
         {
@@ -132454,23 +132566,6 @@
     {
       "Items": [
         {
-          "Name": "Default",
-          "Value": 0
-        },
-        {
-          "Name": "Enabled",
-          "Value": 1
-        },
-        {
-          "Name": "Disabled",
-          "Value": 2
-        }
-      ],
-      "Name": "AvatarJointUpgrade"
-    },
-    {
-      "Items": [
-        {
           "Name": "Success",
           "Value": 1
         },
@@ -134744,6 +134839,23 @@
         }
       ],
       "Name": "DraggerMovementMode"
+    },
+    {
+      "Items": [
+        {
+          "Name": "None",
+          "Value": 0
+        },
+        {
+          "Name": "Horizontal",
+          "Value": 1
+        },
+        {
+          "Name": "Vertical",
+          "Value": 2
+        }
+      ],
+      "Name": "DraggingScrollBar"
     },
     {
       "Items": [
@@ -139626,8 +139738,12 @@
           "Value": 9
         },
         {
-          "Name": "UnknownFailure",
+          "Name": "PurchaseFailure",
           "Value": 10
+        },
+        {
+          "Name": "UnknownFailure",
+          "Value": 11
         }
       ],
       "Name": "PromptCreateAvatarResult"
@@ -142246,6 +142362,23 @@
         }
       ],
       "Name": "TableMajorAxis"
+    },
+    {
+      "Items": [
+        {
+          "Name": "PlaceSizeTooLarge",
+          "Value": 0
+        },
+        {
+          "Name": "PlaceSizeApproachingLimit",
+          "Value": 1
+        },
+        {
+          "Name": "NoError",
+          "Value": 2
+        }
+      ],
+      "Name": "TeamCreateErrorState"
     },
     {
       "Items": [
