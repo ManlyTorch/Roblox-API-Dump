@@ -3117,6 +3117,46 @@
     {
       "Members": [
         {
+          "MemberType": "Event",
+          "Name": "WriteActivityHistoryEventFromStudio",
+          "Parameters": [
+            {
+              "Name": "eventType",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int"
+              }
+            },
+            {
+              "Name": "resourceId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            },
+            {
+              "Name": "metadata",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            }
+          ],
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        }
+      ],
+      "MemoryCategory": "Instances",
+      "Name": "ActivityHistoryEventService",
+      "Superclass": "Instance",
+      "Tags": [
+        "NotCreatable",
+        "Service"
+      ]
+    },
+    {
+      "Members": [
+        {
           "Category": "State",
           "MemberType": "Property",
           "Name": "PortalInvalidReason",
@@ -8030,6 +8070,87 @@
         },
         {
           "MemberType": "Function",
+          "Name": "CreateAssetAsync",
+          "Parameters": [
+            {
+              "Name": "object",
+              "Type": {
+                "Category": "DataType",
+                "Name": "Object"
+              }
+            },
+            {
+              "Name": "assetType",
+              "Type": {
+                "Category": "Enum",
+                "Name": "AssetType"
+              }
+            },
+            {
+              "Default": "nil",
+              "Name": "requestParameters",
+              "Type": {
+                "Category": "Group",
+                "Name": "Dictionary"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Tuple"
+          },
+          "Security": "None",
+          "Tags": [
+            "Yields"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "CreateAssetVersionAsync",
+          "Parameters": [
+            {
+              "Name": "object",
+              "Type": {
+                "Category": "DataType",
+                "Name": "Object"
+              }
+            },
+            {
+              "Name": "assetType",
+              "Type": {
+                "Category": "Enum",
+                "Name": "AssetType"
+              }
+            },
+            {
+              "Name": "assetId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            },
+            {
+              "Default": "nil",
+              "Name": "requestParameters",
+              "Type": {
+                "Category": "Group",
+                "Name": "Dictionary"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Tuple"
+          },
+          "Security": "None",
+          "Tags": [
+            "Yields"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
           "Name": "CreateEditableImageAsync",
           "Parameters": [
             {
@@ -9343,6 +9464,45 @@
             "CustomLuaState"
           ],
           "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Audio"
+          ],
+          "MemberType": "Event",
+          "Name": "WiringChanged",
+          "Parameters": [
+            {
+              "Name": "connected",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "bool"
+              }
+            },
+            {
+              "Name": "pin",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            },
+            {
+              "Name": "wire",
+              "Type": {
+                "Category": "Class",
+                "Name": "Wire"
+              }
+            },
+            {
+              "Name": "instance",
+              "Type": {
+                "Category": "Class",
+                "Name": "Instance"
+              }
+            }
+          ],
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
         }
       ],
       "MemoryCategory": "Internal",
@@ -9462,6 +9622,45 @@
             "Category": "DataType",
             "Name": "Instances"
           },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Audio"
+          ],
+          "MemberType": "Event",
+          "Name": "WiringChanged",
+          "Parameters": [
+            {
+              "Name": "connected",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "bool"
+              }
+            },
+            {
+              "Name": "pin",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            },
+            {
+              "Name": "wire",
+              "Type": {
+                "Category": "Class",
+                "Name": "Wire"
+              }
+            },
+            {
+              "Name": "instance",
+              "Type": {
+                "Category": "Class",
+                "Name": "Instance"
+              }
+            }
+          ],
           "Security": "None",
           "ThreadSafety": "Unsafe"
         }
@@ -9629,6 +9828,45 @@
             "Category": "DataType",
             "Name": "Instances"
           },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Audio"
+          ],
+          "MemberType": "Event",
+          "Name": "WiringChanged",
+          "Parameters": [
+            {
+              "Name": "connected",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "bool"
+              }
+            },
+            {
+              "Name": "pin",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            },
+            {
+              "Name": "wire",
+              "Type": {
+                "Category": "Class",
+                "Name": "Wire"
+              }
+            },
+            {
+              "Name": "instance",
+              "Type": {
+                "Category": "Class",
+                "Name": "Instance"
+              }
+            }
+          ],
           "Security": "None",
           "ThreadSafety": "Unsafe"
         }
@@ -9820,6 +10058,42 @@
           },
           "Security": "None",
           "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Event",
+          "Name": "WiringChanged",
+          "Parameters": [
+            {
+              "Name": "connected",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "bool"
+              }
+            },
+            {
+              "Name": "pin",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            },
+            {
+              "Name": "wire",
+              "Type": {
+                "Category": "Class",
+                "Name": "Wire"
+              }
+            },
+            {
+              "Name": "instance",
+              "Type": {
+                "Category": "Class",
+                "Name": "Instance"
+              }
+            }
+          ],
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
         }
       ],
       "MemoryCategory": "Internal",
@@ -9870,6 +10144,45 @@
             "Category": "DataType",
             "Name": "Instances"
           },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Audio"
+          ],
+          "MemberType": "Event",
+          "Name": "WiringChanged",
+          "Parameters": [
+            {
+              "Name": "connected",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "bool"
+              }
+            },
+            {
+              "Name": "pin",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            },
+            {
+              "Name": "wire",
+              "Type": {
+                "Category": "Class",
+                "Name": "Wire"
+              }
+            },
+            {
+              "Name": "instance",
+              "Type": {
+                "Category": "Class",
+                "Name": "Instance"
+              }
+            }
+          ],
           "Security": "None",
           "ThreadSafety": "Unsafe"
         }
@@ -9945,6 +10258,45 @@
             "Category": "DataType",
             "Name": "Instances"
           },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Audio"
+          ],
+          "MemberType": "Event",
+          "Name": "WiringChanged",
+          "Parameters": [
+            {
+              "Name": "connected",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "bool"
+              }
+            },
+            {
+              "Name": "pin",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            },
+            {
+              "Name": "wire",
+              "Type": {
+                "Category": "Class",
+                "Name": "Wire"
+              }
+            },
+            {
+              "Name": "instance",
+              "Type": {
+                "Category": "Class",
+                "Name": "Instance"
+              }
+            }
+          ],
           "Security": "None",
           "ThreadSafety": "Unsafe"
         }
@@ -10114,6 +10466,45 @@
           },
           "Security": "None",
           "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Audio"
+          ],
+          "MemberType": "Event",
+          "Name": "WiringChanged",
+          "Parameters": [
+            {
+              "Name": "connected",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "bool"
+              }
+            },
+            {
+              "Name": "pin",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            },
+            {
+              "Name": "wire",
+              "Type": {
+                "Category": "Class",
+                "Name": "Wire"
+              }
+            },
+            {
+              "Name": "instance",
+              "Type": {
+                "Category": "Class",
+                "Name": "Instance"
+              }
+            }
+          ],
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
         }
       ],
       "MemoryCategory": "Internal",
@@ -10189,6 +10580,29 @@
           "ValueType": {
             "Category": "DataType",
             "Name": "BinaryString"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "Audio"
+            ]
+          },
+          "Category": "Simulation",
+          "MemberType": "Property",
+          "Name": "SimulationFidelity",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Enum",
+            "Name": "AudioSimulationFidelity"
           }
         },
         {
@@ -10331,6 +10745,45 @@
           "Tags": [
             "CustomLuaState"
           ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Audio"
+          ],
+          "MemberType": "Event",
+          "Name": "WiringChanged",
+          "Parameters": [
+            {
+              "Name": "connected",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "bool"
+              }
+            },
+            {
+              "Name": "pin",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            },
+            {
+              "Name": "wire",
+              "Type": {
+                "Category": "Class",
+                "Name": "Wire"
+              }
+            },
+            {
+              "Name": "instance",
+              "Type": {
+                "Category": "Class",
+                "Name": "Instance"
+              }
+            }
+          ],
+          "Security": "None",
           "ThreadSafety": "Unsafe"
         }
       ],
@@ -10502,6 +10955,45 @@
           },
           "Security": "None",
           "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Audio"
+          ],
+          "MemberType": "Event",
+          "Name": "WiringChanged",
+          "Parameters": [
+            {
+              "Name": "connected",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "bool"
+              }
+            },
+            {
+              "Name": "pin",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            },
+            {
+              "Name": "wire",
+              "Type": {
+                "Category": "Class",
+                "Name": "Wire"
+              }
+            },
+            {
+              "Name": "instance",
+              "Type": {
+                "Category": "Class",
+                "Name": "Instance"
+              }
+            }
+          ],
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
         }
       ],
       "MemoryCategory": "Internal",
@@ -10575,6 +11067,45 @@
             "Category": "DataType",
             "Name": "Instances"
           },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Audio"
+          ],
+          "MemberType": "Event",
+          "Name": "WiringChanged",
+          "Parameters": [
+            {
+              "Name": "connected",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "bool"
+              }
+            },
+            {
+              "Name": "pin",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            },
+            {
+              "Name": "wire",
+              "Type": {
+                "Category": "Class",
+                "Name": "Wire"
+              }
+            },
+            {
+              "Name": "instance",
+              "Type": {
+                "Category": "Class",
+                "Name": "Instance"
+              }
+            }
+          ],
           "Security": "None",
           "ThreadSafety": "Unsafe"
         }
@@ -10769,6 +11300,45 @@
           },
           "Security": "None",
           "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Audio"
+          ],
+          "MemberType": "Event",
+          "Name": "WiringChanged",
+          "Parameters": [
+            {
+              "Name": "connected",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "bool"
+              }
+            },
+            {
+              "Name": "pin",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            },
+            {
+              "Name": "wire",
+              "Type": {
+                "Category": "Class",
+                "Name": "Wire"
+              }
+            },
+            {
+              "Name": "instance",
+              "Type": {
+                "Category": "Class",
+                "Name": "Instance"
+              }
+            }
+          ],
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
         }
       ],
       "MemoryCategory": "Internal",
@@ -10888,6 +11458,45 @@
             "Category": "DataType",
             "Name": "Instances"
           },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Audio"
+          ],
+          "MemberType": "Event",
+          "Name": "WiringChanged",
+          "Parameters": [
+            {
+              "Name": "connected",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "bool"
+              }
+            },
+            {
+              "Name": "pin",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            },
+            {
+              "Name": "wire",
+              "Type": {
+                "Category": "Class",
+                "Name": "Wire"
+              }
+            },
+            {
+              "Name": "instance",
+              "Type": {
+                "Category": "Class",
+                "Name": "Instance"
+              }
+            }
+          ],
           "Security": "None",
           "ThreadSafety": "Unsafe"
         }
@@ -11146,6 +11755,45 @@
           },
           "Security": "None",
           "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Audio"
+          ],
+          "MemberType": "Event",
+          "Name": "WiringChanged",
+          "Parameters": [
+            {
+              "Name": "connected",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "bool"
+              }
+            },
+            {
+              "Name": "pin",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            },
+            {
+              "Name": "wire",
+              "Type": {
+                "Category": "Class",
+                "Name": "Wire"
+              }
+            },
+            {
+              "Name": "instance",
+              "Type": {
+                "Category": "Class",
+                "Name": "Instance"
+              }
+            }
+          ],
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
         }
       ],
       "MemoryCategory": "Internal",
@@ -11221,6 +11869,29 @@
           "ValueType": {
             "Category": "DataType",
             "Name": "BinaryString"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "Audio"
+            ]
+          },
+          "Category": "Simulation",
+          "MemberType": "Property",
+          "Name": "SimulationFidelity",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Enum",
+            "Name": "AudioSimulationFidelity"
           }
         },
         {
@@ -11364,6 +12035,45 @@
             "CustomLuaState"
           ],
           "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Audio"
+          ],
+          "MemberType": "Event",
+          "Name": "WiringChanged",
+          "Parameters": [
+            {
+              "Name": "connected",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "bool"
+              }
+            },
+            {
+              "Name": "pin",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            },
+            {
+              "Name": "wire",
+              "Type": {
+                "Category": "Class",
+                "Name": "Wire"
+              }
+            },
+            {
+              "Name": "instance",
+              "Type": {
+                "Category": "Class",
+                "Name": "Instance"
+              }
+            }
+          ],
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
         }
       ],
       "MemoryCategory": "Internal",
@@ -11437,6 +12147,45 @@
             "Category": "DataType",
             "Name": "Instances"
           },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Audio"
+          ],
+          "MemberType": "Event",
+          "Name": "WiringChanged",
+          "Parameters": [
+            {
+              "Name": "connected",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "bool"
+              }
+            },
+            {
+              "Name": "pin",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            },
+            {
+              "Name": "wire",
+              "Type": {
+                "Category": "Class",
+                "Name": "Wire"
+              }
+            },
+            {
+              "Name": "instance",
+              "Type": {
+                "Category": "Class",
+                "Name": "Instance"
+              }
+            }
+          ],
           "Security": "None",
           "ThreadSafety": "Unsafe"
         }
@@ -11809,6 +12558,45 @@
           "Parameters": [],
           "Security": "None",
           "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Audio"
+          ],
+          "MemberType": "Event",
+          "Name": "WiringChanged",
+          "Parameters": [
+            {
+              "Name": "connected",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "bool"
+              }
+            },
+            {
+              "Name": "pin",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            },
+            {
+              "Name": "wire",
+              "Type": {
+                "Category": "Class",
+                "Name": "Wire"
+              }
+            },
+            {
+              "Name": "instance",
+              "Type": {
+                "Category": "Class",
+                "Name": "Instance"
+              }
+            }
+          ],
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
         }
       ],
       "MemoryCategory": "Internal",
@@ -12135,6 +12923,45 @@
             "Category": "DataType",
             "Name": "Instances"
           },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Audio"
+          ],
+          "MemberType": "Event",
+          "Name": "WiringChanged",
+          "Parameters": [
+            {
+              "Name": "connected",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "bool"
+              }
+            },
+            {
+              "Name": "pin",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            },
+            {
+              "Name": "wire",
+              "Type": {
+                "Category": "Class",
+                "Name": "Wire"
+              }
+            },
+            {
+              "Name": "instance",
+              "Type": {
+                "Category": "Class",
+                "Name": "Instance"
+              }
+            }
+          ],
           "Security": "None",
           "ThreadSafety": "Unsafe"
         }
@@ -14541,6 +15368,37 @@
       ],
       "MemoryCategory": "Instances",
       "Name": "AvatarImportService",
+      "Superclass": "Instance",
+      "Tags": [
+        "NotCreatable",
+        "Service",
+        "NotReplicated"
+      ]
+    },
+    {
+      "Members": [
+        {
+          "MemberType": "Function",
+          "Name": "PreloadModelAssets",
+          "Parameters": [
+            {
+              "Name": "models",
+              "Type": {
+                "Category": "DataType",
+                "Name": "Instances"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Array"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        }
+      ],
+      "MemoryCategory": "Instances",
+      "Name": "AvatarPreloader",
       "Superclass": "Instance",
       "Tags": [
         "NotCreatable",
@@ -37548,6 +38406,37 @@
     {
       "Members": [
         {
+          "MemberType": "Function",
+          "Name": "GetServiceVisibility",
+          "Parameters": [
+            {
+              "Name": "service",
+              "Type": {
+                "Category": "Class",
+                "Name": "Instance"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "bool"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        }
+      ],
+      "MemoryCategory": "Instances",
+      "Name": "ExplorerServiceVisibilityService",
+      "Superclass": "Instance",
+      "Tags": [
+        "NotCreatable",
+        "Service",
+        "NotReplicated"
+      ]
+    },
+    {
+      "Members": [
+        {
           "Category": "Data",
           "MemberType": "Property",
           "Name": "BlastPressure",
@@ -41185,31 +42074,6 @@
             "CSG"
           ],
           "MemberType": "Function",
-          "Name": "StitchMeshesAsync",
-          "Parameters": [
-            {
-              "Name": "meshParts",
-              "Type": {
-                "Category": "Group",
-                "Name": "Array"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "DataType",
-            "Name": "ContentId"
-          },
-          "Security": "RobloxScriptSecurity",
-          "Tags": [
-            "Yields"
-          ],
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "Capabilities": [
-            "CSG"
-          ],
-          "MemberType": "Function",
           "Name": "SubtractAsync",
           "Parameters": [
             {
@@ -41670,6 +42534,38 @@
               "Type": {
                 "Category": "Primitive",
                 "Name": "string"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Tuple"
+          },
+          "Security": "None",
+          "Tags": [
+            "Yields"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "DataStore"
+          ],
+          "MemberType": "Function",
+          "Name": "GetVersionAtTimeAsync",
+          "Parameters": [
+            {
+              "Name": "key",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            },
+            {
+              "Name": "timestamp",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
               }
             }
           ],
@@ -64396,6 +65292,16 @@
       ]
     },
     {
+      "Members": [],
+      "MemoryCategory": "Instances",
+      "Name": "MLModelDeliveryService",
+      "Superclass": "Instance",
+      "Tags": [
+        "NotCreatable",
+        "Service"
+      ]
+    },
+    {
       "Members": [
         {
           "Capabilities": {
@@ -72223,6 +73129,24 @@
           }
         },
         {
+          "Category": "Collision",
+          "MemberType": "Property",
+          "Name": "AudioCanCollide",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "bool"
+          }
+        },
+        {
           "Category": "Surface Inputs",
           "MemberType": "Property",
           "Name": "BackParamA",
@@ -79305,8 +80229,7 @@
             "CanSave": true
           },
           "Tags": [
-            "NotScriptable",
-            "NotBrowsable"
+            "NotScriptable"
           ],
           "ThreadSafety": "ReadSafe",
           "ValueType": {
@@ -89876,6 +90799,35 @@
         },
         {
           "MemberType": "Function",
+          "Name": "CanViewBrandProjectAsync",
+          "Parameters": [
+            {
+              "Name": "player",
+              "Type": {
+                "Category": "Class",
+                "Name": "Player"
+              }
+            },
+            {
+              "Name": "brandProjectId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "bool"
+          },
+          "Security": "None",
+          "Tags": [
+            "Yields"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
           "Name": "GetPolicyInfoForPlayerAsync",
           "Parameters": [
             {
@@ -99102,6 +100054,32 @@
             "Category": "DataType",
             "Name": "BinaryString"
           }
+        },
+        {
+          "MemberType": "Function",
+          "Name": "SetServiceVisibilityPreference",
+          "Parameters": [
+            {
+              "Name": "service",
+              "Type": {
+                "Category": "Class",
+                "Name": "Instance"
+              }
+            },
+            {
+              "Name": "visible",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "bool"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
         }
       ],
       "MemoryCategory": "Instances",
@@ -103333,6 +104311,17 @@
         },
         {
           "MemberType": "Function",
+          "Name": "getTutorialVersionForUser",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "string"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
           "Name": "isTutorialBannerClosed",
           "Parameters": [],
           "ReturnType": {
@@ -105644,6 +106633,28 @@
             "Name": "Variant"
           },
           "Security": "None",
+          "Tags": [
+            "Yields"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetRequiredScripts",
+          "Parameters": [
+            {
+              "Name": "script",
+              "Type": {
+                "Category": "Class",
+                "Name": "Instance"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Variant"
+          },
+          "Security": "RobloxScriptSecurity",
           "Tags": [
             "Yields"
           ],
@@ -112312,6 +113323,13 @@
                 "Category": "Enum",
                 "Name": "TeamCreateErrorState"
               }
+            },
+            {
+              "Name": "teamCreateSaveData",
+              "Type": {
+                "Category": "Group",
+                "Name": "Dictionary"
+              }
             }
           ],
           "Security": "RobloxScriptSecurity",
@@ -112336,13 +113354,6 @@
             "Category": "Primitive",
             "Name": "null"
           },
-          "Security": "RobloxScriptSecurity",
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Event",
-          "Name": "ToggleManageCollaborators",
-          "Parameters": [],
           "Security": "RobloxScriptSecurity",
           "ThreadSafety": "Unsafe"
         }
@@ -120293,6 +121304,32 @@
         },
         {
           "MemberType": "Function",
+          "Name": "ValidateEditableMeshUVDuplicates",
+          "Parameters": [
+            {
+              "Name": "referenceValues",
+              "Type": {
+                "Category": "Group",
+                "Name": "Array"
+              }
+            },
+            {
+              "Name": "editableMesh",
+              "Type": {
+                "Category": "DataType",
+                "Name": "Object"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "int"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
           "Name": "ValidateEditableMeshUVSpace",
           "Parameters": [
             {
@@ -121627,6 +122664,35 @@
           "ReturnType": {
             "Category": "Primitive",
             "Name": "bool"
+          },
+          "Security": "RobloxScriptSecurity",
+          "Tags": [
+            "Yields"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "ValidateUVDuplicates",
+          "Parameters": [
+            {
+              "Name": "referenceValues",
+              "Type": {
+                "Category": "Group",
+                "Name": "Array"
+              }
+            },
+            {
+              "Name": "meshId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "int"
           },
           "Security": "RobloxScriptSecurity",
           "Tags": [
@@ -132828,6 +133894,19 @@
     {
       "Items": [
         {
+          "Name": "None",
+          "Value": 0
+        },
+        {
+          "Name": "Automatic",
+          "Value": 1
+        }
+      ],
+      "Name": "AudioSimulationFidelity"
+    },
+    {
+      "Items": [
+        {
           "Name": "Music",
           "Value": 1
         },
@@ -134747,6 +135826,27 @@
         }
       ],
       "Name": "CoreGuiType"
+    },
+    {
+      "Items": [
+        {
+          "Name": "Success",
+          "Value": 1
+        },
+        {
+          "Name": "PermissionDenied",
+          "Value": 2
+        },
+        {
+          "Name": "UploadFailed",
+          "Value": 3
+        },
+        {
+          "Name": "Unknown",
+          "Value": 4
+        }
+      ],
+      "Name": "CreateAssetResult"
     },
     {
       "Items": [
