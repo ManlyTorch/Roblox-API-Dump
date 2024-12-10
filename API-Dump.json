@@ -18262,10 +18262,7 @@
       ],
       "MemoryCategory": "Instances",
       "Name": "WrapDeformer",
-      "Superclass": "BaseWrap",
-      "Tags": [
-        "NotBrowsable"
-      ]
+      "Superclass": "BaseWrap"
     },
     {
       "Members": [
@@ -40810,6 +40807,16 @@
       ]
     },
     {
+      "Members": [],
+      "MemoryCategory": "Instances",
+      "Name": "FeatureRestrictionManager",
+      "Superclass": "Instance",
+      "Tags": [
+        "NotCreatable",
+        "Service"
+      ]
+    },
+    {
       "Members": [
         {
           "Category": "Data",
@@ -47181,6 +47188,15 @@
       "MemoryCategory": "Gui",
       "Name": "TextLabel",
       "Superclass": "GuiLabel"
+    },
+    {
+      "Members": [],
+      "MemoryCategory": "Gui",
+      "Name": "RelativeGui",
+      "Superclass": "GuiObject",
+      "Tags": [
+        "NotReplicated"
+      ]
     },
     {
       "Members": [
@@ -79924,27 +79940,6 @@
         {
           "Category": "Behavior",
           "MemberType": "Property",
-          "Name": "CSGAsyncDynamicCollision",
-          "Security": {
-            "Read": "None",
-            "Write": "None"
-          },
-          "Serialization": {
-            "CanLoad": true,
-            "CanSave": true
-          },
-          "Tags": [
-            "NotScriptable"
-          ],
-          "ThreadSafety": "ReadSafe",
-          "ValueType": {
-            "Category": "Enum",
-            "Name": "CSGAsyncDynamicCollision"
-          }
-        },
-        {
-          "Category": "Behavior",
-          "MemberType": "Property",
           "Name": "ClientAnimatorThrottling",
           "Security": {
             "Read": "None",
@@ -104456,17 +104451,6 @@
         },
         {
           "MemberType": "Function",
-          "Name": "refreshRegistryDataInStartPage",
-          "Parameters": [],
-          "ReturnType": {
-            "Category": "Primitive",
-            "Name": "null"
-          },
-          "Security": "RobloxScriptSecurity",
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
           "Name": "removeAPIGameFromRegistry",
           "Parameters": [
             {
@@ -111932,25 +111916,6 @@
         },
         {
           "MemberType": "Function",
-          "Name": "RequestClose",
-          "Parameters": [
-            {
-              "Name": "closeMode",
-              "Type": {
-                "Category": "Enum",
-                "Name": "StudioCloseMode"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Primitive",
-            "Name": "null"
-          },
-          "Security": "RobloxScriptSecurity",
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
           "Name": "SetPluginEnabled",
           "Parameters": [
             {
@@ -113819,6 +113784,25 @@
         },
         {
           "MemberType": "Function",
+          "Name": "GetThirdPartyTeleportInfo",
+          "Parameters": [
+            {
+              "Name": "goForth",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "bool"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Tuple"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
           "Name": "SetTeleportGui",
           "Parameters": [
             {
@@ -114075,6 +114059,25 @@
             "Name": "null"
           },
           "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "TeleportTrustedBackForth",
+          "Parameters": [
+            {
+              "Name": "goForth",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "bool"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "RobloxScriptSecurity",
           "ThreadSafety": "Unsafe"
         },
         {
@@ -134990,23 +134993,6 @@
         }
       ],
       "Name": "ButtonStyle"
-    },
-    {
-      "Items": [
-        {
-          "Name": "Default",
-          "Value": 0
-        },
-        {
-          "Name": "Disabled",
-          "Value": 1
-        },
-        {
-          "Name": "Enabled",
-          "Value": 2
-        }
-      ],
-      "Name": "CSGAsyncDynamicCollision"
     },
     {
       "Items": [
