@@ -3285,6 +3285,44 @@
       "Members": [
         {
           "MemberType": "Function",
+          "Name": "CreateAdRewardFromDevProductId",
+          "Parameters": [
+            {
+              "Name": "devProductId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "DataType",
+            "Name": "AdReward"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetAdAvailability",
+          "Parameters": [
+            {
+              "Name": "adFormat",
+              "Type": {
+                "Category": "Enum",
+                "Name": "AdFormat"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Variant"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
           "Name": "GetAdTeleportInfo",
           "Parameters": [],
           "ReturnType": {
@@ -3361,6 +3399,57 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "MemberType": "Function",
+          "Name": "ShowRewardedVideoAdAsync",
+          "Parameters": [
+            {
+              "Name": "player",
+              "Type": {
+                "Category": "Class",
+                "Name": "Player"
+              }
+            },
+            {
+              "Name": "reward",
+              "Type": {
+                "Category": "DataType",
+                "Name": "AdReward"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Enum",
+            "Name": "ShowAdResult"
+          },
+          "Security": "None",
+          "Tags": [
+            "Yields"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Event",
+          "Name": "AdAvailabilityChanged",
+          "Parameters": [
+            {
+              "Name": "adFormat",
+              "Type": {
+                "Category": "Enum",
+                "Name": "AdFormat"
+              }
+            },
+            {
+              "Name": "adAvailabilityResult",
+              "Type": {
+                "Category": "Group",
+                "Name": "Variant"
+              }
+            }
+          ],
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
           "MemberType": "Event",
           "Name": "AdTeleportEnded",
           "Parameters": [],
@@ -3427,8 +3516,16 @@
         },
         {
           "MemberType": "Event",
-          "Name": "ShowStaticEudsaDisclosure",
-          "Parameters": [],
+          "Name": "ShowReportAdPopup",
+          "Parameters": [
+            {
+              "Name": "adInfo",
+              "Type": {
+                "Category": "Group",
+                "Name": "Dictionary"
+              }
+            }
+          ],
           "Security": "RobloxScriptSecurity",
           "ThreadSafety": "Unsafe"
         },
@@ -9723,6 +9820,32 @@
               "Audio"
             ]
           },
+          "Category": "State Editing",
+          "MemberType": "Property",
+          "Name": "Editor",
+          "Security": {
+            "Read": "RobloxScriptSecurity",
+            "Write": "RobloxScriptSecurity"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": false
+          },
+          "Tags": [
+            "NotReplicated"
+          ],
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "bool"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "Audio"
+            ]
+          },
           "Category": "State",
           "MemberType": "Property",
           "Name": "MakeupGain",
@@ -11682,6 +11805,32 @@
             "CanLoad": true,
             "CanSave": true
           },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "bool"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "Audio"
+            ]
+          },
+          "Category": "State Editing",
+          "MemberType": "Property",
+          "Name": "Editor",
+          "Security": {
+            "Read": "RobloxScriptSecurity",
+            "Write": "RobloxScriptSecurity"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": false
+          },
+          "Tags": [
+            "NotReplicated"
+          ],
           "ThreadSafety": "ReadSafe",
           "ValueType": {
             "Category": "Primitive",
@@ -48291,6 +48440,29 @@
           },
           "Category": "Data",
           "MemberType": "Property",
+          "Name": "ShouldEmitUpAndDownArrowEvents",
+          "Security": {
+            "Read": "RobloxScriptSecurity",
+            "Write": "RobloxScriptSecurity"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "bool"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "UI"
+            ]
+          },
+          "Category": "Data",
+          "MemberType": "Property",
           "Name": "ShowNativeInput",
           "Security": {
             "Read": "None",
@@ -55158,8 +55330,8 @@
           "MemberType": "Property",
           "Name": "Position",
           "Security": {
-            "Read": "RobloxScriptSecurity",
-            "Write": "RobloxScriptSecurity"
+            "Read": "None",
+            "Write": "None"
           },
           "Serialization": {
             "CanLoad": true,
@@ -55176,8 +55348,8 @@
           "MemberType": "Property",
           "Name": "Radius",
           "Security": {
-            "Read": "RobloxScriptSecurity",
-            "Write": "RobloxScriptSecurity"
+            "Read": "None",
+            "Write": "None"
           },
           "Serialization": {
             "CanLoad": true,
@@ -55238,7 +55410,7 @@
         },
         {
           "MemberType": "Function",
-          "Name": "SetKeys",
+          "Name": "SetWaveformKeys",
           "Parameters": [
             {
               "Name": "keys",
@@ -55252,7 +55424,7 @@
             "Category": "Primitive",
             "Name": "null"
           },
-          "Security": "RobloxScriptSecurity",
+          "Security": "None",
           "ThreadSafety": "Unsafe"
         },
         {
@@ -80000,6 +80172,24 @@
         {
           "Category": "Behavior",
           "MemberType": "Property",
+          "Name": "FallHeightEnabled",
+          "Security": {
+            "Read": "None",
+            "Write": "PluginSecurity"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "bool"
+          }
+        },
+        {
+          "Category": "Behavior",
+          "MemberType": "Property",
           "Name": "FallenPartsDestroyHeight",
           "Security": {
             "Read": "None",
@@ -103849,6 +104039,21 @@
         },
         {
           "MemberType": "Event",
+          "Name": "OpenAudioCompressorEditorSignal",
+          "Parameters": [
+            {
+              "Name": "selectedCompressorObjects",
+              "Type": {
+                "Category": "DataType",
+                "Name": "Instances"
+              }
+            }
+          ],
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Event",
           "Name": "OpenAudioEqualizerEditorSignal",
           "Parameters": [
             {
@@ -106024,6 +106229,28 @@
         },
         {
           "MemberType": "Function",
+          "Name": "GetMemoryCategoryNames",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Array"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetMemoryUsageMbAllCategories",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Array"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
           "Name": "GetMemoryUsageMbForTag",
           "Parameters": [
             {
@@ -106266,66 +106493,6 @@
     },
     {
       "Members": [
-        {
-          "MemberType": "Function",
-          "Name": "DEPRECATED_RegisterCommand",
-          "Parameters": [
-            {
-              "Name": "commandName",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "string"
-              }
-            },
-            {
-              "Default": "nil",
-              "Name": "function",
-              "Type": {
-                "Category": "DataType",
-                "Name": "Function"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Primitive",
-            "Name": "null"
-          },
-          "Security": "RobloxScriptSecurity",
-          "Tags": [
-            "Deprecated"
-          ],
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "DEPRECATED_RegisterSequentialCommand",
-          "Parameters": [
-            {
-              "Name": "commandName",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "string"
-              }
-            },
-            {
-              "Default": "nil",
-              "Name": "function",
-              "Type": {
-                "Category": "DataType",
-                "Name": "Function"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Primitive",
-            "Name": "null"
-          },
-          "Security": "RobloxScriptSecurity",
-          "Tags": [
-            "Deprecated"
-          ],
-          "ThreadSafety": "Unsafe"
-        },
         {
           "MemberType": "Function",
           "Name": "GetEphemeralVariable",
@@ -112349,39 +112516,6 @@
               "Type": {
                 "Category": "Primitive",
                 "Name": "string?"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Primitive",
-            "Name": "null"
-          },
-          "Security": "RobloxScriptSecurity",
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "AttachPluginGui",
-          "Parameters": [
-            {
-              "Name": "target",
-              "Type": {
-                "Category": "Class",
-                "Name": "StudioWidget"
-              }
-            },
-            {
-              "Name": "gui",
-              "Type": {
-                "Category": "Class",
-                "Name": "PluginGui"
-              }
-            },
-            {
-              "Name": "attachment",
-              "Type": {
-                "Category": "Class",
-                "Name": "StudioAttachment"
               }
             }
           ],
@@ -120431,7 +120565,7 @@
             }
           ],
           "Security": "None",
-          "ThreadSafety": "Unsafe"
+          "ThreadSafety": "Safe"
         }
       ],
       "MemoryCategory": "Instances",
@@ -132728,6 +132862,13 @@
                 "Category": "Primitive",
                 "Name": "string?"
               }
+            },
+            {
+              "Name": "showDomainAsTitle",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "bool?"
+              }
             }
           ],
           "ReturnType": {
@@ -132774,6 +132915,13 @@
               "Type": {
                 "Category": "Primitive",
                 "Name": "string?"
+              }
+            },
+            {
+              "Name": "showDomainAsTitle",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "bool?"
               }
             }
           ],
@@ -133284,6 +133432,15 @@
         }
       ],
       "Name": "AdEventType"
+    },
+    {
+      "Items": [
+        {
+          "Name": "RewardedVideo",
+          "Value": 0
+        }
+      ],
+      "Name": "AdFormat"
     },
     {
       "Items": [
@@ -138143,6 +138300,10 @@
     {
       "Items": [
         {
+          "Name": "Custom",
+          "Value": 0
+        },
+        {
           "Name": "UIHover",
           "Value": 1
         },
@@ -141853,6 +142014,10 @@
         {
           "Name": "UnknownFailure",
           "Value": 11
+        },
+        {
+          "Name": "TokenInvalid",
+          "Value": 12
         }
       ],
       "Name": "PromptCreateAvatarResult"
@@ -143167,6 +143332,31 @@
         }
       ],
       "Name": "Severity"
+    },
+    {
+      "Items": [
+        {
+          "Name": "PlayerIneligible",
+          "Value": 0
+        },
+        {
+          "Name": "ExperienceIneligible",
+          "Value": 1
+        },
+        {
+          "Name": "NotShown",
+          "Value": 2
+        },
+        {
+          "Name": "ShowCompleted",
+          "Value": 3
+        },
+        {
+          "Name": "ShowInterrupted",
+          "Value": 4
+        }
+      ],
+      "Name": "ShowAdResult"
     },
     {
       "Items": [
