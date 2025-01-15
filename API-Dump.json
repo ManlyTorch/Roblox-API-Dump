@@ -40447,6 +40447,32 @@
           },
           "Category": "Appearance",
           "MemberType": "Property",
+          "Name": "TextureContent",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "Tags": [
+            "Hidden"
+          ],
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "DataType",
+            "Name": "Content"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "Basic"
+            ]
+          },
+          "Category": "Appearance",
+          "MemberType": "Property",
           "Name": "Transparency",
           "Security": {
             "Read": "None",
@@ -57646,6 +57672,28 @@
             "Name": "null"
           },
           "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Avatar"
+          ],
+          "MemberType": "Function",
+          "Name": "ComputeOriginalSizeForPart",
+          "Parameters": [
+            {
+              "Name": "part",
+              "Type": {
+                "Category": "Class",
+                "Name": "Instance"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "DataType",
+            "Name": "Vector3?"
+          },
+          "Security": "RobloxScriptSecurity",
           "ThreadSafety": "Unsafe"
         },
         {
@@ -81199,7 +81247,6 @@
           },
           "Tags": [
             "Hidden",
-            "ReadOnly",
             "NotReplicated"
           ],
           "ThreadSafety": "ReadSafe",
@@ -81380,6 +81427,25 @@
     },
     {
       "Members": [
+        {
+          "MemberType": "Function",
+          "Name": "ConvertToMockPackage",
+          "Parameters": [
+            {
+              "Name": "instance",
+              "Type": {
+                "Category": "Class",
+                "Name": "Instance"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
         {
           "MemberType": "Function",
           "Name": "ConvertToPackageUpload",
@@ -104732,6 +104798,28 @@
         },
         {
           "MemberType": "Function",
+          "Name": "shouldShowMacOSDeprecationWarning",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "bool"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "shouldShowWinOSDeprecationWarning",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "bool"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
           "Name": "startTutorial",
           "Parameters": [],
           "ReturnType": {
@@ -107358,6 +107446,24 @@
           "ValueType": {
             "Category": "Primitive",
             "Name": "int"
+          }
+        },
+        {
+          "Category": "Script Editor",
+          "MemberType": "Property",
+          "Name": "AutocompleteAcceptanceBehavior",
+          "Security": {
+            "Read": "RobloxScriptSecurity",
+            "Write": "RobloxScriptSecurity"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Enum",
+            "Name": "CompletionAcceptanceBehavior"
           }
         },
         {
@@ -135743,6 +135849,27 @@
     {
       "Items": [
         {
+          "Name": "Insert",
+          "Value": 0
+        },
+        {
+          "Name": "Replace",
+          "Value": 1
+        },
+        {
+          "Name": "ReplaceOnEnterInsertOnTab",
+          "Value": 2
+        },
+        {
+          "Name": "InsertOnEnterReplaceOnTab",
+          "Value": 3
+        }
+      ],
+      "Name": "CompletionAcceptanceBehavior"
+    },
+    {
+      "Items": [
+        {
           "Name": "Text",
           "Value": 1
         },
@@ -143785,60 +143912,64 @@
           "Value": 31
         },
         {
-          "Name": "MenuPrimaryText",
+          "Name": "Type",
           "Value": 32
         },
         {
-          "Name": "MenuSecondaryText",
+          "Name": "MenuPrimaryText",
           "Value": 33
         },
         {
-          "Name": "MenuSelectedText",
+          "Name": "MenuSecondaryText",
           "Value": 34
         },
         {
-          "Name": "MenuBackground",
+          "Name": "MenuSelectedText",
           "Value": 35
         },
         {
-          "Name": "MenuSelectedBackground",
+          "Name": "MenuBackground",
           "Value": 36
         },
         {
-          "Name": "MenuScrollbarBackground",
+          "Name": "MenuSelectedBackground",
           "Value": 37
         },
         {
-          "Name": "MenuScrollbarHandle",
+          "Name": "MenuScrollbarBackground",
           "Value": 38
         },
         {
-          "Name": "MenuBorder",
+          "Name": "MenuScrollbarHandle",
           "Value": 39
         },
         {
-          "Name": "DocViewCodeBackground",
+          "Name": "MenuBorder",
           "Value": 40
         },
         {
-          "Name": "AICOOverlayText",
+          "Name": "DocViewCodeBackground",
           "Value": 41
         },
         {
-          "Name": "AICOOverlayButtonBackground",
+          "Name": "AICOOverlayText",
           "Value": 42
         },
         {
-          "Name": "AICOOverlayButtonBackgroundHover",
+          "Name": "AICOOverlayButtonBackground",
           "Value": 43
         },
         {
-          "Name": "AICOOverlayButtonBackgroundPressed",
+          "Name": "AICOOverlayButtonBackgroundHover",
           "Value": 44
         },
         {
-          "Name": "IndentationRuler",
+          "Name": "AICOOverlayButtonBackgroundPressed",
           "Value": 45
+        },
+        {
+          "Name": "IndentationRuler",
+          "Value": 46
         }
       ],
       "Name": "StudioScriptEditorColorCategories"
