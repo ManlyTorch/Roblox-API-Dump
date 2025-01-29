@@ -21072,6 +21072,47 @@
       "Members": [
         {
           "MemberType": "Function",
+          "Name": "IsAvailable",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "bool"
+          },
+          "Security": "RobloxScriptSecurity",
+          "Tags": [
+            "Yields"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Event",
+          "Name": "BugReportRequested",
+          "Parameters": [
+            {
+              "Name": "message",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            }
+          ],
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        }
+      ],
+      "MemoryCategory": "Instances",
+      "Name": "BugReporterService",
+      "Superclass": "Instance",
+      "Tags": [
+        "NotCreatable",
+        "Service",
+        "NotReplicated"
+      ]
+    },
+    {
+      "Members": [
+        {
+          "MemberType": "Function",
           "Name": "LaunchBulkImport",
           "Parameters": [
             {
@@ -22774,7 +22815,7 @@
               }
             },
             {
-              "Name": "operationn",
+              "Name": "operation",
               "Type": {
                 "Category": "Enum",
                 "Name": "FinishRecordingOperation"
@@ -23436,6 +23477,28 @@
             "CanLoad": true,
             "CanSave": true
           },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "bool"
+          }
+        },
+        {
+          "Category": "Data",
+          "MemberType": "Property",
+          "Name": "IsAutoMigrated",
+          "Security": {
+            "Read": "RobloxScriptSecurity",
+            "Write": "RobloxScriptSecurity"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "Tags": [
+            "Hidden",
+            "NotReplicated"
+          ],
           "ThreadSafety": "ReadSafe",
           "ValueType": {
             "Category": "Primitive",
@@ -32862,7 +32925,37 @@
       ]
     },
     {
-      "Members": [],
+      "Members": [
+        {
+          "MemberType": "Function",
+          "Name": "PerformCreatorStorePurchase",
+          "Parameters": [
+            {
+              "Name": "productTargetId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            },
+            {
+              "Name": "assetType",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Dictionary"
+          },
+          "Security": "RobloxScriptSecurity",
+          "Tags": [
+            "Yields"
+          ],
+          "ThreadSafety": "Unsafe"
+        }
+      ],
       "MemoryCategory": "Instances",
       "Name": "CreatorStoreService",
       "Superclass": "Instance",
@@ -92876,6 +92969,35 @@
         },
         {
           "MemberType": "Function",
+          "Name": "CreateAssetOrAssetVersionAndPollAssetWithTelemetryAsyncWithAddParamErrorJson",
+          "Parameters": [
+            {
+              "Name": "serializedInstance",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            },
+            {
+              "Name": "publishInfo",
+              "Type": {
+                "Category": "Group",
+                "Name": "Dictionary"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Dictionary"
+          },
+          "Security": "RobloxScriptSecurity",
+          "Tags": [
+            "Yields"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
           "Name": "PublishCageMeshAsync",
           "Parameters": [
             {
@@ -104834,17 +104956,6 @@
         },
         {
           "MemberType": "Function",
-          "Name": "getTutorialVersionForUser",
-          "Parameters": [],
-          "ReturnType": {
-            "Category": "Primitive",
-            "Name": "string"
-          },
-          "Security": "RobloxScriptSecurity",
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
           "Name": "isTutorialBannerClosed",
           "Parameters": [],
           "ReturnType": {
@@ -105693,8 +105804,7 @@
             "CanSave": true
           },
           "Tags": [
-            "Hidden",
-            "NotReplicated"
+            "Hidden"
           ],
           "ThreadSafety": "ReadSafe",
           "ValueType": {
@@ -120495,36 +120605,6 @@
         {
           "MemberType": "Function",
           "Name": "GetMainViewSessionId",
-          "Parameters": [],
-          "ReturnType": {
-            "Category": "Primitive",
-            "Name": "string"
-          },
-          "Security": "RobloxScriptSecurity",
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "GetStudioWidgetFromLabel",
-          "Parameters": [
-            {
-              "Name": "label",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "string"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Class",
-            "Name": "StudioWidget"
-          },
-          "Security": "RobloxScriptSecurity",
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "GetTutorialIDToLaunch",
           "Parameters": [],
           "ReturnType": {
             "Category": "Primitive",
@@ -142343,6 +142423,19 @@
         }
       ],
       "Name": "ProductLocationRestriction"
+    },
+    {
+      "Items": [
+        {
+          "Name": "InExperience",
+          "Value": 1
+        },
+        {
+          "Name": "ExperienceDetailsPage",
+          "Value": 2
+        }
+      ],
+      "Name": "ProductPurchaseChannel"
     },
     {
       "Items": [
