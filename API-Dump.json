@@ -6682,6 +6682,32 @@
         },
         {
           "MemberType": "Function",
+          "Name": "EditAnnotation",
+          "Parameters": [
+            {
+              "Name": "uniqueId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            },
+            {
+              "Name": "contents",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
           "Name": "GetAnnotationThreads",
           "Parameters": [],
           "ReturnType": {
@@ -6800,6 +6826,35 @@
               "Type": {
                 "Category": "Class",
                 "Name": "Annotation"
+              }
+            }
+          ],
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Event",
+          "Name": "AnnotationEdited",
+          "Parameters": [
+            {
+              "Name": "requestId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            },
+            {
+              "Name": "uniqueId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            },
+            {
+              "Name": "contents",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
               }
             }
           ],
@@ -9627,6 +9682,29 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Audio"
+            ]
+          },
+          "Category": "State",
+          "MemberType": "Property",
+          "Name": "WindowSize",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Enum",
+            "Name": "AudioWindowSize"
+          }
+        },
+        {
           "Capabilities": [
             "Audio"
           ],
@@ -10691,6 +10769,20 @@
             "Name": "Instances"
           },
           "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Audio"
+          ],
+          "MemberType": "Function",
+          "Name": "Reset",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "RobloxScriptSecurity",
           "ThreadSafety": "Unsafe"
         },
         {
@@ -12243,6 +12335,20 @@
             "Audio"
           ],
           "MemberType": "Function",
+          "Name": "Reset",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Audio"
+          ],
+          "MemberType": "Function",
           "Name": "SetAngleAttenuation",
           "Parameters": [
             {
@@ -12381,6 +12487,29 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Audio"
+            ]
+          },
+          "Category": "State",
+          "MemberType": "Property",
+          "Name": "WindowSize",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Enum",
+            "Name": "AudioWindowSize"
+          }
+        },
+        {
           "Capabilities": [
             "Audio"
           ],
@@ -12456,7 +12585,7 @@
           },
           "Category": "Asset",
           "MemberType": "Property",
-          "Name": "AssetId",
+          "Name": "Asset",
           "Security": {
             "Read": "None",
             "Write": "None"
@@ -12465,6 +12594,34 @@
             "CanLoad": true,
             "CanSave": true
           },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "DataType",
+            "Name": "ContentId"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "Audio"
+            ]
+          },
+          "Category": "Asset",
+          "MemberType": "Property",
+          "Name": "AssetId",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": false
+          },
+          "Tags": [
+            "Hidden",
+            "NotReplicated",
+            "Deprecated"
+          ],
           "ThreadSafety": "ReadSafe",
           "ValueType": {
             "Category": "Primitive",
@@ -13176,6 +13333,20 @@
             "Name": "Instances"
           },
           "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Audio"
+          ],
+          "MemberType": "Function",
+          "Name": "Reset",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "RobloxScriptSecurity",
           "ThreadSafety": "Unsafe"
         },
         {
@@ -100581,6 +100752,28 @@
         },
         {
           "MemberType": "Function",
+          "Name": "GetFFlagOverrides",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "string"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetFFlags",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "string"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
           "Name": "GetFVariable",
           "Parameters": [
             {
@@ -100596,6 +100789,25 @@
             "Name": "string"
           },
           "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "SetFFlagOverrides",
+          "Parameters": [
+            {
+              "Name": "overrides",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "bool"
+          },
+          "Security": "RobloxScriptSecurity",
           "ThreadSafety": "Unsafe"
         }
       ],
@@ -104018,6 +104230,24 @@
         {
           "Category": "Data",
           "MemberType": "Property",
+          "Name": "CharacterSoundsUseNewApi",
+          "Security": {
+            "Read": "None",
+            "Write": "PluginSecurity"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Enum",
+            "Name": "RolloutState"
+          }
+        },
+        {
+          "Category": "Data",
+          "MemberType": "Property",
           "Name": "DefaultListenerLocation",
           "Security": {
             "Read": "PluginSecurity",
@@ -106695,6 +106925,36 @@
         },
         {
           "MemberType": "Function",
+          "Name": "ResetHarmonyMemoryTarget",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "SetHarmonyMemoryTarget",
+          "Parameters": [
+            {
+              "Name": "targetMB",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
           "Name": "GetPaginatedMemoryByTexture",
           "Parameters": [
             {
@@ -107772,6 +108032,24 @@
           "ValueType": {
             "Category": "Primitive",
             "Name": "int"
+          }
+        },
+        {
+          "Category": "Directories",
+          "MemberType": "Property",
+          "Name": "AutoResumeSyncOnPlaceOpen",
+          "Security": {
+            "Read": "RobloxSecurity",
+            "Write": "RobloxSecurity"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "bool"
           }
         },
         {
@@ -118531,6 +118809,10 @@
             "CanLoad": true,
             "CanSave": true
           },
+          "Tags": [
+            "Hidden",
+            "NotReplicated"
+          ],
           "ThreadSafety": "ReadSafe",
           "ValueType": {
             "Category": "Primitive",
@@ -121187,6 +121469,44 @@
         },
         {
           "MemberType": "Function",
+          "Name": "CreateEditableImageFromBinaryStringRobloxOnly",
+          "Parameters": [
+            {
+              "Name": "value",
+              "Type": {
+                "Category": "Class",
+                "Name": "BinaryStringValue"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "DataType",
+            "Name": "Object"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "CreateEditableMeshFromBinaryStringRobloxOnly",
+          "Parameters": [
+            {
+              "Name": "value",
+              "Type": {
+                "Category": "Class",
+                "Name": "BinaryStringValue"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "DataType",
+            "Name": "Object"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
           "Name": "GetDynamicHeadEditableMeshInactiveControls",
           "Parameters": [
             {
@@ -121254,6 +121574,25 @@
           "ReturnType": {
             "Category": "Group",
             "Name": "Tuple"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetEditableImageData",
+          "Parameters": [
+            {
+              "Name": "editableImage",
+              "Type": {
+                "Category": "DataType",
+                "Name": "Object"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Class",
+            "Name": "BinaryStringValue"
           },
           "Security": "RobloxScriptSecurity",
           "ThreadSafety": "Unsafe"
@@ -121467,6 +121806,32 @@
           "ReturnType": {
             "Category": "Primitive",
             "Name": "bool"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "RegisterAlternateMesh",
+          "Parameters": [
+            {
+              "Name": "alternateId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            },
+            {
+              "Name": "binaryStringValue",
+              "Type": {
+                "Category": "Class",
+                "Name": "BinaryStringValue"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
           },
           "Security": "RobloxScriptSecurity",
           "ThreadSafety": "Unsafe"
@@ -122513,6 +122878,28 @@
           "ReturnType": {
             "Category": "Primitive",
             "Name": "int"
+          },
+          "Security": "RobloxScriptSecurity",
+          "Tags": [
+            "Yields"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetMeshDataBinaryString",
+          "Parameters": [
+            {
+              "Name": "meshId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Class",
+            "Name": "BinaryStringValue"
           },
           "Security": "RobloxScriptSecurity",
           "Tags": [
@@ -133197,6 +133584,17 @@
         },
         {
           "MemberType": "Function",
+          "Name": "leaveVoice",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
           "Name": "rejoinVoice",
           "Parameters": [],
           "ReturnType": {
@@ -142433,6 +142831,14 @@
         {
           "Name": "ExperienceDetailsPage",
           "Value": 2
+        },
+        {
+          "Name": "AdReward",
+          "Value": 3
+        },
+        {
+          "Name": "CommerceProduct",
+          "Value": 4
         }
       ],
       "Name": "ProductPurchaseChannel"
