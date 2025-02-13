@@ -1494,37 +1494,6 @@
           },
           "Security": "None",
           "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "CreateMeshPartAsync",
-          "Parameters": [
-            {
-              "Name": "initialSize",
-              "Type": {
-                "Category": "DataType",
-                "Name": "Vector3"
-              }
-            },
-            {
-              "Default": "nil",
-              "Name": "options",
-              "Type": {
-                "Category": "Group",
-                "Name": "Dictionary"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Class",
-            "Name": "MeshPart"
-          },
-          "Security": "None",
-          "Tags": [
-            "Yields",
-            "Deprecated"
-          ],
-          "ThreadSafety": "Unsafe"
         }
       ],
       "MemoryCategory": "Instances",
@@ -8464,29 +8433,6 @@
         },
         {
           "MemberType": "Function",
-          "Name": "CreateEditableMeshFromPartAsync",
-          "Parameters": [
-            {
-              "Name": "meshPart",
-              "Type": {
-                "Category": "Class",
-                "Name": "Instance"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "DataType",
-            "Name": "Object"
-          },
-          "Security": "None",
-          "Tags": [
-            "Yields",
-            "Deprecated"
-          ],
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
           "Name": "CreateEditableMeshStripSkinningAsync",
           "Parameters": [
             {
@@ -9731,6 +9677,34 @@
             "Audio"
           ],
           "MemberType": "Function",
+          "Name": "GetInputPins",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Array"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Audio"
+          ],
+          "MemberType": "Function",
+          "Name": "GetOutputPins",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Array"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Audio"
+          ],
+          "MemberType": "Function",
           "Name": "GetSpectrum",
           "Parameters": [],
           "ReturnType": {
@@ -9786,6 +9760,194 @@
       "MemoryCategory": "Internal",
       "Name": "AudioAnalyzer",
       "Superclass": "Instance"
+    },
+    {
+      "Members": [
+        {
+          "Capabilities": {
+            "Read": [
+              "Audio"
+            ]
+          },
+          "Category": "State",
+          "MemberType": "Property",
+          "Name": "Layout",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Enum",
+            "Name": "AudioChannelLayout"
+          }
+        },
+        {
+          "Capabilities": [
+            "Audio"
+          ],
+          "MemberType": "Function",
+          "Name": "GetConnectedWires",
+          "Parameters": [
+            {
+              "Name": "pin",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "DataType",
+            "Name": "Instances"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Audio"
+          ],
+          "MemberType": "Event",
+          "Name": "WiringChanged",
+          "Parameters": [
+            {
+              "Name": "connected",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "bool"
+              }
+            },
+            {
+              "Name": "pin",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            },
+            {
+              "Name": "wire",
+              "Type": {
+                "Category": "Class",
+                "Name": "Wire"
+              }
+            },
+            {
+              "Name": "instance",
+              "Type": {
+                "Category": "Class",
+                "Name": "Instance"
+              }
+            }
+          ],
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        }
+      ],
+      "MemoryCategory": "Internal",
+      "Name": "AudioChannelMixer",
+      "Superclass": "Instance",
+      "Tags": [
+        "NotBrowsable"
+      ]
+    },
+    {
+      "Members": [
+        {
+          "Capabilities": {
+            "Read": [
+              "Audio"
+            ]
+          },
+          "Category": "State",
+          "MemberType": "Property",
+          "Name": "Layout",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Enum",
+            "Name": "AudioChannelLayout"
+          }
+        },
+        {
+          "Capabilities": [
+            "Audio"
+          ],
+          "MemberType": "Function",
+          "Name": "GetConnectedWires",
+          "Parameters": [
+            {
+              "Name": "pin",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "DataType",
+            "Name": "Instances"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Audio"
+          ],
+          "MemberType": "Event",
+          "Name": "WiringChanged",
+          "Parameters": [
+            {
+              "Name": "connected",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "bool"
+              }
+            },
+            {
+              "Name": "pin",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            },
+            {
+              "Name": "wire",
+              "Type": {
+                "Category": "Class",
+                "Name": "Wire"
+              }
+            },
+            {
+              "Name": "instance",
+              "Type": {
+                "Category": "Class",
+                "Name": "Instance"
+              }
+            }
+          ],
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        }
+      ],
+      "MemoryCategory": "Internal",
+      "Name": "AudioChannelSplitter",
+      "Superclass": "Instance",
+      "Tags": [
+        "NotBrowsable"
+      ]
     },
     {
       "Members": [
@@ -9899,6 +10061,34 @@
           "ReturnType": {
             "Category": "DataType",
             "Name": "Instances"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Audio"
+          ],
+          "MemberType": "Function",
+          "Name": "GetInputPins",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Array"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Audio"
+          ],
+          "MemberType": "Function",
+          "Name": "GetOutputPins",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Array"
           },
           "Security": "None",
           "ThreadSafety": "Unsafe"
@@ -10139,6 +10329,34 @@
           "Capabilities": [
             "Audio"
           ],
+          "MemberType": "Function",
+          "Name": "GetInputPins",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Array"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Audio"
+          ],
+          "MemberType": "Function",
+          "Name": "GetOutputPins",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Array"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Audio"
+          ],
           "MemberType": "Event",
           "Name": "WiringChanged",
           "Parameters": [
@@ -10335,6 +10553,28 @@
         },
         {
           "MemberType": "Function",
+          "Name": "GetInputPins",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Array"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetOutputPins",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Array"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
           "Name": "GetUserIdAccessList",
           "Parameters": [],
           "ReturnType": {
@@ -10455,6 +10695,34 @@
           "Capabilities": [
             "Audio"
           ],
+          "MemberType": "Function",
+          "Name": "GetInputPins",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Array"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Audio"
+          ],
+          "MemberType": "Function",
+          "Name": "GetOutputPins",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Array"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Audio"
+          ],
           "MemberType": "Event",
           "Name": "WiringChanged",
           "Parameters": [
@@ -10561,6 +10829,34 @@
           "ReturnType": {
             "Category": "DataType",
             "Name": "Instances"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Audio"
+          ],
+          "MemberType": "Function",
+          "Name": "GetInputPins",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Array"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Audio"
+          ],
+          "MemberType": "Function",
+          "Name": "GetOutputPins",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Array"
           },
           "Security": "None",
           "ThreadSafety": "Unsafe"
@@ -10776,6 +11072,34 @@
             "Audio"
           ],
           "MemberType": "Function",
+          "Name": "GetInputPins",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Array"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Audio"
+          ],
+          "MemberType": "Function",
+          "Name": "GetOutputPins",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Array"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Audio"
+          ],
+          "MemberType": "Function",
           "Name": "Reset",
           "Parameters": [],
           "ReturnType": {
@@ -10959,7 +11283,7 @@
             "Category": "Primitive",
             "Name": "float"
           },
-          "Security": "RobloxScriptSecurity",
+          "Security": "None",
           "ThreadSafety": "Unsafe"
         },
         {
@@ -11006,11 +11330,39 @@
             "Audio"
           ],
           "MemberType": "Function",
+          "Name": "GetInputPins",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Array"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Audio"
+          ],
+          "MemberType": "Function",
           "Name": "GetInteractingListeners",
           "Parameters": [],
           "ReturnType": {
             "Category": "DataType",
             "Name": "Instances"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Audio"
+          ],
+          "MemberType": "Function",
+          "Name": "GetOutputPins",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Array"
           },
           "Security": "None",
           "ThreadSafety": "Unsafe"
@@ -11278,6 +11630,34 @@
           "Capabilities": [
             "Audio"
           ],
+          "MemberType": "Function",
+          "Name": "GetInputPins",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Array"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Audio"
+          ],
+          "MemberType": "Function",
+          "Name": "GetOutputPins",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Array"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Audio"
+          ],
           "MemberType": "Event",
           "Name": "WiringChanged",
           "Parameters": [
@@ -11384,6 +11764,34 @@
           "ReturnType": {
             "Category": "DataType",
             "Name": "Instances"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Audio"
+          ],
+          "MemberType": "Function",
+          "Name": "GetInputPins",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Array"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Audio"
+          ],
+          "MemberType": "Function",
+          "Name": "GetOutputPins",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Array"
           },
           "Security": "None",
           "ThreadSafety": "Unsafe"
@@ -11623,6 +12031,34 @@
           "Capabilities": [
             "Audio"
           ],
+          "MemberType": "Function",
+          "Name": "GetInputPins",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Array"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Audio"
+          ],
+          "MemberType": "Function",
+          "Name": "GetOutputPins",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Array"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Audio"
+          ],
           "MemberType": "Event",
           "Name": "WiringChanged",
           "Parameters": [
@@ -11775,6 +12211,34 @@
           "ReturnType": {
             "Category": "DataType",
             "Name": "Instances"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Audio"
+          ],
+          "MemberType": "Function",
+          "Name": "GetInputPins",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Array"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Audio"
+          ],
+          "MemberType": "Function",
+          "Name": "GetOutputPins",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Array"
           },
           "Security": "None",
           "ThreadSafety": "Unsafe"
@@ -12104,6 +12568,34 @@
           "Capabilities": [
             "Audio"
           ],
+          "MemberType": "Function",
+          "Name": "GetInputPins",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Array"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Audio"
+          ],
+          "MemberType": "Function",
+          "Name": "GetOutputPins",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Array"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Audio"
+          ],
           "MemberType": "Event",
           "Name": "WiringChanged",
           "Parameters": [
@@ -12260,7 +12752,7 @@
             "Audio"
           ],
           "MemberType": "Function",
-          "Name": "GetAudibilityOf",
+          "Name": "GetAudibilityFor",
           "Parameters": [
             {
               "Name": "emitter",
@@ -12274,7 +12766,7 @@
             "Category": "Primitive",
             "Name": "float"
           },
-          "Security": "RobloxScriptSecurity",
+          "Security": "None",
           "ThreadSafety": "Unsafe"
         },
         {
@@ -12321,11 +12813,39 @@
             "Audio"
           ],
           "MemberType": "Function",
+          "Name": "GetInputPins",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Array"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Audio"
+          ],
+          "MemberType": "Function",
           "Name": "GetInteractingEmitters",
           "Parameters": [],
           "ReturnType": {
             "Category": "DataType",
             "Name": "Instances"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Audio"
+          ],
+          "MemberType": "Function",
+          "Name": "GetOutputPins",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Array"
           },
           "Security": "None",
           "ThreadSafety": "Unsafe"
@@ -12527,6 +13047,34 @@
           "ReturnType": {
             "Category": "DataType",
             "Name": "Instances"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Audio"
+          ],
+          "MemberType": "Function",
+          "Name": "GetInputPins",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Array"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Audio"
+          ],
+          "MemberType": "Function",
+          "Name": "GetOutputPins",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Array"
           },
           "Security": "None",
           "ThreadSafety": "Unsafe"
@@ -12884,6 +13432,34 @@
           "ReturnType": {
             "Category": "DataType",
             "Name": "Instances"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Audio"
+          ],
+          "MemberType": "Function",
+          "Name": "GetInputPins",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Array"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Audio"
+          ],
+          "MemberType": "Function",
+          "Name": "GetOutputPins",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Array"
           },
           "Security": "None",
           "ThreadSafety": "Unsafe"
@@ -13331,6 +13907,34 @@
           "ReturnType": {
             "Category": "DataType",
             "Name": "Instances"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Audio"
+          ],
+          "MemberType": "Function",
+          "Name": "GetInputPins",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Array"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Audio"
+          ],
+          "MemberType": "Function",
+          "Name": "GetOutputPins",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Array"
           },
           "Security": "None",
           "ThreadSafety": "Unsafe"
@@ -18630,6 +19234,13 @@
               "Type": {
                 "Category": "DataType",
                 "Name": "Content"
+              }
+            },
+            {
+              "Name": "cageOrigin",
+              "Type": {
+                "Category": "DataType",
+                "Name": "CoordinateFrame?"
               }
             }
           ],
@@ -54575,6 +55186,17 @@
         },
         {
           "MemberType": "Function",
+          "Name": "GetErrorDetails",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Dictionary"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
           "Name": "GetErrorMessage",
           "Parameters": [],
           "ReturnType": {
@@ -86391,6 +87013,25 @@
         },
         {
           "MemberType": "Function",
+          "Name": "AddReplicationFocus",
+          "Parameters": [
+            {
+              "Name": "part",
+              "Type": {
+                "Category": "Class",
+                "Name": "BasePart"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
           "Name": "AddToBlockList",
           "Parameters": [
             {
@@ -86717,6 +87358,25 @@
             "Name": "null"
           },
           "Security": "LocalUserSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "RemoveReplicationFocus",
+          "Parameters": [
+            {
+              "Name": "part",
+              "Type": {
+                "Category": "Class",
+                "Name": "BasePart"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "None",
           "ThreadSafety": "Unsafe"
         },
         {
@@ -96278,6 +96938,28 @@
         },
         {
           "MemberType": "Function",
+          "Name": "ReportMenuTabClose",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "ReportMenuTabOpen",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
           "Name": "TakeScreenshot",
           "Parameters": [
             {
@@ -97103,6 +97785,13 @@
               "Type": {
                 "Category": "Primitive",
                 "Name": "int"
+              }
+            },
+            {
+              "Name": "messageId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
               }
             }
           ],
@@ -104230,6 +104919,27 @@
         {
           "Category": "Data",
           "MemberType": "Property",
+          "Name": "AudioApiByDefault",
+          "Security": {
+            "Read": "RobloxScriptSecurity",
+            "Write": "RobloxScriptSecurity"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "Tags": [
+            "Hidden"
+          ],
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Enum",
+            "Name": "RolloutState"
+          }
+        },
+        {
+          "Category": "Data",
+          "MemberType": "Property",
           "Name": "CharacterSoundsUseNewApi",
           "Security": {
             "Read": "None",
@@ -104302,6 +105012,27 @@
         {
           "Category": "Data",
           "MemberType": "Property",
+          "Name": "IsNewExpForAudioApiByDefault",
+          "Security": {
+            "Read": "RobloxScriptSecurity",
+            "Write": "RobloxScriptSecurity"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "Tags": [
+            "Hidden"
+          ],
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "bool"
+          }
+        },
+        {
+          "Category": "Data",
+          "MemberType": "Property",
           "Name": "RespectFilteringEnabled",
           "Security": {
             "Read": "None",
@@ -104359,6 +105090,17 @@
         {
           "MemberType": "Function",
           "Name": "BeginRecording",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "bool"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetAudioApiByDefault",
           "Parameters": [],
           "ReturnType": {
             "Category": "Primitive",
@@ -104446,6 +105188,40 @@
         },
         {
           "MemberType": "Function",
+          "Name": "InsertAsset",
+          "Parameters": [
+            {
+              "Name": "assetId",
+              "Type": {
+                "Category": "DataType",
+                "Name": "ContentId"
+              }
+            },
+            {
+              "Name": "assetName",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            },
+            {
+              "Default": "true",
+              "Name": "useSelection",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "bool"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "DataType",
+            "Name": "Instances"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
           "Name": "OpenAttenuationCurveEditor",
           "Parameters": [
             {
@@ -104499,6 +105275,25 @@
             "Name": "null"
           },
           "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "SetAudioApiByDefault",
+          "Parameters": [
+            {
+              "Name": "enabled",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "bool"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "RobloxScriptSecurity",
           "ThreadSafety": "Unsafe"
         },
         {
@@ -110973,6 +111768,28 @@
         },
         {
           "MemberType": "Function",
+          "Name": "CancelAutoSetupAvatarAsync",
+          "Parameters": [
+            {
+              "Name": "jobId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "RobloxScriptSecurity",
+          "Tags": [
+            "Yields"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
           "Name": "DEPRECATED_SerializeInstances",
           "Parameters": [
             {
@@ -111423,6 +112240,17 @@
       "Name": "StudioCallout",
       "Superclass": "Instance",
       "Tags": [
+        "NotReplicated"
+      ]
+    },
+    {
+      "Members": [],
+      "MemoryCategory": "Instances",
+      "Name": "StudioCameraService",
+      "Superclass": "Instance",
+      "Tags": [
+        "NotCreatable",
+        "Service",
         "NotReplicated"
       ]
     },
@@ -115523,8 +116351,12 @@
           },
           "Serialization": {
             "CanLoad": true,
-            "CanSave": true
+            "CanSave": false
           },
+          "Tags": [
+            "NotReplicated",
+            "Deprecated"
+          ],
           "ThreadSafety": "ReadSafe",
           "ValueType": {
             "Category": "Primitive",
@@ -115623,6 +116455,24 @@
           "ValueType": {
             "Category": "Primitive",
             "Name": "int"
+          }
+        },
+        {
+          "Category": "Physics",
+          "MemberType": "Property",
+          "Name": "ThrottlePhysicsToRealtime",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "bool"
           }
         },
         {
@@ -126098,6 +126948,36 @@
       "Members": [
         {
           "MemberType": "Function",
+          "Name": "GetInstanceByRfc4122String",
+          "Parameters": [
+            {
+              "Name": "id",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Class",
+            "Name": "Instance"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        }
+      ],
+      "MemoryCategory": "Instances",
+      "Name": "UniqueIdLookupService",
+      "Superclass": "Instance",
+      "Tags": [
+        "NotCreatable",
+        "Service"
+      ]
+    },
+    {
+      "Members": [
+        {
+          "MemberType": "Function",
           "Name": "AppendTempAssetId",
           "Parameters": [
             {
@@ -134034,6 +134914,20 @@
             "Category": "Primitive",
             "Name": "string"
           }
+        },
+        {
+          "Capabilities": [
+            "Basic"
+          ],
+          "MemberType": "Function",
+          "Name": "RenameToDefault",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
         }
       ],
       "MemoryCategory": "Instances",
@@ -135250,6 +136144,39 @@
         }
       ],
       "Name": "AudioApiRollout"
+    },
+    {
+      "Items": [
+        {
+          "Name": "Mono",
+          "Value": 0
+        },
+        {
+          "Name": "Stereo",
+          "Value": 1
+        },
+        {
+          "Name": "Quad",
+          "Value": 2
+        },
+        {
+          "Name": "Surround_5",
+          "Value": 3
+        },
+        {
+          "Name": "Surround_5_1",
+          "Value": 4
+        },
+        {
+          "Name": "Surround_7_1",
+          "Value": 5
+        },
+        {
+          "Name": "Surround_7_1_4",
+          "Value": 6
+        }
+      ],
+      "Name": "AudioChannelLayout"
     },
     {
       "Items": [
@@ -137037,6 +137964,10 @@
         {
           "Name": "ServerEmpty",
           "Value": 302
+        },
+        {
+          "Name": "PhantomFreeze",
+          "Value": 303
         },
         {
           "Name": "PlacelaunchErrors",
