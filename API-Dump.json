@@ -6632,6 +6632,32 @@
         },
         {
           "MemberType": "Function",
+          "Name": "DEPRECATED_EditAnnotation",
+          "Parameters": [
+            {
+              "Name": "uniqueId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            },
+            {
+              "Name": "contents",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
           "Name": "DeleteAnnotation",
           "Parameters": [
             {
@@ -6662,6 +6688,13 @@
             },
             {
               "Name": "contents",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            },
+            {
+              "Name": "taggedUsers",
               "Type": {
                 "Category": "Primitive",
                 "Name": "string"
@@ -6825,6 +6858,13 @@
                 "Category": "Primitive",
                 "Name": "string"
               }
+            },
+            {
+              "Name": "taggedUsers",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
             }
           ],
           "Security": "RobloxScriptSecurity",
@@ -6853,6 +6893,35 @@
               "Type": {
                 "Category": "Primitive",
                 "Name": "bool"
+              }
+            }
+          ],
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Event",
+          "Name": "DEPRECATED_AnnotationEdited",
+          "Parameters": [
+            {
+              "Name": "requestId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            },
+            {
+              "Name": "uniqueId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            },
+            {
+              "Name": "contents",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
               }
             }
           ],
@@ -14442,146 +14511,32 @@
         },
         {
           "MemberType": "Function",
+          "Name": "GenerateAvatar2DPreviewAsync",
+          "Parameters": [
+            {
+              "Name": "avatarGeneration2dPreviewParams",
+              "Type": {
+                "Category": "Group",
+                "Name": "Dictionary"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "string"
+          },
+          "Security": "None",
+          "Tags": [
+            "Yields"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
           "Name": "GenerateAvatarAsync",
           "Parameters": [
             {
-              "Name": "sessionId",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "string"
-              }
-            },
-            {
-              "Name": "previewId",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "string"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Primitive",
-            "Name": "string"
-          },
-          "Security": "None",
-          "Tags": [
-            "Yields"
-          ],
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "GenerateAvatarModelAsync",
-          "Parameters": [
-            {
-              "Name": "player",
-              "Type": {
-                "Category": "Class",
-                "Name": "Player"
-              }
-            },
-            {
-              "Name": "previewJobId",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "string"
-              }
-            },
-            {
-              "Name": "options",
-              "Type": {
-                "Category": "Group",
-                "Name": "Dictionary"
-              }
-            },
-            {
-              "Name": "progressCallback",
-              "Type": {
-                "Category": "DataType",
-                "Name": "Function"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Primitive",
-            "Name": "string"
-          },
-          "Security": "None",
-          "Tags": [
-            "Yields"
-          ],
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "GenerateAvatarPreviewAsync",
-          "Parameters": [
-            {
-              "Name": "player",
-              "Type": {
-                "Category": "Class",
-                "Name": "Player"
-              }
-            },
-            {
-              "Name": "textPrompt",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "string"
-              }
-            },
-            {
-              "Name": "options",
-              "Type": {
-                "Category": "Group",
-                "Name": "Dictionary"
-              }
-            },
-            {
-              "Name": "progressCallback",
-              "Type": {
-                "Category": "DataType",
-                "Name": "Function"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Primitive",
-            "Name": "string"
-          },
-          "Security": "None",
-          "Tags": [
-            "Yields"
-          ],
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "GenerateAvatarPreviewAsync2",
-          "Parameters": [
-            {
-              "Name": "sessionId",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "string"
-              }
-            },
-            {
-              "Name": "fileId",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "string"
-              }
-            },
-            {
-              "Name": "textPrompt",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "string"
-              }
-            },
-            {
-              "Name": "options",
+              "Name": "avatarGenerationParams",
               "Type": {
                 "Category": "Group",
                 "Name": "Dictionary"
@@ -14636,54 +14591,10 @@
         },
         {
           "MemberType": "Function",
-          "Name": "LoadAvatarHumanoidDescriptionAsync",
+          "Name": "LoadAvatar2DPreviewAsync",
           "Parameters": [
             {
-              "Name": "id",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "string"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Class",
-            "Name": "HumanoidDescription"
-          },
-          "Security": "None",
-          "Tags": [
-            "Yields"
-          ],
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "LoadAvatarModelAsync",
-          "Parameters": [
-            {
-              "Name": "id",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "string"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Class",
-            "Name": "Instance"
-          },
-          "Security": "None",
-          "Tags": [
-            "Yields"
-          ],
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "LoadAvatarPreviewImageAsync",
-          "Parameters": [
-            {
-              "Name": "avatarPreview",
+              "Name": "previewId",
               "Type": {
                 "Category": "Primitive",
                 "Name": "string"
@@ -14693,6 +14604,28 @@
           "ReturnType": {
             "Category": "DataType",
             "Name": "Object"
+          },
+          "Security": "None",
+          "Tags": [
+            "Yields"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "LoadGeneratedAvatarAsync",
+          "Parameters": [
+            {
+              "Name": "generationId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Class",
+            "Name": "HumanoidDescription"
           },
           "Security": "None",
           "Tags": [
@@ -18414,6 +18347,32 @@
           "ValueType": {
             "Category": "Primitive",
             "Name": "bool"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "UI"
+            ]
+          },
+          "Category": "Data",
+          "MemberType": "Property",
+          "Name": "StudioInsertWidgetLayerCollectorAutoLinkStyleSheet",
+          "Security": {
+            "Read": "RobloxScriptSecurity",
+            "Write": "RobloxScriptSecurity"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "Tags": [
+            "Hidden"
+          ],
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Class",
+            "Name": "StyleSheet"
           }
         },
         {
@@ -24278,8 +24237,7 @@
             "CanSave": true
           },
           "Tags": [
-            "Hidden",
-            "NotReplicated"
+            "Hidden"
           ],
           "ThreadSafety": "ReadSafe",
           "ValueType": {
@@ -33710,6 +33668,57 @@
       "Members": [
         {
           "MemberType": "Function",
+          "Name": "GetAssetInfoAsync",
+          "Parameters": [
+            {
+              "Name": "assetId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Dictionary"
+          },
+          "Security": "RobloxScriptSecurity",
+          "Tags": [
+            "Yields"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetCreatorStoreProductInfoAsync",
+          "Parameters": [
+            {
+              "Name": "productTargetId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            },
+            {
+              "Name": "assetType",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Dictionary"
+          },
+          "Security": "RobloxScriptSecurity",
+          "Tags": [
+            "Yields"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
           "Name": "PerformCreatorStorePurchase",
           "Parameters": [
             {
@@ -34020,6 +34029,68 @@
       "Superclass": "Instance",
       "Tags": [
         "Deprecated"
+      ]
+    },
+    {
+      "Members": [
+        {
+          "MemberType": "Function",
+          "Name": "Close",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetLogPath",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "string"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "Open",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "WriteAppend",
+          "Parameters": [
+            {
+              "Name": "append",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        }
+      ],
+      "MemoryCategory": "Instances",
+      "Name": "CustomLog",
+      "Superclass": "Instance",
+      "Tags": [
+        "NotReplicated"
       ]
     },
     {
@@ -42915,6 +42986,82 @@
       "Members": [
         {
           "MemberType": "Function",
+          "Name": "GenerateMeshAsync",
+          "Parameters": [
+            {
+              "Name": "inputs",
+              "Type": {
+                "Category": "Group",
+                "Name": "Dictionary"
+              }
+            },
+            {
+              "Name": "player",
+              "Type": {
+                "Category": "Class",
+                "Name": "Player"
+              }
+            },
+            {
+              "Name": "options",
+              "Type": {
+                "Category": "Group",
+                "Name": "Dictionary"
+              }
+            },
+            {
+              "Name": "intermediateResultCallback",
+              "Type": {
+                "Category": "DataType",
+                "Name": "Function?"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Tuple"
+          },
+          "Security": "None",
+          "Tags": [
+            "Yields"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "LoadGeneratedMeshAsync",
+          "Parameters": [
+            {
+              "Name": "generationId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Class",
+            "Name": "MeshPart"
+          },
+          "Security": "None",
+          "Tags": [
+            "Yields"
+          ],
+          "ThreadSafety": "Unsafe"
+        }
+      ],
+      "MemoryCategory": "Instances",
+      "Name": "GenerationService",
+      "Superclass": "Instance",
+      "Tags": [
+        "NotCreatable",
+        "Service"
+      ]
+    },
+    {
+      "Members": [
+        {
+          "MemberType": "Function",
           "Name": "SignalChallengeAbandoned",
           "Parameters": [
             {
@@ -50109,6 +50256,238 @@
           },
           "Category": "Video",
           "MemberType": "Property",
+          "Name": "ResampleMode",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Enum",
+            "Name": "ResamplerMode"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "UI"
+            ]
+          },
+          "Category": "Video",
+          "MemberType": "Property",
+          "Name": "ScaleType",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Enum",
+            "Name": "ScaleType"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "UI"
+            ]
+          },
+          "Category": "Video",
+          "MemberType": "Property",
+          "Name": "TileSize",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "DataType",
+            "Name": "UDim2"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "UI"
+            ]
+          },
+          "Category": "Video",
+          "MemberType": "Property",
+          "Name": "VideoColor3",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "DataType",
+            "Name": "Color3"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "UI"
+            ]
+          },
+          "Category": "Video",
+          "MemberType": "Property",
+          "Name": "VideoRectOffset",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "DataType",
+            "Name": "Vector2"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "UI"
+            ]
+          },
+          "Category": "Video",
+          "MemberType": "Property",
+          "Name": "VideoRectSize",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "DataType",
+            "Name": "Vector2"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "UI"
+            ]
+          },
+          "Category": "Video",
+          "MemberType": "Property",
+          "Name": "VideoTransparency",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "float"
+          }
+        },
+        {
+          "Capabilities": [
+            "UI"
+          ],
+          "MemberType": "Function",
+          "Name": "GetConnectedWires",
+          "Parameters": [
+            {
+              "Name": "pin",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "DataType",
+            "Name": "Instances"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "UI"
+          ],
+          "MemberType": "Event",
+          "Name": "WiringChanged",
+          "Parameters": [
+            {
+              "Name": "connected",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "bool"
+              }
+            },
+            {
+              "Name": "pin",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            },
+            {
+              "Name": "wire",
+              "Type": {
+                "Category": "Class",
+                "Name": "Wire"
+              }
+            },
+            {
+              "Name": "instance",
+              "Type": {
+                "Category": "Class",
+                "Name": "Instance"
+              }
+            }
+          ],
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        }
+      ],
+      "MemoryCategory": "Gui",
+      "Name": "VideoDisplay",
+      "Superclass": "GuiObject",
+      "Tags": [
+        "NotBrowsable"
+      ]
+    },
+    {
+      "Members": [
+        {
+          "Capabilities": {
+            "Read": [
+              "UI"
+            ]
+          },
+          "Category": "Video",
+          "MemberType": "Property",
           "Name": "IsLoaded",
           "Security": {
             "Read": "None",
@@ -56620,6 +56999,96 @@
       ]
     },
     {
+      "Members": [
+        {
+          "MemberType": "Function",
+          "Name": "ClientRequestDataAsync",
+          "Parameters": [
+            {
+              "Name": "player",
+              "Type": {
+                "Category": "Class",
+                "Name": "Player"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "string"
+          },
+          "Security": "PluginSecurity",
+          "Tags": [
+            "Yields"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "ServerRequestDataAsync",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "string"
+          },
+          "Security": "PluginSecurity",
+          "Tags": [
+            "Yields"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Event",
+          "Name": "OnNewData",
+          "Parameters": [
+            {
+              "Name": "player",
+              "Type": {
+                "Category": "Class",
+                "Name": "Player"
+              }
+            },
+            {
+              "Name": "jsonString",
+              "Type": {
+                "Category": "DataType",
+                "Name": "buffer"
+              }
+            },
+            {
+              "Name": "id",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int"
+              }
+            },
+            {
+              "Name": "compressedLength",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int"
+              }
+            },
+            {
+              "Name": "uncompressedLength",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int"
+              }
+            }
+          ],
+          "Security": "PluginSecurity",
+          "ThreadSafety": "Unsafe"
+        }
+      ],
+      "MemoryCategory": "Instances",
+      "Name": "HeapProfilerService",
+      "Superclass": "Instance",
+      "Tags": [
+        "NotCreatable",
+        "Service"
+      ]
+    },
+    {
       "Members": [],
       "MemoryCategory": "Instances",
       "Name": "HeatmapService",
@@ -61883,6 +62352,221 @@
         "NotCreatable",
         "Service",
         "NotReplicated"
+      ]
+    },
+    {
+      "Members": [
+        {
+          "Category": "Data",
+          "MemberType": "Property",
+          "Name": "Enabled",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "bool"
+          }
+        },
+        {
+          "Category": "Data",
+          "MemberType": "Property",
+          "Name": "Type",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Enum",
+            "Name": "InputActionType"
+          }
+        },
+        {
+          "MemberType": "Function",
+          "Name": "Fire",
+          "Parameters": [
+            {
+              "Name": "value",
+              "Type": {
+                "Category": "Group",
+                "Name": "Variant"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetState",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Variant"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Event",
+          "Name": "Pressed",
+          "Parameters": [],
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Event",
+          "Name": "Released",
+          "Parameters": [],
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Event",
+          "Name": "StateChanged",
+          "Parameters": [
+            {
+              "Name": "value",
+              "Type": {
+                "Category": "Group",
+                "Name": "Variant"
+              }
+            }
+          ],
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        }
+      ],
+      "MemoryCategory": "Instances",
+      "Name": "InputAction",
+      "Superclass": "Instance",
+      "Tags": [
+        "NotBrowsable"
+      ]
+    },
+    {
+      "Members": [
+        {
+          "Category": "Data",
+          "MemberType": "Property",
+          "Name": "KeyCode",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Enum",
+            "Name": "KeyCode"
+          }
+        },
+        {
+          "Category": "Data",
+          "MemberType": "Property",
+          "Name": "UIButton",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Class",
+            "Name": "GuiButton"
+          }
+        }
+      ],
+      "MemoryCategory": "Instances",
+      "Name": "InputBinding",
+      "Superclass": "Instance",
+      "Tags": [
+        "NotBrowsable"
+      ]
+    },
+    {
+      "Members": [
+        {
+          "Category": "Data",
+          "MemberType": "Property",
+          "Name": "Enabled",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "bool"
+          }
+        },
+        {
+          "Category": "Data",
+          "MemberType": "Property",
+          "Name": "Priority",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "int"
+          }
+        },
+        {
+          "Category": "Data",
+          "MemberType": "Property",
+          "Name": "Sink",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "bool"
+          }
+        }
+      ],
+      "MemoryCategory": "Instances",
+      "Name": "InputContext",
+      "Superclass": "Instance",
+      "Tags": [
+        "NotBrowsable"
       ]
     },
     {
@@ -88362,6 +89046,628 @@
       "MemoryCategory": "Instances",
       "Name": "Player",
       "Superclass": "Instance"
+    },
+    {
+      "Members": [
+        {
+          "MemberType": "Function",
+          "Name": "GetPlayer",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Class",
+            "Name": "Player"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetRecord",
+          "Parameters": [
+            {
+              "Default": "Default",
+              "Name": "recordName",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Class",
+            "Name": "PlayerDataRecord"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        }
+      ],
+      "MemoryCategory": "Instances",
+      "Name": "PlayerData",
+      "Superclass": "Instance",
+      "Tags": [
+        "NotCreatable",
+        "NotReplicated"
+      ]
+    },
+    {
+      "Members": [
+        {
+          "Category": "Data",
+          "MemberType": "Property",
+          "Name": "CreatedTime",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": false,
+            "CanSave": true
+          },
+          "Tags": [
+            "ReadOnly",
+            "NotReplicated"
+          ],
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "int64"
+          }
+        },
+        {
+          "Category": "Data",
+          "MemberType": "Property",
+          "Name": "DefaultRecordName",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": false,
+            "CanSave": true
+          },
+          "Tags": [
+            "ReadOnly",
+            "NotReplicated"
+          ],
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "bool"
+          }
+        },
+        {
+          "Category": "Data",
+          "MemberType": "Property",
+          "Name": "Dirty",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": false,
+            "CanSave": true
+          },
+          "Tags": [
+            "ReadOnly",
+            "NotReplicated"
+          ],
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "bool"
+          }
+        },
+        {
+          "Category": "Data",
+          "MemberType": "Property",
+          "Name": "Error",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": false,
+            "CanSave": true
+          },
+          "Tags": [
+            "ReadOnly",
+            "NotReplicated"
+          ],
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Enum",
+            "Name": "PlayerDataErrorState"
+          }
+        },
+        {
+          "Category": "Data",
+          "MemberType": "Property",
+          "Name": "FlushedTime",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": false,
+            "CanSave": true
+          },
+          "Tags": [
+            "ReadOnly",
+            "NotReplicated"
+          ],
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "int64"
+          }
+        },
+        {
+          "Category": "Data",
+          "MemberType": "Property",
+          "Name": "LoadedTime",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": false,
+            "CanSave": true
+          },
+          "Tags": [
+            "ReadOnly",
+            "NotReplicated"
+          ],
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "int64"
+          }
+        },
+        {
+          "Category": "Data",
+          "MemberType": "Property",
+          "Name": "ModifiedTime",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": false,
+            "CanSave": true
+          },
+          "Tags": [
+            "ReadOnly",
+            "NotReplicated"
+          ],
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "int64"
+          }
+        },
+        {
+          "Category": "Data",
+          "MemberType": "Property",
+          "Name": "NewRecord",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": false,
+            "CanSave": true
+          },
+          "Tags": [
+            "ReadOnly",
+            "NotReplicated"
+          ],
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "bool"
+          }
+        },
+        {
+          "Category": "Data",
+          "MemberType": "Property",
+          "Name": "Readable",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": false,
+            "CanSave": true
+          },
+          "Tags": [
+            "ReadOnly",
+            "NotReplicated"
+          ],
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "bool"
+          }
+        },
+        {
+          "Category": "Data",
+          "MemberType": "Property",
+          "Name": "RecordName",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": false,
+            "CanSave": true
+          },
+          "Tags": [
+            "ReadOnly",
+            "NotReplicated"
+          ],
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "string"
+          }
+        },
+        {
+          "Category": "Data",
+          "MemberType": "Property",
+          "Name": "Writable",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": false,
+            "CanSave": true
+          },
+          "Tags": [
+            "ReadOnly",
+            "NotReplicated"
+          ],
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "bool"
+          }
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetPlayer",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Class",
+            "Name": "Player"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetValue",
+          "Parameters": [
+            {
+              "Name": "key",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Variant"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetValueChangedSignal",
+          "Parameters": [
+            {
+              "Name": "key",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "DataType",
+            "Name": "RBXScriptSignal"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "Release",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "RemoveValue",
+          "Parameters": [
+            {
+              "Name": "key",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "SetValue",
+          "Parameters": [
+            {
+              "Name": "key",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            },
+            {
+              "Name": "value",
+              "Type": {
+                "Category": "Group",
+                "Name": "Variant"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "RequestFlushAsync",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "None",
+          "Tags": [
+            "Yields"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "WaitForLoadAsync",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "None",
+          "Tags": [
+            "Yields"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Event",
+          "Name": "Changed",
+          "Parameters": [
+            {
+              "Name": "key",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            },
+            {
+              "Name": "value",
+              "Type": {
+                "Category": "Group",
+                "Name": "Variant"
+              }
+            }
+          ],
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Event",
+          "Name": "Flushed",
+          "Parameters": [
+            {
+              "Name": "flushState",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "bool"
+              }
+            },
+            {
+              "Name": "error",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string?"
+              }
+            }
+          ],
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Event",
+          "Name": "Loaded",
+          "Parameters": [
+            {
+              "Name": "success",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "bool"
+              }
+            },
+            {
+              "Name": "error",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string?"
+              }
+            }
+          ],
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        }
+      ],
+      "MemoryCategory": "Instances",
+      "Name": "PlayerDataRecord",
+      "Superclass": "Instance",
+      "Tags": [
+        "NotCreatable",
+        "NotReplicated"
+      ]
+    },
+    {
+      "Members": [
+        {
+          "Category": "Data",
+          "MemberType": "Property",
+          "Name": "RecordName",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": false,
+            "CanSave": true
+          },
+          "Tags": [
+            "ReadOnly",
+            "NotReplicated"
+          ],
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "string"
+          }
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetDefaultValue",
+          "Parameters": [
+            {
+              "Name": "key",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Variant"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "SetDefaultValue",
+          "Parameters": [
+            {
+              "Name": "key",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            },
+            {
+              "Name": "value",
+              "Type": {
+                "Category": "Group",
+                "Name": "Variant"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        }
+      ],
+      "MemoryCategory": "Instances",
+      "Name": "PlayerDataRecordConfig",
+      "Superclass": "Instance",
+      "Tags": [
+        "NotCreatable",
+        "NotReplicated"
+      ]
+    },
+    {
+      "Members": [
+        {
+          "Category": "Data",
+          "MemberType": "Property",
+          "Name": "LoadFailureBehavior",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Enum",
+            "Name": "PlayerDataLoadFailureBehavior"
+          }
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetRecordConfig",
+          "Parameters": [
+            {
+              "Default": "Default",
+              "Name": "recordName",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Class",
+            "Name": "PlayerDataRecordConfig"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        }
+      ],
+      "MemoryCategory": "Instances",
+      "Name": "PlayerDataService",
+      "Superclass": "Instance",
+      "Tags": [
+        "NotCreatable",
+        "Service",
+        "NotReplicated"
+      ]
     },
     {
       "Members": [
@@ -132518,14 +133824,14 @@
         },
         {
           "MemberType": "Event",
-          "Name": "Ended",
+          "Name": "DidEnd",
           "Parameters": [],
           "Security": "None",
           "ThreadSafety": "Unsafe"
         },
         {
           "MemberType": "Event",
-          "Name": "Looped",
+          "Name": "DidLoop",
           "Parameters": [],
           "Security": "None",
           "ThreadSafety": "Unsafe"
@@ -140693,6 +141999,23 @@
     {
       "Items": [
         {
+          "Name": "Bool",
+          "Value": 0
+        },
+        {
+          "Name": "Float",
+          "Value": 1
+        },
+        {
+          "Name": "Direction2D",
+          "Value": 2
+        }
+      ],
+      "Name": "InputActionType"
+    },
+    {
+      "Items": [
+        {
           "LegacyNames": [
             "Action1",
             "Action2",
@@ -140719,6 +142042,15 @@
         }
       ],
       "Name": "InputType"
+    },
+    {
+      "Items": [
+        {
+          "Name": "HighQualityMesh",
+          "Value": 0
+        }
+      ],
+      "Name": "IntermediateMeshGenerationResult"
     },
     {
       "Items": [
@@ -143585,6 +144917,40 @@
     {
       "Items": [
         {
+          "Name": "LoadFailed",
+          "Value": 0
+        },
+        {
+          "Name": "FlushFailed",
+          "Value": 1
+        },
+        {
+          "Name": "None",
+          "Value": 2
+        }
+      ],
+      "Name": "PlayerDataErrorState"
+    },
+    {
+      "Items": [
+        {
+          "Name": "Failure",
+          "Value": 0
+        },
+        {
+          "Name": "FallbackToDefault",
+          "Value": 1
+        },
+        {
+          "Name": "Kick",
+          "Value": 2
+        }
+      ],
+      "Name": "PlayerDataLoadFailureBehavior"
+    },
+    {
+      "Items": [
+        {
           "Name": "In",
           "Value": 0
         },
@@ -145201,6 +146567,10 @@
         {
           "Name": "ShowInterrupted",
           "Value": 5
+        },
+        {
+          "Name": "InsufficientMemory",
+          "Value": 6
         }
       ],
       "Name": "ShowAdResult"
