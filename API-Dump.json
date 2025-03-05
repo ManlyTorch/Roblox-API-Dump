@@ -6684,7 +6684,7 @@
             "Category": "Primitive",
             "Name": "null"
           },
-          "Security": "None",
+          "Security": "RobloxScriptSecurity",
           "ThreadSafety": "Unsafe"
         },
         {
@@ -14341,12 +14341,6 @@
       ]
     },
     {
-      "Members": [],
-      "MemoryCategory": "Internal",
-      "Name": "AudioTextToSpeech",
-      "Superclass": "Instance"
-    },
-    {
       "Members": [
         {
           "Category": "State",
@@ -14739,6 +14733,28 @@
         },
         {
           "MemberType": "Function",
+          "Name": "PrepareAvatarForPreviewAsync",
+          "Parameters": [
+            {
+              "Name": "humanoidModel",
+              "Type": {
+                "Category": "Class",
+                "Name": "Model"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "None",
+          "Tags": [
+            "Yields"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
           "Name": "PromptCreateAvatarAsync",
           "Parameters": [
             {
@@ -14923,6 +14939,28 @@
           "Tags": [
             "Yields"
           ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Event",
+          "Name": "AvatarModerationCompleted",
+          "Parameters": [
+            {
+              "Name": "outfitId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            },
+            {
+              "Name": "moderationStatus",
+              "Type": {
+                "Category": "Enum",
+                "Name": "ModerationStatus"
+              }
+            }
+          ],
+          "Security": "None",
           "ThreadSafety": "Unsafe"
         },
         {
@@ -33714,6 +33752,47 @@
           },
           "Security": "RobloxScriptSecurity",
           "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "SendMeshGenMeshInsertedTelemetry",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "SendMeshGenPublishedAssetsTelemetry",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "SendMeshGenResultTelemetry",
+          "Parameters": [
+            {
+              "Name": "success",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "bool"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
         }
       ],
       "MemoryCategory": "Instances",
@@ -45428,6 +45507,34 @@
           "ValueType": {
             "Category": "Primitive",
             "Name": "int"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "UI"
+            ]
+          },
+          "Category": "Data",
+          "MemberType": "Property",
+          "Name": "SelectionRect2D",
+          "Security": {
+            "Read": "RobloxScriptSecurity",
+            "Write": "RobloxScriptSecurity"
+          },
+          "Serialization": {
+            "CanLoad": false,
+            "CanSave": false
+          },
+          "Tags": [
+            "Hidden",
+            "ReadOnly",
+            "NotReplicated"
+          ],
+          "ThreadSafety": "Unsafe",
+          "ValueType": {
+            "Category": "DataType",
+            "Name": "Rect"
           }
         },
         {
@@ -65158,7 +65265,7 @@
     {
       "Members": [
         {
-          "Category": "Data",
+          "Category": "Behavior",
           "MemberType": "Property",
           "Name": "Enabled",
           "Security": {
@@ -65176,7 +65283,7 @@
           }
         },
         {
-          "Category": "Data",
+          "Category": "Behavior",
           "MemberType": "Property",
           "Name": "Type",
           "Security": {
@@ -65263,7 +65370,7 @@
     {
       "Members": [
         {
-          "Category": "Data",
+          "Category": "Behavior",
           "MemberType": "Property",
           "Name": "KeyCode",
           "Security": {
@@ -65281,7 +65388,7 @@
           }
         },
         {
-          "Category": "Data",
+          "Category": "Behavior",
           "MemberType": "Property",
           "Name": "UIButton",
           "Security": {
@@ -65309,7 +65416,7 @@
     {
       "Members": [
         {
-          "Category": "Data",
+          "Category": "Behavior",
           "MemberType": "Property",
           "Name": "Enabled",
           "Security": {
@@ -65327,7 +65434,7 @@
           }
         },
         {
-          "Category": "Data",
+          "Category": "Behavior",
           "MemberType": "Property",
           "Name": "Priority",
           "Security": {
@@ -65345,7 +65452,7 @@
           }
         },
         {
-          "Category": "Data",
+          "Category": "Behavior",
           "MemberType": "Property",
           "Name": "Sink",
           "Security": {
@@ -90330,6 +90437,24 @@
           }
         },
         {
+          "Category": "Data",
+          "MemberType": "Property",
+          "Name": "StepIdOffset",
+          "Security": {
+            "Read": "RobloxSecurity",
+            "Write": "RobloxSecurity"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "int"
+          }
+        },
+        {
           "Category": "Team",
           "MemberType": "Property",
           "Name": "Team",
@@ -90410,6 +90535,28 @@
           "ValueType": {
             "Category": "Primitive",
             "Name": "bool"
+          }
+        },
+        {
+          "Category": "Data",
+          "MemberType": "Property",
+          "Name": "ThirdPartyTextChatRestrictionStatus",
+          "Security": {
+            "Read": "RobloxScriptSecurity",
+            "Write": "RobloxScriptSecurity"
+          },
+          "Serialization": {
+            "CanLoad": false,
+            "CanSave": true
+          },
+          "Tags": [
+            "ReadOnly",
+            "NotReplicated"
+          ],
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Enum",
+            "Name": "ChatRestrictionStatus"
           }
         },
         {
@@ -94342,6 +94489,24 @@
         {
           "Category": "Data",
           "MemberType": "Property",
+          "Name": "IsDebuggable",
+          "Security": {
+            "Read": "RobloxScriptSecurity",
+            "Write": "RobloxScriptSecurity"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "bool"
+          }
+        },
+        {
+          "Category": "Data",
+          "MemberType": "Property",
           "Name": "MultipleDocumentInterfaceInstance",
           "Security": {
             "Read": "RobloxScriptSecurity",
@@ -94707,6 +94872,17 @@
             "Name": "bool"
           },
           "Security": "PluginSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "IsLoadedFromProject",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "bool"
+          },
+          "Security": "RobloxScriptSecurity",
           "ThreadSafety": "Unsafe"
         },
         {
@@ -124961,6 +125137,17 @@
         },
         {
           "MemberType": "Function",
+          "Name": "IsChatRestrictionSupported",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "bool"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
           "Name": "IsOver13",
           "Parameters": [],
           "ReturnType": {
@@ -137156,6 +137343,39 @@
               "Type": {
                 "Category": "Primitive",
                 "Name": "int"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "SendMouseMoveDeltaEvent",
+          "Parameters": [
+            {
+              "Name": "deltaX",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "float"
+              }
+            },
+            {
+              "Name": "deltaY",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "float"
+              }
+            },
+            {
+              "Name": "layerCollector",
+              "Type": {
+                "Category": "Class",
+                "Name": "Instance"
               }
             }
           ],
