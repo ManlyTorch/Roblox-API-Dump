@@ -2169,7 +2169,7 @@
           "Name": "IsPropertyModified",
           "Parameters": [
             {
-              "Name": "name",
+              "Name": "property",
               "Type": {
                 "Category": "Primitive",
                 "Name": "string"
@@ -2221,7 +2221,7 @@
           "Name": "ResetPropertyToDefault",
           "Parameters": [
             {
-              "Name": "name",
+              "Name": "property",
               "Type": {
                 "Category": "Primitive",
                 "Name": "string"
@@ -8383,6 +8383,28 @@
         },
         {
           "MemberType": "Function",
+          "Name": "CanEditAssetAsync",
+          "Parameters": [
+            {
+              "Name": "content",
+              "Type": {
+                "Category": "DataType",
+                "Name": "Content"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "bool"
+          },
+          "Security": "RobloxScriptSecurity",
+          "Tags": [
+            "Yields"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
           "Name": "CheckTextureAlphaAsync",
           "Parameters": [
             {
@@ -14343,6 +14365,446 @@
     {
       "Members": [
         {
+          "Capabilities": {
+            "Read": [
+              "Audio"
+            ]
+          },
+          "Category": "Asset",
+          "MemberType": "Property",
+          "Name": "IsLoaded",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": false,
+            "CanSave": true
+          },
+          "Tags": [
+            "ReadOnly",
+            "NotReplicated"
+          ],
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "bool"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "Audio"
+            ]
+          },
+          "Category": "Playback",
+          "MemberType": "Property",
+          "Name": "IsPlaying",
+          "Security": {
+            "Read": "None",
+            "Write": "RobloxSecurity"
+          },
+          "Serialization": {
+            "CanLoad": false,
+            "CanSave": false
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "bool"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "Audio"
+            ]
+          },
+          "Category": "Playback",
+          "MemberType": "Property",
+          "Name": "Looping",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "bool"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "Audio"
+            ]
+          },
+          "Category": "Asset",
+          "MemberType": "Property",
+          "Name": "Pitch",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "float"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "Audio"
+            ]
+          },
+          "Category": "Playback",
+          "MemberType": "Property",
+          "Name": "PlaybackSpeed",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "float"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "Audio"
+            ]
+          },
+          "Category": "Asset",
+          "MemberType": "Property",
+          "Name": "Speed",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "float"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "Audio"
+            ]
+          },
+          "Category": "Asset",
+          "MemberType": "Property",
+          "Name": "Text",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "string"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "Audio"
+            ]
+          },
+          "Category": "Asset",
+          "MemberType": "Property",
+          "Name": "TimeLength",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": false,
+            "CanSave": true
+          },
+          "Tags": [
+            "ReadOnly",
+            "NotReplicated"
+          ],
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "double"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "Audio"
+            ]
+          },
+          "Category": "Playback",
+          "MemberType": "Property",
+          "Name": "TimePosition",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "double"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "Audio"
+            ]
+          },
+          "Category": "Asset",
+          "MemberType": "Property",
+          "Name": "VoiceId",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "string"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "Audio"
+            ]
+          },
+          "Category": "State",
+          "MemberType": "Property",
+          "Name": "Volume",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "float"
+          }
+        },
+        {
+          "Capabilities": [
+            "Audio"
+          ],
+          "MemberType": "Function",
+          "Name": "GetConnectedWires",
+          "Parameters": [
+            {
+              "Name": "pin",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "DataType",
+            "Name": "Instances"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Audio"
+          ],
+          "MemberType": "Function",
+          "Name": "Pause",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Audio"
+          ],
+          "MemberType": "Function",
+          "Name": "Play",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Audio"
+          ],
+          "MemberType": "Function",
+          "Name": "Unload",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Audio"
+          ],
+          "MemberType": "Function",
+          "Name": "GetWaveformAsync",
+          "Parameters": [
+            {
+              "Name": "timeRange",
+              "Type": {
+                "Category": "DataType",
+                "Name": "NumberRange"
+              }
+            },
+            {
+              "Name": "samples",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Array"
+          },
+          "Security": "None",
+          "Tags": [
+            "Yields"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Audio"
+          ],
+          "MemberType": "Function",
+          "Name": "LoadAsync",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Enum",
+            "Name": "AssetFetchStatus"
+          },
+          "Security": "None",
+          "Tags": [
+            "Yields"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Audio"
+          ],
+          "MemberType": "Event",
+          "Name": "Ended",
+          "Parameters": [],
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Audio"
+          ],
+          "MemberType": "Event",
+          "Name": "Looped",
+          "Parameters": [],
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Audio"
+          ],
+          "MemberType": "Event",
+          "Name": "WiringChanged",
+          "Parameters": [
+            {
+              "Name": "connected",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "bool"
+              }
+            },
+            {
+              "Name": "pin",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            },
+            {
+              "Name": "wire",
+              "Type": {
+                "Category": "Class",
+                "Name": "Wire"
+              }
+            },
+            {
+              "Name": "instance",
+              "Type": {
+                "Category": "Class",
+                "Name": "Instance"
+              }
+            }
+          ],
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        }
+      ],
+      "MemoryCategory": "Internal",
+      "Name": "AudioTextToSpeech",
+      "Superclass": "Instance"
+    },
+    {
+      "Members": [
+        {
           "Category": "State",
           "MemberType": "Property",
           "Name": "ClientFeatures",
@@ -18499,6 +18961,32 @@
           },
           "Category": "Data",
           "MemberType": "Property",
+          "Name": "StudioDefaultStyleSheet",
+          "Security": {
+            "Read": "RobloxScriptSecurity",
+            "Write": "RobloxScriptSecurity"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "Tags": [
+            "Hidden"
+          ],
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Class",
+            "Name": "StyleSheet"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "UI"
+            ]
+          },
+          "Category": "Data",
+          "MemberType": "Property",
           "Name": "StudioInsertWidgetLayerCollectorAutoLinkStyleSheet",
           "Security": {
             "Read": "RobloxScriptSecurity",
@@ -19014,9 +19502,6 @@
             "CanLoad": true,
             "CanSave": true
           },
-          "Tags": [
-            "Hidden"
-          ],
           "ThreadSafety": "ReadSafe",
           "ValueType": {
             "Category": "DataType",
@@ -19587,9 +20072,6 @@
             "CanLoad": true,
             "CanSave": true
           },
-          "Tags": [
-            "Hidden"
-          ],
           "ThreadSafety": "ReadSafe",
           "ValueType": {
             "Category": "DataType",
@@ -33755,8 +34237,95 @@
         },
         {
           "MemberType": "Function",
-          "Name": "SendMeshGenMeshInsertedTelemetry",
+          "Name": "SendMeshGenActivatedTelemetry",
           "Parameters": [],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "SendMeshGenCompletedTelemetry",
+          "Parameters": [
+            {
+              "Name": "requestId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            },
+            {
+              "Name": "generationId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            },
+            {
+              "Name": "success",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "bool"
+              }
+            },
+            {
+              "Name": "errorMessage",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            },
+            {
+              "Name": "prompt",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "SendMeshGenMeshInsertedTelemetry",
+          "Parameters": [
+            {
+              "Name": "requestId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            },
+            {
+              "Name": "generationId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            },
+            {
+              "Name": "success",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "bool"
+              }
+            },
+            {
+              "Name": "errorMessage",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            }
+          ],
           "ReturnType": {
             "Category": "Primitive",
             "Name": "null"
@@ -33767,23 +34336,47 @@
         {
           "MemberType": "Function",
           "Name": "SendMeshGenPublishedAssetsTelemetry",
-          "Parameters": [],
-          "ReturnType": {
-            "Category": "Primitive",
-            "Name": "null"
-          },
-          "Security": "RobloxScriptSecurity",
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "SendMeshGenResultTelemetry",
           "Parameters": [
+            {
+              "Name": "requestId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            },
+            {
+              "Name": "generationId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            },
             {
               "Name": "success",
               "Type": {
                 "Category": "Primitive",
                 "Name": "bool"
+              }
+            },
+            {
+              "Name": "errorMessage",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            },
+            {
+              "Name": "meshId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64?"
+              }
+            },
+            {
+              "Name": "imageId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64?"
               }
             }
           ],
@@ -41740,9 +42333,6 @@
             "CanLoad": true,
             "CanSave": true
           },
-          "Tags": [
-            "Hidden"
-          ],
           "ThreadSafety": "ReadSafe",
           "ValueType": {
             "Category": "DataType",
@@ -44377,7 +44967,7 @@
           ],
           "ReturnType": {
             "Category": "Class",
-            "Name": "Instance"
+            "Name": "DataStorePages"
           },
           "Security": "None",
           "Tags": [
@@ -46761,9 +47351,6 @@
             "CanLoad": true,
             "CanSave": true
           },
-          "Tags": [
-            "Hidden"
-          ],
           "ThreadSafety": "ReadSafe",
           "ValueType": {
             "Category": "DataType",
@@ -47852,9 +48439,6 @@
             "CanLoad": true,
             "CanSave": true
           },
-          "Tags": [
-            "Hidden"
-          ],
           "ThreadSafety": "ReadSafe",
           "ValueType": {
             "Category": "DataType",
@@ -72565,6 +73149,82 @@
       "Members": [
         {
           "MemberType": "Function",
+          "Name": "GetServerAttribute",
+          "Parameters": [
+            {
+              "Name": "name",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Tuple"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "InitializeServerAttributesForStudio",
+          "Parameters": [
+            {
+              "Name": "serverAttributes",
+              "Type": {
+                "Category": "Group",
+                "Name": "Dictionary"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Tuple"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "SetServerAttribute",
+          "Parameters": [
+            {
+              "Name": "name",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            },
+            {
+              "Name": "value",
+              "Type": {
+                "Category": "Group",
+                "Name": "Variant"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Tuple"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        }
+      ],
+      "MemoryCategory": "Instances",
+      "Name": "MatchmakingService",
+      "Superclass": "Instance",
+      "Tags": [
+        "NotCreatable",
+        "Service",
+        "NotReplicated"
+      ]
+    },
+    {
+      "Members": [
+        {
+          "MemberType": "Function",
           "Name": "StartSession",
           "Parameters": [],
           "ReturnType": {
@@ -82396,9 +83056,6 @@
             "CanLoad": true,
             "CanSave": true
           },
-          "Tags": [
-            "Hidden"
-          ],
           "ThreadSafety": "ReadSafe",
           "ValueType": {
             "Category": "DataType",
@@ -82471,9 +83128,6 @@
             "CanLoad": true,
             "CanSave": true
           },
-          "Tags": [
-            "Hidden"
-          ],
           "ThreadSafety": "ReadSafe",
           "ValueType": {
             "Category": "DataType",
@@ -89721,6 +90375,11 @@
     {
       "Members": [
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Data",
           "MemberType": "Property",
           "Name": "AccountAge",
@@ -89743,6 +90402,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Data",
           "MemberType": "Property",
           "Name": "AppearanceDidLoad",
@@ -89767,6 +90431,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Data",
           "MemberType": "Property",
           "Name": "AutoJumpEnabled",
@@ -89785,6 +90454,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Camera",
           "MemberType": "Property",
           "Name": "CameraMaxZoomDistance",
@@ -89803,6 +90477,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Camera",
           "MemberType": "Property",
           "Name": "CameraMinZoomDistance",
@@ -89821,6 +90500,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Camera",
           "MemberType": "Property",
           "Name": "CameraMode",
@@ -89839,6 +90523,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Behavior",
           "MemberType": "Property",
           "Name": "CanLoadCharacterAppearance",
@@ -89857,6 +90546,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Data",
           "MemberType": "Property",
           "Name": "Character",
@@ -89875,6 +90569,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Data",
           "MemberType": "Property",
           "Name": "CharacterAppearance",
@@ -89897,6 +90596,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Data",
           "MemberType": "Property",
           "Name": "CharacterAppearanceId",
@@ -89915,6 +90619,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Data",
           "MemberType": "Property",
           "Name": "ChatMode",
@@ -89938,6 +90647,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Data",
           "MemberType": "Property",
           "Name": "DataComplexity",
@@ -89962,6 +90676,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Data",
           "MemberType": "Property",
           "Name": "DataComplexityLimit",
@@ -89985,6 +90704,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Data",
           "MemberType": "Property",
           "Name": "DataReady",
@@ -90009,6 +90733,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Camera",
           "MemberType": "Property",
           "Name": "DevCameraOcclusionMode",
@@ -90027,6 +90756,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Camera",
           "MemberType": "Property",
           "Name": "DevComputerCameraMode",
@@ -90045,6 +90779,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Control",
           "MemberType": "Property",
           "Name": "DevComputerMovementMode",
@@ -90063,6 +90802,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Camera",
           "MemberType": "Property",
           "Name": "DevEnableMouseLock",
@@ -90081,6 +90825,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Camera",
           "MemberType": "Property",
           "Name": "DevTouchCameraMode",
@@ -90099,6 +90848,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Control",
           "MemberType": "Property",
           "Name": "DevTouchMovementMode",
@@ -90117,6 +90871,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Data",
           "MemberType": "Property",
           "Name": "DisplayName",
@@ -90135,6 +90894,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Data",
           "MemberType": "Property",
           "Name": "FollowUserId",
@@ -90157,6 +90921,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Behavior",
           "MemberType": "Property",
           "Name": "GameplayPaused",
@@ -90175,6 +90944,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Data",
           "MemberType": "Property",
           "Name": "Guest",
@@ -90198,6 +90972,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Data",
           "MemberType": "Property",
           "Name": "HasVerifiedBadge",
@@ -90216,6 +90995,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Camera",
           "MemberType": "Property",
           "Name": "HealthDisplayDistance",
@@ -90234,6 +91018,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Data",
           "MemberType": "Property",
           "Name": "LocaleId",
@@ -90257,6 +91046,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Data",
           "MemberType": "Property",
           "Name": "MaximumSimulationRadius",
@@ -90279,6 +91073,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Data",
           "MemberType": "Property",
           "Name": "MembershipType",
@@ -90301,6 +91100,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Camera",
           "MemberType": "Property",
           "Name": "NameDisplayDistance",
@@ -90319,6 +91123,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Team",
           "MemberType": "Property",
           "Name": "Neutral",
@@ -90337,6 +91146,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Data",
           "MemberType": "Property",
           "Name": "OsPlatform",
@@ -90359,6 +91173,38 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
+          "Category": "Data",
+          "MemberType": "Property",
+          "Name": "PartyId",
+          "Security": {
+            "Read": "None",
+            "Write": "WritePlayerSecurity"
+          },
+          "Serialization": {
+            "CanLoad": false,
+            "CanSave": false
+          },
+          "Tags": [
+            "Hidden",
+            "NotReplicated"
+          ],
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "string"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Data",
           "MemberType": "Property",
           "Name": "PlatformName",
@@ -90380,6 +91226,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Data",
           "MemberType": "Property",
           "Name": "ReplicationFocus",
@@ -90398,6 +91249,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Data",
           "MemberType": "Property",
           "Name": "RespawnLocation",
@@ -90416,6 +91272,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Data",
           "MemberType": "Property",
           "Name": "SimulationRadius",
@@ -90437,6 +91298,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Data",
           "MemberType": "Property",
           "Name": "StepIdOffset",
@@ -90455,6 +91321,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Team",
           "MemberType": "Property",
           "Name": "Team",
@@ -90476,6 +91347,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Team",
           "MemberType": "Property",
           "Name": "TeamColor",
@@ -90494,6 +91370,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Data",
           "MemberType": "Property",
           "Name": "Teleported",
@@ -90517,6 +91398,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Data",
           "MemberType": "Property",
           "Name": "TeleportedIn",
@@ -90538,6 +91424,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Data",
           "MemberType": "Property",
           "Name": "ThirdPartyTextChatRestrictionStatus",
@@ -90560,6 +91451,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Data",
           "MemberType": "Property",
           "Name": "UnfilteredChat",
@@ -90583,6 +91479,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Data",
           "MemberType": "Property",
           "Name": "UserId",
@@ -90601,6 +91502,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Data",
           "MemberType": "Property",
           "Name": "VRDevice",
@@ -90622,6 +91528,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Data",
           "MemberType": "Property",
           "Name": "VREnabled",
@@ -90644,6 +91555,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Data",
           "MemberType": "Property",
           "Name": "userId",
@@ -90665,6 +91581,9 @@
           }
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "AddReplicationFocus",
           "Parameters": [
@@ -90684,6 +91603,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "AddReplicationFocusPosition",
           "Parameters": [
@@ -90710,6 +91632,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "AddToBlockList",
           "Parameters": [
@@ -90729,6 +91654,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "ClearCharacterAppearance",
           "Parameters": [],
@@ -90740,6 +91668,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "DistanceFromCharacter",
           "Parameters": [
@@ -90759,6 +91690,23 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
+          "MemberType": "Function",
+          "Name": "GetData",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Class",
+            "Name": "PlayerData"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "GetFriendStatus",
           "Parameters": [
@@ -90778,6 +91726,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "GetGameSessionID",
           "Parameters": [],
@@ -90789,6 +91740,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "GetJoinData",
           "Parameters": [],
@@ -90803,6 +91757,10 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Input",
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "GetMouse",
           "Parameters": [],
@@ -90814,6 +91772,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "GetNetworkPing",
           "Parameters": [],
@@ -90825,6 +91786,9 @@
           "ThreadSafety": "Safe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "GetUnder13",
           "Parameters": [],
@@ -90836,6 +91800,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "HasAppearanceLoaded",
           "Parameters": [],
@@ -90847,6 +91814,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "IsVerified",
           "Parameters": [],
@@ -90858,6 +91828,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "Kick",
           "Parameters": [
@@ -90878,6 +91851,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "LoadBoolean",
           "Parameters": [
@@ -90900,6 +91876,10 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Avatar",
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "LoadCharacterAppearance",
           "Parameters": [
@@ -90922,6 +91902,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "LoadData",
           "Parameters": [],
@@ -90936,6 +91919,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "LoadInstance",
           "Parameters": [
@@ -90958,6 +91944,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "LoadNumber",
           "Parameters": [
@@ -90980,6 +91969,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "LoadString",
           "Parameters": [
@@ -91002,6 +91994,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "Move",
           "Parameters": [
@@ -91029,6 +92024,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "RemoveCharacter",
           "Parameters": [],
@@ -91040,6 +92038,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "RemoveReplicationFocus",
           "Parameters": [
@@ -91059,6 +92060,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "RemoveReplicationFocusPosition",
           "Parameters": [
@@ -91085,6 +92089,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "RequestFriendship",
           "Parameters": [
@@ -91104,6 +92111,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "RevokeFriendship",
           "Parameters": [
@@ -91123,6 +92133,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "SaveBoolean",
           "Parameters": [
@@ -91152,6 +92165,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "SaveData",
           "Parameters": [],
@@ -91166,6 +92182,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "SaveInstance",
           "Parameters": [
@@ -91195,6 +92214,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "SaveNumber",
           "Parameters": [
@@ -91224,6 +92246,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "SaveString",
           "Parameters": [
@@ -91253,6 +92278,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "SetAccountAge",
           "Parameters": [
@@ -91272,6 +92300,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "SetBlockListInitialized",
           "Parameters": [],
@@ -91283,6 +92314,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "SetCharacterAppearanceJson",
           "Parameters": [
@@ -91302,6 +92336,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "SetChatTranslationSettingsLocaleId",
           "Parameters": [
@@ -91321,6 +92358,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "SetExperienceSettingsLocaleId",
           "Parameters": [
@@ -91340,6 +92380,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "SetMembershipType",
           "Parameters": [
@@ -91359,6 +92402,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "SetModerationAccessKey",
           "Parameters": [
@@ -91378,6 +92424,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "SetSuperSafeChat",
           "Parameters": [
@@ -91397,6 +92446,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "SetUnder13",
           "Parameters": [
@@ -91419,6 +92471,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "UpdatePlayerBlocked",
           "Parameters": [
@@ -91445,6 +92500,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "loadBoolean",
           "Parameters": [
@@ -91467,6 +92525,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "loadInstance",
           "Parameters": [
@@ -91489,6 +92550,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "loadNumber",
           "Parameters": [
@@ -91511,6 +92575,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "loadString",
           "Parameters": [
@@ -91533,6 +92600,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "saveBoolean",
           "Parameters": [
@@ -91562,6 +92632,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "saveInstance",
           "Parameters": [
@@ -91591,6 +92664,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "saveNumber",
           "Parameters": [
@@ -91620,6 +92696,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "saveString",
           "Parameters": [
@@ -91649,6 +92728,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "GetFriendsOnline",
           "Parameters": [
@@ -91672,6 +92754,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "GetRankInGroup",
           "Parameters": [
@@ -91694,6 +92779,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "GetRoleInGroup",
           "Parameters": [
@@ -91716,6 +92804,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "IsBestFriendsWith",
           "Parameters": [
@@ -91739,6 +92830,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "IsFriendsWith",
           "Parameters": [
@@ -91761,6 +92855,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "IsInGroup",
           "Parameters": [
@@ -91783,6 +92880,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "LoadCharacter",
           "Parameters": [],
@@ -91797,6 +92897,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "LoadCharacterBlocking",
           "Parameters": [],
@@ -91811,6 +92914,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "LoadCharacterWithHumanoidDescription",
           "Parameters": [
@@ -91833,6 +92939,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "RequestStreamAroundAsync",
           "Parameters": [
@@ -91863,6 +92972,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "WaitForDataReady",
           "Parameters": [],
@@ -91878,6 +92990,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "isFriendsWith",
           "Parameters": [
@@ -91901,6 +93016,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "waitForDataReady",
           "Parameters": [],
@@ -91916,6 +93034,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Event",
           "Name": "CharacterAdded",
           "Parameters": [
@@ -91931,6 +93052,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Event",
           "Name": "CharacterAppearanceLoaded",
           "Parameters": [
@@ -91946,6 +93070,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Event",
           "Name": "CharacterRemoving",
           "Parameters": [
@@ -91961,6 +93088,10 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Chat",
+            "Players"
+          ],
           "MemberType": "Event",
           "Name": "Chatted",
           "Parameters": [
@@ -91983,6 +93114,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Event",
           "Name": "FriendStatusChanged",
           "Parameters": [
@@ -92005,6 +93139,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Event",
           "Name": "Idled",
           "Parameters": [
@@ -92020,6 +93157,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Event",
           "Name": "OnTeleport",
           "Parameters": [
@@ -92049,6 +93189,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Event",
           "Name": "SimulationRadiusChanged",
           "Parameters": [
@@ -92083,7 +93226,7 @@
         },
         {
           "MemberType": "Function",
-          "Name": "GetRecord",
+          "Name": "GetRecordAsync",
           "Parameters": [
             {
               "Default": "Default",
@@ -92099,6 +93242,9 @@
             "Name": "PlayerDataRecord"
           },
           "Security": "None",
+          "Tags": [
+            "Yields"
+          ],
           "ThreadSafety": "Unsafe"
         }
       ],
@@ -92462,20 +93608,6 @@
         {
           "MemberType": "Function",
           "Name": "RequestFlushAsync",
-          "Parameters": [],
-          "ReturnType": {
-            "Category": "Primitive",
-            "Name": "null"
-          },
-          "Security": "None",
-          "Tags": [
-            "Yields"
-          ],
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "WaitForLoadAsync",
           "Parameters": [],
           "ReturnType": {
             "Category": "Primitive",
@@ -93211,6 +94343,11 @@
     {
       "Members": [
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Behavior",
           "MemberType": "Property",
           "Name": "BanningEnabled",
@@ -93233,6 +94370,15 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Chat",
+              "Players"
+            ],
+            "Write": [
+              "Chat"
+            ]
+          },
           "Category": "Data",
           "MemberType": "Property",
           "Name": "BubbleChat",
@@ -93255,6 +94401,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Behavior",
           "MemberType": "Property",
           "Name": "CharacterAutoLoads",
@@ -93276,6 +94427,15 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Chat",
+              "Players"
+            ],
+            "Write": [
+              "Chat"
+            ]
+          },
           "Category": "Data",
           "MemberType": "Property",
           "Name": "ClassicChat",
@@ -93298,6 +94458,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Data",
           "MemberType": "Property",
           "Name": "LocalPlayer",
@@ -93320,6 +94485,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Data",
           "MemberType": "Property",
           "Name": "MaxPlayers",
@@ -93342,6 +94512,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Data",
           "MemberType": "Property",
           "Name": "MaxPlayersInternal",
@@ -93363,6 +94538,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Data",
           "MemberType": "Property",
           "Name": "NumPlayers",
@@ -93386,6 +94566,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Data",
           "MemberType": "Property",
           "Name": "PreferredPlayers",
@@ -93408,6 +94593,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Data",
           "MemberType": "Property",
           "Name": "PreferredPlayersInternal",
@@ -93429,6 +94619,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Data",
           "MemberType": "Property",
           "Name": "RespawnTime",
@@ -93447,6 +94642,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Behavior",
           "MemberType": "Property",
           "Name": "UseStrafingAnimations",
@@ -93468,6 +94668,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Data",
           "MemberType": "Property",
           "Name": "localPlayer",
@@ -93492,6 +94697,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Data",
           "MemberType": "Property",
           "Name": "numPlayers",
@@ -93516,6 +94726,9 @@
           }
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "Chat",
           "Parameters": [
@@ -93535,6 +94748,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "CreateLocalPlayer",
           "Parameters": [],
@@ -93546,6 +94762,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "GetPlayerByUserId",
           "Parameters": [
@@ -93565,6 +94784,9 @@
           "ThreadSafety": "Safe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "GetPlayerFromCharacter",
           "Parameters": [
@@ -93584,6 +94806,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "GetPlayers",
           "Parameters": [],
@@ -93595,6 +94820,9 @@
           "ThreadSafety": "Safe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "ReportAbuse",
           "Parameters": [
@@ -93628,6 +94856,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "ReportAbuseV3",
           "Parameters": [
@@ -93654,6 +94885,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "ReportChatAbuse",
           "Parameters": [
@@ -93687,6 +94921,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "ResetLocalPlayer",
           "Parameters": [],
@@ -93698,6 +94935,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "SetChatStyle",
           "Parameters": [
@@ -93718,6 +94958,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "SetLocalPlayerInfo",
           "Parameters": [
@@ -93765,6 +95008,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "TeamChat",
           "Parameters": [
@@ -93784,6 +95030,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "WhisperChat",
           "Parameters": [
@@ -93810,6 +95059,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "getPlayers",
           "Parameters": [],
@@ -93824,6 +95076,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "playerFromCharacter",
           "Parameters": [
@@ -93846,6 +95101,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "players",
           "Parameters": [],
@@ -93860,6 +95118,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "BanAsync",
           "Parameters": [
@@ -93882,6 +95143,10 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Avatar",
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "CreateHumanoidModelFromDescription",
           "Parameters": [
@@ -93919,6 +95184,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "CreateHumanoidModelFromUserId",
           "Parameters": [
@@ -93941,6 +95209,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "GetBanHistoryAsync",
           "Parameters": [
@@ -93963,6 +95234,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "GetCharacterAppearanceAsync",
           "Parameters": [
@@ -93986,6 +95260,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "GetCharacterAppearanceInfoAsync",
           "Parameters": [
@@ -94008,6 +95285,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "GetFriendsAsync",
           "Parameters": [
@@ -94030,6 +95310,10 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Avatar",
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "GetHumanoidDescriptionFromOutfitId",
           "Parameters": [
@@ -94052,6 +95336,10 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Avatar",
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "GetHumanoidDescriptionFromUserId",
           "Parameters": [
@@ -94074,6 +95362,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "GetNameFromUserIdAsync",
           "Parameters": [
@@ -94096,6 +95387,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "GetUserIdFromNameAsync",
           "Parameters": [
@@ -94118,6 +95412,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "GetUserThumbnailAsync",
           "Parameters": [
@@ -94154,6 +95451,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "UnbanAsync",
           "Parameters": [
@@ -94176,6 +95476,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Event",
           "Name": "FriendRequestEvent",
           "Parameters": [
@@ -94205,6 +95508,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Event",
           "Name": "GameAnnounce",
           "Parameters": [
@@ -94220,6 +95526,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Event",
           "Name": "PlayerAdded",
           "Parameters": [
@@ -94235,6 +95544,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Event",
           "Name": "PlayerChatted",
           "Parameters": [
@@ -94271,6 +95583,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Event",
           "Name": "PlayerConnecting",
           "Parameters": [
@@ -94286,6 +95601,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Event",
           "Name": "PlayerDisconnecting",
           "Parameters": [
@@ -94301,6 +95619,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Event",
           "Name": "PlayerMembershipChanged",
           "Parameters": [
@@ -94316,6 +95637,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Event",
           "Name": "PlayerRejoining",
           "Parameters": [
@@ -94331,6 +95655,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Event",
           "Name": "PlayerRemoving",
           "Parameters": [
@@ -94346,6 +95673,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Event",
           "Name": "UserSubscriptionStatusChanged",
           "Parameters": [
@@ -110681,6 +112011,11 @@
     {
       "Members": [
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Character",
           "MemberType": "Property",
           "Name": "AllowCustomAnimations",
@@ -110702,6 +112037,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Mobile",
           "MemberType": "Property",
           "Name": "AutoJumpEnabled",
@@ -110720,6 +112060,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Character",
           "MemberType": "Property",
           "Name": "AvatarJointUpgrade",
@@ -110743,6 +112088,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Camera",
           "MemberType": "Property",
           "Name": "CameraMaxZoomDistance",
@@ -110761,6 +112111,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Camera",
           "MemberType": "Property",
           "Name": "CameraMinZoomDistance",
@@ -110779,6 +112134,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Camera",
           "MemberType": "Property",
           "Name": "CameraMode",
@@ -110797,6 +112157,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Character Jump Settings",
           "MemberType": "Property",
           "Name": "CharacterJumpHeight",
@@ -110815,6 +112180,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Character Jump Settings",
           "MemberType": "Property",
           "Name": "CharacterJumpPower",
@@ -110833,6 +112203,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Character",
           "MemberType": "Property",
           "Name": "CharacterMaxSlopeAngle",
@@ -110851,6 +112226,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Character Jump Settings",
           "MemberType": "Property",
           "Name": "CharacterUseJumpPower",
@@ -110869,6 +112249,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Character",
           "MemberType": "Property",
           "Name": "CharacterWalkSpeed",
@@ -110887,6 +112272,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Camera",
           "MemberType": "Property",
           "Name": "DevCameraOcclusionMode",
@@ -110905,6 +112295,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Camera",
           "MemberType": "Property",
           "Name": "DevComputerCameraMovementMode",
@@ -110923,6 +112318,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Controls",
           "MemberType": "Property",
           "Name": "DevComputerMovementMode",
@@ -110941,6 +112341,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Camera",
           "MemberType": "Property",
           "Name": "DevTouchCameraMovementMode",
@@ -110959,6 +112364,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Controls",
           "MemberType": "Property",
           "Name": "DevTouchMovementMode",
@@ -110977,6 +112387,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Character",
           "MemberType": "Property",
           "Name": "EnableDynamicHeads",
@@ -110998,6 +112413,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Controls",
           "MemberType": "Property",
           "Name": "EnableMouseLockOption",
@@ -111016,6 +112436,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Character",
           "MemberType": "Property",
           "Name": "GameSettingsAssetIDFace",
@@ -111038,6 +112463,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Character",
           "MemberType": "Property",
           "Name": "GameSettingsAssetIDHead",
@@ -111060,6 +112490,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Character",
           "MemberType": "Property",
           "Name": "GameSettingsAssetIDLeftArm",
@@ -111082,6 +112517,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Character",
           "MemberType": "Property",
           "Name": "GameSettingsAssetIDLeftLeg",
@@ -111104,6 +112544,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Character",
           "MemberType": "Property",
           "Name": "GameSettingsAssetIDPants",
@@ -111126,6 +112571,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Character",
           "MemberType": "Property",
           "Name": "GameSettingsAssetIDRightArm",
@@ -111148,6 +112598,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Character",
           "MemberType": "Property",
           "Name": "GameSettingsAssetIDRightLeg",
@@ -111170,6 +112625,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Character",
           "MemberType": "Property",
           "Name": "GameSettingsAssetIDShirt",
@@ -111192,6 +112652,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Character",
           "MemberType": "Property",
           "Name": "GameSettingsAssetIDTeeShirt",
@@ -111214,6 +112679,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Character",
           "MemberType": "Property",
           "Name": "GameSettingsAssetIDTorso",
@@ -111236,6 +112706,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Character",
           "MemberType": "Property",
           "Name": "GameSettingsAvatar",
@@ -111257,6 +112732,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Character",
           "MemberType": "Property",
           "Name": "GameSettingsR15Collision",
@@ -111279,6 +112759,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Character",
           "MemberType": "Property",
           "Name": "GameSettingsScaleRangeBodyType",
@@ -111301,6 +112786,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Character",
           "MemberType": "Property",
           "Name": "GameSettingsScaleRangeHead",
@@ -111323,6 +112813,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Character",
           "MemberType": "Property",
           "Name": "GameSettingsScaleRangeHeight",
@@ -111345,6 +112840,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Character",
           "MemberType": "Property",
           "Name": "GameSettingsScaleRangeProportion",
@@ -111367,6 +112867,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Character",
           "MemberType": "Property",
           "Name": "GameSettingsScaleRangeWidth",
@@ -111389,6 +112894,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Data",
           "MemberType": "Property",
           "Name": "HealthDisplayDistance",
@@ -111407,6 +112917,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Character",
           "MemberType": "Property",
           "Name": "LoadCharacterAppearance",
@@ -111425,6 +112940,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Character",
           "MemberType": "Property",
           "Name": "LoadCharacterLayeredClothing ",
@@ -111447,6 +112967,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Controls",
           "MemberType": "Property",
           "Name": "LuaCharacterController",
@@ -111468,6 +112993,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Data",
           "MemberType": "Property",
           "Name": "NameDisplayDistance",
@@ -111486,6 +113016,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Character",
           "MemberType": "Property",
           "Name": "UserEmotesEnabled",
@@ -111504,6 +113039,9 @@
           }
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "ClearDefaults",
           "Parameters": [],
@@ -112081,6 +113619,17 @@
           "ReturnType": {
             "Category": "Primitive",
             "Name": "string"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetHarmonyQualityLevel",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "int"
           },
           "Security": "RobloxScriptSecurity",
           "ThreadSafety": "Unsafe"
@@ -116173,6 +117722,13 @@
                 "Category": "DataType",
                 "Name": "Function"
               }
+            },
+            {
+              "Name": "notificationCallback",
+              "Type": {
+                "Category": "DataType",
+                "Name": "Function?"
+              }
             }
           ],
           "ReturnType": {
@@ -118567,7 +120123,7 @@
               }
             },
             {
-              "Name": "index",
+              "Name": "priority",
               "Type": {
                 "Category": "Primitive",
                 "Name": "int?"
@@ -118740,7 +120296,7 @@
           "Name": "SetProperties",
           "Parameters": [
             {
-              "Name": "table",
+              "Name": "styleProperties",
               "Type": {
                 "Category": "Group",
                 "Name": "Dictionary"
@@ -119253,6 +120809,11 @@
     {
       "Members": [
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Data",
           "MemberType": "Property",
           "Name": "AutoAssignable",
@@ -119271,6 +120832,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Data",
           "MemberType": "Property",
           "Name": "AutoColorCharacters",
@@ -119293,6 +120859,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Data",
           "MemberType": "Property",
           "Name": "ChildOrder",
@@ -119314,6 +120885,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Data",
           "MemberType": "Property",
           "Name": "Score",
@@ -119336,6 +120912,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
           "Category": "Data",
           "MemberType": "Property",
           "Name": "TeamColor",
@@ -119354,6 +120935,9 @@
           }
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "GetPlayers",
           "Parameters": [],
@@ -119365,6 +120949,9 @@
           "ThreadSafety": "Safe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Event",
           "Name": "PlayerAdded",
           "Parameters": [
@@ -119380,6 +120967,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Event",
           "Name": "PlayerRemoved",
           "Parameters": [
@@ -119468,6 +121058,9 @@
     {
       "Members": [
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "GetTeams",
           "Parameters": [],
@@ -119479,6 +121072,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Players"
+          ],
           "MemberType": "Function",
           "Name": "RebalanceTeams",
           "Parameters": [],
@@ -125126,6 +126722,17 @@
         },
         {
           "MemberType": "Function",
+          "Name": "GetVoiceChatRestrictionStatus",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Enum",
+            "Name": "ChatRestrictionStatus"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
           "Name": "HaveActiveUser",
           "Parameters": [],
           "ReturnType": {
@@ -126658,6 +128265,100 @@
           "ReturnType": {
             "Category": "Primitive",
             "Name": "float"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "CalculateEditableMeshModifiedCageBoundingBox",
+          "Parameters": [
+            {
+              "Name": "referenceUVValues",
+              "Type": {
+                "Category": "Group",
+                "Name": "Array"
+              }
+            },
+            {
+              "Name": "innerCage",
+              "Type": {
+                "Category": "DataType",
+                "Name": "Object"
+              }
+            },
+            {
+              "Name": "innerTransform",
+              "Type": {
+                "Category": "DataType",
+                "Name": "CFrame"
+              }
+            },
+            {
+              "Name": "outerCage",
+              "Type": {
+                "Category": "DataType",
+                "Name": "Object"
+              }
+            },
+            {
+              "Name": "outerTransform",
+              "Type": {
+                "Category": "DataType",
+                "Name": "CFrame"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Tuple"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "CalculateEditableMeshNumModifiedCageUVsInSet",
+          "Parameters": [
+            {
+              "Name": "referenceUVValues",
+              "Type": {
+                "Category": "Group",
+                "Name": "Array"
+              }
+            },
+            {
+              "Name": "innerCage",
+              "Type": {
+                "Category": "DataType",
+                "Name": "Object"
+              }
+            },
+            {
+              "Name": "innerTransform",
+              "Type": {
+                "Category": "DataType",
+                "Name": "CFrame"
+              }
+            },
+            {
+              "Name": "outerCage",
+              "Type": {
+                "Category": "DataType",
+                "Name": "Object"
+              }
+            },
+            {
+              "Name": "outerTransform",
+              "Type": {
+                "Category": "DataType",
+                "Name": "CFrame"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Tuple"
           },
           "Security": "RobloxScriptSecurity",
           "ThreadSafety": "Unsafe"
@@ -138928,27 +140629,6 @@
           }
         },
         {
-          "Category": "Data",
-          "MemberType": "Property",
-          "Name": "UseRME",
-          "Security": {
-            "Read": "RobloxSecurity",
-            "Write": "RobloxSecurity"
-          },
-          "Serialization": {
-            "CanLoad": false,
-            "CanSave": false
-          },
-          "Tags": [
-            "Hidden"
-          ],
-          "ThreadSafety": "ReadSafe",
-          "ValueType": {
-            "Category": "Primitive",
-            "Name": "bool"
-          }
-        },
-        {
           "Category": "State",
           "MemberType": "Property",
           "Name": "VoiceChatEnabledForPlaceOnRcc",
@@ -138989,6 +140669,102 @@
             "Category": "Primitive",
             "Name": "bool"
           }
+        },
+        {
+          "MemberType": "Function",
+          "Name": "getInternalChannelId",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "string"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "getInternalGroupId",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "string"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "getInternalPublishPause",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "bool"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "getInternalSessionId",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "string"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "getInternalSubscribePause",
+          "Parameters": [
+            {
+              "Name": "userId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "bool"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "getInternalSubscribePauseAll",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "bool"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "getInternalVoiceChatApiVersion",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "int"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "isInternalPublishPaused",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "bool"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
         },
         {
           "MemberType": "Function",
@@ -140178,6 +141954,10 @@
         {
           "Name": "ErrorNotFound",
           "Value": 2
+        },
+        {
+          "Name": "ErrorModerated",
+          "Value": 3
         }
       ],
       "Name": "AnnotationRequestResult"
@@ -149702,6 +151482,10 @@
         {
           "Name": "LegacySound",
           "Value": 20
+        },
+        {
+          "Name": "Players",
+          "Value": 21
         }
       ],
       "Name": "SecurityCapability"
