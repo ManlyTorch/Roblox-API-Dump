@@ -5627,6 +5627,42 @@
             "Animation"
           ],
           "MemberType": "Function",
+          "Name": "GetTargetInstance",
+          "Parameters": [
+            {
+              "Name": "name",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Class",
+            "Name": "Instance"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Animation"
+          ],
+          "MemberType": "Function",
+          "Name": "GetTargetNames",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Array"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Animation"
+          ],
+          "MemberType": "Function",
           "Name": "GetTimeOfKeyframe",
           "Parameters": [
             {
@@ -5684,6 +5720,35 @@
           "Tags": [
             "CustomLuaState"
           ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Animation"
+          ],
+          "MemberType": "Function",
+          "Name": "SetTargetInstance",
+          "Parameters": [
+            {
+              "Name": "name",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            },
+            {
+              "Name": "target",
+              "Type": {
+                "Category": "Class",
+                "Name": "Instance"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "None",
           "ThreadSafety": "Unsafe"
         },
         {
@@ -6689,6 +6754,25 @@
         },
         {
           "MemberType": "Function",
+          "Name": "DEPRECATED_LoadAnnotationReplies",
+          "Parameters": [
+            {
+              "Name": "annotation",
+              "Type": {
+                "Category": "Class",
+                "Name": "Annotation"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
           "Name": "DeleteAnnotation",
           "Parameters": [
             {
@@ -6759,6 +6843,20 @@
               "Type": {
                 "Category": "Class",
                 "Name": "Annotation"
+              }
+            },
+            {
+              "Name": "reverseOrder",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "bool"
+              }
+            },
+            {
+              "Name": "loadAll",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "bool"
               }
             }
           ],
@@ -6961,6 +7059,21 @@
         },
         {
           "MemberType": "Event",
+          "Name": "DEPRECATED_ServerLoadAnnotationReplies",
+          "Parameters": [
+            {
+              "Name": "annotation",
+              "Type": {
+                "Category": "Class",
+                "Name": "Annotation"
+              }
+            }
+          ],
+          "Security": "RobloxSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Event",
           "Name": "ServerLoadAnnotationReplies",
           "Parameters": [
             {
@@ -6968,6 +7081,20 @@
               "Type": {
                 "Category": "Class",
                 "Name": "Annotation"
+              }
+            },
+            {
+              "Name": "reverseOrder",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "bool"
+              }
+            },
+            {
+              "Name": "loadAll",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "bool"
               }
             }
           ],
@@ -14800,7 +14927,10 @@
       ],
       "MemoryCategory": "Internal",
       "Name": "AudioTextToSpeech",
-      "Superclass": "Instance"
+      "Superclass": "Instance",
+      "Tags": [
+        "NotBrowsable"
+      ]
     },
     {
       "Members": [
@@ -47018,6 +47148,29 @@
               "UI"
             ]
           },
+          "Category": "Haptic",
+          "MemberType": "Property",
+          "Name": "HoverHapticEffect",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Class",
+            "Name": "HapticEffect"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "UI"
+            ]
+          },
           "Category": "Data",
           "MemberType": "Property",
           "Name": "Modal",
@@ -47033,6 +47186,29 @@
           "ValueType": {
             "Category": "Primitive",
             "Name": "bool"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "UI"
+            ]
+          },
+          "Category": "Haptic",
+          "MemberType": "Property",
+          "Name": "PressHapticEffect",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Class",
+            "Name": "HapticEffect"
           }
         },
         {
@@ -49789,6 +49965,33 @@
           },
           "Category": "Scrolling",
           "MemberType": "Property",
+          "Name": "ScrollRate",
+          "Security": {
+            "Read": "RobloxScriptSecurity",
+            "Write": "RobloxScriptSecurity"
+          },
+          "Serialization": {
+            "CanLoad": false,
+            "CanSave": false
+          },
+          "Tags": [
+            "Hidden",
+            "NotReplicated"
+          ],
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "float"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "UI"
+            ]
+          },
+          "Category": "Scrolling",
+          "MemberType": "Property",
           "Name": "ScrollVelocity",
           "Security": {
             "Read": "RobloxScriptSecurity",
@@ -49848,6 +50051,33 @@
             "CanLoad": true,
             "CanSave": true
           },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "bool"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "UI"
+            ]
+          },
+          "Category": "Scrolling",
+          "MemberType": "Property",
+          "Name": "SmoothScroll",
+          "Security": {
+            "Read": "RobloxScriptSecurity",
+            "Write": "RobloxScriptSecurity"
+          },
+          "Serialization": {
+            "CanLoad": false,
+            "CanSave": false
+          },
+          "Tags": [
+            "Hidden",
+            "NotReplicated"
+          ],
           "ThreadSafety": "ReadSafe",
           "ValueType": {
             "Category": "Primitive",
@@ -57771,7 +58001,10 @@
       ],
       "MemoryCategory": "Instances",
       "Name": "HapticEffect",
-      "Superclass": "Instance"
+      "Superclass": "Instance",
+      "Tags": [
+        "NotBrowsable"
+      ]
     },
     {
       "Members": [
@@ -65969,6 +66202,60 @@
           "ValueType": {
             "Category": "Enum",
             "Name": "KeyCode"
+          }
+        },
+        {
+          "Category": "Behavior",
+          "MemberType": "Property",
+          "Name": "PressedThreshold",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "float"
+          }
+        },
+        {
+          "Category": "Behavior",
+          "MemberType": "Property",
+          "Name": "ReleasedThreshold",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "float"
+          }
+        },
+        {
+          "Category": "Data",
+          "MemberType": "Property",
+          "Name": "Scale",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "float"
           }
         },
         {
@@ -93551,17 +93838,6 @@
         },
         {
           "MemberType": "Function",
-          "Name": "Release",
-          "Parameters": [],
-          "ReturnType": {
-            "Category": "Primitive",
-            "Name": "null"
-          },
-          "Security": "None",
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
           "Name": "RemoveValue",
           "Parameters": [
             {
@@ -93603,6 +93879,20 @@
             "Name": "null"
           },
           "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "ReleaseAsync",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "None",
+          "Tags": [
+            "Yields"
+          ],
           "ThreadSafety": "Unsafe"
         },
         {
@@ -108446,6 +108736,25 @@
       "Members": [
         {
           "MemberType": "Function",
+          "Name": "GetPlayersByPartyId",
+          "Parameters": [
+            {
+              "Name": "partyId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "DataType",
+            "Name": "Instances"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
           "Name": "HideSelfView",
           "Parameters": [],
           "ReturnType": {
@@ -108715,6 +109024,21 @@
             }
           ],
           "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Event",
+          "Name": "PlayerPartyDataChanged",
+          "Parameters": [
+            {
+              "Name": "partyId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            }
+          ],
+          "Security": "RobloxScriptSecurity",
           "ThreadSafety": "Unsafe"
         },
         {
@@ -140833,6 +141157,129 @@
     {
       "Members": [
         {
+          "Category": "Data",
+          "MemberType": "Property",
+          "Name": "ConnectionState",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": false,
+            "CanSave": true
+          },
+          "Tags": [
+            "ReadOnly",
+            "NotReplicated"
+          ],
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Enum",
+            "Name": "WebSocketState"
+          }
+        },
+        {
+          "MemberType": "Function",
+          "Name": "Close",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "Send",
+          "Parameters": [
+            {
+              "Name": "data",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Event",
+          "Name": "Closed",
+          "Parameters": [],
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Event",
+          "Name": "MessageReceived",
+          "Parameters": [
+            {
+              "Name": "data",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            }
+          ],
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Event",
+          "Name": "Opened",
+          "Parameters": [],
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        }
+      ],
+      "MemoryCategory": "Instances",
+      "Name": "WebSocketClient",
+      "Superclass": "Instance",
+      "Tags": [
+        "NotCreatable",
+        "NotReplicated"
+      ]
+    },
+    {
+      "Members": [
+        {
+          "MemberType": "Function",
+          "Name": "CreateClient",
+          "Parameters": [
+            {
+              "Name": "uri",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Class",
+            "Name": "WebSocketClient"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        }
+      ],
+      "MemoryCategory": "Instances",
+      "Name": "WebSocketService",
+      "Superclass": "Instance",
+      "Tags": [
+        "NotCreatable",
+        "Service",
+        "NotReplicated"
+      ]
+    },
+    {
+      "Members": [
+        {
           "MemberType": "Function",
           "Name": "CloseWindow",
           "Parameters": [],
@@ -141666,6 +142113,13 @@
         {
           "Name": "Transparency",
           "Value": 1
+        },
+        {
+          "Name": "TintMask",
+          "Tags": [
+            "NotBrowsable"
+          ],
+          "Value": 2
         }
       ],
       "Name": "AlphaMode"
@@ -143363,23 +143817,6 @@
         }
       ],
       "Name": "CameraType"
-    },
-    {
-      "Items": [
-        {
-          "Name": "All",
-          "Value": 0
-        },
-        {
-          "Name": "None",
-          "Value": 1
-        },
-        {
-          "Name": "Core",
-          "Value": 2
-        }
-      ],
-      "Name": "CaptureUIHideMode"
     },
     {
       "Items": [
@@ -150001,8 +150438,12 @@
           "Value": 1
         },
         {
-          "Name": "None",
+          "Name": "ReleaseFailed",
           "Value": 2
+        },
+        {
+          "Name": "None",
+          "Value": 3
         }
       ],
       "Name": "PlayerDataErrorState"
@@ -151805,6 +152246,43 @@
         }
       ],
       "Name": "StartCorner"
+    },
+    {
+      "Items": [
+        {
+          "Name": "Boolean",
+          "Value": 0
+        },
+        {
+          "Name": "CFrame",
+          "Value": 1
+        },
+        {
+          "Name": "Float",
+          "Value": 2
+        },
+        {
+          "Name": "Instance",
+          "Value": 3
+        },
+        {
+          "Name": "Random",
+          "Value": 4
+        },
+        {
+          "Name": "Vector2",
+          "Value": 5
+        },
+        {
+          "Name": "Vector3",
+          "Value": 6
+        },
+        {
+          "Name": "INVALID",
+          "Value": 7
+        }
+      ],
+      "Name": "StateObjectFieldType"
     },
     {
       "Items": [
@@ -153826,6 +154304,23 @@
     {
       "Items": [
         {
+          "Name": "All",
+          "Value": 0
+        },
+        {
+          "Name": "None",
+          "Value": 1
+        },
+        {
+          "Name": "PlayerGui",
+          "Value": 2
+        }
+      ],
+      "Name": "UICaptureMode"
+    },
+    {
+      "Items": [
+        {
           "Name": "Automatic",
           "Value": 0
         },
@@ -154673,6 +155168,27 @@
         }
       ],
       "Name": "WaterForce"
+    },
+    {
+      "Items": [
+        {
+          "Name": "Connecting",
+          "Value": 0
+        },
+        {
+          "Name": "Open",
+          "Value": 1
+        },
+        {
+          "Name": "Closing",
+          "Value": 2
+        },
+        {
+          "Name": "Closed",
+          "Value": 3
+        }
+      ],
+      "Name": "WebSocketState"
     },
     {
       "Items": [
