@@ -369,8 +369,8 @@
             {
               "Name": "image",
               "Type": {
-                "Category": "DataType",
-                "Name": "Object"
+                "Category": "Class",
+                "Name": "EditableImage"
               }
             },
             {
@@ -395,8 +395,8 @@
             {
               "Name": "mesh",
               "Type": {
-                "Category": "DataType",
-                "Name": "Object"
+                "Category": "Class",
+                "Name": "EditableMesh"
               }
             },
             {
@@ -449,8 +449,8 @@
             {
               "Name": "image",
               "Type": {
-                "Category": "DataType",
-                "Name": "Object"
+                "Category": "Class",
+                "Name": "EditableImage"
               }
             },
             {
@@ -1135,6 +1135,75 @@
             "Name": "Array"
           },
           "Security": "None",
+          "Tags": [
+            "Deprecated"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetFacesWithColor",
+          "Parameters": [
+            {
+              "Name": "colorId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Array"
+          },
+          "Security": "None",
+          "Tags": [
+            "CustomLuaState"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetFacesWithNormal",
+          "Parameters": [
+            {
+              "Name": "normalId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Array"
+          },
+          "Security": "None",
+          "Tags": [
+            "CustomLuaState"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetFacesWithUV",
+          "Parameters": [
+            {
+              "Name": "uvId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Array"
+          },
+          "Security": "None",
+          "Tags": [
+            "CustomLuaState"
+          ],
           "ThreadSafety": "Unsafe"
         },
         {
@@ -1235,6 +1304,172 @@
         },
         {
           "MemberType": "Function",
+          "Name": "GetVertexColors",
+          "Parameters": [
+            {
+              "Name": "vertexId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Array"
+          },
+          "Security": "None",
+          "Tags": [
+            "CustomLuaState"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetVertexFaceColor",
+          "Parameters": [
+            {
+              "Name": "vertexId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            },
+            {
+              "Name": "faceId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "int64"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetVertexFaceNormal",
+          "Parameters": [
+            {
+              "Name": "vertexId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            },
+            {
+              "Name": "faceId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "int64"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetVertexFaceUV",
+          "Parameters": [
+            {
+              "Name": "vertexId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            },
+            {
+              "Name": "faceId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "int64"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetVertexFaces",
+          "Parameters": [
+            {
+              "Name": "vertexId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Array"
+          },
+          "Security": "None",
+          "Tags": [
+            "CustomLuaState"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetVertexNormals",
+          "Parameters": [
+            {
+              "Name": "vertexId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Array"
+          },
+          "Security": "None",
+          "Tags": [
+            "CustomLuaState"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetVertexUVs",
+          "Parameters": [
+            {
+              "Name": "vertexId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Array"
+          },
+          "Security": "None",
+          "Tags": [
+            "CustomLuaState"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
           "Name": "GetVertices",
           "Parameters": [],
           "ReturnType": {
@@ -1261,6 +1496,75 @@
             "Name": "Array"
           },
           "Security": "None",
+          "Tags": [
+            "Deprecated"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetVerticesWithColor",
+          "Parameters": [
+            {
+              "Name": "colorId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Array"
+          },
+          "Security": "None",
+          "Tags": [
+            "CustomLuaState"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetVerticesWithNormal",
+          "Parameters": [
+            {
+              "Name": "normalId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Array"
+          },
+          "Security": "None",
+          "Tags": [
+            "CustomLuaState"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetVerticesWithUV",
+          "Parameters": [
+            {
+              "Name": "uvId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Array"
+          },
+          "Security": "None",
+          "Tags": [
+            "CustomLuaState"
+          ],
           "ThreadSafety": "Unsafe"
         },
         {
@@ -1612,6 +1916,105 @@
               "Type": {
                 "Category": "DataType",
                 "Name": "Vector2"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "SetVertexFaceColor",
+          "Parameters": [
+            {
+              "Name": "vertexId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            },
+            {
+              "Name": "faceId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            },
+            {
+              "Name": "colorId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "SetVertexFaceNormal",
+          "Parameters": [
+            {
+              "Name": "vertexId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            },
+            {
+              "Name": "faceId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            },
+            {
+              "Name": "normalId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "SetVertexFaceUV",
+          "Parameters": [
+            {
+              "Name": "vertexId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            },
+            {
+              "Name": "faceId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            },
+            {
+              "Name": "uvId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
               }
             }
           ],
@@ -8544,8 +8947,8 @@
             }
           ],
           "ReturnType": {
-            "Category": "DataType",
-            "Name": "Object"
+            "Category": "Class",
+            "Name": "EditableImage"
           },
           "Security": "None",
           "ThreadSafety": "Unsafe"
@@ -8563,8 +8966,8 @@
             }
           ],
           "ReturnType": {
-            "Category": "DataType",
-            "Name": "Object"
+            "Category": "Class",
+            "Name": "EditableMesh"
           },
           "Security": "None",
           "ThreadSafety": "Unsafe"
@@ -8677,7 +9080,7 @@
             {
               "Name": "object",
               "Type": {
-                "Category": "DataType",
+                "Category": "Class",
                 "Name": "Object"
               }
             },
@@ -8714,7 +9117,7 @@
             {
               "Name": "object",
               "Type": {
-                "Category": "DataType",
+                "Category": "Class",
                 "Name": "Object"
               }
             },
@@ -8771,8 +9174,8 @@
             }
           ],
           "ReturnType": {
-            "Category": "DataType",
-            "Name": "Object"
+            "Category": "Class",
+            "Name": "EditableImage"
           },
           "Security": "None",
           "Tags": [
@@ -8800,8 +9203,8 @@
             }
           ],
           "ReturnType": {
-            "Category": "DataType",
-            "Name": "Object"
+            "Category": "Class",
+            "Name": "EditableMesh"
           },
           "Security": "None",
           "Tags": [
@@ -8822,8 +9225,8 @@
             }
           ],
           "ReturnType": {
-            "Category": "DataType",
-            "Name": "Object"
+            "Category": "Class",
+            "Name": "EditableMesh"
           },
           "Security": "RobloxScriptSecurity",
           "Tags": [
@@ -10256,10 +10659,7 @@
       ],
       "MemoryCategory": "Internal",
       "Name": "AudioChannelMixer",
-      "Superclass": "Instance",
-      "Tags": [
-        "NotBrowsable"
-      ]
+      "Superclass": "Instance"
     },
     {
       "Members": [
@@ -10378,10 +10778,7 @@
       ],
       "MemoryCategory": "Internal",
       "Name": "AudioChannelSplitter",
-      "Superclass": "Instance",
-      "Tags": [
-        "NotBrowsable"
-      ]
+      "Superclass": "Instance"
     },
     {
       "Members": [
@@ -15436,8 +15833,8 @@
             }
           ],
           "ReturnType": {
-            "Category": "DataType",
-            "Name": "Object"
+            "Category": "Class",
+            "Name": "EditableImage"
           },
           "Security": "None",
           "Tags": [
@@ -20119,8 +20516,8 @@
           "Name": "CreateEditableMeshAsync",
           "Parameters": [],
           "ReturnType": {
-            "Category": "DataType",
-            "Name": "Object"
+            "Category": "Class",
+            "Name": "EditableMesh"
           },
           "Security": "None",
           "Tags": [
@@ -22728,7 +23125,7 @@
           "Name": "BugReportRequested",
           "Parameters": [
             {
-              "Name": "message",
+              "Name": "trigger",
               "Type": {
                 "Category": "Primitive",
                 "Name": "string"
@@ -22998,721 +23395,6 @@
       "Tags": [
         "NotCreatable",
         "Service",
-        "NotReplicated"
-      ]
-    },
-    {
-      "Members": [
-        {
-          "Category": "Data",
-          "MemberType": "Property",
-          "Name": "CFrame",
-          "Security": {
-            "Read": "None",
-            "Write": "None"
-          },
-          "Serialization": {
-            "CanLoad": true,
-            "CanSave": true
-          },
-          "ThreadSafety": "ReadSafe",
-          "ValueType": {
-            "Category": "DataType",
-            "Name": "CFrame"
-          }
-        },
-        {
-          "Category": "Camera",
-          "MemberType": "Property",
-          "Name": "CameraSubject",
-          "Security": {
-            "Read": "None",
-            "Write": "None"
-          },
-          "Serialization": {
-            "CanLoad": true,
-            "CanSave": true
-          },
-          "ThreadSafety": "ReadSafe",
-          "ValueType": {
-            "Category": "Class",
-            "Name": "Instance"
-          }
-        },
-        {
-          "Category": "Camera",
-          "MemberType": "Property",
-          "Name": "CameraType",
-          "Security": {
-            "Read": "None",
-            "Write": "None"
-          },
-          "Serialization": {
-            "CanLoad": true,
-            "CanSave": true
-          },
-          "ThreadSafety": "ReadSafe",
-          "ValueType": {
-            "Category": "Enum",
-            "Name": "CameraType"
-          }
-        },
-        {
-          "Category": "Data",
-          "MemberType": "Property",
-          "Name": "CoordinateFrame",
-          "Security": {
-            "Read": "None",
-            "Write": "None"
-          },
-          "Serialization": {
-            "CanLoad": true,
-            "CanSave": false
-          },
-          "Tags": [
-            "Hidden",
-            "NotReplicated",
-            "Deprecated"
-          ],
-          "ThreadSafety": "ReadSafe",
-          "ValueType": {
-            "Category": "DataType",
-            "Name": "CFrame"
-          }
-        },
-        {
-          "Category": "Camera",
-          "MemberType": "Property",
-          "Name": "DiagonalFieldOfView",
-          "Security": {
-            "Read": "None",
-            "Write": "None"
-          },
-          "Serialization": {
-            "CanLoad": false,
-            "CanSave": false
-          },
-          "Tags": [
-            "NotReplicated"
-          ],
-          "ThreadSafety": "ReadSafe",
-          "ValueType": {
-            "Category": "Primitive",
-            "Name": "float"
-          }
-        },
-        {
-          "Category": "Camera",
-          "MemberType": "Property",
-          "Name": "FieldOfView",
-          "Security": {
-            "Read": "None",
-            "Write": "None"
-          },
-          "Serialization": {
-            "CanLoad": true,
-            "CanSave": true
-          },
-          "ThreadSafety": "ReadSafe",
-          "ValueType": {
-            "Category": "Primitive",
-            "Name": "float"
-          }
-        },
-        {
-          "Category": "Camera",
-          "MemberType": "Property",
-          "Name": "FieldOfViewMode",
-          "Security": {
-            "Read": "None",
-            "Write": "None"
-          },
-          "Serialization": {
-            "CanLoad": true,
-            "CanSave": true
-          },
-          "ThreadSafety": "ReadSafe",
-          "ValueType": {
-            "Category": "Enum",
-            "Name": "FieldOfViewMode"
-          }
-        },
-        {
-          "Category": "Data",
-          "MemberType": "Property",
-          "Name": "Focus",
-          "Security": {
-            "Read": "None",
-            "Write": "None"
-          },
-          "Serialization": {
-            "CanLoad": true,
-            "CanSave": true
-          },
-          "ThreadSafety": "ReadSafe",
-          "ValueType": {
-            "Category": "DataType",
-            "Name": "CFrame"
-          }
-        },
-        {
-          "Category": "Data",
-          "MemberType": "Property",
-          "Name": "HeadLocked",
-          "Security": {
-            "Read": "None",
-            "Write": "None"
-          },
-          "Serialization": {
-            "CanLoad": true,
-            "CanSave": true
-          },
-          "ThreadSafety": "ReadSafe",
-          "ValueType": {
-            "Category": "Primitive",
-            "Name": "bool"
-          }
-        },
-        {
-          "Category": "Data",
-          "MemberType": "Property",
-          "Name": "HeadScale",
-          "Security": {
-            "Read": "None",
-            "Write": "None"
-          },
-          "Serialization": {
-            "CanLoad": true,
-            "CanSave": true
-          },
-          "ThreadSafety": "ReadSafe",
-          "ValueType": {
-            "Category": "Primitive",
-            "Name": "float"
-          }
-        },
-        {
-          "Category": "Camera",
-          "MemberType": "Property",
-          "Name": "MaxAxisFieldOfView",
-          "Security": {
-            "Read": "None",
-            "Write": "None"
-          },
-          "Serialization": {
-            "CanLoad": false,
-            "CanSave": false
-          },
-          "Tags": [
-            "NotReplicated"
-          ],
-          "ThreadSafety": "ReadSafe",
-          "ValueType": {
-            "Category": "Primitive",
-            "Name": "float"
-          }
-        },
-        {
-          "Category": "Data",
-          "MemberType": "Property",
-          "Name": "NearPlaneZ",
-          "Security": {
-            "Read": "None",
-            "Write": "None"
-          },
-          "Serialization": {
-            "CanLoad": false,
-            "CanSave": true
-          },
-          "Tags": [
-            "ReadOnly",
-            "NotReplicated"
-          ],
-          "ThreadSafety": "ReadSafe",
-          "ValueType": {
-            "Category": "Primitive",
-            "Name": "float"
-          }
-        },
-        {
-          "Category": "Data",
-          "MemberType": "Property",
-          "Name": "VRTiltAndRollEnabled",
-          "Security": {
-            "Read": "None",
-            "Write": "None"
-          },
-          "Serialization": {
-            "CanLoad": true,
-            "CanSave": true
-          },
-          "ThreadSafety": "ReadSafe",
-          "ValueType": {
-            "Category": "Primitive",
-            "Name": "bool"
-          }
-        },
-        {
-          "Category": "Data",
-          "MemberType": "Property",
-          "Name": "ViewportSize",
-          "Security": {
-            "Read": "None",
-            "Write": "None"
-          },
-          "Serialization": {
-            "CanLoad": false,
-            "CanSave": true
-          },
-          "Tags": [
-            "ReadOnly",
-            "NotReplicated"
-          ],
-          "ThreadSafety": "ReadSafe",
-          "ValueType": {
-            "Category": "DataType",
-            "Name": "Vector2"
-          }
-        },
-        {
-          "Category": "Data",
-          "MemberType": "Property",
-          "Name": "focus",
-          "Security": {
-            "Read": "None",
-            "Write": "None"
-          },
-          "Serialization": {
-            "CanLoad": true,
-            "CanSave": false
-          },
-          "Tags": [
-            "NotReplicated",
-            "Deprecated"
-          ],
-          "ThreadSafety": "ReadSafe",
-          "ValueType": {
-            "Category": "DataType",
-            "Name": "CFrame"
-          }
-        },
-        {
-          "MemberType": "Function",
-          "Name": "GetLargestCutoffDistance",
-          "Parameters": [
-            {
-              "Name": "ignoreList",
-              "Type": {
-                "Category": "DataType",
-                "Name": "Instances"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Primitive",
-            "Name": "float"
-          },
-          "Security": "None",
-          "Tags": [
-            "Deprecated"
-          ],
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "GetPanSpeed",
-          "Parameters": [],
-          "ReturnType": {
-            "Category": "Primitive",
-            "Name": "float"
-          },
-          "Security": "None",
-          "Tags": [
-            "Deprecated"
-          ],
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "GetPartsObscuringTarget",
-          "Parameters": [
-            {
-              "Name": "castPoints",
-              "Type": {
-                "Category": "Group",
-                "Name": "Array"
-              }
-            },
-            {
-              "Name": "ignoreList",
-              "Type": {
-                "Category": "DataType",
-                "Name": "Instances"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "DataType",
-            "Name": "Instances"
-          },
-          "Security": "None",
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "GetRenderCFrame",
-          "Parameters": [],
-          "ReturnType": {
-            "Category": "DataType",
-            "Name": "CFrame"
-          },
-          "Security": "None",
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "GetRoll",
-          "Parameters": [],
-          "ReturnType": {
-            "Category": "Primitive",
-            "Name": "float"
-          },
-          "Security": "None",
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "GetTiltSpeed",
-          "Parameters": [],
-          "ReturnType": {
-            "Category": "Primitive",
-            "Name": "float"
-          },
-          "Security": "None",
-          "Tags": [
-            "Deprecated"
-          ],
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "Interpolate",
-          "Parameters": [
-            {
-              "Name": "endPos",
-              "Type": {
-                "Category": "DataType",
-                "Name": "CFrame"
-              }
-            },
-            {
-              "Name": "endFocus",
-              "Type": {
-                "Category": "DataType",
-                "Name": "CFrame"
-              }
-            },
-            {
-              "Name": "duration",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "float"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Primitive",
-            "Name": "null"
-          },
-          "Security": "None",
-          "Tags": [
-            "Deprecated"
-          ],
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "PanUnits",
-          "Parameters": [
-            {
-              "Name": "units",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "int"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Primitive",
-            "Name": "null"
-          },
-          "Security": "None",
-          "Tags": [
-            "Deprecated"
-          ],
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "ScreenPointToRay",
-          "Parameters": [
-            {
-              "Name": "x",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "float"
-              }
-            },
-            {
-              "Name": "y",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "float"
-              }
-            },
-            {
-              "Default": "0",
-              "Name": "depth",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "float"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "DataType",
-            "Name": "Ray"
-          },
-          "Security": "None",
-          "ThreadSafety": "Safe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "SetCameraPanMode",
-          "Parameters": [
-            {
-              "Default": "Classic",
-              "Name": "mode",
-              "Type": {
-                "Category": "Enum",
-                "Name": "CameraPanMode"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Primitive",
-            "Name": "null"
-          },
-          "Security": "None",
-          "Tags": [
-            "Deprecated"
-          ],
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "SetImageServerView",
-          "Parameters": [
-            {
-              "Name": "modelCoord",
-              "Type": {
-                "Category": "DataType",
-                "Name": "CFrame"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Primitive",
-            "Name": "null"
-          },
-          "Security": "RobloxScriptSecurity",
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "SetRoll",
-          "Parameters": [
-            {
-              "Name": "rollAngle",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "float"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Primitive",
-            "Name": "null"
-          },
-          "Security": "None",
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "TiltUnits",
-          "Parameters": [
-            {
-              "Name": "units",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "int"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Primitive",
-            "Name": "bool"
-          },
-          "Security": "None",
-          "Tags": [
-            "Deprecated"
-          ],
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "ViewportPointToRay",
-          "Parameters": [
-            {
-              "Name": "x",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "float"
-              }
-            },
-            {
-              "Name": "y",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "float"
-              }
-            },
-            {
-              "Default": "0",
-              "Name": "depth",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "float"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "DataType",
-            "Name": "Ray"
-          },
-          "Security": "None",
-          "ThreadSafety": "Safe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "WorldToScreenPoint",
-          "Parameters": [
-            {
-              "Name": "worldPoint",
-              "Type": {
-                "Category": "DataType",
-                "Name": "Vector3"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Group",
-            "Name": "Tuple"
-          },
-          "Security": "None",
-          "ThreadSafety": "Safe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "WorldToViewportPoint",
-          "Parameters": [
-            {
-              "Name": "worldPoint",
-              "Type": {
-                "Category": "DataType",
-                "Name": "Vector3"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Group",
-            "Name": "Tuple"
-          },
-          "Security": "None",
-          "ThreadSafety": "Safe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "Zoom",
-          "Parameters": [
-            {
-              "Name": "distance",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "float"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Primitive",
-            "Name": "bool"
-          },
-          "Security": "RobloxScriptSecurity",
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "ZoomToExtents",
-          "Parameters": [
-            {
-              "Name": "boundingBoxCFrame",
-              "Type": {
-                "Category": "DataType",
-                "Name": "CFrame"
-              }
-            },
-            {
-              "Name": "boundingBoxSize",
-              "Type": {
-                "Category": "DataType",
-                "Name": "Vector3"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Primitive",
-            "Name": "null"
-          },
-          "Security": "None",
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Event",
-          "Name": "FirstPersonTransition",
-          "Parameters": [
-            {
-              "Name": "entering",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "bool"
-              }
-            }
-          ],
-          "Security": "LocalUserSecurity",
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Event",
-          "Name": "InterpolationFinished",
-          "Parameters": [],
-          "Security": "None",
-          "ThreadSafety": "Unsafe"
-        }
-      ],
-      "MemoryCategory": "Instances",
-      "Name": "Camera",
-      "Superclass": "Instance",
-      "Tags": [
         "NotReplicated"
       ]
     },
@@ -27955,8 +27637,8 @@
           "Name": "GetConfigAsync",
           "Parameters": [],
           "ReturnType": {
-            "Category": "DataType",
-            "Name": "Object"
+            "Category": "Class",
+            "Name": "ConfigSnapshot"
           },
           "Security": "None",
           "Tags": [
@@ -27977,8 +27659,8 @@
             }
           ],
           "ReturnType": {
-            "Category": "DataType",
-            "Name": "Object"
+            "Category": "Class",
+            "Name": "ConfigSnapshot"
           },
           "Security": "None",
           "Tags": [
@@ -65904,6 +65586,20 @@
           },
           "Security": "None",
           "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Animation"
+          ],
+          "MemberType": "Function",
+          "Name": "Solve",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
         }
       ],
       "MemoryCategory": "Animation",
@@ -66379,9 +66075,45 @@
     {
       "Members": [
         {
+          "Category": "Composite Directions",
+          "MemberType": "Property",
+          "Name": "Down",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Enum",
+            "Name": "KeyCode"
+          }
+        },
+        {
           "Category": "Behavior",
           "MemberType": "Property",
           "Name": "KeyCode",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Enum",
+            "Name": "KeyCode"
+          }
+        },
+        {
+          "Category": "Composite Directions",
+          "MemberType": "Property",
+          "Name": "Left",
           "Security": {
             "Read": "None",
             "Write": "None"
@@ -66433,7 +66165,25 @@
           }
         },
         {
-          "Category": "Data",
+          "Category": "Composite Directions",
+          "MemberType": "Property",
+          "Name": "Right",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Enum",
+            "Name": "KeyCode"
+          }
+        },
+        {
+          "Category": "Behavior",
           "MemberType": "Property",
           "Name": "Scale",
           "Security": {
@@ -66466,6 +66216,42 @@
           "ValueType": {
             "Category": "Class",
             "Name": "GuiButton"
+          }
+        },
+        {
+          "Category": "Composite Directions",
+          "MemberType": "Property",
+          "Name": "Up",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Enum",
+            "Name": "KeyCode"
+          }
+        },
+        {
+          "Category": "Behavior",
+          "MemberType": "Property",
+          "Name": "Vector2Scale",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "DataType",
+            "Name": "Vector2"
           }
         }
       ],
@@ -84085,6 +83871,721 @@
     {
       "Members": [
         {
+          "Category": "Data",
+          "MemberType": "Property",
+          "Name": "CFrame",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "DataType",
+            "Name": "CFrame"
+          }
+        },
+        {
+          "Category": "Camera",
+          "MemberType": "Property",
+          "Name": "CameraSubject",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Class",
+            "Name": "Instance"
+          }
+        },
+        {
+          "Category": "Camera",
+          "MemberType": "Property",
+          "Name": "CameraType",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Enum",
+            "Name": "CameraType"
+          }
+        },
+        {
+          "Category": "Data",
+          "MemberType": "Property",
+          "Name": "CoordinateFrame",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": false
+          },
+          "Tags": [
+            "Hidden",
+            "NotReplicated",
+            "Deprecated"
+          ],
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "DataType",
+            "Name": "CFrame"
+          }
+        },
+        {
+          "Category": "Camera",
+          "MemberType": "Property",
+          "Name": "DiagonalFieldOfView",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": false,
+            "CanSave": false
+          },
+          "Tags": [
+            "NotReplicated"
+          ],
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "float"
+          }
+        },
+        {
+          "Category": "Camera",
+          "MemberType": "Property",
+          "Name": "FieldOfView",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "float"
+          }
+        },
+        {
+          "Category": "Camera",
+          "MemberType": "Property",
+          "Name": "FieldOfViewMode",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Enum",
+            "Name": "FieldOfViewMode"
+          }
+        },
+        {
+          "Category": "Data",
+          "MemberType": "Property",
+          "Name": "Focus",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "DataType",
+            "Name": "CFrame"
+          }
+        },
+        {
+          "Category": "Data",
+          "MemberType": "Property",
+          "Name": "HeadLocked",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "bool"
+          }
+        },
+        {
+          "Category": "Data",
+          "MemberType": "Property",
+          "Name": "HeadScale",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "float"
+          }
+        },
+        {
+          "Category": "Camera",
+          "MemberType": "Property",
+          "Name": "MaxAxisFieldOfView",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": false,
+            "CanSave": false
+          },
+          "Tags": [
+            "NotReplicated"
+          ],
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "float"
+          }
+        },
+        {
+          "Category": "Data",
+          "MemberType": "Property",
+          "Name": "NearPlaneZ",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": false,
+            "CanSave": true
+          },
+          "Tags": [
+            "ReadOnly",
+            "NotReplicated"
+          ],
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "float"
+          }
+        },
+        {
+          "Category": "Data",
+          "MemberType": "Property",
+          "Name": "VRTiltAndRollEnabled",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "bool"
+          }
+        },
+        {
+          "Category": "Data",
+          "MemberType": "Property",
+          "Name": "ViewportSize",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": false,
+            "CanSave": true
+          },
+          "Tags": [
+            "ReadOnly",
+            "NotReplicated"
+          ],
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "DataType",
+            "Name": "Vector2"
+          }
+        },
+        {
+          "Category": "Data",
+          "MemberType": "Property",
+          "Name": "focus",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": false
+          },
+          "Tags": [
+            "NotReplicated",
+            "Deprecated"
+          ],
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "DataType",
+            "Name": "CFrame"
+          }
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetLargestCutoffDistance",
+          "Parameters": [
+            {
+              "Name": "ignoreList",
+              "Type": {
+                "Category": "DataType",
+                "Name": "Instances"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "float"
+          },
+          "Security": "None",
+          "Tags": [
+            "Deprecated"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetPanSpeed",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "float"
+          },
+          "Security": "None",
+          "Tags": [
+            "Deprecated"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetPartsObscuringTarget",
+          "Parameters": [
+            {
+              "Name": "castPoints",
+              "Type": {
+                "Category": "Group",
+                "Name": "Array"
+              }
+            },
+            {
+              "Name": "ignoreList",
+              "Type": {
+                "Category": "DataType",
+                "Name": "Instances"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "DataType",
+            "Name": "Instances"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetRenderCFrame",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "DataType",
+            "Name": "CFrame"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetRoll",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "float"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetTiltSpeed",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "float"
+          },
+          "Security": "None",
+          "Tags": [
+            "Deprecated"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "Interpolate",
+          "Parameters": [
+            {
+              "Name": "endPos",
+              "Type": {
+                "Category": "DataType",
+                "Name": "CFrame"
+              }
+            },
+            {
+              "Name": "endFocus",
+              "Type": {
+                "Category": "DataType",
+                "Name": "CFrame"
+              }
+            },
+            {
+              "Name": "duration",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "float"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "None",
+          "Tags": [
+            "Deprecated"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "PanUnits",
+          "Parameters": [
+            {
+              "Name": "units",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "None",
+          "Tags": [
+            "Deprecated"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "ScreenPointToRay",
+          "Parameters": [
+            {
+              "Name": "x",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "float"
+              }
+            },
+            {
+              "Name": "y",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "float"
+              }
+            },
+            {
+              "Default": "0",
+              "Name": "depth",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "float"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "DataType",
+            "Name": "Ray"
+          },
+          "Security": "None",
+          "ThreadSafety": "Safe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "SetCameraPanMode",
+          "Parameters": [
+            {
+              "Default": "Classic",
+              "Name": "mode",
+              "Type": {
+                "Category": "Enum",
+                "Name": "CameraPanMode"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "None",
+          "Tags": [
+            "Deprecated"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "SetImageServerView",
+          "Parameters": [
+            {
+              "Name": "modelCoord",
+              "Type": {
+                "Category": "DataType",
+                "Name": "CFrame"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "SetRoll",
+          "Parameters": [
+            {
+              "Name": "rollAngle",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "float"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "TiltUnits",
+          "Parameters": [
+            {
+              "Name": "units",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "bool"
+          },
+          "Security": "None",
+          "Tags": [
+            "Deprecated"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "ViewportPointToRay",
+          "Parameters": [
+            {
+              "Name": "x",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "float"
+              }
+            },
+            {
+              "Name": "y",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "float"
+              }
+            },
+            {
+              "Default": "0",
+              "Name": "depth",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "float"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "DataType",
+            "Name": "Ray"
+          },
+          "Security": "None",
+          "ThreadSafety": "Safe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "WorldToScreenPoint",
+          "Parameters": [
+            {
+              "Name": "worldPoint",
+              "Type": {
+                "Category": "DataType",
+                "Name": "Vector3"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Tuple"
+          },
+          "Security": "None",
+          "ThreadSafety": "Safe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "WorldToViewportPoint",
+          "Parameters": [
+            {
+              "Name": "worldPoint",
+              "Type": {
+                "Category": "DataType",
+                "Name": "Vector3"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Tuple"
+          },
+          "Security": "None",
+          "ThreadSafety": "Safe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "Zoom",
+          "Parameters": [
+            {
+              "Name": "distance",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "float"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "bool"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "ZoomToExtents",
+          "Parameters": [
+            {
+              "Name": "boundingBoxCFrame",
+              "Type": {
+                "Category": "DataType",
+                "Name": "CFrame"
+              }
+            },
+            {
+              "Name": "boundingBoxSize",
+              "Type": {
+                "Category": "DataType",
+                "Name": "Vector3"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Event",
+          "Name": "FirstPersonTransition",
+          "Parameters": [
+            {
+              "Name": "entering",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "bool"
+              }
+            }
+          ],
+          "Security": "LocalUserSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Event",
+          "Name": "InterpolationFinished",
+          "Parameters": [],
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        }
+      ],
+      "MemoryCategory": "Instances",
+      "Name": "Camera",
+      "Superclass": "PVInstance",
+      "Tags": [
+        "NotReplicated"
+      ]
+    },
+    {
+      "Members": [
+        {
           "Category": "Appearance",
           "MemberType": "Property",
           "Name": "LevelOfDetail",
@@ -85710,14 +86211,6 @@
               "Type": {
                 "Category": "DataType",
                 "Name": "Vector3"
-              }
-            },
-            {
-              "Default": "false",
-              "Name": "ignoreGrid",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "bool"
               }
             }
           ],
@@ -128753,22 +129246,22 @@
             {
               "Name": "innerCage",
               "Type": {
-                "Category": "DataType",
-                "Name": "Object"
+                "Category": "Class",
+                "Name": "EditableMesh"
               }
             },
             {
               "Name": "outerCage",
               "Type": {
-                "Category": "DataType",
-                "Name": "Object"
+                "Category": "Class",
+                "Name": "EditableMesh"
               }
             },
             {
               "Name": "refMesh",
               "Type": {
-                "Category": "DataType",
-                "Name": "Object"
+                "Category": "Class",
+                "Name": "EditableMesh"
               }
             },
             {
@@ -128800,15 +129293,15 @@
             {
               "Name": "editableMeshRoot",
               "Type": {
-                "Category": "DataType",
-                "Name": "Object"
+                "Category": "Class",
+                "Name": "EditableMesh"
               }
             },
             {
               "Name": "editableMeshQuery",
               "Type": {
-                "Category": "DataType",
-                "Name": "Object"
+                "Category": "Class",
+                "Name": "EditableMesh"
               }
             },
             {
@@ -128847,8 +129340,8 @@
             {
               "Name": "innerCage",
               "Type": {
-                "Category": "DataType",
-                "Name": "Object"
+                "Category": "Class",
+                "Name": "EditableMesh"
               }
             },
             {
@@ -128861,8 +129354,8 @@
             {
               "Name": "outerCage",
               "Type": {
-                "Category": "DataType",
-                "Name": "Object"
+                "Category": "Class",
+                "Name": "EditableMesh"
               }
             },
             {
@@ -128894,8 +129387,8 @@
             {
               "Name": "innerCage",
               "Type": {
-                "Category": "DataType",
-                "Name": "Object"
+                "Category": "Class",
+                "Name": "EditableMesh"
               }
             },
             {
@@ -128908,8 +129401,8 @@
             {
               "Name": "outerCage",
               "Type": {
-                "Category": "DataType",
-                "Name": "Object"
+                "Category": "Class",
+                "Name": "EditableMesh"
               }
             },
             {
@@ -128934,8 +129427,8 @@
             {
               "Name": "editableMesh",
               "Type": {
-                "Category": "DataType",
-                "Name": "Object"
+                "Category": "Class",
+                "Name": "EditableMesh"
               }
             },
             {
@@ -128960,8 +129453,8 @@
             {
               "Name": "editableMesh",
               "Type": {
-                "Category": "DataType",
-                "Name": "Object"
+                "Category": "Class",
+                "Name": "EditableMesh"
               }
             }
           ],
@@ -128979,8 +129472,8 @@
             {
               "Name": "editableMesh",
               "Type": {
-                "Category": "DataType",
-                "Name": "Object"
+                "Category": "Class",
+                "Name": "EditableMesh"
               }
             },
             {
@@ -129025,8 +129518,8 @@
             }
           ],
           "ReturnType": {
-            "Category": "DataType",
-            "Name": "Object"
+            "Category": "Class",
+            "Name": "EditableImage"
           },
           "Security": "RobloxScriptSecurity",
           "ThreadSafety": "Unsafe"
@@ -129044,8 +129537,8 @@
             }
           ],
           "ReturnType": {
-            "Category": "DataType",
-            "Name": "Object"
+            "Category": "Class",
+            "Name": "EditableMesh"
           },
           "Security": "RobloxScriptSecurity",
           "ThreadSafety": "Unsafe"
@@ -129057,8 +129550,8 @@
             {
               "Name": "editableMesh",
               "Type": {
-                "Category": "DataType",
-                "Name": "Object"
+                "Category": "Class",
+                "Name": "EditableMesh"
               }
             },
             {
@@ -129083,22 +129576,22 @@
             {
               "Name": "innerCage",
               "Type": {
-                "Category": "DataType",
-                "Name": "Object"
+                "Category": "Class",
+                "Name": "EditableMesh"
               }
             },
             {
               "Name": "outerCage",
               "Type": {
-                "Category": "DataType",
-                "Name": "Object"
+                "Category": "Class",
+                "Name": "EditableMesh"
               }
             },
             {
               "Name": "refMesh",
               "Type": {
-                "Category": "DataType",
-                "Name": "Object"
+                "Category": "Class",
+                "Name": "EditableMesh"
               }
             },
             {
@@ -129130,8 +129623,8 @@
             {
               "Name": "editableImage",
               "Type": {
-                "Category": "DataType",
-                "Name": "Object"
+                "Category": "Class",
+                "Name": "EditableImage"
               }
             }
           ],
@@ -129149,8 +129642,8 @@
             {
               "Name": "editableImage",
               "Type": {
-                "Category": "DataType",
-                "Name": "Object"
+                "Category": "Class",
+                "Name": "EditableImage"
               }
             }
           ],
@@ -129168,8 +129661,8 @@
             {
               "Name": "editableMesh",
               "Type": {
-                "Category": "DataType",
-                "Name": "Object"
+                "Category": "Class",
+                "Name": "EditableMesh"
               }
             },
             {
@@ -129194,8 +129687,8 @@
             {
               "Name": "editableMesh",
               "Type": {
-                "Category": "DataType",
-                "Name": "Object"
+                "Category": "Class",
+                "Name": "EditableMesh"
               }
             }
           ],
@@ -129213,8 +129706,8 @@
             {
               "Name": "editableMesh",
               "Type": {
-                "Category": "DataType",
-                "Name": "Object"
+                "Category": "Class",
+                "Name": "EditableMesh"
               }
             }
           ],
@@ -129232,8 +129725,8 @@
             {
               "Name": "editableMesh",
               "Type": {
-                "Category": "DataType",
-                "Name": "Object"
+                "Category": "Class",
+                "Name": "EditableMesh"
               }
             },
             {
@@ -129258,8 +129751,8 @@
             {
               "Name": "editableMesh",
               "Type": {
-                "Category": "DataType",
-                "Name": "Object"
+                "Category": "Class",
+                "Name": "EditableMesh"
               }
             }
           ],
@@ -129322,8 +129815,8 @@
             {
               "Name": "editableMesh",
               "Type": {
-                "Category": "DataType",
-                "Name": "Object"
+                "Category": "Class",
+                "Name": "EditableMesh"
               }
             },
             {
@@ -129512,8 +130005,8 @@
             {
               "Name": "editableMesh",
               "Type": {
-                "Category": "DataType",
-                "Name": "Object"
+                "Category": "Class",
+                "Name": "EditableMesh"
               }
             },
             {
@@ -129565,8 +130058,8 @@
             {
               "Name": "editableMesh",
               "Type": {
-                "Category": "DataType",
-                "Name": "Object"
+                "Category": "Class",
+                "Name": "EditableMesh"
               }
             }
           ],
@@ -129584,8 +130077,8 @@
             {
               "Name": "editableImage",
               "Type": {
-                "Category": "DataType",
-                "Name": "Object"
+                "Category": "Class",
+                "Name": "EditableImage"
               }
             },
             {
@@ -129610,8 +130103,8 @@
             {
               "Name": "editableImage",
               "Type": {
-                "Category": "DataType",
-                "Name": "Object"
+                "Category": "Class",
+                "Name": "EditableImage"
               }
             }
           ],
@@ -129629,8 +130122,8 @@
             {
               "Name": "editableMesh",
               "Type": {
-                "Category": "DataType",
-                "Name": "Object"
+                "Category": "Class",
+                "Name": "EditableMesh"
               }
             },
             {
@@ -129676,22 +130169,22 @@
             {
               "Name": "innerCage",
               "Type": {
-                "Category": "DataType",
-                "Name": "Object"
+                "Category": "Class",
+                "Name": "EditableMesh"
               }
             },
             {
               "Name": "outerCage",
               "Type": {
-                "Category": "DataType",
-                "Name": "Object"
+                "Category": "Class",
+                "Name": "EditableMesh"
               }
             },
             {
               "Name": "refMesh",
               "Type": {
-                "Category": "DataType",
-                "Name": "Object"
+                "Category": "Class",
+                "Name": "EditableMesh"
               }
             }
           ],
@@ -129709,8 +130202,8 @@
             {
               "Name": "editableMesh",
               "Type": {
-                "Category": "DataType",
-                "Name": "Object"
+                "Category": "Class",
+                "Name": "EditableMesh"
               }
             }
           ],
@@ -129728,8 +130221,8 @@
             {
               "Name": "editableMesh",
               "Type": {
-                "Category": "DataType",
-                "Name": "Object"
+                "Category": "Class",
+                "Name": "EditableMesh"
               }
             }
           ],
@@ -129747,8 +130240,8 @@
             {
               "Name": "editableMesh",
               "Type": {
-                "Category": "DataType",
-                "Name": "Object"
+                "Category": "Class",
+                "Name": "EditableMesh"
               }
             }
           ],
@@ -129766,8 +130259,8 @@
             {
               "Name": "editableMesh",
               "Type": {
-                "Category": "DataType",
-                "Name": "Object"
+                "Category": "Class",
+                "Name": "EditableMesh"
               }
             }
           ],
@@ -129785,15 +130278,15 @@
             {
               "Name": "innerCage",
               "Type": {
-                "Category": "DataType",
-                "Name": "Object"
+                "Category": "Class",
+                "Name": "EditableMesh"
               }
             },
             {
               "Name": "outerCage",
               "Type": {
-                "Category": "DataType",
-                "Name": "Object"
+                "Category": "Class",
+                "Name": "EditableMesh"
               }
             }
           ],
@@ -129811,8 +130304,8 @@
             {
               "Name": "editableMesh",
               "Type": {
-                "Category": "DataType",
-                "Name": "Object"
+                "Category": "Class",
+                "Name": "EditableMesh"
               }
             }
           ],
@@ -129830,8 +130323,8 @@
             {
               "Name": "editableMesh",
               "Type": {
-                "Category": "DataType",
-                "Name": "Object"
+                "Category": "Class",
+                "Name": "EditableMesh"
               }
             }
           ],
@@ -129849,8 +130342,8 @@
             {
               "Name": "editableMesh",
               "Type": {
-                "Category": "DataType",
-                "Name": "Object"
+                "Category": "Class",
+                "Name": "EditableMesh"
               }
             }
           ],
@@ -129875,8 +130368,8 @@
             {
               "Name": "editableMesh",
               "Type": {
-                "Category": "DataType",
-                "Name": "Object"
+                "Category": "Class",
+                "Name": "EditableMesh"
               }
             }
           ],
@@ -129894,8 +130387,8 @@
             {
               "Name": "editableMesh",
               "Type": {
-                "Category": "DataType",
-                "Name": "Object"
+                "Category": "Class",
+                "Name": "EditableMesh"
               }
             }
           ],
@@ -129920,8 +130413,8 @@
             {
               "Name": "editableMesh",
               "Type": {
-                "Category": "DataType",
-                "Name": "Object"
+                "Category": "Class",
+                "Name": "EditableMesh"
               }
             }
           ],
@@ -129939,8 +130432,8 @@
             {
               "Name": "editableMesh",
               "Type": {
-                "Category": "DataType",
-                "Name": "Object"
+                "Category": "Class",
+                "Name": "EditableMesh"
               }
             },
             {
@@ -129965,8 +130458,8 @@
             {
               "Name": "editableMesh",
               "Type": {
-                "Category": "DataType",
-                "Name": "Object"
+                "Category": "Class",
+                "Name": "EditableMesh"
               }
             },
             {
@@ -129992,8 +130485,8 @@
             {
               "Name": "editableMesh",
               "Type": {
-                "Category": "DataType",
-                "Name": "Object"
+                "Category": "Class",
+                "Name": "EditableMesh"
               }
             }
           ],
@@ -141093,6 +141586,24 @@
     },
     {
       "Members": [
+        {
+          "Category": "Behavior",
+          "MemberType": "Property",
+          "Name": "DefaultDistanceAttenuation",
+          "Security": {
+            "Read": "PluginSecurity",
+            "Write": "PluginSecurity"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Enum",
+            "Name": "VoiceChatDistanceAttenuationType"
+          }
+        },
         {
           "Category": "Behavior",
           "MemberType": "Property",
@@ -155588,6 +156099,19 @@
         }
       ],
       "Name": "VirtualInputMode"
+    },
+    {
+      "Items": [
+        {
+          "Name": "Inverse",
+          "Value": 0
+        },
+        {
+          "Name": "Legacy",
+          "Value": 1
+        }
+      ],
+      "Name": "VoiceChatDistanceAttenuationType"
     },
     {
       "Items": [
