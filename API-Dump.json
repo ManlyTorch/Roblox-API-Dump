@@ -726,6 +726,25 @@
         },
         {
           "MemberType": "Function",
+          "Name": "AddBone",
+          "Parameters": [
+            {
+              "Name": "boneProperties",
+              "Type": {
+                "Category": "Group",
+                "Name": "Dictionary"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "int64"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
           "Name": "AddColor",
           "Parameters": [
             {
@@ -946,6 +965,112 @@
               }
             }
           ],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Array"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetBoneByName",
+          "Parameters": [
+            {
+              "Name": "boneName",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "int64"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetBoneCFrame",
+          "Parameters": [
+            {
+              "Name": "boneId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "DataType",
+            "Name": "CFrame"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetBoneIsVirtual",
+          "Parameters": [
+            {
+              "Name": "boneId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "bool"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetBoneName",
+          "Parameters": [
+            {
+              "Name": "boneId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "string"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetBoneParent",
+          "Parameters": [
+            {
+              "Name": "boneId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "int64"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetBones",
+          "Parameters": [],
           "ReturnType": {
             "Category": "Group",
             "Name": "Array"
@@ -1208,6 +1333,66 @@
         },
         {
           "MemberType": "Function",
+          "Name": "GetFacsCorrectivePose",
+          "Parameters": [
+            {
+              "Name": "actions",
+              "Type": {
+                "Category": "Group",
+                "Name": "Array"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Tuple"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetFacsCorrectivePoses",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Array"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetFacsPose",
+          "Parameters": [
+            {
+              "Name": "action",
+              "Type": {
+                "Category": "Enum",
+                "Name": "FacsActionUnit"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Tuple"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetFacsPoses",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Array"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
           "Name": "GetNormal",
           "Parameters": [
             {
@@ -1300,6 +1485,44 @@
           "Tags": [
             "CustomLuaState"
           ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetVertexBoneWeights",
+          "Parameters": [
+            {
+              "Name": "vertexId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Array"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetVertexBones",
+          "Parameters": [
+            {
+              "Name": "vertexId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Array"
+          },
+          "Security": "None",
           "ThreadSafety": "Unsafe"
         },
         {
@@ -1633,6 +1856,25 @@
         },
         {
           "MemberType": "Function",
+          "Name": "RemoveBone",
+          "Parameters": [
+            {
+              "Name": "boneId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
           "Name": "RemoveFace",
           "Parameters": [
             {
@@ -1667,6 +1909,110 @@
           "Parameters": [
             {
               "Name": "normalId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "SetBoneCFrame",
+          "Parameters": [
+            {
+              "Name": "boneId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            },
+            {
+              "Name": "cframe",
+              "Type": {
+                "Category": "DataType",
+                "Name": "CFrame"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "SetBoneIsVirtual",
+          "Parameters": [
+            {
+              "Name": "boneId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            },
+            {
+              "Name": "virtual",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "bool"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "SetBoneName",
+          "Parameters": [
+            {
+              "Name": "boneId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            },
+            {
+              "Name": "name",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "SetBoneParent",
+          "Parameters": [
+            {
+              "Name": "boneId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            },
+            {
+              "Name": "parentBoneId",
               "Type": {
                 "Category": "Primitive",
                 "Name": "int64"
@@ -1850,6 +2196,105 @@
         },
         {
           "MemberType": "Function",
+          "Name": "SetFacsBonePose",
+          "Parameters": [
+            {
+              "Name": "action",
+              "Type": {
+                "Category": "Enum",
+                "Name": "FacsActionUnit"
+              }
+            },
+            {
+              "Name": "boneId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            },
+            {
+              "Name": "cframe",
+              "Type": {
+                "Category": "DataType",
+                "Name": "CFrame"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "SetFacsCorrectivePose",
+          "Parameters": [
+            {
+              "Name": "actions",
+              "Type": {
+                "Category": "Group",
+                "Name": "Array"
+              }
+            },
+            {
+              "Name": "boneIds",
+              "Type": {
+                "Category": "Group",
+                "Name": "Array"
+              }
+            },
+            {
+              "Name": "cframes",
+              "Type": {
+                "Category": "Group",
+                "Name": "Array"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "SetFacsPose",
+          "Parameters": [
+            {
+              "Name": "action",
+              "Type": {
+                "Category": "Enum",
+                "Name": "FacsActionUnit"
+              }
+            },
+            {
+              "Name": "boneIds",
+              "Type": {
+                "Category": "Group",
+                "Name": "Array"
+              }
+            },
+            {
+              "Name": "cframes",
+              "Type": {
+                "Category": "Group",
+                "Name": "Array"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
           "Name": "SetNormal",
           "Parameters": [
             {
@@ -1916,6 +2361,58 @@
               "Type": {
                 "Category": "DataType",
                 "Name": "Vector2"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "SetVertexBoneWeights",
+          "Parameters": [
+            {
+              "Name": "vertexId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            },
+            {
+              "Name": "boneWeights",
+              "Type": {
+                "Category": "Group",
+                "Name": "Array"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "SetVertexBones",
+          "Parameters": [
+            {
+              "Name": "vertexId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            },
+            {
+              "Name": "boneIDs",
+              "Type": {
+                "Category": "Group",
+                "Name": "Array"
               }
             }
           ],
@@ -2065,12 +2562,20 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "CapabilityControl"
+            ],
+            "Write": [
+              "CapabilityControl"
+            ]
+          },
           "Category": "Permissions",
           "MemberType": "Property",
           "Name": "Capabilities",
           "Security": {
-            "Read": "RobloxScriptSecurity",
-            "Write": "RobloxScriptSecurity"
+            "Read": "None",
+            "Write": "None"
           },
           "Serialization": {
             "CanLoad": true,
@@ -2167,12 +2672,20 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "CapabilityControl"
+            ],
+            "Write": [
+              "CapabilityControl"
+            ]
+          },
           "Category": "Permissions",
           "MemberType": "Property",
           "Name": "Sandboxed",
           "Security": {
-            "Read": "RobloxScriptSecurity",
-            "Write": "RobloxScriptSecurity"
+            "Read": "None",
+            "Write": "None"
           },
           "Serialization": {
             "CanLoad": false,
@@ -7143,6 +7656,28 @@
         {
           "Category": "Data",
           "MemberType": "Property",
+          "Name": "AnnotationsLoadingStatus",
+          "Security": {
+            "Read": "RobloxScriptSecurity",
+            "Write": "RobloxScriptSecurity"
+          },
+          "Serialization": {
+            "CanLoad": false,
+            "CanSave": false
+          },
+          "Tags": [
+            "Hidden",
+            "NotReplicated"
+          ],
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Enum",
+            "Name": "AnnotationRequestStatus"
+          }
+        },
+        {
+          "Category": "Data",
+          "MemberType": "Property",
           "Name": "AnnotationsVisible",
           "Security": {
             "Read": "RobloxScriptSecurity",
@@ -7209,6 +7744,28 @@
         {
           "Category": "Data",
           "MemberType": "Property",
+          "Name": "ResolvedLoadingStatus",
+          "Security": {
+            "Read": "RobloxScriptSecurity",
+            "Write": "RobloxScriptSecurity"
+          },
+          "Serialization": {
+            "CanLoad": false,
+            "CanSave": false
+          },
+          "Tags": [
+            "Hidden",
+            "NotReplicated"
+          ],
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Enum",
+            "Name": "AnnotationRequestStatus"
+          }
+        },
+        {
+          "Category": "Data",
+          "MemberType": "Property",
           "Name": "Selected",
           "Security": {
             "Read": "RobloxScriptSecurity",
@@ -7226,50 +7783,6 @@
           "ValueType": {
             "Category": "Class",
             "Name": "Annotation"
-          }
-        },
-        {
-          "Category": "Data",
-          "MemberType": "Property",
-          "Name": "annotationsLoadingStatus",
-          "Security": {
-            "Read": "RobloxScriptSecurity",
-            "Write": "RobloxScriptSecurity"
-          },
-          "Serialization": {
-            "CanLoad": false,
-            "CanSave": false
-          },
-          "Tags": [
-            "Hidden",
-            "NotReplicated"
-          ],
-          "ThreadSafety": "ReadSafe",
-          "ValueType": {
-            "Category": "Enum",
-            "Name": "AnnotationRequestStatus"
-          }
-        },
-        {
-          "Category": "Data",
-          "MemberType": "Property",
-          "Name": "resolvedLoadingStatus",
-          "Security": {
-            "Read": "RobloxScriptSecurity",
-            "Write": "RobloxScriptSecurity"
-          },
-          "Serialization": {
-            "CanLoad": false,
-            "CanSave": false
-          },
-          "Tags": [
-            "Hidden",
-            "NotReplicated"
-          ],
-          "ThreadSafety": "ReadSafe",
-          "ValueType": {
-            "Category": "Enum",
-            "Name": "AnnotationRequestStatus"
           }
         },
         {
@@ -15560,32 +16073,6 @@
         },
         {
           "MemberType": "Function",
-          "Name": "SendAnalyticsEvent",
-          "Parameters": [
-            {
-              "Name": "eventName",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "string"
-              }
-            },
-            {
-              "Name": "params",
-              "Type": {
-                "Category": "Group",
-                "Name": "Dictionary"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Primitive",
-            "Name": "null"
-          },
-          "Security": "None",
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
           "Name": "GenerateAvatar2DPreviewAsync",
           "Parameters": [
             {
@@ -15621,20 +16108,6 @@
           "ReturnType": {
             "Category": "Primitive",
             "Name": "string"
-          },
-          "Security": "None",
-          "Tags": [
-            "Yields"
-          ],
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "GetAvatarGenerationConfig",
-          "Parameters": [],
-          "ReturnType": {
-            "Category": "Group",
-            "Name": "Dictionary"
           },
           "Security": "None",
           "Tags": [
@@ -23478,6 +23951,39 @@
         },
         {
           "MemberType": "Function",
+          "Name": "StartVideoCaptureInternal",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "StopCapture",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "StopVideoCaptureInternal",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
           "Name": "TakeCapture",
           "Parameters": [
             {
@@ -27458,6 +27964,51 @@
     },
     {
       "Members": [
+        {
+          "MemberType": "Function",
+          "Name": "ClearTestingValue",
+          "Parameters": [
+            {
+              "Name": "key",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "SetTestingValue",
+          "Parameters": [
+            {
+              "Name": "key",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            },
+            {
+              "Name": "value",
+              "Type": {
+                "Category": "Group",
+                "Name": "Variant"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
         {
           "MemberType": "Function",
           "Name": "GetConfigAsync",
@@ -34670,6 +35221,9 @@
     {
       "Members": [
         {
+          "Capabilities": [
+            "InternalTest"
+          ],
           "MemberType": "Function",
           "Name": "Close",
           "Parameters": [],
@@ -34681,6 +35235,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "InternalTest"
+          ],
           "MemberType": "Function",
           "Name": "GetLogPath",
           "Parameters": [],
@@ -34692,6 +35249,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "InternalTest"
+          ],
           "MemberType": "Function",
           "Name": "Open",
           "Parameters": [],
@@ -34703,6 +35263,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "InternalTest"
+          ],
           "MemberType": "Function",
           "Name": "WriteAppend",
           "Parameters": [
@@ -42766,6 +43329,83 @@
     {
       "Members": [
         {
+          "MemberType": "Function",
+          "Name": "BatchRemoveFeedItemsAsync",
+          "Parameters": [
+            {
+              "Name": "feedItemIds",
+              "Type": {
+                "Category": "Group",
+                "Name": "Array"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "None",
+          "Tags": [
+            "Yields"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetFeedItemsAsync",
+          "Parameters": [
+            {
+              "Name": "getFeedRequest",
+              "Type": {
+                "Category": "Group",
+                "Name": "Dictionary"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Class",
+            "Name": "FeedPages"
+          },
+          "Security": "None",
+          "Tags": [
+            "Yields"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "RegisterFeedItemsAsync",
+          "Parameters": [
+            {
+              "Name": "registerFeedItemsRequest",
+              "Type": {
+                "Category": "Group",
+                "Name": "Dictionary"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Dictionary"
+          },
+          "Security": "None",
+          "Tags": [
+            "Yields"
+          ],
+          "ThreadSafety": "Unsafe"
+        }
+      ],
+      "MemoryCategory": "Instances",
+      "Name": "FeedService",
+      "Superclass": "Instance",
+      "Tags": [
+        "NotCreatable",
+        "Service"
+      ]
+    },
+    {
+      "Members": [
+        {
           "Category": "Data",
           "MemberType": "Property",
           "Name": "Size",
@@ -46818,9 +47458,13 @@
             "Write": "RobloxScriptSecurity"
           },
           "Serialization": {
-            "CanLoad": true,
-            "CanSave": true
+            "CanLoad": false,
+            "CanSave": false
           },
+          "Tags": [
+            "Hidden",
+            "NotReplicated"
+          ],
           "ThreadSafety": "ReadSafe",
           "ValueType": {
             "Category": "Primitive",
@@ -47217,6 +47861,29 @@
           },
           "Category": "Image",
           "MemberType": "Property",
+          "Name": "HoverImageContent",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "DataType",
+            "Name": "Content"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "UI"
+            ]
+          },
+          "Category": "Image",
+          "MemberType": "Property",
           "Name": "Image",
           "Security": {
             "Read": "None",
@@ -47395,6 +48062,29 @@
           "ValueType": {
             "Category": "DataType",
             "Name": "ContentId"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "UI"
+            ]
+          },
+          "Category": "Image",
+          "MemberType": "Property",
+          "Name": "PressedImageContent",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "DataType",
+            "Name": "Content"
           }
         },
         {
@@ -50485,9 +51175,13 @@
             "Write": "RobloxScriptSecurity"
           },
           "Serialization": {
-            "CanLoad": true,
-            "CanSave": true
+            "CanLoad": false,
+            "CanSave": false
           },
+          "Tags": [
+            "Hidden",
+            "NotReplicated"
+          ],
           "ThreadSafety": "ReadSafe",
           "ValueType": {
             "Category": "Primitive",
@@ -50508,9 +51202,13 @@
             "Write": "RobloxScriptSecurity"
           },
           "Serialization": {
-            "CanLoad": true,
-            "CanSave": true
+            "CanLoad": false,
+            "CanSave": false
           },
+          "Tags": [
+            "Hidden",
+            "NotReplicated"
+          ],
           "ThreadSafety": "ReadSafe",
           "ValueType": {
             "Category": "Primitive",
@@ -54522,6 +55220,29 @@
           "ValueType": {
             "Category": "DataType",
             "Name": "Vector3"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "UI"
+            ]
+          },
+          "Category": "Data",
+          "MemberType": "Property",
+          "Name": "Thickness",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "float"
           }
         },
         {
@@ -68225,7 +68946,30 @@
       ]
     },
     {
-      "Members": [],
+      "Members": [
+        {
+          "MemberType": "Function",
+          "Name": "GetCapabilitiesUsedInPackageAsync",
+          "Parameters": [
+            {
+              "Name": "instances",
+              "Type": {
+                "Category": "DataType",
+                "Name": "Instances"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Dictionary"
+          },
+          "Security": "None",
+          "Tags": [
+            "Yields"
+          ],
+          "ThreadSafety": "Unsafe"
+        }
+      ],
       "MemoryCategory": "Instances",
       "Name": "LanguageService",
       "Superclass": "Instance",
@@ -88266,6 +89010,16 @@
     {
       "Members": [],
       "MemoryCategory": "Instances",
+      "Name": "FeedPages",
+      "Superclass": "Pages",
+      "Tags": [
+        "NotCreatable",
+        "NotReplicated"
+      ]
+    },
+    {
+      "Members": [],
+      "MemoryCategory": "Instances",
       "Name": "FriendPages",
       "Superclass": "Pages",
       "Tags": [
@@ -91263,6 +92017,16 @@
         "NotCreatable",
         "Settings",
         "NotReplicated"
+      ]
+    },
+    {
+      "Members": [],
+      "MemoryCategory": "Instances",
+      "Name": "PlaceAssetIdsService",
+      "Superclass": "Instance",
+      "Tags": [
+        "NotCreatable",
+        "Service"
       ]
     },
     {
@@ -114288,6 +115052,32 @@
           },
           "Category": "Character",
           "MemberType": "Property",
+          "Name": "RagdollDeath",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "Tags": [
+            "NotBrowsable"
+          ],
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "bool"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "Players"
+            ]
+          },
+          "Category": "Character",
+          "MemberType": "Property",
           "Name": "UserEmotesEnabled",
           "Security": {
             "Read": "None",
@@ -114889,6 +115679,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "InternalTest"
+          ],
           "MemberType": "Function",
           "Name": "GetHarmonyQualityLevel",
           "Parameters": [],
@@ -114896,10 +115689,13 @@
             "Category": "Primitive",
             "Name": "int"
           },
-          "Security": "RobloxScriptSecurity",
+          "Security": "None",
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "InternalTest"
+          ],
           "MemberType": "Function",
           "Name": "GetMemoryCategoryNames",
           "Parameters": [],
@@ -114907,10 +115703,13 @@
             "Category": "Group",
             "Name": "Array"
           },
-          "Security": "RobloxScriptSecurity",
+          "Security": "None",
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "InternalTest"
+          ],
           "MemberType": "Function",
           "Name": "GetMemoryUsageMbAllCategories",
           "Parameters": [],
@@ -114918,7 +115717,7 @@
             "Category": "Group",
             "Name": "Array"
           },
-          "Security": "RobloxScriptSecurity",
+          "Security": "None",
           "ThreadSafety": "Unsafe"
         },
         {
@@ -114952,6 +115751,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "InternalTest"
+          ],
           "MemberType": "Function",
           "Name": "ResetHarmonyMemoryTarget",
           "Parameters": [],
@@ -114959,10 +115761,13 @@
             "Category": "Primitive",
             "Name": "null"
           },
-          "Security": "RobloxScriptSecurity",
+          "Security": "None",
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "InternalTest"
+          ],
           "MemberType": "Function",
           "Name": "SetHarmonyMemoryTarget",
           "Parameters": [
@@ -114978,7 +115783,7 @@
             "Category": "Primitive",
             "Name": "null"
           },
-          "Security": "RobloxScriptSecurity",
+          "Security": "None",
           "ThreadSafety": "Unsafe"
         },
         {
@@ -116365,6 +117170,60 @@
         {
           "Category": "Camera",
           "MemberType": "Property",
+          "Name": "CameraOrbitSensitivity",
+          "Security": {
+            "Read": "RobloxScriptSecurity",
+            "Write": "RobloxScriptSecurity"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "float"
+          }
+        },
+        {
+          "Category": "Camera",
+          "MemberType": "Property",
+          "Name": "CameraPanSensitivity",
+          "Security": {
+            "Read": "RobloxScriptSecurity",
+            "Write": "RobloxScriptSecurity"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "float"
+          }
+        },
+        {
+          "Category": "Camera",
+          "MemberType": "Property",
+          "Name": "CameraShiftFactor",
+          "Security": {
+            "Read": "RobloxScriptSecurity",
+            "Write": "RobloxScriptSecurity"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "float"
+          }
+        },
+        {
+          "Category": "Camera",
+          "MemberType": "Property",
           "Name": "CameraTweenFocus",
           "Security": {
             "Read": "RobloxScriptSecurity",
@@ -116378,6 +117237,24 @@
           "ValueType": {
             "Category": "Primitive",
             "Name": "bool"
+          }
+        },
+        {
+          "Category": "Camera",
+          "MemberType": "Property",
+          "Name": "CameraZoomSpeed",
+          "Security": {
+            "Read": "RobloxScriptSecurity",
+            "Write": "RobloxScriptSecurity"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "float"
           }
         },
         {
@@ -119044,6 +119921,49 @@
         },
         {
           "MemberType": "Function",
+          "Name": "AutoSetupSerializedAvatarAsync",
+          "Parameters": [
+            {
+              "Name": "serializedInstance",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            },
+            {
+              "Name": "publishInfo",
+              "Type": {
+                "Category": "Group",
+                "Name": "Dictionary"
+              }
+            },
+            {
+              "Name": "progressCallback",
+              "Type": {
+                "Category": "DataType",
+                "Name": "Function"
+              }
+            },
+            {
+              "Name": "notificationCallback",
+              "Type": {
+                "Category": "DataType",
+                "Name": "Function?"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Class",
+            "Name": "Instance"
+          },
+          "Security": "RobloxScriptSecurity",
+          "Tags": [
+            "Yields"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
           "Name": "CancelAutoSetupAvatarAsync",
           "Parameters": [
             {
@@ -119520,7 +120440,41 @@
       ]
     },
     {
-      "Members": [],
+      "Members": [
+        {
+          "Category": "Data",
+          "MemberType": "Property",
+          "Name": "LockCameraSpeed",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "bool"
+          }
+        },
+        {
+          "MemberType": "Event",
+          "Name": "ShowCameraSpeed",
+          "Parameters": [
+            {
+              "Name": "speed",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "float"
+              }
+            }
+          ],
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        }
+      ],
       "MemoryCategory": "Instances",
       "Name": "StudioCameraService",
       "Superclass": "Instance",
@@ -129695,6 +130649,46 @@
               "Type": {
                 "Category": "DataType",
                 "Name": "CFrame"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "float"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "CalculateBodyPartMaxCageDistance",
+          "Parameters": [
+            {
+              "Name": "outerCage",
+              "Type": {
+                "Category": "Class",
+                "Name": "EditableMesh"
+              }
+            },
+            {
+              "Name": "renderMesh",
+              "Type": {
+                "Category": "Class",
+                "Name": "EditableMesh"
+              }
+            },
+            {
+              "Name": "outerTransform",
+              "Type": {
+                "Category": "DataType",
+                "Name": "CFrame"
+              }
+            },
+            {
+              "Name": "scale",
+              "Type": {
+                "Category": "DataType",
+                "Name": "Vector3"
               }
             }
           ],
@@ -144360,6 +145354,10 @@
         {
           "Name": "Notch",
           "Value": 10
+        },
+        {
+          "Name": "Lowpass6dB",
+          "Value": 11
         }
       ],
       "Name": "AudioFilterType"
@@ -147327,6 +148325,240 @@
         }
       ],
       "Name": "FacialAnimationStreamingState"
+    },
+    {
+      "Items": [
+        {
+          "Name": "ChinRaiserUpperLip",
+          "Value": 0
+        },
+        {
+          "Name": "ChinRaiser",
+          "Value": 1
+        },
+        {
+          "Name": "FlatPucker",
+          "Value": 2
+        },
+        {
+          "Name": "Funneler",
+          "Value": 3
+        },
+        {
+          "Name": "LowerLipSuck",
+          "Value": 4
+        },
+        {
+          "Name": "LipPresser",
+          "Value": 5
+        },
+        {
+          "Name": "LipsTogether",
+          "Value": 6
+        },
+        {
+          "Name": "MouthLeft",
+          "Value": 7
+        },
+        {
+          "Name": "MouthRight",
+          "Value": 8
+        },
+        {
+          "Name": "Pucker",
+          "Value": 9
+        },
+        {
+          "Name": "UpperLipSuck",
+          "Value": 10
+        },
+        {
+          "Name": "LeftCheekPuff",
+          "Value": 11
+        },
+        {
+          "Name": "LeftDimpler",
+          "Value": 12
+        },
+        {
+          "Name": "LeftLipCornerDown",
+          "Value": 13
+        },
+        {
+          "Name": "LeftLowerLipDepressor",
+          "Value": 14
+        },
+        {
+          "Name": "LeftLipCornerPuller",
+          "Value": 15
+        },
+        {
+          "Name": "LeftLipStretcher",
+          "Value": 16
+        },
+        {
+          "Name": "LeftUpperLipRaiser",
+          "Value": 17
+        },
+        {
+          "Name": "RightCheekPuff",
+          "Value": 18
+        },
+        {
+          "Name": "RightDimpler",
+          "Value": 19
+        },
+        {
+          "Name": "RightLipCornerDown",
+          "Value": 20
+        },
+        {
+          "Name": "RightLowerLipDepressor",
+          "Value": 21
+        },
+        {
+          "Name": "RightLipCornerPuller",
+          "Value": 22
+        },
+        {
+          "Name": "RightLipStretcher",
+          "Value": 23
+        },
+        {
+          "Name": "RightUpperLipRaiser",
+          "Value": 24
+        },
+        {
+          "Name": "JawDrop",
+          "Value": 25
+        },
+        {
+          "Name": "JawLeft",
+          "Value": 26
+        },
+        {
+          "Name": "JawRight",
+          "Value": 27
+        },
+        {
+          "Name": "Corrugator",
+          "Value": 28
+        },
+        {
+          "Name": "LeftBrowLowerer",
+          "Value": 29
+        },
+        {
+          "Name": "LeftOuterBrowRaiser",
+          "Value": 30
+        },
+        {
+          "Name": "LeftNoseWrinkler",
+          "Value": 31
+        },
+        {
+          "Name": "LeftInnerBrowRaiser",
+          "Value": 32
+        },
+        {
+          "Name": "RightBrowLowerer",
+          "Value": 33
+        },
+        {
+          "Name": "RightOuterBrowRaiser",
+          "Value": 34
+        },
+        {
+          "Name": "RightInnerBrowRaiser",
+          "Value": 35
+        },
+        {
+          "Name": "RightNoseWrinkler",
+          "Value": 36
+        },
+        {
+          "Name": "EyesLookDown",
+          "Value": 37
+        },
+        {
+          "Name": "EyesLookLeft",
+          "Value": 38
+        },
+        {
+          "Name": "EyesLookUp",
+          "Value": 39
+        },
+        {
+          "Name": "EyesLookRight",
+          "Value": 40
+        },
+        {
+          "Name": "LeftCheekRaiser",
+          "Value": 41
+        },
+        {
+          "Name": "LeftEyeUpperLidRaiser",
+          "Value": 42
+        },
+        {
+          "Name": "LeftEyeClosed",
+          "Value": 43
+        },
+        {
+          "Name": "RightCheekRaiser",
+          "Value": 44
+        },
+        {
+          "Name": "RightEyeUpperLidRaiser",
+          "Value": 45
+        },
+        {
+          "Name": "RightEyeClosed",
+          "Value": 46
+        },
+        {
+          "Name": "TongueDown",
+          "Value": 47
+        },
+        {
+          "Name": "TongueOut",
+          "Value": 48
+        },
+        {
+          "Name": "TongueUp",
+          "Value": 49
+        }
+      ],
+      "Name": "FacsActionUnit"
+    },
+    {
+      "Items": [
+        {
+          "Name": "Content",
+          "Value": 0
+        },
+        {
+          "Name": "Final",
+          "Value": 1
+        },
+        {
+          "Name": "GameJoin",
+          "Value": 2
+        },
+        {
+          "Name": "Interaction",
+          "Value": 3
+        },
+        {
+          "Name": "Invalid",
+          "Value": 4
+        },
+        {
+          "Name": "Sharing",
+          "Value": 5
+        }
+      ],
+      "Name": "FeedRankingScoreType"
     },
     {
       "Items": [
@@ -153609,6 +154841,10 @@
         {
           "Name": "Players",
           "Value": 21
+        },
+        {
+          "Name": "CapabilityControl",
+          "Value": 22
         }
       ],
       "Name": "SecurityCapability"
@@ -153940,28 +155176,32 @@
           "Value": 1
         },
         {
-          "Name": "Float",
+          "Name": "Color3",
           "Value": 2
         },
         {
-          "Name": "Instance",
+          "Name": "Float",
           "Value": 3
         },
         {
-          "Name": "Random",
+          "Name": "Instance",
           "Value": 4
         },
         {
-          "Name": "Vector2",
+          "Name": "Random",
           "Value": 5
         },
         {
-          "Name": "Vector3",
+          "Name": "Vector2",
           "Value": 6
         },
         {
-          "Name": "INVALID",
+          "Name": "Vector3",
           "Value": 7
+        },
+        {
+          "Name": "INVALID",
+          "Value": 8
         }
       ],
       "Name": "StateObjectFieldType"
