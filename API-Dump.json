@@ -160,6 +160,39 @@
         {
           "Category": "Data",
           "MemberType": "Property",
+          "Name": "TimeLength",
+          "Security": {
+            "Read": "RobloxScriptSecurity",
+            "Write": "RobloxScriptSecurity"
+          },
+          "Serialization": {
+            "CanLoad": false,
+            "CanSave": true
+          },
+          "Tags": [
+            "ReadOnly",
+            "NotReplicated"
+          ],
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "double"
+          }
+        }
+      ],
+      "MemoryCategory": "Instances",
+      "Name": "VideoCapture",
+      "Superclass": "Capture",
+      "Tags": [
+        "NotCreatable",
+        "NotReplicated"
+      ]
+    },
+    {
+      "Members": [
+        {
+          "Category": "Data",
+          "MemberType": "Property",
           "Name": "Error",
           "Security": {
             "Read": "None",
@@ -16996,24 +17029,6 @@
         {
           "Category": "Data",
           "MemberType": "Property",
-          "Name": "CustomBodyAvatarReference",
-          "Security": {
-            "Read": "RobloxScriptSecurity",
-            "Write": "RobloxScriptSecurity"
-          },
-          "Serialization": {
-            "CanLoad": true,
-            "CanSave": true
-          },
-          "ThreadSafety": "ReadSafe",
-          "ValueType": {
-            "Category": "Class",
-            "Name": "Instance"
-          }
-        },
-        {
-          "Category": "Data",
-          "MemberType": "Property",
           "Name": "CustomBodyBundleId",
           "Security": {
             "Read": "RobloxScriptSecurity",
@@ -20193,7 +20208,41 @@
       "Superclass": "Instance"
     },
     {
-      "Members": [],
+      "Members": [
+        {
+          "Category": "Data",
+          "MemberType": "Property",
+          "Name": "Loaded",
+          "Security": {
+            "Read": "RobloxScriptSecurity",
+            "Write": "RobloxScriptSecurity"
+          },
+          "Serialization": {
+            "CanLoad": false,
+            "CanSave": true
+          },
+          "Tags": [
+            "ReadOnly",
+            "NotReplicated"
+          ],
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "bool"
+          }
+        },
+        {
+          "MemberType": "Function",
+          "Name": "Publish",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        }
+      ],
       "MemoryCategory": "Instances",
       "Name": "AvatarSettings",
       "Superclass": "Instance",
@@ -26258,24 +26307,13 @@
         },
         {
           "MemberType": "Function",
-          "Name": "StartVideoCaptureInternal",
+          "Name": "StopVideoCapture",
           "Parameters": [],
           "ReturnType": {
             "Category": "Primitive",
             "Name": "null"
           },
-          "Security": "RobloxScriptSecurity",
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "StopCapture",
-          "Parameters": [],
-          "ReturnType": {
-            "Category": "Primitive",
-            "Name": "null"
-          },
-          "Security": "RobloxScriptSecurity",
+          "Security": "None",
           "ThreadSafety": "Unsafe"
         },
         {
@@ -26470,6 +26508,50 @@
           "ReturnType": {
             "Category": "Primitive",
             "Name": "int64"
+          },
+          "Security": "RobloxScriptSecurity",
+          "Tags": [
+            "Yields"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "StartVideoCaptureAsync",
+          "Parameters": [
+            {
+              "Name": "onCaptureReady",
+              "Type": {
+                "Category": "DataType",
+                "Name": "Function"
+              }
+            },
+            {
+              "Default": "nil",
+              "Name": "captureParams",
+              "Type": {
+                "Category": "Group",
+                "Name": "Dictionary"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Enum",
+            "Name": "VideoCaptureResult"
+          },
+          "Security": "None",
+          "Tags": [
+            "Yields"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "StartVideoCaptureInternalAsync",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Enum",
+            "Name": "VideoCaptureResult"
           },
           "Security": "RobloxScriptSecurity",
           "Tags": [
@@ -60718,6 +60800,956 @@
     {
       "Members": [
         {
+          "Capabilities": {
+            "Read": [
+              "Animation"
+            ]
+          },
+          "Category": "Mapping",
+          "MemberType": "Property",
+          "Name": "Index1",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Class",
+            "Name": "Instance"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "Animation"
+            ]
+          },
+          "Category": "Tpose",
+          "MemberType": "Property",
+          "Name": "Index1TposeAdjustment",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "DataType",
+            "Name": "CFrame"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "Animation"
+            ]
+          },
+          "Category": "Mapping",
+          "MemberType": "Property",
+          "Name": "Index2",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Class",
+            "Name": "Instance"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "Animation"
+            ]
+          },
+          "Category": "Tpose",
+          "MemberType": "Property",
+          "Name": "Index2TposeAdjustment",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "DataType",
+            "Name": "CFrame"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "Animation"
+            ]
+          },
+          "Category": "Mapping",
+          "MemberType": "Property",
+          "Name": "Index3",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Class",
+            "Name": "Instance"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "Animation"
+            ]
+          },
+          "Category": "Tpose",
+          "MemberType": "Property",
+          "Name": "Index3TposeAdjustment",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "DataType",
+            "Name": "CFrame"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "Animation"
+            ]
+          },
+          "Category": "Range",
+          "MemberType": "Property",
+          "Name": "IndexRange",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "DataType",
+            "Name": "Vector3"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "Animation"
+            ]
+          },
+          "Category": "Size",
+          "MemberType": "Property",
+          "Name": "IndexSize",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "float"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "Animation"
+            ]
+          },
+          "Category": "Mapping",
+          "MemberType": "Property",
+          "Name": "Middle1",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Class",
+            "Name": "Instance"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "Animation"
+            ]
+          },
+          "Category": "Tpose",
+          "MemberType": "Property",
+          "Name": "Middle1TposeAdjustment",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "DataType",
+            "Name": "CFrame"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "Animation"
+            ]
+          },
+          "Category": "Mapping",
+          "MemberType": "Property",
+          "Name": "Middle2",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Class",
+            "Name": "Instance"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "Animation"
+            ]
+          },
+          "Category": "Tpose",
+          "MemberType": "Property",
+          "Name": "Middle2TposeAdjustment",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "DataType",
+            "Name": "CFrame"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "Animation"
+            ]
+          },
+          "Category": "Mapping",
+          "MemberType": "Property",
+          "Name": "Middle3",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Class",
+            "Name": "Instance"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "Animation"
+            ]
+          },
+          "Category": "Tpose",
+          "MemberType": "Property",
+          "Name": "Middle3TposeAdjustment",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "DataType",
+            "Name": "CFrame"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "Animation"
+            ]
+          },
+          "Category": "Range",
+          "MemberType": "Property",
+          "Name": "MiddleRange",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "DataType",
+            "Name": "Vector3"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "Animation"
+            ]
+          },
+          "Category": "Size",
+          "MemberType": "Property",
+          "Name": "MiddleSize",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "float"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "Animation"
+            ]
+          },
+          "Category": "Mapping",
+          "MemberType": "Property",
+          "Name": "Pinky1",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Class",
+            "Name": "Instance"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "Animation"
+            ]
+          },
+          "Category": "Tpose",
+          "MemberType": "Property",
+          "Name": "Pinky1TposeAdjustment",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "DataType",
+            "Name": "CFrame"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "Animation"
+            ]
+          },
+          "Category": "Mapping",
+          "MemberType": "Property",
+          "Name": "Pinky2",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Class",
+            "Name": "Instance"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "Animation"
+            ]
+          },
+          "Category": "Tpose",
+          "MemberType": "Property",
+          "Name": "Pinky2TposeAdjustment",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "DataType",
+            "Name": "CFrame"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "Animation"
+            ]
+          },
+          "Category": "Mapping",
+          "MemberType": "Property",
+          "Name": "Pinky3",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Class",
+            "Name": "Instance"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "Animation"
+            ]
+          },
+          "Category": "Tpose",
+          "MemberType": "Property",
+          "Name": "Pinky3TposeAdjustment",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "DataType",
+            "Name": "CFrame"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "Animation"
+            ]
+          },
+          "Category": "Range",
+          "MemberType": "Property",
+          "Name": "PinkyRange",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "DataType",
+            "Name": "Vector3"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "Animation"
+            ]
+          },
+          "Category": "Size",
+          "MemberType": "Property",
+          "Name": "PinkySize",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "float"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "Animation"
+            ]
+          },
+          "Category": "Mapping",
+          "MemberType": "Property",
+          "Name": "Ring1",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Class",
+            "Name": "Instance"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "Animation"
+            ]
+          },
+          "Category": "Tpose",
+          "MemberType": "Property",
+          "Name": "Ring1TposeAdjustment",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "DataType",
+            "Name": "CFrame"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "Animation"
+            ]
+          },
+          "Category": "Mapping",
+          "MemberType": "Property",
+          "Name": "Ring2",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Class",
+            "Name": "Instance"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "Animation"
+            ]
+          },
+          "Category": "Tpose",
+          "MemberType": "Property",
+          "Name": "Ring2TposeAdjustment",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "DataType",
+            "Name": "CFrame"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "Animation"
+            ]
+          },
+          "Category": "Mapping",
+          "MemberType": "Property",
+          "Name": "Ring3",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Class",
+            "Name": "Instance"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "Animation"
+            ]
+          },
+          "Category": "Tpose",
+          "MemberType": "Property",
+          "Name": "Ring3TposeAdjustment",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "DataType",
+            "Name": "CFrame"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "Animation"
+            ]
+          },
+          "Category": "Range",
+          "MemberType": "Property",
+          "Name": "RingRange",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "DataType",
+            "Name": "Vector3"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "Animation"
+            ]
+          },
+          "Category": "Size",
+          "MemberType": "Property",
+          "Name": "RingSize",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "float"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "Animation"
+            ]
+          },
+          "Category": "Data",
+          "MemberType": "Property",
+          "Name": "Side",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Enum",
+            "Name": "HandRigDescriptionSide"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "Animation"
+            ]
+          },
+          "Category": "Mapping",
+          "MemberType": "Property",
+          "Name": "Thumb1",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Class",
+            "Name": "Instance"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "Animation"
+            ]
+          },
+          "Category": "Tpose",
+          "MemberType": "Property",
+          "Name": "Thumb1TposeAdjustment",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "DataType",
+            "Name": "CFrame"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "Animation"
+            ]
+          },
+          "Category": "Mapping",
+          "MemberType": "Property",
+          "Name": "Thumb2",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Class",
+            "Name": "Instance"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "Animation"
+            ]
+          },
+          "Category": "Tpose",
+          "MemberType": "Property",
+          "Name": "Thumb2TposeAdjustment",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "DataType",
+            "Name": "CFrame"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "Animation"
+            ]
+          },
+          "Category": "Mapping",
+          "MemberType": "Property",
+          "Name": "Thumb3",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Class",
+            "Name": "Instance"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "Animation"
+            ]
+          },
+          "Category": "Tpose",
+          "MemberType": "Property",
+          "Name": "Thumb3TposeAdjustment",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "DataType",
+            "Name": "CFrame"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "Animation"
+            ]
+          },
+          "Category": "Range",
+          "MemberType": "Property",
+          "Name": "ThumbRange",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "DataType",
+            "Name": "Vector3"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "Animation"
+            ]
+          },
+          "Category": "Size",
+          "MemberType": "Property",
+          "Name": "ThumbSize",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "float"
+          }
+        }
+      ],
+      "MemoryCategory": "Animation",
+      "Name": "HandRigDescription",
+      "Superclass": "Instance"
+    },
+    {
+      "Members": [
+        {
           "Category": "Data",
           "MemberType": "Property",
           "Name": "Looped",
@@ -68231,7 +69263,10 @@
       ],
       "MemoryCategory": "Animation",
       "Name": "HumanoidRigDescription",
-      "Superclass": "Instance"
+      "Superclass": "Instance",
+      "Tags": [
+        "NotBrowsable"
+      ]
     },
     {
       "Members": [
@@ -78044,6 +79079,24 @@
           }
         },
         {
+          "Category": "Appearance",
+          "MemberType": "Property",
+          "Name": "ColorMapContent",
+          "Security": {
+            "Read": "PluginSecurity",
+            "Write": "PluginSecurity"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "DataType",
+            "Name": "Content"
+          }
+        },
+        {
           "Category": "Material",
           "MemberType": "Property",
           "Name": "CustomPhysicalProperties",
@@ -78100,6 +79153,24 @@
         {
           "Category": "Appearance",
           "MemberType": "Property",
+          "Name": "MetalnessMapContent",
+          "Security": {
+            "Read": "PluginSecurity",
+            "Write": "PluginSecurity"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "DataType",
+            "Name": "Content"
+          }
+        },
+        {
+          "Category": "Appearance",
+          "MemberType": "Property",
           "Name": "NormalMap",
           "Security": {
             "Read": "PluginSecurity",
@@ -78118,6 +79189,24 @@
         {
           "Category": "Appearance",
           "MemberType": "Property",
+          "Name": "NormalMapContent",
+          "Security": {
+            "Read": "PluginSecurity",
+            "Write": "PluginSecurity"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "DataType",
+            "Name": "Content"
+          }
+        },
+        {
+          "Category": "Appearance",
+          "MemberType": "Property",
           "Name": "RoughnessMap",
           "Security": {
             "Read": "PluginSecurity",
@@ -78131,6 +79220,24 @@
           "ValueType": {
             "Category": "DataType",
             "Name": "ContentId"
+          }
+        },
+        {
+          "Category": "Appearance",
+          "MemberType": "Property",
+          "Name": "RoughnessMapContent",
+          "Security": {
+            "Read": "PluginSecurity",
+            "Write": "PluginSecurity"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "DataType",
+            "Name": "Content"
           }
         },
         {
@@ -103878,6 +104985,28 @@
             "Yields"
           ],
           "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "PublishDescendantAssetsAsync",
+          "Parameters": [
+            {
+              "Name": "instance",
+              "Type": {
+                "Category": "Class",
+                "Name": "Instance"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "bool"
+          },
+          "Security": "RobloxScriptSecurity",
+          "Tags": [
+            "Yields"
+          ],
+          "ThreadSafety": "Unsafe"
         }
       ],
       "MemoryCategory": "Instances",
@@ -115689,6 +116818,25 @@
           "ReturnType": {
             "Category": "Primitive",
             "Name": "bool"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "SetSoundEnabled",
+          "Parameters": [
+            {
+              "Name": "enabled",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "bool"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
           },
           "Security": "RobloxScriptSecurity",
           "ThreadSafety": "Unsafe"
@@ -131678,17 +132826,6 @@
       "Members": [
         {
           "MemberType": "Function",
-          "Name": "GetUserPlatformId",
-          "Parameters": [],
-          "ReturnType": {
-            "Category": "Primitive",
-            "Name": "string"
-          },
-          "Security": "RobloxScriptSecurity",
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
           "Name": "GetUserPlatformName",
           "Parameters": [],
           "ReturnType": {
@@ -131727,28 +132864,6 @@
           "ReturnType": {
             "Category": "Primitive",
             "Name": "bool"
-          },
-          "Security": "RobloxScriptSecurity",
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "IsOver13",
-          "Parameters": [],
-          "ReturnType": {
-            "Category": "Primitive",
-            "Name": "bool"
-          },
-          "Security": "RobloxScriptSecurity",
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "ReturnToEngagement",
-          "Parameters": [],
-          "ReturnType": {
-            "Category": "Primitive",
-            "Name": "null"
           },
           "Security": "RobloxScriptSecurity",
           "ThreadSafety": "Unsafe"
@@ -152289,6 +153404,23 @@
     {
       "Items": [
         {
+          "Name": "None",
+          "Value": 0
+        },
+        {
+          "Name": "Left",
+          "Value": 1
+        },
+        {
+          "Name": "Right",
+          "Value": 2
+        }
+      ],
+      "Name": "HandRigDescriptionSide"
+    },
+    {
+      "Items": [
+        {
           "Name": "Resize",
           "Value": 0
         },
@@ -155430,6 +156562,23 @@
         }
       ],
       "Name": "NameOcclusion"
+    },
+    {
+      "Items": [
+        {
+          "Name": "None",
+          "Value": 0
+        },
+        {
+          "Name": "NegatedUnion",
+          "Value": 1
+        },
+        {
+          "Name": "NegatedIntersection",
+          "Value": 2
+        }
+      ],
+      "Name": "NegateOperationHiddenHistory"
     },
     {
       "Items": [
@@ -161079,6 +162228,10 @@
         {
           "Name": "LayerCageFittedToPrev",
           "Value": 13
+        },
+        {
+          "Name": "PreWrapDeformerOuterCage",
+          "Value": 14
         }
       ],
       "Name": "WrapLayerDebugMode"
@@ -161120,6 +162273,10 @@
         {
           "Name": "OuterCageDetail",
           "Value": 8
+        },
+        {
+          "Name": "PreWrapDeformerCage",
+          "Value": 9
         }
       ],
       "Name": "WrapTargetDebugMode"
