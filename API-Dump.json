@@ -26253,6 +26253,25 @@
         },
         {
           "MemberType": "Function",
+          "Name": "PreVideoCaptureShared",
+          "Parameters": [
+            {
+              "Name": "videoCapture",
+              "Type": {
+                "Category": "Class",
+                "Name": "VideoCapture"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "string"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
           "Name": "PromptSaveCapturesToGallery",
           "Parameters": [
             {
@@ -26618,7 +26637,7 @@
           ],
           "ReturnType": {
             "Category": "Enum",
-            "Name": "VideoCaptureResult"
+            "Name": "VideoCaptureStartedResult"
           },
           "Security": "None",
           "Tags": [
@@ -26632,7 +26651,7 @@
           "Parameters": [],
           "ReturnType": {
             "Category": "Enum",
-            "Name": "VideoCaptureResult"
+            "Name": "VideoCaptureStartedResult"
           },
           "Security": "RobloxScriptSecurity",
           "Tags": [
@@ -26785,6 +26804,21 @@
               "Type": {
                 "Category": "Enum",
                 "Name": "VideoCaptureResult"
+              }
+            }
+          ],
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Event",
+          "Name": "UserVideoCaptureStartFailed",
+          "Parameters": [
+            {
+              "Name": "result",
+              "Type": {
+                "Category": "Enum",
+                "Name": "VideoCaptureStartedResult"
               }
             }
           ],
@@ -64439,6 +64473,26 @@
             "Avatar"
           ],
           "MemberType": "Function",
+          "Name": "ComputeR15BodyBoundingBox",
+          "Parameters": [],
+          "ReturnType": [
+            {
+              "Category": "DataType",
+              "Name": "CFrame"
+            },
+            {
+              "Category": "DataType",
+              "Name": "Vector3"
+            }
+          ],
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Avatar"
+          ],
+          "MemberType": "Function",
           "Name": "EquipTool",
           "Parameters": [
             {
@@ -70506,6 +70560,75 @@
     {
       "Members": [
         {
+          "Category": "Data",
+          "MemberType": "Property",
+          "Name": "BoolState",
+          "Security": {
+            "Read": "RobloxScriptSecurity",
+            "Write": "RobloxScriptSecurity"
+          },
+          "Serialization": {
+            "CanLoad": false,
+            "CanSave": false
+          },
+          "Tags": [
+            "ReadOnly",
+            "NotReplicated",
+            "NotScriptable"
+          ],
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "bool"
+          }
+        },
+        {
+          "Category": "Data",
+          "MemberType": "Property",
+          "Name": "Direction1DState",
+          "Security": {
+            "Read": "RobloxScriptSecurity",
+            "Write": "RobloxScriptSecurity"
+          },
+          "Serialization": {
+            "CanLoad": false,
+            "CanSave": false
+          },
+          "Tags": [
+            "ReadOnly",
+            "NotReplicated",
+            "NotScriptable"
+          ],
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "float"
+          }
+        },
+        {
+          "Category": "Data",
+          "MemberType": "Property",
+          "Name": "Direction2DState",
+          "Security": {
+            "Read": "RobloxScriptSecurity",
+            "Write": "RobloxScriptSecurity"
+          },
+          "Serialization": {
+            "CanLoad": false,
+            "CanSave": false
+          },
+          "Tags": [
+            "ReadOnly",
+            "NotReplicated",
+            "NotScriptable"
+          ],
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "DataType",
+            "Name": "Vector2"
+          }
+        },
+        {
           "Category": "Behavior",
           "MemberType": "Property",
           "Name": "Enabled",
@@ -75640,6 +75763,40 @@
       "Tags": [
         "NotCreatable",
         "Service"
+      ]
+    },
+    {
+      "Members": [
+        {
+          "MemberType": "Function",
+          "Name": "CreateSessionAsync",
+          "Parameters": [
+            {
+              "Name": "assetId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Class",
+            "Name": "MLSession"
+          },
+          "Security": "None",
+          "Tags": [
+            "Yields"
+          ],
+          "ThreadSafety": "Unsafe"
+        }
+      ],
+      "MemoryCategory": "Instances",
+      "Name": "MLService",
+      "Superclass": "Instance",
+      "Tags": [
+        "NotCreatable",
+        "Service",
+        "NotReplicated"
       ]
     },
     {
@@ -86404,27 +86561,6 @@
           "ValueType": {
             "Category": "DataType",
             "Name": "Region3int16"
-          }
-        },
-        {
-          "Category": "Appearance",
-          "MemberType": "Property",
-          "Name": "ShorelinesUpgraded",
-          "Security": {
-            "Read": "RobloxScriptSecurity",
-            "Write": "RobloxScriptSecurity"
-          },
-          "Serialization": {
-            "CanLoad": true,
-            "CanSave": true
-          },
-          "Tags": [
-            "Hidden"
-          ],
-          "ThreadSafety": "ReadSafe",
-          "ValueType": {
-            "Category": "Primitive",
-            "Name": "bool"
           }
         },
         {
@@ -132417,6 +132553,33 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Chat"
+            ]
+          },
+          "Category": "Data",
+          "MemberType": "Property",
+          "Name": "isLegacyChatDisabled",
+          "Security": {
+            "Read": "RobloxScriptSecurity",
+            "Write": "RobloxScriptSecurity"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "Tags": [
+            "Hidden",
+            "NotReplicated"
+          ],
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "bool"
+          }
+        },
+        {
           "Capabilities": [
             "Chat"
           ],
@@ -148384,6 +148547,39 @@
       "Members": [
         {
           "MemberType": "Function",
+          "Name": "ForwardAsync",
+          "Parameters": [
+            {
+              "Name": "data",
+              "Type": {
+                "Category": "Group",
+                "Name": "Dictionary"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Dictionary"
+          },
+          "Security": "None",
+          "Tags": [
+            "Yields"
+          ],
+          "ThreadSafety": "Unsafe"
+        }
+      ],
+      "MemoryCategory": "Instances",
+      "Name": "MLSession",
+      "Superclass": "Object",
+      "Tags": [
+        "NotCreatable",
+        "NotReplicated"
+      ]
+    },
+    {
+      "Members": [
+        {
+          "MemberType": "Function",
           "Name": "CommitBlock",
           "Parameters": [
             {
@@ -162650,6 +162846,27 @@
           "Value": 1
         },
         {
+          "Name": "ScreenSizeChanged",
+          "Value": 2
+        },
+        {
+          "Name": "TimeLimitReached",
+          "Value": 3
+        }
+      ],
+      "Name": "VideoCaptureResult"
+    },
+    {
+      "Items": [
+        {
+          "Name": "Success",
+          "Value": 0
+        },
+        {
+          "Name": "OtherError",
+          "Value": 1
+        },
+        {
           "Name": "CapturingAlready",
           "Value": 2
         },
@@ -162662,7 +162879,7 @@
           "Value": 4
         }
       ],
-      "Name": "VideoCaptureResult"
+      "Name": "VideoCaptureStartedResult"
     },
     {
       "Items": [
