@@ -9426,6 +9426,25 @@
         },
         {
           "MemberType": "Function",
+          "Name": "CreateSurfaceAppearance",
+          "Parameters": [
+            {
+              "Name": "content",
+              "Type": {
+                "Category": "Group",
+                "Name": "Dictionary"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Class",
+            "Name": "SurfaceAppearance"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
           "Name": "DeserializeInstance",
           "Parameters": [
             {
@@ -20405,7 +20424,7 @@
           },
           "Serialization": {
             "CanLoad": false,
-            "CanSave": true
+            "CanSave": false
           },
           "Tags": [
             "ReadOnly",
@@ -24360,6 +24379,11 @@
     {
       "Members": [
         {
+          "Capabilities": {
+            "Read": [
+              "Physics"
+            ]
+          },
           "Category": "Goals",
           "MemberType": "Property",
           "Name": "AngularVelocity",
@@ -24378,6 +24402,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Physics"
+            ]
+          },
           "Category": "Goals",
           "MemberType": "Property",
           "Name": "MaxTorque",
@@ -24396,6 +24425,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Physics"
+            ]
+          },
           "Category": "Goals",
           "MemberType": "Property",
           "Name": "P",
@@ -24414,6 +24448,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Physics"
+            ]
+          },
           "Category": "Goals",
           "MemberType": "Property",
           "Name": "angularvelocity",
@@ -24436,6 +24475,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Physics"
+            ]
+          },
           "Category": "Goals",
           "MemberType": "Property",
           "Name": "maxTorque",
@@ -24468,6 +24512,11 @@
     {
       "Members": [
         {
+          "Capabilities": {
+            "Read": [
+              "Physics"
+            ]
+          },
           "Category": "Goals",
           "MemberType": "Property",
           "Name": "Force",
@@ -24486,6 +24535,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Physics"
+            ]
+          },
           "Category": "Goals",
           "MemberType": "Property",
           "Name": "force",
@@ -24871,6 +24925,11 @@
     {
       "Members": [
         {
+          "Capabilities": {
+            "Read": [
+              "Physics"
+            ]
+          },
           "Category": "Goals",
           "MemberType": "Property",
           "Name": "Force",
@@ -24889,6 +24948,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Physics"
+            ]
+          },
           "Category": "Goals",
           "MemberType": "Property",
           "Name": "Location",
@@ -24907,6 +24971,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Physics"
+            ]
+          },
           "Category": "Goals",
           "MemberType": "Property",
           "Name": "force",
@@ -24929,6 +24998,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Physics"
+            ]
+          },
           "Category": "Goals",
           "MemberType": "Property",
           "Name": "location",
@@ -24961,6 +25035,11 @@
     {
       "Members": [
         {
+          "Capabilities": {
+            "Read": [
+              "Physics"
+            ]
+          },
           "Category": "Goals",
           "MemberType": "Property",
           "Name": "MaxForce",
@@ -24979,6 +25058,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Physics"
+            ]
+          },
           "Category": "Goals",
           "MemberType": "Property",
           "Name": "P",
@@ -24997,6 +25081,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Physics"
+            ]
+          },
           "Category": "Goals",
           "MemberType": "Property",
           "Name": "Velocity",
@@ -25015,6 +25104,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Physics"
+            ]
+          },
           "Category": "Goals",
           "MemberType": "Property",
           "Name": "maxForce",
@@ -25037,6 +25131,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Physics"
+            ]
+          },
           "Category": "Goals",
           "MemberType": "Property",
           "Name": "velocity",
@@ -25059,6 +25158,9 @@
           }
         },
         {
+          "Capabilities": [
+            "Physics"
+          ],
           "MemberType": "Function",
           "Name": "GetLastForce",
           "Parameters": [],
@@ -25070,6 +25172,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Physics"
+          ],
           "MemberType": "Function",
           "Name": "lastForce",
           "Parameters": [],
@@ -25091,6 +25196,11 @@
     {
       "Members": [
         {
+          "Capabilities": {
+            "Read": [
+              "Physics"
+            ]
+          },
           "Category": "Goals",
           "MemberType": "Property",
           "Name": "CartoonFactor",
@@ -25109,6 +25219,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Physics"
+            ]
+          },
           "Category": "Thrust",
           "MemberType": "Property",
           "Name": "MaxSpeed",
@@ -25127,6 +25242,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Physics"
+            ]
+          },
           "Category": "Thrust",
           "MemberType": "Property",
           "Name": "MaxThrust",
@@ -25145,6 +25265,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Physics"
+            ]
+          },
           "Category": "Turn",
           "MemberType": "Property",
           "Name": "MaxTorque",
@@ -25163,6 +25288,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Physics"
+            ]
+          },
           "Category": "Goals",
           "MemberType": "Property",
           "Name": "Target",
@@ -25181,6 +25311,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Physics"
+            ]
+          },
           "Category": "Goals",
           "MemberType": "Property",
           "Name": "TargetOffset",
@@ -25199,6 +25334,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Physics"
+            ]
+          },
           "Category": "Goals",
           "MemberType": "Property",
           "Name": "TargetRadius",
@@ -25217,6 +25357,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Physics"
+            ]
+          },
           "Category": "Thrust",
           "MemberType": "Property",
           "Name": "ThrustD",
@@ -25235,6 +25380,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Physics"
+            ]
+          },
           "Category": "Thrust",
           "MemberType": "Property",
           "Name": "ThrustP",
@@ -25253,6 +25403,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Physics"
+            ]
+          },
           "Category": "Turn",
           "MemberType": "Property",
           "Name": "TurnD",
@@ -25271,6 +25426,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Physics"
+            ]
+          },
           "Category": "Turn",
           "MemberType": "Property",
           "Name": "TurnP",
@@ -25289,6 +25449,9 @@
           }
         },
         {
+          "Capabilities": [
+            "Physics"
+          ],
           "MemberType": "Function",
           "Name": "Abort",
           "Parameters": [],
@@ -25300,6 +25463,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Physics"
+          ],
           "MemberType": "Function",
           "Name": "Fire",
           "Parameters": [],
@@ -25311,6 +25477,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Physics"
+          ],
           "MemberType": "Function",
           "Name": "fire",
           "Parameters": [],
@@ -25325,6 +25494,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Physics"
+          ],
           "MemberType": "Event",
           "Name": "ReachedTarget",
           "Parameters": [],
@@ -28509,6 +28681,11 @@
     {
       "Members": [
         {
+          "Capabilities": {
+            "Read": [
+              "Input"
+            ]
+          },
           "Category": "Image",
           "MemberType": "Property",
           "Name": "CursorIcon",
@@ -28527,6 +28704,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Input"
+            ]
+          },
           "Category": "Data",
           "MemberType": "Property",
           "Name": "MaxActivationDistance",
@@ -28545,6 +28727,9 @@
           }
         },
         {
+          "Capabilities": [
+            "Input"
+          ],
           "MemberType": "Event",
           "Name": "MouseClick",
           "Parameters": [
@@ -28560,6 +28745,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Input"
+          ],
           "MemberType": "Event",
           "Name": "MouseHoverEnter",
           "Parameters": [
@@ -28575,6 +28763,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Input"
+          ],
           "MemberType": "Event",
           "Name": "MouseHoverLeave",
           "Parameters": [
@@ -28590,6 +28781,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Input"
+          ],
           "MemberType": "Event",
           "Name": "RightMouseClick",
           "Parameters": [
@@ -28605,6 +28799,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Input"
+          ],
           "MemberType": "Event",
           "Name": "mouseClick",
           "Parameters": [
@@ -28630,6 +28827,12 @@
     {
       "Members": [
         {
+          "Capabilities": {
+            "Read": [
+              "Physics",
+              "Input"
+            ]
+          },
           "Category": "Image",
           "MemberType": "Property",
           "Name": "ActivatedCursorIcon",
@@ -28648,6 +28851,12 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Physics",
+              "Input"
+            ]
+          },
           "Category": "Physics Response",
           "MemberType": "Property",
           "Name": "ApplyAtCenterOfMass",
@@ -28666,6 +28875,12 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Physics",
+              "Input"
+            ]
+          },
           "Category": "Drag Directions",
           "MemberType": "Property",
           "Name": "Axis",
@@ -28687,6 +28902,12 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Physics",
+              "Input"
+            ]
+          },
           "Category": "Dragged Amount",
           "MemberType": "Property",
           "Name": "DragFrame",
@@ -28705,6 +28926,12 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Physics",
+              "Input"
+            ]
+          },
           "Category": "Behavior",
           "MemberType": "Property",
           "Name": "DragStyle",
@@ -28723,6 +28950,12 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Physics",
+              "Input"
+            ]
+          },
           "Category": "Behavior",
           "MemberType": "Property",
           "Name": "Enabled",
@@ -28741,6 +28974,12 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Physics",
+              "Input"
+            ]
+          },
           "Category": "Mode Switching",
           "MemberType": "Property",
           "Name": "GamepadModeSwitchKeyCode",
@@ -28759,6 +28998,12 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Physics",
+              "Input"
+            ]
+          },
           "Category": "Mode Switching",
           "MemberType": "Property",
           "Name": "KeyboardModeSwitchKeyCode",
@@ -28777,6 +29022,12 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Physics",
+              "Input"
+            ]
+          },
           "Category": "Drag Limits",
           "MemberType": "Property",
           "Name": "MaxDragAngle",
@@ -28795,6 +29046,12 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Physics",
+              "Input"
+            ]
+          },
           "Category": "Drag Limits",
           "MemberType": "Property",
           "Name": "MaxDragTranslation",
@@ -28813,6 +29070,12 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Physics",
+              "Input"
+            ]
+          },
           "Category": "Physics Response",
           "MemberType": "Property",
           "Name": "MaxForce",
@@ -28831,6 +29094,12 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Physics",
+              "Input"
+            ]
+          },
           "Category": "Physics Response",
           "MemberType": "Property",
           "Name": "MaxTorque",
@@ -28849,6 +29118,12 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Physics",
+              "Input"
+            ]
+          },
           "Category": "Drag Limits",
           "MemberType": "Property",
           "Name": "MinDragAngle",
@@ -28867,6 +29142,12 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Physics",
+              "Input"
+            ]
+          },
           "Category": "Drag Limits",
           "MemberType": "Property",
           "Name": "MinDragTranslation",
@@ -28885,6 +29166,12 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Physics",
+              "Input"
+            ]
+          },
           "Category": "Drag Directions",
           "MemberType": "Property",
           "Name": "Orientation",
@@ -28903,6 +29190,12 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Physics",
+              "Input"
+            ]
+          },
           "Category": "Behavior",
           "MemberType": "Property",
           "Name": "PermissionPolicy",
@@ -28921,6 +29214,12 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Physics",
+              "Input"
+            ]
+          },
           "Category": "Data",
           "MemberType": "Property",
           "Name": "ReferenceInstance",
@@ -28939,6 +29238,12 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Physics",
+              "Input"
+            ]
+          },
           "Category": "Behavior",
           "MemberType": "Property",
           "Name": "ResponseStyle",
@@ -28957,6 +29262,12 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Physics",
+              "Input"
+            ]
+          },
           "Category": "Physics Response",
           "MemberType": "Property",
           "Name": "Responsiveness",
@@ -28975,6 +29286,12 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Physics",
+              "Input"
+            ]
+          },
           "Category": "Behavior",
           "MemberType": "Property",
           "Name": "RunLocally",
@@ -28993,6 +29310,12 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Physics",
+              "Input"
+            ]
+          },
           "Category": "Drag Directions",
           "MemberType": "Property",
           "Name": "SecondaryAxis",
@@ -29014,6 +29337,12 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Physics",
+              "Input"
+            ]
+          },
           "Category": "Behavior",
           "MemberType": "Property",
           "Name": "TrackballRadialPullFactor",
@@ -29032,6 +29361,12 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Physics",
+              "Input"
+            ]
+          },
           "Category": "Behavior",
           "MemberType": "Property",
           "Name": "TrackballRollFactor",
@@ -29050,6 +29385,12 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Physics",
+              "Input"
+            ]
+          },
           "Category": "Mode Switching",
           "MemberType": "Property",
           "Name": "VRSwitchKeyCode",
@@ -29068,6 +29409,12 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Physics",
+              "Input"
+            ]
+          },
           "Category": "Drag Directions",
           "MemberType": "Property",
           "Name": "WorldAxis",
@@ -29089,6 +29436,12 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Physics",
+              "Input"
+            ]
+          },
           "Category": "Drag Directions",
           "MemberType": "Property",
           "Name": "WorldSecondaryAxis",
@@ -29110,6 +29463,10 @@
           }
         },
         {
+          "Capabilities": [
+            "Physics",
+            "Input"
+          ],
           "MemberType": "Function",
           "Name": "AddConstraintFunction",
           "Parameters": [
@@ -29136,6 +29493,10 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Physics",
+            "Input"
+          ],
           "MemberType": "Function",
           "Name": "GetReferenceFrame",
           "Parameters": [],
@@ -29147,6 +29508,10 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Physics",
+            "Input"
+          ],
           "MemberType": "Function",
           "Name": "RestartDrag",
           "Parameters": [],
@@ -29158,6 +29523,10 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Physics",
+            "Input"
+          ],
           "MemberType": "Function",
           "Name": "SetDragStyleFunction",
           "Parameters": [
@@ -29177,6 +29546,10 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Physics",
+            "Input"
+          ],
           "MemberType": "Function",
           "Name": "SetPermissionPolicyFunction",
           "Parameters": [
@@ -29196,6 +29569,10 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Physics",
+            "Input"
+          ],
           "MemberType": "Event",
           "Name": "DragContinue",
           "Parameters": [
@@ -29239,6 +29616,10 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Physics",
+            "Input"
+          ],
           "MemberType": "Event",
           "Name": "DragEnd",
           "Parameters": [
@@ -29254,6 +29635,10 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Physics",
+            "Input"
+          ],
           "MemberType": "Event",
           "Name": "DragStart",
           "Parameters": [
@@ -36208,6 +36593,11 @@
     {
       "Members": [
         {
+          "Capabilities": {
+            "Read": [
+              "Basic"
+            ]
+          },
           "Category": "Axes",
           "MemberType": "Property",
           "Name": "Steer",
@@ -36230,6 +36620,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Basic"
+            ]
+          },
           "Category": "Axes",
           "MemberType": "Property",
           "Name": "Throttle",
@@ -36252,6 +36647,9 @@
           }
         },
         {
+          "Capabilities": [
+            "Basic"
+          ],
           "MemberType": "Event",
           "Name": "AxisChanged",
           "Parameters": [
@@ -36348,6 +36746,11 @@
     {
       "Members": [
         {
+          "Capabilities": {
+            "Read": [
+              "Basic"
+            ]
+          },
           "Category": "Balance",
           "MemberType": "Property",
           "Name": "BalanceMaxTorque",
@@ -36366,6 +36769,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Basic"
+            ]
+          },
           "Category": "Balance",
           "MemberType": "Property",
           "Name": "BalanceSpeed",
@@ -36384,6 +36792,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Basic"
+            ]
+          },
           "Category": "Movement",
           "MemberType": "Property",
           "Name": "LinearImpulse",
@@ -36406,6 +36819,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Basic"
+            ]
+          },
           "Category": "Turn",
           "MemberType": "Property",
           "Name": "MaintainAngularMomentum",
@@ -36424,6 +36842,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Basic"
+            ]
+          },
           "Category": "Movement",
           "MemberType": "Property",
           "Name": "MaintainLinearMomentum",
@@ -36442,6 +36865,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Basic"
+            ]
+          },
           "Category": "Movement",
           "MemberType": "Property",
           "Name": "MoveMaxForce",
@@ -36460,6 +36888,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Basic"
+            ]
+          },
           "Category": "Turn",
           "MemberType": "Property",
           "Name": "TurnMaxTorque",
@@ -36478,6 +36911,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Basic"
+            ]
+          },
           "Category": "Turn",
           "MemberType": "Property",
           "Name": "TurnSpeedFactor",
@@ -36503,6 +36941,11 @@
     {
       "Members": [
         {
+          "Capabilities": {
+            "Read": [
+              "Basic"
+            ]
+          },
           "Category": "Movement",
           "MemberType": "Property",
           "Name": "AccelerationTime",
@@ -36521,6 +36964,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Basic"
+            ]
+          },
           "Category": "Balance",
           "MemberType": "Property",
           "Name": "BalanceMaxTorque",
@@ -36539,6 +36987,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Basic"
+            ]
+          },
           "Category": "Balance",
           "MemberType": "Property",
           "Name": "BalanceSpeed",
@@ -36557,6 +37010,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Basic"
+            ]
+          },
           "Category": "Movement",
           "MemberType": "Property",
           "Name": "MoveMaxForce",
@@ -36582,6 +37040,11 @@
     {
       "Members": [
         {
+          "Capabilities": {
+            "Read": [
+              "Basic"
+            ]
+          },
           "Category": "Balance",
           "MemberType": "Property",
           "Name": "AccelerationLean",
@@ -36600,6 +37063,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Basic"
+            ]
+          },
           "Category": "Movement",
           "MemberType": "Property",
           "Name": "AccelerationTime",
@@ -36618,6 +37086,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Basic"
+            ]
+          },
           "Category": "Balance",
           "MemberType": "Property",
           "Name": "BalanceMaxTorque",
@@ -36636,6 +37109,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Basic"
+            ]
+          },
           "Category": "Balance",
           "MemberType": "Property",
           "Name": "BalanceSpeed",
@@ -36654,6 +37132,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Basic"
+            ]
+          },
           "Category": "Movement",
           "MemberType": "Property",
           "Name": "DecelerationTime",
@@ -36672,6 +37155,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Basic"
+            ]
+          },
           "Category": "Movement",
           "MemberType": "Property",
           "Name": "Friction",
@@ -36690,6 +37178,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Basic"
+            ]
+          },
           "Category": "Movement",
           "MemberType": "Property",
           "Name": "FrictionWeight",
@@ -36708,6 +37201,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Basic"
+            ]
+          },
           "Category": "Movement",
           "MemberType": "Property",
           "Name": "GroundOffset",
@@ -36726,6 +37224,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Basic"
+            ]
+          },
           "Category": "Movement",
           "MemberType": "Property",
           "Name": "StandForce",
@@ -36744,6 +37247,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Basic"
+            ]
+          },
           "Category": "Movement",
           "MemberType": "Property",
           "Name": "StandSpeed",
@@ -36762,6 +37270,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Basic"
+            ]
+          },
           "Category": "Movement",
           "MemberType": "Property",
           "Name": "TurnSpeedFactor",
@@ -36787,6 +37300,11 @@
     {
       "Members": [
         {
+          "Capabilities": {
+            "Read": [
+              "Basic"
+            ]
+          },
           "Category": "Movement",
           "MemberType": "Property",
           "Name": "AccelerationTime",
@@ -36805,6 +37323,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Basic"
+            ]
+          },
           "Category": "Balance",
           "MemberType": "Property",
           "Name": "PitchMaxTorque",
@@ -36823,6 +37346,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Basic"
+            ]
+          },
           "Category": "Balance",
           "MemberType": "Property",
           "Name": "PitchSpeedFactor",
@@ -36841,6 +37369,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Basic"
+            ]
+          },
           "Category": "Balance",
           "MemberType": "Property",
           "Name": "RollMaxTorque",
@@ -36859,6 +37392,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Basic"
+            ]
+          },
           "Category": "Balance",
           "MemberType": "Property",
           "Name": "RollSpeedFactor",
@@ -36884,6 +37422,11 @@
     {
       "Members": [
         {
+          "Capabilities": {
+            "Read": [
+              "Avatar"
+            ]
+          },
           "Category": "Behavior",
           "MemberType": "Property",
           "Name": "ActiveController",
@@ -36902,6 +37445,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Avatar"
+            ]
+          },
           "Category": "Behavior",
           "MemberType": "Property",
           "Name": "BaseMoveSpeed",
@@ -36920,6 +37468,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Avatar"
+            ]
+          },
           "Category": "Behavior",
           "MemberType": "Property",
           "Name": "BaseTurnSpeed",
@@ -36938,6 +37491,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Avatar"
+            ]
+          },
           "Category": "Behavior",
           "MemberType": "Property",
           "Name": "ClimbSensor",
@@ -36956,6 +37514,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Avatar"
+            ]
+          },
           "Category": "Input",
           "MemberType": "Property",
           "Name": "FacingDirection",
@@ -36974,6 +37537,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Avatar"
+            ]
+          },
           "Category": "Behavior",
           "MemberType": "Property",
           "Name": "GroundSensor",
@@ -36992,6 +37560,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Avatar"
+            ]
+          },
           "Category": "Input",
           "MemberType": "Property",
           "Name": "MovingDirection",
@@ -37010,6 +37583,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Avatar"
+            ]
+          },
           "Category": "Behavior",
           "MemberType": "Property",
           "Name": "RootPart",
@@ -37028,6 +37606,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Avatar"
+            ]
+          },
           "Category": "Input",
           "MemberType": "Property",
           "Name": "UpDirection",
@@ -38161,6 +38744,11 @@
     {
       "Members": [
         {
+          "Capabilities": {
+            "Read": [
+              "Basic"
+            ]
+          },
           "Category": "Data",
           "MemberType": "Property",
           "Name": "MeshId",
@@ -38179,6 +38767,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Basic"
+            ]
+          },
           "Category": "Data",
           "MemberType": "Property",
           "Name": "TextureId",
@@ -38204,6 +38797,11 @@
     {
       "Members": [
         {
+          "Capabilities": {
+            "Read": [
+              "Basic"
+            ]
+          },
           "Category": "Data",
           "MemberType": "Property",
           "Name": "MeshType",
@@ -43471,6 +44069,17 @@
       ]
     },
     {
+      "Members": [],
+      "MemoryCategory": "Instances",
+      "Name": "ExperienceStateRecordingService",
+      "Superclass": "Instance",
+      "Tags": [
+        "NotCreatable",
+        "Service",
+        "NotReplicated"
+      ]
+    },
+    {
       "Members": [
         {
           "MemberType": "Function",
@@ -46117,83 +46726,6 @@
       ],
       "MemoryCategory": "Instances",
       "Name": "FeatureRestrictionManager",
-      "Superclass": "Instance",
-      "Tags": [
-        "NotCreatable",
-        "Service"
-      ]
-    },
-    {
-      "Members": [
-        {
-          "MemberType": "Function",
-          "Name": "BatchRemoveFeedItemsAsync",
-          "Parameters": [
-            {
-              "Name": "feedItemIds",
-              "Type": {
-                "Category": "Group",
-                "Name": "Array"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Primitive",
-            "Name": "null"
-          },
-          "Security": "None",
-          "Tags": [
-            "Yields"
-          ],
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "GetFeedItemsAsync",
-          "Parameters": [
-            {
-              "Name": "getFeedRequest",
-              "Type": {
-                "Category": "Group",
-                "Name": "Dictionary"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Class",
-            "Name": "FeedPages"
-          },
-          "Security": "None",
-          "Tags": [
-            "Yields"
-          ],
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "RegisterFeedItemsAsync",
-          "Parameters": [
-            {
-              "Name": "registerFeedItemsRequest",
-              "Type": {
-                "Category": "Group",
-                "Name": "Dictionary"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Group",
-            "Name": "Dictionary"
-          },
-          "Security": "None",
-          "Tags": [
-            "Yields"
-          ],
-          "ThreadSafety": "Unsafe"
-        }
-      ],
-      "MemoryCategory": "Instances",
-      "Name": "FeedService",
       "Superclass": "Instance",
       "Tags": [
         "NotCreatable",
@@ -57211,6 +57743,7 @@
         {
           "Capabilities": {
             "Read": [
+              "Basic",
               "UI"
             ]
           },
@@ -57234,6 +57767,7 @@
         {
           "Capabilities": {
             "Read": [
+              "Basic",
               "UI"
             ]
           },
@@ -57257,6 +57791,7 @@
         {
           "Capabilities": {
             "Read": [
+              "Basic",
               "UI"
             ]
           },
@@ -57280,6 +57815,7 @@
         {
           "Capabilities": {
             "Read": [
+              "Basic",
               "UI"
             ]
           },
@@ -57303,6 +57839,7 @@
         {
           "Capabilities": {
             "Read": [
+              "Basic",
               "UI"
             ]
           },
@@ -57326,6 +57863,7 @@
         {
           "Capabilities": {
             "Read": [
+              "Basic",
               "UI"
             ]
           },
@@ -57349,6 +57887,7 @@
         {
           "Capabilities": {
             "Read": [
+              "Basic",
               "UI"
             ]
           },
@@ -57372,6 +57911,7 @@
         {
           "Capabilities": {
             "Read": [
+              "Basic",
               "UI"
             ]
           },
@@ -57405,6 +57945,7 @@
         {
           "Capabilities": {
             "Read": [
+              "Basic",
               "UI"
             ]
           },
@@ -57438,6 +57979,7 @@
         {
           "Capabilities": {
             "Read": [
+              "Basic",
               "UI"
             ]
           },
@@ -57461,6 +58003,7 @@
         {
           "Capabilities": {
             "Read": [
+              "Basic",
               "UI"
             ]
           },
@@ -57487,6 +58030,7 @@
         {
           "Capabilities": {
             "Read": [
+              "Basic",
               "UI"
             ]
           },
@@ -57515,6 +58059,7 @@
         {
           "Capabilities": {
             "Read": [
+              "Basic",
               "UI"
             ]
           },
@@ -57538,6 +58083,7 @@
         {
           "Capabilities": {
             "Read": [
+              "Basic",
               "UI"
             ]
           },
@@ -57601,6 +58147,7 @@
         {
           "Capabilities": {
             "Read": [
+              "Basic",
               "UI"
             ]
           },
@@ -57624,6 +58171,7 @@
         {
           "Capabilities": {
             "Read": [
+              "Basic",
               "UI"
             ]
           },
@@ -57647,6 +58195,7 @@
         {
           "Capabilities": {
             "Read": [
+              "Basic",
               "UI"
             ]
           },
@@ -57670,6 +58219,7 @@
         {
           "Capabilities": {
             "Read": [
+              "Basic",
               "UI"
             ]
           },
@@ -57693,6 +58243,7 @@
         {
           "Capabilities": {
             "Read": [
+              "Basic",
               "UI"
             ]
           },
@@ -57715,6 +58266,7 @@
         },
         {
           "Capabilities": [
+            "Basic",
             "UI"
           ],
           "MemberType": "Event",
@@ -57725,6 +58277,7 @@
         },
         {
           "Capabilities": [
+            "Basic",
             "UI"
           ],
           "MemberType": "Event",
@@ -57735,6 +58288,7 @@
         },
         {
           "Capabilities": [
+            "Basic",
             "UI"
           ],
           "MemberType": "Event",
@@ -57745,6 +58299,7 @@
         },
         {
           "Capabilities": [
+            "Basic",
             "UI"
           ],
           "MemberType": "Event",
@@ -57766,6 +58321,7 @@
         {
           "Capabilities": {
             "Read": [
+              "Basic",
               "UI"
             ]
           },
@@ -57796,6 +58352,7 @@
         {
           "Capabilities": {
             "Read": [
+              "Basic",
               "UI"
             ]
           },
@@ -57819,6 +58376,7 @@
         {
           "Capabilities": {
             "Read": [
+              "Basic",
               "UI"
             ]
           },
@@ -57849,6 +58407,7 @@
         {
           "Capabilities": {
             "Read": [
+              "Basic",
               "UI"
             ]
           },
@@ -57872,6 +58431,7 @@
         {
           "Capabilities": {
             "Read": [
+              "Basic",
               "UI"
             ]
           },
@@ -57895,6 +58455,7 @@
         {
           "Capabilities": {
             "Read": [
+              "Basic",
               "UI"
             ]
           },
@@ -57918,6 +58479,7 @@
         {
           "Capabilities": {
             "Read": [
+              "Basic",
               "UI"
             ]
           },
@@ -57948,6 +58510,7 @@
         {
           "Capabilities": {
             "Read": [
+              "Basic",
               "UI"
             ]
           },
@@ -57971,6 +58534,7 @@
         {
           "Capabilities": {
             "Read": [
+              "Basic",
               "UI"
             ]
           },
@@ -58001,6 +58565,7 @@
         {
           "Capabilities": {
             "Read": [
+              "Basic",
               "UI"
             ]
           },
@@ -58024,6 +58589,7 @@
         {
           "Capabilities": {
             "Read": [
+              "Basic",
               "UI"
             ]
           },
@@ -58054,6 +58620,7 @@
         {
           "Capabilities": {
             "Read": [
+              "Basic",
               "UI"
             ]
           },
@@ -58084,6 +58651,7 @@
         {
           "Capabilities": {
             "Read": [
+              "Basic",
               "UI"
             ]
           },
@@ -58107,6 +58675,7 @@
         {
           "Capabilities": {
             "Read": [
+              "Basic",
               "UI"
             ]
           },
@@ -58129,6 +58698,7 @@
         },
         {
           "Capabilities": [
+            "Basic",
             "UI"
           ],
           "MemberType": "Function",
@@ -58158,6 +58728,7 @@
         },
         {
           "Capabilities": [
+            "Basic",
             "UI"
           ],
           "MemberType": "Function",
@@ -58180,6 +58751,7 @@
         },
         {
           "Capabilities": [
+            "Basic",
             "UI"
           ],
           "MemberType": "Function",
@@ -58209,6 +58781,7 @@
         },
         {
           "Capabilities": [
+            "Basic",
             "UI"
           ],
           "MemberType": "Function",
@@ -58246,6 +58819,7 @@
         },
         {
           "Capabilities": [
+            "Basic",
             "UI"
           ],
           "MemberType": "Function",
@@ -58427,6 +59001,7 @@
         {
           "Capabilities": {
             "Read": [
+              "Basic",
               "UI"
             ]
           },
@@ -58455,6 +59030,7 @@
         {
           "Capabilities": {
             "Read": [
+              "Basic",
               "UI"
             ]
           },
@@ -58478,6 +59054,7 @@
         {
           "Capabilities": {
             "Read": [
+              "Basic",
               "UI"
             ]
           },
@@ -58508,6 +59085,7 @@
         {
           "Capabilities": {
             "Read": [
+              "Basic",
               "UI"
             ]
           },
@@ -58550,7 +59128,9 @@
         {
           "Capabilities": {
             "Read": [
-              "UI"
+              "Basic",
+              "UI",
+              "Input"
             ]
           },
           "Category": "Data",
@@ -58572,7 +59152,9 @@
         },
         {
           "Capabilities": [
-            "UI"
+            "Basic",
+            "UI",
+            "Input"
           ],
           "MemberType": "Event",
           "Name": "MouseButton1Down",
@@ -58590,7 +59172,9 @@
         },
         {
           "Capabilities": [
-            "UI"
+            "Basic",
+            "UI",
+            "Input"
           ],
           "MemberType": "Event",
           "Name": "MouseButton1Up",
@@ -58608,7 +59192,9 @@
         },
         {
           "Capabilities": [
-            "UI"
+            "Basic",
+            "UI",
+            "Input"
           ],
           "MemberType": "Event",
           "Name": "MouseDrag",
@@ -58640,7 +59226,9 @@
         },
         {
           "Capabilities": [
-            "UI"
+            "Basic",
+            "UI",
+            "Input"
           ],
           "MemberType": "Event",
           "Name": "MouseEnter",
@@ -58658,7 +59246,9 @@
         },
         {
           "Capabilities": [
-            "UI"
+            "Basic",
+            "UI",
+            "Input"
           ],
           "MemberType": "Event",
           "Name": "MouseLeave",
@@ -58684,7 +59274,9 @@
         {
           "Capabilities": {
             "Read": [
-              "UI"
+              "Basic",
+              "UI",
+              "Input"
             ]
           },
           "Category": "Data",
@@ -58707,7 +59299,9 @@
         {
           "Capabilities": {
             "Read": [
-              "UI"
+              "Basic",
+              "UI",
+              "Input"
             ]
           },
           "Category": "Appearance",
@@ -58729,7 +59323,9 @@
         },
         {
           "Capabilities": [
-            "UI"
+            "Basic",
+            "UI",
+            "Input"
           ],
           "MemberType": "Event",
           "Name": "MouseButton1Down",
@@ -58747,7 +59343,9 @@
         },
         {
           "Capabilities": [
-            "UI"
+            "Basic",
+            "UI",
+            "Input"
           ],
           "MemberType": "Event",
           "Name": "MouseButton1Up",
@@ -58765,7 +59363,9 @@
         },
         {
           "Capabilities": [
-            "UI"
+            "Basic",
+            "UI",
+            "Input"
           ],
           "MemberType": "Event",
           "Name": "MouseDrag",
@@ -58790,7 +59390,9 @@
         },
         {
           "Capabilities": [
-            "UI"
+            "Basic",
+            "UI",
+            "Input"
           ],
           "MemberType": "Event",
           "Name": "MouseEnter",
@@ -58808,7 +59410,9 @@
         },
         {
           "Capabilities": [
-            "UI"
+            "Basic",
+            "UI",
+            "Input"
           ],
           "MemberType": "Event",
           "Name": "MouseLeave",
@@ -58834,6 +59438,7 @@
         {
           "Capabilities": {
             "Read": [
+              "Basic",
               "UI"
             ]
           },
@@ -58897,6 +59502,7 @@
         {
           "Capabilities": {
             "Read": [
+              "Basic",
               "UI"
             ]
           },
@@ -58930,6 +59536,7 @@
         {
           "Capabilities": {
             "Read": [
+              "Basic",
               "UI"
             ]
           },
@@ -70865,6 +71472,11 @@
     {
       "Members": [
         {
+          "Capabilities": {
+            "Read": [
+              "Input"
+            ]
+          },
           "Category": "Data",
           "MemberType": "Property",
           "Name": "BoolState",
@@ -70888,6 +71500,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Input"
+            ]
+          },
           "Category": "Data",
           "MemberType": "Property",
           "Name": "Direction1DState",
@@ -70911,6 +71528,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Input"
+            ]
+          },
           "Category": "Data",
           "MemberType": "Property",
           "Name": "Direction2DState",
@@ -70934,6 +71556,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Input"
+            ]
+          },
           "Category": "Data",
           "MemberType": "Property",
           "Name": "Direction3DState",
@@ -70957,6 +71584,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Input"
+            ]
+          },
           "Category": "Behavior",
           "MemberType": "Property",
           "Name": "Enabled",
@@ -70975,6 +71607,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Input"
+            ]
+          },
           "Category": "Behavior",
           "MemberType": "Property",
           "Name": "Type",
@@ -70993,6 +71630,9 @@
           }
         },
         {
+          "Capabilities": [
+            "Input"
+          ],
           "MemberType": "Function",
           "Name": "Fire",
           "Parameters": [
@@ -71012,6 +71652,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Input"
+          ],
           "MemberType": "Function",
           "Name": "GetState",
           "Parameters": [],
@@ -71023,6 +71666,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Input"
+          ],
           "MemberType": "Event",
           "Name": "Pressed",
           "Parameters": [],
@@ -71030,6 +71676,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Input"
+          ],
           "MemberType": "Event",
           "Name": "Released",
           "Parameters": [],
@@ -71037,6 +71686,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Input"
+          ],
           "MemberType": "Event",
           "Name": "StateChanged",
           "Parameters": [
@@ -71062,6 +71714,11 @@
     {
       "Members": [
         {
+          "Capabilities": {
+            "Read": [
+              "Input"
+            ]
+          },
           "Category": "Composite Directions",
           "MemberType": "Property",
           "Name": "Backward",
@@ -71080,6 +71737,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Input"
+            ]
+          },
           "Category": "Composite Directions",
           "MemberType": "Property",
           "Name": "Down",
@@ -71098,6 +71760,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Input"
+            ]
+          },
           "Category": "Composite Directions",
           "MemberType": "Property",
           "Name": "Forward",
@@ -71116,6 +71783,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Input"
+            ]
+          },
           "Category": "Behavior",
           "MemberType": "Property",
           "Name": "KeyCode",
@@ -71134,6 +71806,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Input"
+            ]
+          },
           "Category": "Composite Directions",
           "MemberType": "Property",
           "Name": "Left",
@@ -71152,6 +71829,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Input"
+            ]
+          },
           "Category": "Behavior",
           "MemberType": "Property",
           "Name": "PressedThreshold",
@@ -71170,6 +71852,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Input"
+            ]
+          },
           "Category": "Behavior",
           "MemberType": "Property",
           "Name": "ReleasedThreshold",
@@ -71188,6 +71875,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Input"
+            ]
+          },
           "Category": "Composite Directions",
           "MemberType": "Property",
           "Name": "Right",
@@ -71206,6 +71898,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Input"
+            ]
+          },
           "Category": "Behavior",
           "MemberType": "Property",
           "Name": "Scale",
@@ -71224,6 +71921,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Input"
+            ]
+          },
           "Category": "Behavior",
           "MemberType": "Property",
           "Name": "UIButton",
@@ -71242,6 +71944,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Input"
+            ]
+          },
           "Category": "Composite Directions",
           "MemberType": "Property",
           "Name": "Up",
@@ -71260,6 +71967,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Input"
+            ]
+          },
           "Category": "Behavior",
           "MemberType": "Property",
           "Name": "Vector2Scale",
@@ -71288,6 +72000,11 @@
     {
       "Members": [
         {
+          "Capabilities": {
+            "Read": [
+              "Input"
+            ]
+          },
           "Category": "Behavior",
           "MemberType": "Property",
           "Name": "Enabled",
@@ -71306,6 +72023,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Input"
+            ]
+          },
           "Category": "Behavior",
           "MemberType": "Property",
           "Name": "Priority",
@@ -71324,6 +72046,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Input"
+            ]
+          },
           "Category": "Behavior",
           "MemberType": "Property",
           "Name": "Sink",
@@ -85805,6 +86532,17 @@
         },
         {
           "MemberType": "Function",
+          "Name": "GetPhysicsCost",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "float"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Safe"
+        },
+        {
+          "MemberType": "Function",
           "Name": "GetRenderCFrame",
           "Parameters": [],
           "ReturnType": {
@@ -86405,7 +87143,8 @@
         {
           "Capabilities": {
             "Read": [
-              "Basic"
+              "Basic",
+              "Avatar"
             ]
           },
           "Category": "Control",
@@ -86428,7 +87167,8 @@
         {
           "Capabilities": {
             "Read": [
-              "Basic"
+              "Basic",
+              "Avatar"
             ]
           },
           "Category": "Control",
@@ -86454,7 +87194,8 @@
         },
         {
           "Capabilities": [
-            "Basic"
+            "Basic",
+            "Avatar"
           ],
           "MemberType": "Function",
           "Name": "Sit",
@@ -86756,7 +87497,8 @@
         {
           "Capabilities": {
             "Read": [
-              "Basic"
+              "Basic",
+              "Players"
             ]
           },
           "Category": "Teams",
@@ -86779,7 +87521,8 @@
         {
           "Capabilities": {
             "Read": [
-              "Basic"
+              "Basic",
+              "Players"
             ]
           },
           "Category": "Forcefield",
@@ -86802,7 +87545,8 @@
         {
           "Capabilities": {
             "Read": [
-              "Basic"
+              "Basic",
+              "Players"
             ]
           },
           "Category": "Behavior",
@@ -86825,7 +87569,8 @@
         {
           "Capabilities": {
             "Read": [
-              "Basic"
+              "Basic",
+              "Players"
             ]
           },
           "Category": "Teams",
@@ -86848,7 +87593,8 @@
         {
           "Capabilities": {
             "Read": [
-              "Basic"
+              "Basic",
+              "Players"
             ]
           },
           "Category": "Teams",
@@ -89053,6 +89799,12 @@
     {
       "Members": [
         {
+          "Capabilities": {
+            "Read": [
+              "Basic",
+              "Avatar"
+            ]
+          },
           "Category": "Control",
           "MemberType": "Property",
           "Name": "AreHingesDetected",
@@ -89075,6 +89827,12 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Basic",
+              "Avatar"
+            ]
+          },
           "Category": "Control",
           "MemberType": "Property",
           "Name": "Disabled",
@@ -89093,6 +89851,12 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Basic",
+              "Avatar"
+            ]
+          },
           "Category": "Control",
           "MemberType": "Property",
           "Name": "HeadsUpDisplay",
@@ -89111,6 +89875,12 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Basic",
+              "Avatar"
+            ]
+          },
           "Category": "Control",
           "MemberType": "Property",
           "Name": "MaxSpeed",
@@ -89129,6 +89899,12 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Basic",
+              "Avatar"
+            ]
+          },
           "Category": "Control",
           "MemberType": "Property",
           "Name": "Occupant",
@@ -89151,6 +89927,12 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Basic",
+              "Avatar"
+            ]
+          },
           "Category": "Control",
           "MemberType": "Property",
           "Name": "Steer",
@@ -89172,6 +89954,12 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Basic",
+              "Avatar"
+            ]
+          },
           "Category": "Control",
           "MemberType": "Property",
           "Name": "SteerFloat",
@@ -89190,6 +89978,12 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Basic",
+              "Avatar"
+            ]
+          },
           "Category": "Control",
           "MemberType": "Property",
           "Name": "Throttle",
@@ -89211,6 +90005,12 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Basic",
+              "Avatar"
+            ]
+          },
           "Category": "Control",
           "MemberType": "Property",
           "Name": "ThrottleFloat",
@@ -89229,6 +90029,12 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Basic",
+              "Avatar"
+            ]
+          },
           "Category": "Control",
           "MemberType": "Property",
           "Name": "Torque",
@@ -89247,6 +90053,12 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Basic",
+              "Avatar"
+            ]
+          },
           "Category": "Control",
           "MemberType": "Property",
           "Name": "TurnSpeed",
@@ -89265,6 +90077,10 @@
           }
         },
         {
+          "Capabilities": [
+            "Basic",
+            "Avatar"
+          ],
           "MemberType": "Function",
           "Name": "Sit",
           "Parameters": [
@@ -90449,6 +91265,9 @@
     {
       "Members": [
         {
+          "Capabilities": [
+            "Basic"
+          ],
           "MemberType": "Function",
           "Name": "BindToMessage",
           "Parameters": [
@@ -90475,6 +91294,9 @@
           "ThreadSafety": "Safe"
         },
         {
+          "Capabilities": [
+            "Basic"
+          ],
           "MemberType": "Function",
           "Name": "BindToMessageParallel",
           "Parameters": [
@@ -90501,6 +91323,9 @@
           "ThreadSafety": "Safe"
         },
         {
+          "Capabilities": [
+            "Basic"
+          ],
           "MemberType": "Function",
           "Name": "SendMessage",
           "Parameters": [
@@ -90562,6 +91387,11 @@
     {
       "Members": [
         {
+          "Capabilities": {
+            "Read": [
+              "Input"
+            ]
+          },
           "Category": "Data",
           "MemberType": "Property",
           "Name": "Active",
@@ -90580,6 +91410,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Input"
+            ]
+          },
           "Category": "Data",
           "MemberType": "Property",
           "Name": "BinType",
@@ -90598,6 +91433,9 @@
           }
         },
         {
+          "Capabilities": [
+            "Input"
+          ],
           "MemberType": "Function",
           "Name": "Disable",
           "Parameters": [],
@@ -90609,6 +91447,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Input"
+          ],
           "MemberType": "Function",
           "Name": "ToggleSelect",
           "Parameters": [],
@@ -90620,6 +91461,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Input"
+          ],
           "MemberType": "Event",
           "Name": "Deselected",
           "Parameters": [],
@@ -90627,6 +91471,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Input"
+          ],
           "MemberType": "Event",
           "Name": "Selected",
           "Parameters": [
@@ -90652,6 +91499,11 @@
     {
       "Members": [
         {
+          "Capabilities": {
+            "Read": [
+              "Input"
+            ]
+          },
           "Category": "Behavior",
           "MemberType": "Property",
           "Name": "CanBeDropped",
@@ -90670,6 +91522,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Input"
+            ]
+          },
           "Category": "State",
           "MemberType": "Property",
           "Name": "Enabled",
@@ -90688,6 +91545,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Input"
+            ]
+          },
           "Category": "Transform",
           "MemberType": "Property",
           "Name": "Grip",
@@ -90706,6 +91568,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Input"
+            ]
+          },
           "Category": "Transform",
           "MemberType": "Property",
           "Name": "GripForward",
@@ -90728,6 +91595,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Input"
+            ]
+          },
           "Category": "Transform",
           "MemberType": "Property",
           "Name": "GripPos",
@@ -90750,6 +91622,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Input"
+            ]
+          },
           "Category": "Transform",
           "MemberType": "Property",
           "Name": "GripRight",
@@ -90772,6 +91649,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Input"
+            ]
+          },
           "Category": "Transform",
           "MemberType": "Property",
           "Name": "GripUp",
@@ -90794,6 +91676,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Input"
+            ]
+          },
           "Category": "Behavior",
           "MemberType": "Property",
           "Name": "ManualActivationOnly",
@@ -90812,6 +91699,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Input"
+            ]
+          },
           "Category": "Behavior",
           "MemberType": "Property",
           "Name": "RequiresHandle",
@@ -90830,6 +91722,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Input"
+            ]
+          },
           "Category": "Appearance",
           "MemberType": "Property",
           "Name": "ToolTip",
@@ -90848,6 +91745,9 @@
           }
         },
         {
+          "Capabilities": [
+            "Input"
+          ],
           "MemberType": "Function",
           "Name": "Activate",
           "Parameters": [],
@@ -90859,6 +91759,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Input"
+          ],
           "MemberType": "Function",
           "Name": "Deactivate",
           "Parameters": [],
@@ -90870,6 +91773,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Input"
+          ],
           "MemberType": "Event",
           "Name": "Activated",
           "Parameters": [],
@@ -90877,6 +91783,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Input"
+          ],
           "MemberType": "Event",
           "Name": "Deactivated",
           "Parameters": [],
@@ -90884,6 +91793,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Input"
+          ],
           "MemberType": "Event",
           "Name": "Equipped",
           "Parameters": [
@@ -90899,6 +91811,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Input"
+          ],
           "MemberType": "Event",
           "Name": "Unequipped",
           "Parameters": [],
@@ -90913,6 +91828,12 @@
     {
       "Members": [
         {
+          "Capabilities": {
+            "Read": [
+              "Basic",
+              "Input"
+            ]
+          },
           "Category": "Data",
           "MemberType": "Property",
           "Name": "TeamColor",
@@ -91365,6 +92286,62 @@
             "Deprecated"
           ],
           "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetAwakeContactNormals",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Array"
+          },
+          "Security": "RobloxScriptSecurity",
+          "Tags": [
+            "CustomLuaState"
+          ],
+          "ThreadSafety": "Safe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetAwakeContactParts",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Array"
+          },
+          "Security": "RobloxScriptSecurity",
+          "Tags": [
+            "CustomLuaState"
+          ],
+          "ThreadSafety": "Safe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetAwakeContactPositions",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Array"
+          },
+          "Security": "RobloxScriptSecurity",
+          "Tags": [
+            "CustomLuaState"
+          ],
+          "ThreadSafety": "Safe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetAwakeRootParts",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "DataType",
+            "Name": "Instances"
+          },
+          "Security": "RobloxScriptSecurity",
+          "Tags": [
+            "CustomLuaState"
+          ],
+          "ThreadSafety": "Safe"
         },
         {
           "MemberType": "Function",
@@ -91899,6 +92876,27 @@
           }
         },
         {
+          "Category": "Server Authority",
+          "MemberType": "Property",
+          "Name": "AuthorityMode",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "Tags": [
+            "NotScriptable"
+          ],
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Enum",
+            "Name": "AuthorityMode"
+          }
+        },
+        {
           "Category": "Behavior",
           "MemberType": "Property",
           "Name": "AvatarUnificationMode",
@@ -92158,6 +93156,24 @@
           "ValueType": {
             "Category": "Enum",
             "Name": "InterpolationThrottlingMode"
+          }
+        },
+        {
+          "Category": "Behavior",
+          "MemberType": "Property",
+          "Name": "LuauTypeCheckMode",
+          "Security": {
+            "Read": "PluginSecurity",
+            "Write": "PluginSecurity"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Enum",
+            "Name": "LuauTypeCheckMode"
           }
         },
         {
@@ -92615,6 +93631,27 @@
           "ValueType": {
             "Category": "Primitive",
             "Name": "bool"
+          }
+        },
+        {
+          "Category": "Behavior",
+          "MemberType": "Property",
+          "Name": "UseImprovedModelLod",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "Tags": [
+            "NotScriptable"
+          ],
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Enum",
+            "Name": "RolloutState"
           }
         },
         {
@@ -93611,16 +94648,6 @@
     {
       "Members": [],
       "MemoryCategory": "Instances",
-      "Name": "FeedPages",
-      "Superclass": "Pages",
-      "Tags": [
-        "NotCreatable",
-        "NotReplicated"
-      ]
-    },
-    {
-      "Members": [],
-      "MemoryCategory": "Instances",
       "Name": "FriendPages",
       "Superclass": "Pages",
       "Tags": [
@@ -93662,6 +94689,16 @@
       "Members": [],
       "MemoryCategory": "Instances",
       "Name": "OutfitPages",
+      "Superclass": "Pages",
+      "Tags": [
+        "NotCreatable",
+        "NotReplicated"
+      ]
+    },
+    {
+      "Members": [],
+      "MemoryCategory": "Instances",
+      "Name": "RecommendationPages",
       "Superclass": "Pages",
       "Tags": [
         "NotCreatable",
@@ -94642,6 +95679,11 @@
     {
       "Members": [
         {
+          "Capabilities": {
+            "Read": [
+              "Basic"
+            ]
+          },
           "Category": "Data",
           "MemberType": "Property",
           "Name": "Status",
@@ -94664,6 +95706,9 @@
           }
         },
         {
+          "Capabilities": [
+            "Basic"
+          ],
           "MemberType": "Function",
           "Name": "GetPointCoordinates",
           "Parameters": [],
@@ -94678,6 +95723,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Basic"
+          ],
           "MemberType": "Function",
           "Name": "GetWaypoints",
           "Parameters": [],
@@ -94689,6 +95737,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Basic"
+          ],
           "MemberType": "Function",
           "Name": "CheckOcclusionAsync",
           "Parameters": [
@@ -94711,6 +95762,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Basic"
+          ],
           "MemberType": "Function",
           "Name": "ComputeAsync",
           "Parameters": [
@@ -94740,6 +95794,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Basic"
+          ],
           "MemberType": "Event",
           "Name": "Blocked",
           "Parameters": [
@@ -94755,6 +95812,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Basic"
+          ],
           "MemberType": "Event",
           "Name": "Unblocked",
           "Parameters": [
@@ -94781,6 +95841,11 @@
     {
       "Members": [
         {
+          "Capabilities": {
+            "Read": [
+              "Basic"
+            ]
+          },
           "Category": "Data",
           "MemberType": "Property",
           "Name": "Attachment0",
@@ -94799,6 +95864,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Basic"
+            ]
+          },
           "Category": "Data",
           "MemberType": "Property",
           "Name": "Attachment1",
@@ -94817,6 +95887,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Basic"
+            ]
+          },
           "Category": "Data",
           "MemberType": "Property",
           "Name": "IsBidirectional",
@@ -94835,6 +95910,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Basic"
+            ]
+          },
           "Category": "Data",
           "MemberType": "Property",
           "Name": "Label",
@@ -94860,6 +95940,11 @@
     {
       "Members": [
         {
+          "Capabilities": {
+            "Read": [
+              "Basic"
+            ]
+          },
           "Category": "Data",
           "MemberType": "Property",
           "Name": "Label",
@@ -94878,6 +95963,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Basic"
+            ]
+          },
           "Category": "Data",
           "MemberType": "Property",
           "Name": "PassThrough",
@@ -94903,6 +95993,11 @@
     {
       "Members": [
         {
+          "Capabilities": {
+            "Read": [
+              "Basic"
+            ]
+          },
           "Category": "Data",
           "MemberType": "Property",
           "Name": "EmptyCutoff",
@@ -94925,6 +96020,9 @@
           }
         },
         {
+          "Capabilities": [
+            "Basic"
+          ],
           "MemberType": "Function",
           "Name": "CreatePath",
           "Parameters": [
@@ -94945,6 +96043,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Basic"
+          ],
           "MemberType": "Function",
           "Name": "ComputeRawPathAsync",
           "Parameters": [
@@ -94982,6 +96083,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Basic"
+          ],
           "MemberType": "Function",
           "Name": "ComputeSmoothPathAsync",
           "Parameters": [
@@ -95019,6 +96123,9 @@
           "ThreadSafety": "Unsafe"
         },
         {
+          "Capabilities": [
+            "Basic"
+          ],
           "MemberType": "Function",
           "Name": "FindPathAsync",
           "Parameters": [
@@ -99678,6 +100785,24 @@
             }
           ],
           "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Players"
+          ],
+          "MemberType": "Event",
+          "Name": "CloudEditSelectionChanged",
+          "Parameters": [
+            {
+              "Name": "newSelection",
+              "Type": {
+                "Category": "Group",
+                "Name": "Array"
+              }
+            }
+          ],
+          "Security": "RobloxScriptSecurity",
           "ThreadSafety": "Unsafe"
         },
         {
@@ -106987,6 +108112,205 @@
       ]
     },
     {
+      "Members": [
+        {
+          "Capabilities": [
+            "InternalTest"
+          ],
+          "MemberType": "Function",
+          "Name": "LogActionEvent",
+          "Parameters": [
+            {
+              "Name": "actionType",
+              "Type": {
+                "Category": "Enum",
+                "Name": "RecommendationActionType"
+              }
+            },
+            {
+              "Name": "itemId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            },
+            {
+              "Name": "tracingId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            },
+            {
+              "Default": "nil",
+              "Name": "actionEventDetails",
+              "Type": {
+                "Category": "Group",
+                "Name": "Dictionary"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "InternalTest"
+          ],
+          "MemberType": "Function",
+          "Name": "LogImpressionEvent",
+          "Parameters": [
+            {
+              "Name": "impressionType",
+              "Type": {
+                "Category": "Enum",
+                "Name": "RecommendationImpressionType"
+              }
+            },
+            {
+              "Name": "itemId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            },
+            {
+              "Name": "tracingId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            },
+            {
+              "Default": "nil",
+              "Name": "impressionEventDetails",
+              "Type": {
+                "Category": "Group",
+                "Name": "Dictionary"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "InternalTest"
+          ],
+          "MemberType": "Function",
+          "Name": "GenerateItemListAsync",
+          "Parameters": [
+            {
+              "Name": "generateRecommendationItemListRequest",
+              "Type": {
+                "Category": "Group",
+                "Name": "Dictionary"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Class",
+            "Name": "RecommendationPages"
+          },
+          "Security": "None",
+          "Tags": [
+            "Yields"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "InternalTest"
+          ],
+          "MemberType": "Function",
+          "Name": "RegisterItemAsync",
+          "Parameters": [
+            {
+              "Name": "registerRecommendationItemsRequest",
+              "Type": {
+                "Category": "Group",
+                "Name": "Dictionary"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Dictionary"
+          },
+          "Security": "None",
+          "Tags": [
+            "Yields"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "InternalTest"
+          ],
+          "MemberType": "Function",
+          "Name": "RemoveItemAsync",
+          "Parameters": [
+            {
+              "Name": "itemId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "None",
+          "Tags": [
+            "Yields"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "InternalTest"
+          ],
+          "MemberType": "Function",
+          "Name": "UpdateItemAsync",
+          "Parameters": [
+            {
+              "Name": "updateRecommendationItemRequest",
+              "Type": {
+                "Category": "Group",
+                "Name": "Dictionary"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "None",
+          "Tags": [
+            "Yields"
+          ],
+          "ThreadSafety": "Unsafe"
+        }
+      ],
+      "MemoryCategory": "Instances",
+      "Name": "RecommendationService",
+      "Superclass": "Instance",
+      "Tags": [
+        "NotCreatable",
+        "Service"
+      ]
+    },
+    {
       "Members": [],
       "MemoryCategory": "Instances",
       "Name": "ReflectionMetadata",
@@ -109940,17 +111264,6 @@
         },
         {
           "MemberType": "Function",
-          "Name": "ClearScriptProfilingData",
-          "Parameters": [],
-          "ReturnType": {
-            "Category": "Primitive",
-            "Name": "null"
-          },
-          "Security": "RobloxScriptSecurity",
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
           "Name": "CompressLuaApp",
           "Parameters": [],
           "ReturnType": {
@@ -109958,28 +111271,6 @@
             "Name": "null"
           },
           "Security": "RobloxScriptSecurity",
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "DeserializeScriptProfilerString",
-          "Parameters": [
-            {
-              "Name": "jsonString",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "string?"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Group",
-            "Name": "Dictionary"
-          },
-          "Security": "RobloxScriptSecurity",
-          "Tags": [
-            "CustomLuaState"
-          ],
           "ThreadSafety": "Unsafe"
         },
         {
@@ -110039,48 +111330,11 @@
         },
         {
           "MemberType": "Function",
-          "Name": "GetScriptProfilingData",
-          "Parameters": [],
-          "ReturnType": {
-            "Category": "Primitive",
-            "Name": "string"
-          },
-          "Security": "RobloxScriptSecurity",
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
           "Name": "ReportLuaRequireCount",
           "Parameters": [],
           "ReturnType": {
             "Category": "Primitive",
             "Name": "null"
-          },
-          "Security": "RobloxScriptSecurity",
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "SaveScriptProfilingData",
-          "Parameters": [
-            {
-              "Name": "jsonString",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "string"
-              }
-            },
-            {
-              "Name": "filename",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "string"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Primitive",
-            "Name": "string"
           },
           "Security": "RobloxScriptSecurity",
           "ThreadSafety": "Unsafe"
@@ -110102,36 +111356,6 @@
             "Name": "null"
           },
           "Security": "PluginSecurity",
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "StartScriptProfiling",
-          "Parameters": [
-            {
-              "Name": "frequency",
-              "Type": {
-                "Category": "Primitive",
-                "Name": "int?"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Primitive",
-            "Name": "null"
-          },
-          "Security": "RobloxScriptSecurity",
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
-          "Name": "StopScriptProfiling",
-          "Parameters": [],
-          "ReturnType": {
-            "Category": "Primitive",
-            "Name": "string"
-          },
-          "Security": "RobloxScriptSecurity",
           "ThreadSafety": "Unsafe"
         },
         {
@@ -111392,6 +112616,14 @@
                 "Category": "Class",
                 "Name": "LuaSourceContainer"
               }
+            },
+            {
+              "Default": "nil",
+              "Name": "options",
+              "Type": {
+                "Category": "Group",
+                "Name": "Dictionary"
+              }
             }
           ],
           "ReturnType": {
@@ -112086,6 +113318,11 @@
     {
       "Members": [
         {
+          "Capabilities": {
+            "Read": [
+              "Basic"
+            ]
+          },
           "Category": "Output",
           "MemberType": "Property",
           "Name": "AirDensity",
@@ -112108,6 +113345,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Basic"
+            ]
+          },
           "Category": "Output",
           "MemberType": "Property",
           "Name": "RelativeWindVelocity",
@@ -112137,6 +113379,11 @@
     {
       "Members": [
         {
+          "Capabilities": {
+            "Read": [
+              "Basic"
+            ]
+          },
           "Category": "Output",
           "MemberType": "Property",
           "Name": "FullySubmerged",
@@ -112155,6 +113402,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Basic"
+            ]
+          },
           "Category": "Output",
           "MemberType": "Property",
           "Name": "TouchingSurface",
@@ -112189,6 +113441,11 @@
     {
       "Members": [
         {
+          "Capabilities": {
+            "Read": [
+              "Basic"
+            ]
+          },
           "Category": "Output",
           "MemberType": "Property",
           "Name": "HitFrame",
@@ -112207,6 +113464,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Basic"
+            ]
+          },
           "Category": "Output",
           "MemberType": "Property",
           "Name": "HitNormal",
@@ -112225,6 +113487,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Basic"
+            ]
+          },
           "Category": "Input",
           "MemberType": "Property",
           "Name": "SearchDistance",
@@ -112243,6 +113510,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Basic"
+            ]
+          },
           "Category": "Output",
           "MemberType": "Property",
           "Name": "SensedPart",
@@ -112261,6 +113533,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Basic"
+            ]
+          },
           "Category": "Input",
           "MemberType": "Property",
           "Name": "SensorMode",
@@ -112286,6 +113563,11 @@
     {
       "Members": [
         {
+          "Capabilities": {
+            "Read": [
+              "Basic"
+            ]
+          },
           "Category": "Output",
           "MemberType": "Property",
           "Name": "CenterOfPressure",
@@ -112308,6 +113590,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Basic"
+            ]
+          },
           "Category": "Output",
           "MemberType": "Property",
           "Name": "Force",
@@ -112330,6 +113617,11 @@
           }
         },
         {
+          "Capabilities": {
+            "Read": [
+              "Basic"
+            ]
+          },
           "Category": "Output",
           "MemberType": "Property",
           "Name": "Torque",
@@ -112352,6 +113644,9 @@
           }
         },
         {
+          "Capabilities": [
+            "Basic"
+          ],
           "MemberType": "Function",
           "Name": "EvaluateAsync",
           "Parameters": [
@@ -114929,6 +116224,17 @@
       "MemoryCategory": "Instances",
       "Name": "Sky",
       "Superclass": "Instance"
+    },
+    {
+      "Members": [],
+      "MemoryCategory": "Instances",
+      "Name": "SlimService",
+      "Superclass": "Instance",
+      "Tags": [
+        "NotCreatable",
+        "Service",
+        "NotReplicated"
+      ]
     },
     {
       "Members": [
@@ -122153,6 +123459,24 @@
           "ValueType": {
             "Category": "Primitive",
             "Name": "float"
+          }
+        },
+        {
+          "Category": "Camera",
+          "MemberType": "Property",
+          "Name": "CameraSpeedLockDefault",
+          "Security": {
+            "Read": "RobloxScriptSecurity",
+            "Write": "RobloxScriptSecurity"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "bool"
           }
         },
         {
@@ -137084,6 +138408,28 @@
         },
         {
           "MemberType": "Function",
+          "Name": "CalculateBodyMaxCageDistance",
+          "Parameters": [
+            {
+              "Name": "inputBodyParts",
+              "Type": {
+                "Category": "Group",
+                "Name": "Array"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Tuple"
+          },
+          "Security": "RobloxScriptSecurity",
+          "Tags": [
+            "Yields"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
           "Name": "CalculateMeshInsideMeshPercentage",
           "Parameters": [
             {
@@ -150702,6 +152048,19 @@
     {
       "Items": [
         {
+          "Name": "Server",
+          "Value": 0
+        },
+        {
+          "Name": "Automatic",
+          "Value": 1
+        }
+      ],
+      "Name": "AuthorityMode"
+    },
+    {
+      "Items": [
+        {
           "Name": "Off",
           "Value": 0
         },
@@ -154048,31 +155407,6 @@
         }
       ],
       "Name": "FacsActionUnit"
-    },
-    {
-      "Items": [
-        {
-          "Name": "Content",
-          "Value": 0
-        },
-        {
-          "Name": "Final",
-          "Value": 1
-        },
-        {
-          "Name": "GameJoin",
-          "Value": 2
-        },
-        {
-          "Name": "Interaction",
-          "Value": 3
-        },
-        {
-          "Name": "Sharing",
-          "Value": 4
-        }
-      ],
-      "Name": "FeedRankingScoreType"
     },
     {
       "Items": [
@@ -157481,6 +158815,23 @@
     {
       "Items": [
         {
+          "Name": "NoCheck",
+          "Value": 0
+        },
+        {
+          "Name": "Nonstrict",
+          "Value": 1
+        },
+        {
+          "Name": "Strict",
+          "Value": 2
+        }
+      ],
+      "Name": "LuauTypeCheckMode"
+    },
+    {
+      "Items": [
+        {
           "Name": "Completed",
           "Value": 1
         },
@@ -158001,6 +159352,9 @@
           "Value": 0
         },
         {
+          "LegacyNames": [
+            "Enabled"
+          ],
           "Name": "StreamingMesh",
           "Value": 1
         },
@@ -159514,6 +160868,61 @@
         }
       ],
       "Name": "RaycastFilterType"
+    },
+    {
+      "Items": [
+        {
+          "Name": "AddReaction",
+          "Value": 0
+        },
+        {
+          "Name": "RemoveReaction",
+          "Value": 1
+        },
+        {
+          "Name": "Share",
+          "Value": 2
+        },
+        {
+          "Name": "Report",
+          "Value": 3
+        },
+        {
+          "Name": "Comment",
+          "Value": 4
+        },
+        {
+          "Name": "Play",
+          "Value": 5
+        },
+        {
+          "Name": "Purchase",
+          "Value": 6
+        }
+      ],
+      "Name": "RecommendationActionType"
+    },
+    {
+      "Items": [
+        {
+          "Name": "View",
+          "Value": 0
+        }
+      ],
+      "Name": "RecommendationImpressionType"
+    },
+    {
+      "Items": [
+        {
+          "Name": "Private",
+          "Value": 0
+        },
+        {
+          "Name": "Public",
+          "Value": 1
+        }
+      ],
+      "Name": "RecommendationItemVisibility"
     },
     {
       "Items": [
