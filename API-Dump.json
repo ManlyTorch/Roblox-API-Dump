@@ -399,13 +399,6 @@
                 "Category": "Primitive",
                 "Name": "string"
               }
-            },
-            {
-              "Name": "defaultValue",
-              "Type": {
-                "Category": "Group",
-                "Name": "Variant"
-              }
             }
           ],
           "ReturnType": {
@@ -3384,6 +3377,20 @@
           "ThreadSafety": "Safe"
         },
         {
+          "Capabilities": [
+            "InternalTest"
+          ],
+          "MemberType": "Function",
+          "Name": "GetPredictionMode",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Enum",
+            "Name": "PredictionMode"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
           "MemberType": "Function",
           "Name": "GetStyled",
           "Parameters": [
@@ -4839,6 +4846,42 @@
             "Name": "Variant"
           },
           "Security": "None",
+          "Tags": [
+            "Yields"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetAdAvailabilityNowForUniverseAsync",
+          "Parameters": [
+            {
+              "Name": "adFormat",
+              "Type": {
+                "Category": "Enum",
+                "Name": "AdFormat"
+              }
+            },
+            {
+              "Name": "universeId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            },
+            {
+              "Name": "isUniversalAppDM",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "bool"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Variant"
+          },
+          "Security": "RobloxScriptSecurity",
           "Tags": [
             "Yields"
           ],
@@ -73193,25 +73236,6 @@
       "Members": [
         {
           "MemberType": "Function",
-          "Name": "AddKnownAssetsToCache",
-          "Parameters": [
-            {
-              "Name": "knownAssets",
-              "Type": {
-                "Category": "Group",
-                "Name": "Dictionary"
-              }
-            }
-          ],
-          "ReturnType": {
-            "Category": "Primitive",
-            "Name": "null"
-          },
-          "Security": "RobloxScriptSecurity",
-          "ThreadSafety": "Unsafe"
-        },
-        {
-          "MemberType": "Function",
           "Name": "ApplyPreset",
           "Parameters": [
             {
@@ -76515,15 +76539,12 @@
           "Name": "LightingStyle",
           "Security": {
             "Read": "None",
-            "Write": "None"
+            "Write": "RobloxScriptSecurity"
           },
           "Serialization": {
             "CanLoad": true,
             "CanSave": true
           },
-          "Tags": [
-            "NotScriptable"
-          ],
           "ThreadSafety": "ReadSafe",
           "ValueType": {
             "Category": "Enum",
@@ -76590,15 +76611,12 @@
           "Name": "PrioritizeLightingQuality",
           "Security": {
             "Read": "None",
-            "Write": "None"
+            "Write": "RobloxScriptSecurity"
           },
           "Serialization": {
             "CanLoad": true,
             "CanSave": true
           },
-          "Tags": [
-            "NotScriptable"
-          ],
           "ThreadSafety": "ReadSafe",
           "ValueType": {
             "Category": "Primitive",
@@ -103121,6 +103139,56 @@
             "Players"
           ],
           "MemberType": "Event",
+          "Name": "InstancePinned",
+          "Parameters": [
+            {
+              "Name": "uniqueIdString",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            },
+            {
+              "Name": "depth",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int"
+              }
+            }
+          ],
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Players"
+          ],
+          "MemberType": "Event",
+          "Name": "InstanceUnpinned",
+          "Parameters": [
+            {
+              "Name": "uniqueIdString",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            },
+            {
+              "Name": "depth",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int"
+              }
+            }
+          ],
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Players"
+          ],
+          "MemberType": "Event",
           "Name": "OnTeleport",
           "Parameters": [
             {
@@ -106317,6 +106385,9 @@
             "Name": "null"
           },
           "Security": "PluginSecurity",
+          "Tags": [
+            "Deprecated"
+          ],
           "ThreadSafety": "Unsafe"
         },
         {
@@ -121602,6 +121673,24 @@
         {
           "Category": "Data",
           "MemberType": "Property",
+          "Name": "AcousticSimulationEnabled",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "bool"
+          }
+        },
+        {
+          "Category": "Data",
+          "MemberType": "Property",
           "Name": "AmbientReverb",
           "Security": {
             "Read": "None",
@@ -127571,6 +127660,24 @@
           }
         },
         {
+          "Category": "Data",
+          "MemberType": "Property",
+          "Name": "MaxFindReplaceAllResults",
+          "Security": {
+            "Read": "RobloxScriptSecurity",
+            "Write": "RobloxScriptSecurity"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "int"
+          }
+        },
+        {
           "Category": "Output",
           "MemberType": "Property",
           "Name": "Maximum Output Lines",
@@ -128596,42 +128703,6 @@
           }
         },
         {
-          "Category": "Streaming",
-          "MemberType": "Property",
-          "Name": "StudioStreamingMaxRadius",
-          "Security": {
-            "Read": "RobloxScriptSecurity",
-            "Write": "RobloxScriptSecurity"
-          },
-          "Serialization": {
-            "CanLoad": true,
-            "CanSave": true
-          },
-          "ThreadSafety": "ReadSafe",
-          "ValueType": {
-            "Category": "Primitive",
-            "Name": "int"
-          }
-        },
-        {
-          "Category": "Streaming",
-          "MemberType": "Property",
-          "Name": "StudioStreamingMinRadius",
-          "Security": {
-            "Read": "RobloxScriptSecurity",
-            "Write": "RobloxScriptSecurity"
-          },
-          "Serialization": {
-            "CanLoad": true,
-            "CanSave": true
-          },
-          "ThreadSafety": "ReadSafe",
-          "ValueType": {
-            "Category": "Primitive",
-            "Name": "int"
-          }
-        },
-        {
           "Category": "Script Editor",
           "MemberType": "Property",
           "Name": "Tab Width",
@@ -128998,6 +129069,13 @@
                 "Category": "DataType",
                 "Name": "Function?"
               }
+            },
+            {
+              "Name": "options",
+              "Type": {
+                "Category": "Group",
+                "Name": "Dictionary?"
+              }
             }
           ],
           "ReturnType": {
@@ -129047,6 +129125,13 @@
               "Type": {
                 "Category": "DataType",
                 "Name": "Function?"
+              }
+            },
+            {
+              "Name": "options",
+              "Type": {
+                "Category": "Group",
+                "Name": "Dictionary?"
               }
             }
           ],
@@ -141625,6 +141710,25 @@
         },
         {
           "MemberType": "Function",
+          "Name": "ValidatePropertiesSensible",
+          "Parameters": [
+            {
+              "Name": "instance",
+              "Type": {
+                "Category": "Class",
+                "Name": "Instance"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Tuple"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
           "Name": "ValidateSkinnedEditableMesh",
           "Parameters": [
             {
@@ -146027,6 +146131,24 @@
           "ValueType": {
             "Category": "Primitive",
             "Name": "float"
+          }
+        },
+        {
+          "Category": "Data",
+          "MemberType": "Property",
+          "Name": "PeoplePageLayout",
+          "Security": {
+            "Read": "RobloxScriptSecurity",
+            "Write": "RobloxScriptSecurity"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Enum",
+            "Name": "PeoplePageLayout"
           }
         },
         {
@@ -153796,7 +153918,77 @@
       "Superclass": "Instance"
     },
     {
-      "Members": [],
+      "Members": [
+        {
+          "Capabilities": {
+            "Read": [
+              "Avatar"
+            ]
+          },
+          "Category": "Appearance",
+          "MemberType": "Property",
+          "Name": "ReferenceCageMeshContent",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "DataType",
+            "Name": "Content"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "Avatar"
+            ]
+          },
+          "Category": "Appearance",
+          "MemberType": "Property",
+          "Name": "UVMaxBound",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "DataType",
+            "Name": "Vector2"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "Avatar"
+            ]
+          },
+          "Category": "Appearance",
+          "MemberType": "Property",
+          "Name": "UVMinBound",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "DataType",
+            "Name": "Vector2"
+          }
+        }
+      ],
       "MemoryCategory": "Instances",
       "Name": "WrapTextureTransfer",
       "Superclass": "Instance"
@@ -155020,6 +155212,10 @@
         {
           "Name": "AvailableBoundChannel",
           "Value": 5
+        },
+        {
+          "Name": "AvailableBetaProgram",
+          "Value": 6
         }
       ],
       "Name": "AppUpdateStatus"
@@ -157492,6 +157688,10 @@
         {
           "Name": "AndroidRootedKick",
           "Value": 306
+        },
+        {
+          "Name": "ScreentimeLockoutKick",
+          "Value": 307
         },
         {
           "Name": "PlacelaunchErrors",
@@ -163546,6 +163746,19 @@
         }
       ],
       "Name": "PathfindingUseImprovedSearch"
+    },
+    {
+      "Items": [
+        {
+          "Name": "Card",
+          "Value": 0
+        },
+        {
+          "Name": "List",
+          "Value": 1
+        }
+      ],
+      "Name": "PeoplePageLayout"
     },
     {
       "Items": [
