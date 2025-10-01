@@ -7948,6 +7948,27 @@
         {
           "Category": "Data",
           "MemberType": "Property",
+          "Name": "ChannelId",
+          "Security": {
+            "Read": "RobloxScriptSecurity",
+            "Write": "RobloxScriptSecurity"
+          },
+          "Serialization": {
+            "CanLoad": false,
+            "CanSave": false
+          },
+          "Tags": [
+            "Hidden"
+          ],
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "string"
+          }
+        },
+        {
+          "Category": "Data",
+          "MemberType": "Property",
           "Name": "Contents",
           "Security": {
             "Read": "RobloxScriptSecurity",
@@ -8413,6 +8434,39 @@
         },
         {
           "MemberType": "Function",
+          "Name": "CreateOrUpdatePlacePreference",
+          "Parameters": [
+            {
+              "Name": "placeId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            },
+            {
+              "Name": "userId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            },
+            {
+              "Name": "placeContentPreference",
+              "Type": {
+                "Category": "Enum",
+                "Name": "PlaceContentPreference"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
           "Name": "DeleteAnnotation",
           "Parameters": [
             {
@@ -8470,6 +8524,32 @@
           "ReturnType": {
             "Category": "DataType",
             "Name": "Instances"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetPlacePreference",
+          "Parameters": [
+            {
+              "Name": "placeId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            },
+            {
+              "Name": "userId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Enum",
+            "Name": "PlaceContentPreference"
           },
           "Security": "RobloxScriptSecurity",
           "ThreadSafety": "Unsafe"
@@ -8572,6 +8652,150 @@
             "Name": "null"
           },
           "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "CreateOrUpdateChannelPreferenceAsync",
+          "Parameters": [
+            {
+              "Name": "userId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            },
+            {
+              "Name": "channelId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            },
+            {
+              "Name": "placeId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            },
+            {
+              "Name": "channelContentPreference",
+              "Type": {
+                "Category": "Enum",
+                "Name": "AnnotationChannelContentPreference"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "RobloxScriptSecurity",
+          "Tags": [
+            "Yields"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "CreateOrUpdatePlacePreferenceAsync",
+          "Parameters": [
+            {
+              "Name": "userId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            },
+            {
+              "Name": "placeContentPreference",
+              "Type": {
+                "Category": "Enum",
+                "Name": "AnnotationPlaceContentPreference"
+              }
+            },
+            {
+              "Name": "placeId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "RobloxScriptSecurity",
+          "Tags": [
+            "Yields"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetChannelPreferenceAsync",
+          "Parameters": [
+            {
+              "Name": "userId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            },
+            {
+              "Name": "channelId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            },
+            {
+              "Name": "placeId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Enum",
+            "Name": "AnnotationChannelContentPreference"
+          },
+          "Security": "RobloxScriptSecurity",
+          "Tags": [
+            "Yields"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetPlacePreferenceAsync",
+          "Parameters": [
+            {
+              "Name": "userId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            },
+            {
+              "Name": "placeId",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Enum",
+            "Name": "AnnotationPlaceContentPreference"
+          },
+          "Security": "RobloxScriptSecurity",
+          "Tags": [
+            "Yields"
+          ],
           "ThreadSafety": "Unsafe"
         },
         {
@@ -12990,6 +13214,29 @@
               "Audio"
             ]
           },
+          "Category": "Simulation",
+          "MemberType": "Property",
+          "Name": "AcousticSimulationEnabled",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "bool"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "Audio"
+            ]
+          },
           "Category": "Emission",
           "MemberType": "Property",
           "Name": "AngleAttenuation",
@@ -13093,6 +13340,9 @@
             "CanLoad": true,
             "CanSave": true
           },
+          "Tags": [
+            "Deprecated"
+          ],
           "ThreadSafety": "ReadSafe",
           "ValueType": {
             "Category": "Enum",
@@ -14698,6 +14948,29 @@
               "Audio"
             ]
           },
+          "Category": "Simulation",
+          "MemberType": "Property",
+          "Name": "AcousticSimulationEnabled",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "bool"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "Audio"
+            ]
+          },
           "Category": "Listening",
           "MemberType": "Property",
           "Name": "AngleAttenuation",
@@ -14801,6 +15074,9 @@
             "CanLoad": true,
             "CanSave": true
           },
+          "Tags": [
+            "Deprecated"
+          ],
           "ThreadSafety": "ReadSafe",
           "ValueType": {
             "Category": "Enum",
@@ -24443,16 +24719,13 @@
           "MemberType": "Property",
           "Name": "HSRAssetId",
           "Security": {
-            "Read": "RobloxSecurity",
+            "Read": "RobloxScriptSecurity",
             "Write": "RobloxSecurity"
           },
           "Serialization": {
             "CanLoad": true,
             "CanSave": true
           },
-          "Tags": [
-            "NotScriptable"
-          ],
           "ThreadSafety": "ReadSafe",
           "ValueType": {
             "Category": "DataType",
@@ -32815,7 +33088,7 @@
           "ThreadSafety": "Unsafe"
         }
       ],
-      "MemoryCategory": "PhysicsParts",
+      "MemoryCategory": "BaseParts",
       "Name": "Constraint",
       "Superclass": "Instance",
       "Tags": [
@@ -33110,7 +33383,7 @@
           }
         }
       ],
-      "MemoryCategory": "PhysicsParts",
+      "MemoryCategory": "BaseParts",
       "Name": "AlignOrientation",
       "Superclass": "Constraint"
     },
@@ -33370,7 +33643,7 @@
           }
         }
       ],
-      "MemoryCategory": "PhysicsParts",
+      "MemoryCategory": "BaseParts",
       "Name": "AlignPosition",
       "Superclass": "Constraint"
     },
@@ -33469,7 +33742,7 @@
           }
         }
       ],
-      "MemoryCategory": "PhysicsParts",
+      "MemoryCategory": "BaseParts",
       "Name": "AngularVelocity",
       "Superclass": "Constraint"
     },
@@ -33692,7 +33965,7 @@
           }
         }
       ],
-      "MemoryCategory": "PhysicsParts",
+      "MemoryCategory": "BaseParts",
       "Name": "AnimationConstraint",
       "Superclass": "Constraint",
       "Tags": [
@@ -33886,7 +34159,7 @@
           }
         }
       ],
-      "MemoryCategory": "PhysicsParts",
+      "MemoryCategory": "BaseParts",
       "Name": "BallSocketConstraint",
       "Superclass": "Constraint"
     },
@@ -34245,7 +34518,7 @@
           }
         }
       ],
-      "MemoryCategory": "PhysicsParts",
+      "MemoryCategory": "BaseParts",
       "Name": "HingeConstraint",
       "Superclass": "Constraint"
     },
@@ -34367,7 +34640,7 @@
           }
         }
       ],
-      "MemoryCategory": "PhysicsParts",
+      "MemoryCategory": "BaseParts",
       "Name": "LineForce",
       "Superclass": "Constraint"
     },
@@ -34696,19 +34969,19 @@
           }
         }
       ],
-      "MemoryCategory": "PhysicsParts",
+      "MemoryCategory": "BaseParts",
       "Name": "LinearVelocity",
       "Superclass": "Constraint"
     },
     {
       "Members": [],
-      "MemoryCategory": "PhysicsParts",
+      "MemoryCategory": "BaseParts",
       "Name": "PlaneConstraint",
       "Superclass": "Constraint"
     },
     {
       "Members": [],
-      "MemoryCategory": "PhysicsParts",
+      "MemoryCategory": "BaseParts",
       "Name": "Plane",
       "Superclass": "PlaneConstraint",
       "Tags": [
@@ -34717,7 +34990,7 @@
     },
     {
       "Members": [],
-      "MemoryCategory": "PhysicsParts",
+      "MemoryCategory": "BaseParts",
       "Name": "RigidConstraint",
       "Superclass": "Constraint"
     },
@@ -34866,7 +35139,7 @@
           }
         }
       ],
-      "MemoryCategory": "PhysicsParts",
+      "MemoryCategory": "BaseParts",
       "Name": "RodConstraint",
       "Superclass": "Constraint"
     },
@@ -35084,7 +35357,7 @@
           }
         }
       ],
-      "MemoryCategory": "PhysicsParts",
+      "MemoryCategory": "BaseParts",
       "Name": "RopeConstraint",
       "Superclass": "Constraint"
     },
@@ -35443,7 +35716,7 @@
           }
         }
       ],
-      "MemoryCategory": "PhysicsParts",
+      "MemoryCategory": "BaseParts",
       "Name": "SlidingBallConstraint",
       "Superclass": "Constraint",
       "Tags": [
@@ -35855,13 +36128,13 @@
           }
         }
       ],
-      "MemoryCategory": "PhysicsParts",
+      "MemoryCategory": "BaseParts",
       "Name": "CylindricalConstraint",
       "Superclass": "SlidingBallConstraint"
     },
     {
       "Members": [],
-      "MemoryCategory": "PhysicsParts",
+      "MemoryCategory": "BaseParts",
       "Name": "PrismaticConstraint",
       "Superclass": "SlidingBallConstraint"
     },
@@ -36125,7 +36398,7 @@
           }
         }
       ],
-      "MemoryCategory": "PhysicsParts",
+      "MemoryCategory": "BaseParts",
       "Name": "SpringConstraint",
       "Superclass": "Constraint"
     },
@@ -36178,7 +36451,7 @@
           }
         }
       ],
-      "MemoryCategory": "PhysicsParts",
+      "MemoryCategory": "BaseParts",
       "Name": "Torque",
       "Superclass": "Constraint"
     },
@@ -36423,7 +36696,7 @@
           }
         }
       ],
-      "MemoryCategory": "PhysicsParts",
+      "MemoryCategory": "BaseParts",
       "Name": "TorsionSpringConstraint",
       "Superclass": "Constraint"
     },
@@ -36522,7 +36795,7 @@
           }
         }
       ],
-      "MemoryCategory": "PhysicsParts",
+      "MemoryCategory": "BaseParts",
       "Name": "UniversalConstraint",
       "Superclass": "Constraint"
     },
@@ -36598,7 +36871,7 @@
           }
         }
       ],
-      "MemoryCategory": "PhysicsParts",
+      "MemoryCategory": "BaseParts",
       "Name": "VectorForce",
       "Superclass": "Constraint"
     },
@@ -40106,13 +40379,13 @@
     },
     {
       "Members": [],
-      "MemoryCategory": "PhysicsParts",
+      "MemoryCategory": "BaseParts",
       "Name": "BlockMesh",
       "Superclass": "BevelMesh"
     },
     {
       "Members": [],
-      "MemoryCategory": "PhysicsParts",
+      "MemoryCategory": "BaseParts",
       "Name": "CylinderMesh",
       "Superclass": "BevelMesh",
       "Tags": [
@@ -40168,7 +40441,7 @@
           }
         }
       ],
-      "MemoryCategory": "PhysicsParts",
+      "MemoryCategory": "BaseParts",
       "Name": "FileMesh",
       "Superclass": "DataModelMesh"
     },
@@ -40198,7 +40471,7 @@
           }
         }
       ],
-      "MemoryCategory": "PhysicsParts",
+      "MemoryCategory": "BaseParts",
       "Name": "SpecialMesh",
       "Superclass": "FileMesh"
     },
@@ -45467,7 +45740,144 @@
       ]
     },
     {
-      "Members": [],
+      "Members": [
+        {
+          "MemberType": "Function",
+          "Name": "ExitPlayback",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetCurrentPlaybackRestartFrames",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Array"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "GetPlaybackMode",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Enum",
+            "Name": "ExperienceStateRecordingPlaybackMode"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "SetPlaybackMode",
+          "Parameters": [
+            {
+              "Name": "mode",
+              "Type": {
+                "Category": "Enum",
+                "Name": "ExperienceStateRecordingPlaybackMode"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "SetPlaybackPercentage",
+          "Parameters": [
+            {
+              "Name": "percentage",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "float"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "LoadPlaybackAsync",
+          "Parameters": [
+            {
+              "Name": "uri",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            },
+            {
+              "Name": "placeFileUri",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string?"
+              }
+            },
+            {
+              "Name": "mode",
+              "Type": {
+                "Category": "Enum",
+                "Name": "ExperienceStateRecordingLoadMode"
+              }
+            },
+            {
+              "Name": "sourceType",
+              "Type": {
+                "Category": "Enum",
+                "Name": "ExperienceStateRecordingLoadSourceType"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Group",
+            "Name": "Dictionary"
+          },
+          "Security": "RobloxScriptSecurity",
+          "Tags": [
+            "Yields"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Event",
+          "Name": "PlaybackStatusUpdated",
+          "Parameters": [
+            {
+              "Name": "percentage",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "float"
+              }
+            },
+            {
+              "Name": "currentFrameNumber",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "int64"
+              }
+            }
+          ],
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        }
+      ],
       "MemoryCategory": "Instances",
       "Name": "ExperienceStateRecordingService",
       "Superclass": "Instance",
@@ -58091,6 +58501,9 @@
             "CanLoad": true,
             "CanSave": true
           },
+          "Tags": [
+            "Deprecated"
+          ],
           "ThreadSafety": "ReadSafe",
           "ValueType": {
             "Category": "Primitive",
@@ -58112,8 +58525,11 @@
           },
           "Serialization": {
             "CanLoad": true,
-            "CanSave": true
+            "CanSave": false
           },
+          "Tags": [
+            "NotReplicated"
+          ],
           "ThreadSafety": "ReadSafe",
           "ValueType": {
             "Category": "Primitive",
@@ -58137,6 +58553,9 @@
             "CanLoad": true,
             "CanSave": true
           },
+          "Tags": [
+            "Deprecated"
+          ],
           "ThreadSafety": "ReadSafe",
           "ValueType": {
             "Category": "Primitive",
@@ -73683,6 +74102,24 @@
         {
           "Category": "Data",
           "MemberType": "Property",
+          "Name": "UseFileLevelCompressionInsteadOfChunk",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "bool"
+          }
+        },
+        {
+          "Category": "Data",
+          "MemberType": "Property",
           "Name": "ZstdCompression",
           "Security": {
             "Read": "None",
@@ -75160,7 +75597,7 @@
           }
         }
       ],
-      "MemoryCategory": "PhysicsParts",
+      "MemoryCategory": "BaseParts",
       "Name": "JointInstance",
       "Superclass": "Instance",
       "Tags": [
@@ -75193,7 +75630,7 @@
           }
         }
       ],
-      "MemoryCategory": "PhysicsParts",
+      "MemoryCategory": "BaseParts",
       "Name": "DynamicRotate",
       "Superclass": "JointInstance",
       "Tags": [
@@ -75202,7 +75639,7 @@
     },
     {
       "Members": [],
-      "MemoryCategory": "PhysicsParts",
+      "MemoryCategory": "BaseParts",
       "Name": "RotateP",
       "Superclass": "DynamicRotate",
       "Tags": [
@@ -75211,7 +75648,7 @@
     },
     {
       "Members": [],
-      "MemoryCategory": "PhysicsParts",
+      "MemoryCategory": "BaseParts",
       "Name": "RotateV",
       "Superclass": "DynamicRotate",
       "Tags": [
@@ -75313,7 +75750,7 @@
           }
         }
       ],
-      "MemoryCategory": "PhysicsParts",
+      "MemoryCategory": "BaseParts",
       "Name": "Glue",
       "Superclass": "JointInstance",
       "Tags": [
@@ -75322,7 +75759,7 @@
     },
     {
       "Members": [],
-      "MemoryCategory": "PhysicsParts",
+      "MemoryCategory": "BaseParts",
       "Name": "ManualSurfaceJointInstance",
       "Superclass": "JointInstance",
       "Tags": [
@@ -75332,7 +75769,7 @@
     },
     {
       "Members": [],
-      "MemoryCategory": "PhysicsParts",
+      "MemoryCategory": "BaseParts",
       "Name": "ManualGlue",
       "Superclass": "ManualSurfaceJointInstance",
       "Tags": [
@@ -75341,7 +75778,7 @@
     },
     {
       "Members": [],
-      "MemoryCategory": "PhysicsParts",
+      "MemoryCategory": "BaseParts",
       "Name": "ManualWeld",
       "Superclass": "ManualSurfaceJointInstance",
       "Tags": [
@@ -75445,7 +75882,7 @@
           "ThreadSafety": "Unsafe"
         }
       ],
-      "MemoryCategory": "PhysicsParts",
+      "MemoryCategory": "BaseParts",
       "Name": "Motor",
       "Superclass": "JointInstance"
     },
@@ -75535,13 +75972,13 @@
           }
         }
       ],
-      "MemoryCategory": "PhysicsParts",
+      "MemoryCategory": "BaseParts",
       "Name": "Motor6D",
       "Superclass": "Motor"
     },
     {
       "Members": [],
-      "MemoryCategory": "PhysicsParts",
+      "MemoryCategory": "BaseParts",
       "Name": "Rotate",
       "Superclass": "JointInstance",
       "Tags": [
@@ -75550,7 +75987,7 @@
     },
     {
       "Members": [],
-      "MemoryCategory": "PhysicsParts",
+      "MemoryCategory": "BaseParts",
       "Name": "Snap",
       "Superclass": "JointInstance",
       "Tags": [
@@ -75652,13 +76089,13 @@
           }
         }
       ],
-      "MemoryCategory": "PhysicsParts",
+      "MemoryCategory": "BaseParts",
       "Name": "VelocityMotor",
       "Superclass": "JointInstance"
     },
     {
       "Members": [],
-      "MemoryCategory": "PhysicsParts",
+      "MemoryCategory": "BaseParts",
       "Name": "Weld",
       "Superclass": "JointInstance"
     },
@@ -84990,6 +85427,28 @@
             "InternalTest"
           ],
           "MemberType": "Function",
+          "Name": "CreateReviewableContentKey",
+          "Parameters": [
+            {
+              "Name": "content",
+              "Type": {
+                "Category": "DataType",
+                "Name": "Content"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "string"
+          },
+          "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "InternalTest"
+          ],
+          "MemberType": "Function",
           "Name": "InternalCreateReviewableContentAsync",
           "Parameters": [
             {
@@ -86307,7 +86766,7 @@
           }
         }
       ],
-      "MemoryCategory": "PhysicsParts",
+      "MemoryCategory": "BaseParts",
       "Name": "NoCollisionConstraint",
       "Superclass": "Instance"
     },
@@ -89304,7 +89763,7 @@
           }
         }
       ],
-      "MemoryCategory": "PhysicsParts",
+      "MemoryCategory": "BaseParts",
       "Name": "Part",
       "Superclass": "FormFactorPart"
     },
@@ -89352,7 +89811,7 @@
           "ThreadSafety": "Unsafe"
         }
       ],
-      "MemoryCategory": "PhysicsParts",
+      "MemoryCategory": "BaseParts",
       "Name": "FlagStand",
       "Superclass": "Part",
       "Tags": [
@@ -89361,7 +89820,7 @@
     },
     {
       "Members": [],
-      "MemoryCategory": "PhysicsParts",
+      "MemoryCategory": "BaseParts",
       "Name": "Platform",
       "Superclass": "Part",
       "Tags": [
@@ -89446,7 +89905,7 @@
           "ThreadSafety": "Unsafe"
         }
       ],
-      "MemoryCategory": "PhysicsParts",
+      "MemoryCategory": "BaseParts",
       "Name": "Seat",
       "Superclass": "Part"
     },
@@ -89715,7 +90174,7 @@
           "ThreadSafety": "Unsafe"
         }
       ],
-      "MemoryCategory": "PhysicsParts",
+      "MemoryCategory": "BaseParts",
       "Name": "SkateboardPlatform",
       "Superclass": "Part",
       "Tags": [
@@ -89845,7 +90304,7 @@
           }
         }
       ],
-      "MemoryCategory": "PhysicsParts",
+      "MemoryCategory": "BaseParts",
       "Name": "SpawnLocation",
       "Superclass": "Part"
     },
@@ -91640,7 +92099,8 @@
             "CanSave": true
           },
           "Tags": [
-            "Hidden"
+            "Hidden",
+            "Deprecated"
           ],
           "ThreadSafety": "ReadSafe",
           "ValueType": {
@@ -91692,7 +92152,8 @@
             "CanSave": true
           },
           "Tags": [
-            "Hidden"
+            "Hidden",
+            "Deprecated"
           ],
           "ThreadSafety": "ReadSafe",
           "ValueType": {
@@ -91841,7 +92302,7 @@
           "ThreadSafety": "Unsafe"
         }
       ],
-      "MemoryCategory": "PhysicsParts",
+      "MemoryCategory": "BaseParts",
       "Name": "MeshPart",
       "Superclass": "TriangleMeshPart"
     },
@@ -93488,7 +93949,7 @@
           "ThreadSafety": "Unsafe"
         }
       ],
-      "MemoryCategory": "PhysicsParts",
+      "MemoryCategory": "BaseParts",
       "Name": "Model",
       "Superclass": "PVInstance"
     },
@@ -93582,7 +94043,7 @@
           "ThreadSafety": "Safe"
         }
       ],
-      "MemoryCategory": "PhysicsParts",
+      "MemoryCategory": "BaseParts",
       "Name": "Actor",
       "Superclass": "Model"
     },
@@ -93625,7 +94086,7 @@
           }
         }
       ],
-      "MemoryCategory": "PhysicsParts",
+      "MemoryCategory": "BaseParts",
       "Name": "BackpackItem",
       "Superclass": "Model",
       "Tags": [
@@ -93737,7 +94198,7 @@
           "ThreadSafety": "Unsafe"
         }
       ],
-      "MemoryCategory": "PhysicsParts",
+      "MemoryCategory": "BaseParts",
       "Name": "HopperBin",
       "Superclass": "BackpackItem",
       "Tags": [
@@ -94069,7 +94530,7 @@
           "ThreadSafety": "Unsafe"
         }
       ],
-      "MemoryCategory": "PhysicsParts",
+      "MemoryCategory": "BaseParts",
       "Name": "Tool",
       "Superclass": "BackpackItem"
     },
@@ -94100,7 +94561,7 @@
           }
         }
       ],
-      "MemoryCategory": "PhysicsParts",
+      "MemoryCategory": "BaseParts",
       "Name": "Flag",
       "Superclass": "Tool",
       "Tags": [
@@ -94109,7 +94570,7 @@
     },
     {
       "Members": [],
-      "MemoryCategory": "PhysicsParts",
+      "MemoryCategory": "BaseParts",
       "Name": "Status",
       "Superclass": "Model",
       "Tags": [
@@ -95084,7 +95545,7 @@
           "ThreadSafety": "Unsafe"
         }
       ],
-      "MemoryCategory": "PhysicsParts",
+      "MemoryCategory": "BaseParts",
       "Name": "WorldRoot",
       "Superclass": "Model",
       "Tags": [
@@ -96279,7 +96740,7 @@
           "ThreadSafety": "Unsafe"
         }
       ],
-      "MemoryCategory": "PhysicsParts",
+      "MemoryCategory": "BaseParts",
       "Name": "Workspace",
       "Superclass": "WorldRoot",
       "Tags": [
@@ -96289,7 +96750,7 @@
     },
     {
       "Members": [],
-      "MemoryCategory": "PhysicsParts",
+      "MemoryCategory": "BaseParts",
       "Name": "WorldModel",
       "Superclass": "WorldRoot"
     },
@@ -103211,6 +103672,23 @@
             "Name": "null"
           },
           "Security": "None",
+          "Tags": [
+            "Yields"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "Capabilities": [
+            "Players"
+          ],
+          "MemberType": "Function",
+          "Name": "PromptSecurityChallengeAsync",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "bool"
+          },
+          "Security": "RobloxSecurity",
           "Tags": [
             "Yields"
           ],
@@ -119728,6 +120206,36 @@
         },
         {
           "MemberType": "Function",
+          "Name": "SignalFeedbackSubmissionCompleted",
+          "Parameters": [
+            {
+              "Name": "feedback",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            }
+          ],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "SignalFeedbackSubmissionPermissionDenied",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
+          },
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
           "Name": "UpdatePlayerPartyData",
           "Parameters": [
             {
@@ -119834,6 +120342,20 @@
           "ReturnType": {
             "Category": "Group",
             "Name": "Array"
+          },
+          "Security": "None",
+          "Tags": [
+            "Yields"
+          ],
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Function",
+          "Name": "PromptFeedbackSubmissionAsync",
+          "Parameters": [],
+          "ReturnType": {
+            "Category": "Primitive",
+            "Name": "null"
           },
           "Security": "None",
           "Tags": [
@@ -120061,6 +120583,28 @@
             }
           ],
           "Security": "None",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Event",
+          "Name": "ShowPromptFeedbackSubmission",
+          "Parameters": [],
+          "Security": "RobloxScriptSecurity",
+          "ThreadSafety": "Unsafe"
+        },
+        {
+          "MemberType": "Event",
+          "Name": "ShowPromptFeedbackUnavailable",
+          "Parameters": [
+            {
+              "Name": "reason",
+              "Type": {
+                "Category": "Primitive",
+                "Name": "string"
+              }
+            }
+          ],
+          "Security": "RobloxScriptSecurity",
           "ThreadSafety": "Unsafe"
         },
         {
@@ -132248,6 +132792,93 @@
     {
       "Members": [
         {
+          "Category": "Behavior",
+          "MemberType": "Property",
+          "Name": "AspectRatioRange",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "DataType",
+            "Name": "NumberRange"
+          }
+        },
+        {
+          "Category": "Behavior",
+          "MemberType": "Property",
+          "Name": "IsActive",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": false,
+            "CanSave": true
+          },
+          "Tags": [
+            "ReadOnly",
+            "NotReplicated"
+          ],
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "bool"
+          }
+        },
+        {
+          "Category": "Behavior",
+          "MemberType": "Property",
+          "Name": "MaxSize",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "DataType",
+            "Name": "Vector2"
+          }
+        },
+        {
+          "Category": "Behavior",
+          "MemberType": "Property",
+          "Name": "MinSize",
+          "Security": {
+            "Read": "None",
+            "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": true,
+            "CanSave": true
+          },
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "DataType",
+            "Name": "Vector2"
+          }
+        }
+      ],
+      "MemoryCategory": "Instances",
+      "Name": "StyleQuery",
+      "Superclass": "Instance",
+      "Tags": [
+        "NotReplicated",
+        "NotBrowsable"
+      ]
+    },
+    {
+      "Members": [
+        {
           "MemberType": "Function",
           "Name": "GetAppliedStyles",
           "Parameters": [
@@ -142195,6 +142826,14 @@
                 "Category": "Class",
                 "Name": "Instance"
               }
+            },
+            {
+              "Default": "nil",
+              "Name": "stringLenRestrictions",
+              "Type": {
+                "Category": "Group",
+                "Name": "Dictionary"
+              }
             }
           ],
           "ReturnType": {
@@ -143423,113 +144062,6 @@
       "MemoryCategory": "Instances",
       "Name": "UITextSizeConstraint",
       "Superclass": "UIConstraint"
-    },
-    {
-      "Members": [
-        {
-          "Capabilities": {
-            "Read": [
-              "UI"
-            ]
-          },
-          "Category": "Behavior",
-          "MemberType": "Property",
-          "Name": "AspectRatioRange",
-          "Security": {
-            "Read": "None",
-            "Write": "None"
-          },
-          "Serialization": {
-            "CanLoad": true,
-            "CanSave": true
-          },
-          "ThreadSafety": "ReadSafe",
-          "ValueType": {
-            "Category": "DataType",
-            "Name": "NumberRange"
-          }
-        },
-        {
-          "Capabilities": {
-            "Read": [
-              "UI"
-            ]
-          },
-          "Category": "Behavior",
-          "MemberType": "Property",
-          "Name": "IsActive",
-          "Security": {
-            "Read": "None",
-            "Write": "None"
-          },
-          "Serialization": {
-            "CanLoad": false,
-            "CanSave": true
-          },
-          "Tags": [
-            "ReadOnly",
-            "NotReplicated"
-          ],
-          "ThreadSafety": "ReadSafe",
-          "ValueType": {
-            "Category": "Primitive",
-            "Name": "bool"
-          }
-        },
-        {
-          "Capabilities": {
-            "Read": [
-              "UI"
-            ]
-          },
-          "Category": "Behavior",
-          "MemberType": "Property",
-          "Name": "MaxSize",
-          "Security": {
-            "Read": "None",
-            "Write": "None"
-          },
-          "Serialization": {
-            "CanLoad": true,
-            "CanSave": true
-          },
-          "ThreadSafety": "ReadSafe",
-          "ValueType": {
-            "Category": "DataType",
-            "Name": "Vector2"
-          }
-        },
-        {
-          "Capabilities": {
-            "Read": [
-              "UI"
-            ]
-          },
-          "Category": "Behavior",
-          "MemberType": "Property",
-          "Name": "MinSize",
-          "Security": {
-            "Read": "None",
-            "Write": "None"
-          },
-          "Serialization": {
-            "CanLoad": true,
-            "CanSave": true
-          },
-          "ThreadSafety": "ReadSafe",
-          "ValueType": {
-            "Category": "DataType",
-            "Name": "Vector2"
-          }
-        }
-      ],
-      "MemoryCategory": "Instances",
-      "Name": "UIContainerQuery",
-      "Superclass": "UIComponent",
-      "Tags": [
-        "NotReplicated",
-        "NotBrowsable"
-      ]
     },
     {
       "Members": [
@@ -148087,6 +148619,33 @@
           "Security": {
             "Read": "None",
             "Write": "None"
+          },
+          "Serialization": {
+            "CanLoad": false,
+            "CanSave": true
+          },
+          "Tags": [
+            "ReadOnly",
+            "NotReplicated"
+          ],
+          "ThreadSafety": "ReadSafe",
+          "ValueType": {
+            "Category": "Primitive",
+            "Name": "bool"
+          }
+        },
+        {
+          "Capabilities": {
+            "Read": [
+              "Input"
+            ]
+          },
+          "Category": "Data",
+          "MemberType": "Property",
+          "Name": "TouchScreenEnabled",
+          "Security": {
+            "Read": "RobloxScriptSecurity",
+            "Write": "RobloxScriptSecurity"
           },
           "Serialization": {
             "CanLoad": false,
@@ -154259,7 +154818,7 @@
           }
         }
       ],
-      "MemoryCategory": "PhysicsParts",
+      "MemoryCategory": "BaseParts",
       "Name": "WeldConstraint",
       "Superclass": "Instance"
     },
@@ -154477,7 +155036,10 @@
       ],
       "MemoryCategory": "Instances",
       "Name": "WrapTextureTransfer",
-      "Superclass": "Instance"
+      "Superclass": "Instance",
+      "Tags": [
+        "NotBrowsable"
+      ]
     },
     {
       "Members": [
@@ -155510,6 +156072,23 @@
           "Value": 0
         },
         {
+          "Name": "All",
+          "Value": 1
+        },
+        {
+          "Name": "Unknown",
+          "Value": 2
+        }
+      ],
+      "Name": "AnnotationChannelContentPreference"
+    },
+    {
+      "Items": [
+        {
+          "Name": "None",
+          "Value": 0
+        },
+        {
           "Name": "PlacingNew",
           "Value": 1
         },
@@ -155519,6 +156098,27 @@
         }
       ],
       "Name": "AnnotationEditingMode"
+    },
+    {
+      "Items": [
+        {
+          "Name": "None",
+          "Value": 0
+        },
+        {
+          "Name": "All",
+          "Value": 1
+        },
+        {
+          "Name": "MentionsAndReplies",
+          "Value": 2
+        },
+        {
+          "Name": "Unknown",
+          "Value": 3
+        }
+      ],
+      "Name": "AnnotationPlaceContentPreference"
     },
     {
       "Items": [
@@ -158822,7 +159422,10 @@
           "Value": 6
         },
         {
-          "Name": "PhysicsParts",
+          "LegacyNames": [
+            "PhysicsParts"
+          ],
+          "Name": "BaseParts",
           "Value": 7
         },
         {
@@ -159325,6 +159928,57 @@
         }
       ],
       "Name": "ExperienceAuthScope"
+    },
+    {
+      "Items": [
+        {
+          "Name": "NewReplay",
+          "Value": 0
+        },
+        {
+          "Name": "ContiguousSlice",
+          "Value": 1
+        },
+        {
+          "Name": "NoncontiguousSlice",
+          "Value": 2
+        }
+      ],
+      "Name": "ExperienceStateRecordingLoadMode"
+    },
+    {
+      "Items": [
+        {
+          "Name": "S3Url",
+          "Value": 0
+        },
+        {
+          "Name": "File",
+          "Value": 1
+        }
+      ],
+      "Name": "ExperienceStateRecordingLoadSourceType"
+    },
+    {
+      "Items": [
+        {
+          "Name": "Undefined",
+          "Value": 0
+        },
+        {
+          "Name": "Stopped",
+          "Value": 1
+        },
+        {
+          "Name": "Playing",
+          "Value": 2
+        },
+        {
+          "Name": "Rewinding",
+          "Value": 3
+        }
+      ],
+      "Name": "ExperienceStateRecordingPlaybackMode"
     },
     {
       "Items": [
@@ -164337,6 +164991,27 @@
           "Value": 0
         },
         {
+          "Name": "All",
+          "Value": 1
+        },
+        {
+          "Name": "MentionsAndReplies",
+          "Value": 2
+        },
+        {
+          "Name": "Unknown",
+          "Value": 3
+        }
+      ],
+      "Name": "PlaceContentPreference"
+    },
+    {
+      "Items": [
+        {
+          "Name": "None",
+          "Value": 0
+        },
+        {
           "Name": "Publish",
           "Value": 1
         },
@@ -165250,11 +165925,49 @@
     {
       "Items": [
         {
+          "Name": "Neutral",
+          "Value": 0
+        },
+        {
+          "Name": "Positive",
+          "Value": 1
+        },
+        {
+          "Name": "Negative",
+          "Value": 2
+        }
+      ],
+      "Name": "RecommendationDepartureIntent"
+    },
+    {
+      "Items": [
+        {
           "Name": "View",
           "Value": 0
+        },
+        {
+          "Name": "NotViewable",
+          "Value": 1
         }
       ],
       "Name": "RecommendationImpressionType"
+    },
+    {
+      "Items": [
+        {
+          "Name": "Static",
+          "Value": 0
+        },
+        {
+          "Name": "Dynamic",
+          "Value": 1
+        },
+        {
+          "Name": "Interactive",
+          "Value": 2
+        }
+      ],
+      "Name": "RecommendationItemContentType"
     },
     {
       "Items": [
@@ -167765,8 +168478,12 @@
           "Value": 1
         },
         {
-          "Name": "NoError",
+          "Name": "PlaceUploadFailing",
           "Value": 2
+        },
+        {
+          "Name": "NoError",
+          "Value": 3
         }
       ],
       "Name": "TeamCreateErrorState"
